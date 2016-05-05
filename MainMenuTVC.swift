@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainMenuTVC: UITableViewController {
+class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
 
     @IBOutlet weak var userProfileImage: UIImageView!
     
@@ -30,45 +30,61 @@ class MainMenuTVC: UITableViewController {
         
         switch indexPath.row {
             case 1: //Inicio
-                    print("Inicio")
+                    self.performSegueWithIdentifier("startSegue", sender: self)
                     break
             case 2: //Obj. Educacionales
-                    print("Obj. Eduacionales")
+                    self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                     break
             case 3: //Res. Estudiantiles
-                    print("Res. Estudiantiles")
+                    self.performSegueWithIdentifier("studentResSegue", sender: self)
                     break
             case 4: //Rubricas
-                    print("Rubricas")
+                
                     break
             case 5: //Aspectos
-                    print("Aspectos")
+                
                     break
             case 6: //Criterios
-                    print("Criterios")
+                
                     break
             case 7: //Cursos
-                    print("Cursos")
+                
                     break
             case 8: //Mejora Continua
-                    print("Mej. Continua")
+                
                     break
             case 9: //Resultados de Evaluaciones
-                    print("Res. Evaluaciones")
+                
                     break
             case 11: //Cerrar Sesion
-                    print("Cerrar Sesion")
+
                     break
             default: break
         }
     }
-
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
+        if segue.identifier == "startSegue" {
+            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! UITableViewController
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        }
+        
+        if segue.identifier == "edObjectivesSegue" {
+            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! UITableViewController
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        }
+        
+        if segue.identifier == "studentResSegue" {
+            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! UITableViewController
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        }
     }
 
 }

@@ -28,6 +28,7 @@
 		77A24C931CDBC91E006AA0B9 /* University Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A24C921CDBC91E006AA0B9 /* University Filled-50.png */; };
 		77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C941CDBCD98006AA0B9 /* MainMenuTVC.swift */; };
 		77A24C971CDBCFB5006AA0B9 /* Salir-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A24C961CDBCFB5006AA0B9 /* Salir-30.png */; };
+		77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C981CDBD64E006AA0B9 /* MasterSVC.swift */; };
 		77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E198491CD7C85300782B72 /* AppDelegate.swift */; };
 		77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1984B1CD7C85300782B72 /* ViewController.swift */; };
 		77E1984F1CD7C85300782B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E1984D1CD7C85300782B72 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		77A24C921CDBC91E006AA0B9 /* University Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "University Filled-50.png"; path = "UASApp/img/University Filled-50.png"; sourceTree = "<group>"; };
 		77A24C941CDBCD98006AA0B9 /* MainMenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuTVC.swift; sourceTree = "<group>"; };
 		77A24C961CDBCFB5006AA0B9 /* Salir-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Salir-30.png"; path = "UASApp/img/Salir-30.png"; sourceTree = "<group>"; };
+		77A24C981CDBD64E006AA0B9 /* MasterSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterSVC.swift; sourceTree = "<group>"; };
 		77E198461CD7C85300782B72 /* UASApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UASApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E198491CD7C85300782B72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E1984B1CD7C85300782B72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				778315741CDBBA6C008D9209 /* HomeCVC.swift */,
 				778315791CDBC07F008D9209 /* EspecialtyCell.swift */,
 				77A24C941CDBCD98006AA0B9 /* MainMenuTVC.swift */,
+				77A24C981CDBD64E006AA0B9 /* MasterSVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
 				778315731CDBB835008D9209 /* Faculty.swift in Sources */,
 				77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */,
+				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
 				7783157A1CDBC07F008D9209 /* EspecialtyCell.swift in Sources */,
 				77E198521CD7C85300782B72 /* UASApp.xcdatamodeld in Sources */,
 				778315751CDBBA6C008D9209 /* HomeCVC.swift in Sources */,
