@@ -11,7 +11,7 @@ import UIKit
 class EspecialidadTVC: UITableViewController {
 
     
-    let faculties = ["Ing. Informatica","Ing. Electronica","Ing. Civil"]
+    let faculties = ["Informática","Electrónica","Civil", "Minas", "Telecomunicaciones", "Industrial"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,14 +82,17 @@ class EspecialidadTVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "presentMainMenuSegue" {
+            let mainSVC = segue.destinationViewController as! UISplitViewController
+            
+            mainSVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        }
     }
-    */
 
 }
