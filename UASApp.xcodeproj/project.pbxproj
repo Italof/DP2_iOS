@@ -22,6 +22,10 @@
 		77167A581CDD16C7004C91BC /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A571CDD16C7004C91BC /* SuggestionCell.swift */; };
 		77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A591CDD16DD004C91BC /* Suggestions.swift */; };
 		77167A5C1CDD16EB004C91BC /* ImprovementPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A5B1CDD16EB004C91BC /* ImprovementPlans.swift */; };
+		77167A5E1CDD1DBB004C91BC /* ImprovementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A5D1CDD1DBB004C91BC /* ImprovementCell.swift */; };
+		77167A601CDD2236004C91BC /* Download-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77167A5F1CDD2236004C91BC /* Download-30.png */; };
+		77167A621CDD228F004C91BC /* Download-Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77167A611CDD228F004C91BC /* Download-Filled-30.png */; };
+		77167A651CDD233F004C91BC /* EvaluationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A641CDD233F004C91BC /* EvaluationResults.swift */; };
 		7783156E1CDAE525008D9209 /* Menu-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7783156D1CDAE525008D9209 /* Menu-30.png */; };
 		778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783156F1CDAE621008D9209 /* EspecialidadTVC.swift */; };
 		778315731CDBB835008D9209 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778315721CDBB835008D9209 /* Faculty.swift */; };
@@ -92,6 +96,10 @@
 		77167A571CDD16C7004C91BC /* SuggestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
 		77167A591CDD16DD004C91BC /* Suggestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestions.swift; sourceTree = "<group>"; };
 		77167A5B1CDD16EB004C91BC /* ImprovementPlans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprovementPlans.swift; sourceTree = "<group>"; };
+		77167A5D1CDD1DBB004C91BC /* ImprovementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprovementCell.swift; sourceTree = "<group>"; };
+		77167A5F1CDD2236004C91BC /* Download-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Download-30.png"; path = "UASApp/img/Download-30.png"; sourceTree = "<group>"; };
+		77167A611CDD228F004C91BC /* Download-Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Download-Filled-30.png"; path = "UASApp/img/Download-Filled-30.png"; sourceTree = "<group>"; };
+		77167A641CDD233F004C91BC /* EvaluationResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationResults.swift; sourceTree = "<group>"; };
 		7783156D1CDAE525008D9209 /* Menu-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu-30.png"; path = "UASApp/img/Menu-30.png"; sourceTree = "<group>"; };
 		7783156F1CDAE621008D9209 /* EspecialidadTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EspecialidadTVC.swift; sourceTree = "<group>"; };
 		778315721CDBB835008D9209 /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
@@ -162,6 +170,8 @@
 		771470741CDACDFC009D5501 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				77167A611CDD228F004C91BC /* Download-Filled-30.png */,
+				77167A5F1CDD2236004C91BC /* Download-30.png */,
 				77A24CC71CDD15EB006AA0B9 /* Improve-30.png */,
 				77A24CC51CDD1555006AA0B9 /* Sugerencias-30.png */,
 				77A24C921CDBC91E006AA0B9 /* University Filled-50.png */,
@@ -187,6 +197,7 @@
 		771470771CDAD89C009D5501 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				77167A631CDD2324004C91BC /* EvaluationResults */,
 				77167A561CDD16B7004C91BC /* ImprovementPlans */,
 				77167A551CDD16B0004C91BC /* Suggestions */,
 				77A24CC21CDD10EF006AA0B9 /* Teachers */,
@@ -216,8 +227,17 @@
 			isa = PBXGroup;
 			children = (
 				77167A5B1CDD16EB004C91BC /* ImprovementPlans.swift */,
+				77167A5D1CDD1DBB004C91BC /* ImprovementCell.swift */,
 			);
 			name = ImprovementPlans;
+			sourceTree = "<group>";
+		};
+		77167A631CDD2324004C91BC /* EvaluationResults */ = {
+			isa = PBXGroup;
+			children = (
+				77167A641CDD233F004C91BC /* EvaluationResults.swift */,
+			);
+			name = EvaluationResults;
 			sourceTree = "<group>";
 		};
 		778315711CDBB828008D9209 /* Model */ = {
@@ -455,6 +475,7 @@
 				7783156E1CDAE525008D9209 /* Menu-30.png in Resources */,
 				7714708E1CDAE14D009D5501 /* Objetivos-30.png in Resources */,
 				77E198571CD7C85300782B72 /* LaunchScreen.storyboard in Resources */,
+				77167A621CDD228F004C91BC /* Download-Filled-30.png in Resources */,
 				77E198541CD7C85300782B72 /* Assets.xcassets in Resources */,
 				771470901CDAE14D009D5501 /* Rubricas-30.png in Resources */,
 				7714708F1CDAE14D009D5501 /* Resultados-30.png in Resources */,
@@ -464,6 +485,7 @@
 				77E1984F1CD7C85300782B72 /* Main.storyboard in Resources */,
 				771470821CDAE034009D5501 /* Home-30.png in Resources */,
 				7714708B1CDAE14D009D5501 /* Criterios-30.png in Resources */,
+				77167A601CDD2236004C91BC /* Download-30.png in Resources */,
 				77A24C971CDBCFB5006AA0B9 /* Salir-30.png in Resources */,
 				771470761CDACE0C009D5501 /* home-logo.png in Resources */,
 				771470931CDAE23A009D5501 /* Evaluaciones-30.png in Resources */,
@@ -493,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77167A651CDD233F004C91BC /* EvaluationResults.swift in Sources */,
 				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
@@ -503,6 +526,7 @@
 				778315731CDBB835008D9209 /* Faculty.swift in Sources */,
 				77A24CC41CDD1106006AA0B9 /* TeacherModal.swift in Sources */,
 				77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */,
+				77167A5E1CDD1DBB004C91BC /* ImprovementCell.swift in Sources */,
 				77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */,
 				77A24CC11CDD0A5E006AA0B9 /* TeacherCell.swift in Sources */,
 				77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */,
