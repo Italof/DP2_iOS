@@ -44,19 +44,17 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
             case 5: //Aspectos
                 
                     break
-            case 6: //Criterios
+
+            case 6: //Cursos
                 
                     break
-            case 7: //Cursos
+            case 7: //Mejora Continua
                 
                     break
-            case 8: //Mejora Continua
+            case 8: //Resultados de Evaluaciones
                 
                     break
-            case 9: //Resultados de Evaluaciones
-                
-                    break
-            case 11: //Cerrar Sesion
+            case 10: //Cerrar Sesion
 
                     break
             default: break

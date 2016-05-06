@@ -1,21 +1,25 @@
 //
-//  EspecialidadTVC.swift
+//  ObjetivosEdTVC.swift
 //  UASApp
 //
-//  Created by Karl Montenegro on 04/05/16.
+//  Created by Karl Montenegro on 05/05/16.
 //  Copyright © 2016 puntobat. All rights reserved.
 //
 
 import UIKit
 
-class EspecialidadTVC: UITableViewController {
+class ObjetivosEdTVC: UITableViewController {
 
-    
-    let faculties = ["Informática","Electrónica","Civil", "Minas", "Telecomunicaciones", "Industrial"]
+    let array = ["Objetivo Educacional 1", "Objetivo Educacional 1", "Objetivo Educacional 2", "Objetivo Educacional 3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,16 +36,14 @@ class EspecialidadTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.faculties.count
+        return self.array.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("facultyCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("objEdCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = self.faculties[indexPath.row]
-        
-        // Configure the cell...
+        cell.textLabel?.text = self.array[indexPath.row]
 
         return cell
     }
@@ -82,35 +84,14 @@ class EspecialidadTVC: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    @IBAction func logoutTapped(sender: AnyObject) {
-        
-        let alertController = UIAlertController(title: "Atención", message:
-            "¿Desea cerrar sesión?", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        // Delete action
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (alertController) -> Void in
-            // Logs out
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }))
-        
-        // Cancel action
-        alertController.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Default,handler: { (alertController) -> Void in
-
-        }))
-        
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "presentMainMenuSegue" {
-            let mainSVC = segue.destinationViewController as! UISplitViewController
-            
-            mainSVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        }
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
 
 }
