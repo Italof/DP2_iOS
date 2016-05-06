@@ -42,7 +42,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     self.performSegueWithIdentifier("rubricSegue", sender: self)
                     break
             case 5: //Aspectos
-                
+                    self.performSegueWithIdentifier("aspectSegue", sender: self)
                     break
 
             case 6: //Cursos
@@ -86,6 +86,12 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         }
         
         if segue.identifier == "rubricSegue" {
+            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! UITableViewController
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        }
+        
+        if segue.identifier == "aspectSegue"{
             let controller = (segue.destinationViewController as! UINavigationController).topViewController as! UITableViewController
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
             controller.navigationItem.leftItemsSupplementBackButton = true
