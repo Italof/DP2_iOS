@@ -11,6 +11,7 @@ import UIKit
 class AspectosTVC: UITableViewController {
 
     let array = ["Aspecto 1","Aspecto 2","Aspecto 3","Aspecto 4"]
+    let rubrics = ["Rubrica 1","Rubrica 2","Rubrica 3","Rubrica 4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class AspectosTVC: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("aspectCell", forIndexPath: indexPath)
 
         cell.textLabel?.text = self.array[indexPath.row]
-
+        cell.detailTextLabel?.text = "Rubricas a las que Pertenece: " + self.rubrics[indexPath.row]
         return cell
     }
 
