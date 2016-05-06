@@ -1,5 +1,5 @@
 //
-//  ObjetivoEdDetalleTVC.swift
+//  EducationalObjectiveDetail.swift
 //  UASApp
 //
 //  Created by Karl Montenegro on 05/05/16.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ObjetivoEdDetalleTVC: UITableViewController {
+class EducationalObjectiveDetail: UITableViewController {
 
     var objData = ["1","2015-1","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]
-    var arrayRes = ["Resultado Educacional 1","Resultado Educacional 2","Resultado Educacional 3"]
+    var arrayRes = ["Resultado Estudiantil 1","Resultado Estudiantil 2","Resultado Estudiantil 3"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,7 +48,7 @@ class ObjetivoEdDetalleTVC: UITableViewController {
                 if section == 2 {
                     return "Descripción"
                 } else {
-                    return "Resultados Educacionales Asociados"
+                    return "Resultados Estudiantiles Asociados"
                 }
             }
         }
@@ -56,6 +56,14 @@ class ObjetivoEdDetalleTVC: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.0
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 2 {
+            return 105.0
+        } else {
+            return 61.0
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -73,15 +81,14 @@ class ObjetivoEdDetalleTVC: UITableViewController {
                 return cell
             } else {
                 if indexPath.section == 2 {
-                    let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath)
-                    cell.textLabel?.text = self.objData[indexPath.section]
+                    let cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath) as! DescriptionCell
+                    cell.lblDescription.text = self.objData[indexPath.section]
                     return cell
+                    
                 } else {
-                    let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath)
+                    let cell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath)
 
                     cell.textLabel?.text = self.arrayRes[indexPath.row]
-                    cell.detailTextLabel?.text = ""
-                    cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
                     return cell
                 }
             }

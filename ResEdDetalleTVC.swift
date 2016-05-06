@@ -50,10 +50,10 @@ class ResEdDetalleTVC: UITableViewController {
             return "Descripción:"
         } else {
             if section == 3 {
-                return "Rúbricas:"
+                return "Rúbricas Asociadas al Resultado:"
             } else {
                 if section == 4 {
-                    return "Objetivos Educacionales:"
+                    return "Objetivos Educacionales Asociados al Resultado:"
                 } else {
                     return ""
                 }
@@ -61,30 +61,44 @@ class ResEdDetalleTVC: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 2 {
+            return 107.0
+        } else {
+            return 57.0
+        }
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
+        
         
         if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
             cell.textLabel?.text = "Identificador:"
             cell.detailTextLabel?.text = self.data[indexPath.section]
             return cell
         } else {
             if indexPath.section == 1 {
+                let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
                 cell.textLabel?.text = "Ciclo de Registro:"
                 cell.detailTextLabel?.text = self.data[indexPath.section]
                 return cell
             } else {
                 if indexPath.section == 2 {
-                    cell.textLabel?.text = self.data[indexPath.section]
-                    cell.detailTextLabel?.text = ""
+                    let cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath) as! EdResultDescriptionCell
+                    
+                    cell.lblDescription.text = self.data[2]
+                    
                     return cell
                 } else {
                     if indexPath.section == 3 {
+                        let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
                         cell.textLabel?.text = self.rubrics[indexPath.row]
                         cell.detailTextLabel?.text = ""
                         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
                         return cell
                     } else {
+                        let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
                         cell.textLabel?.text = self.objEd[indexPath.row]
                         cell.detailTextLabel?.text = ""
                         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator

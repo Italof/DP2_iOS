@@ -1,14 +1,14 @@
 //
-//  DescriptionCell.swift
+//  EdResultDescriptionCell.swift
 //  UASApp
 //
-//  Created by Karl Montenegro on 05/05/16.
+//  Created by Karl Montenegro on 06/05/16.
 //  Copyright © 2016 puntobat. All rights reserved.
 //
 
 import UIKit
 
-class DescriptionCell: UITableViewCell {
+class EdResultDescriptionCell: UITableViewCell {
 
     @IBOutlet weak var lblDescription: UITextView!
     override func awakeFromNib() {

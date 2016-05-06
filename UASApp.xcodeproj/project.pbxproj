@@ -29,6 +29,7 @@
 		77167A671CDD2BAA004C91BC /* RubricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A661CDD2BAA004C91BC /* RubricCell.swift */; };
 		77167A6C1CDD30E2004C91BC /* CriteriaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6B1CDD30E2004C91BC /* CriteriaDetail.swift */; };
 		77167A6E1CDD30F0004C91BC /* CriteriaLevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6D1CDD30F0004C91BC /* CriteriaLevelCell.swift */; };
+		77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */; };
 		7783156E1CDAE525008D9209 /* Menu-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7783156D1CDAE525008D9209 /* Menu-30.png */; };
 		778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783156F1CDAE621008D9209 /* EspecialidadTVC.swift */; };
 		778315731CDBB835008D9209 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778315721CDBB835008D9209 /* Faculty.swift */; };
@@ -38,7 +39,7 @@
 		77A24C971CDBCFB5006AA0B9 /* Salir-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A24C961CDBCFB5006AA0B9 /* Salir-30.png */; };
 		77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C981CDBD64E006AA0B9 /* MasterSVC.swift */; };
 		77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C9A1CDC1885006AA0B9 /* ObjetivosEdTVC.swift */; };
-		77A24CA01CDC29C1006AA0B9 /* ObjetivoEdDetalleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C9F1CDC29C1006AA0B9 /* ObjetivoEdDetalleTVC.swift */; };
+		77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C9F1CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift */; };
 		77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CA11CDC2AD1006AA0B9 /* DescriptionCell.swift */; };
 		77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */; };
 		77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */; };
@@ -106,6 +107,7 @@
 		77167A661CDD2BAA004C91BC /* RubricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RubricCell.swift; sourceTree = "<group>"; };
 		77167A6B1CDD30E2004C91BC /* CriteriaDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriteriaDetail.swift; sourceTree = "<group>"; };
 		77167A6D1CDD30F0004C91BC /* CriteriaLevelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriteriaLevelCell.swift; sourceTree = "<group>"; };
+		77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdResultDescriptionCell.swift; sourceTree = "<group>"; };
 		7783156D1CDAE525008D9209 /* Menu-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu-30.png"; path = "UASApp/img/Menu-30.png"; sourceTree = "<group>"; };
 		7783156F1CDAE621008D9209 /* EspecialidadTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EspecialidadTVC.swift; sourceTree = "<group>"; };
 		778315721CDBB835008D9209 /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
@@ -115,7 +117,7 @@
 		77A24C961CDBCFB5006AA0B9 /* Salir-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Salir-30.png"; path = "UASApp/img/Salir-30.png"; sourceTree = "<group>"; };
 		77A24C981CDBD64E006AA0B9 /* MasterSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterSVC.swift; sourceTree = "<group>"; };
 		77A24C9A1CDC1885006AA0B9 /* ObjetivosEdTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjetivosEdTVC.swift; sourceTree = "<group>"; };
-		77A24C9F1CDC29C1006AA0B9 /* ObjetivoEdDetalleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjetivoEdDetalleTVC.swift; sourceTree = "<group>"; };
+		77A24C9F1CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalObjectiveDetail.swift; sourceTree = "<group>"; };
 		77A24CA11CDC2AD1006AA0B9 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResEdTVC.swift; sourceTree = "<group>"; };
 		77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResEdDetalleTVC.swift; sourceTree = "<group>"; };
@@ -268,8 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				77A24C9A1CDC1885006AA0B9 /* ObjetivosEdTVC.swift */,
-				77A24C9F1CDC29C1006AA0B9 /* ObjetivoEdDetalleTVC.swift */,
 				77A24CA11CDC2AD1006AA0B9 /* DescriptionCell.swift */,
+				77A24C9F1CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift */,
 			);
 			name = "Objetivos Educacionales";
 			sourceTree = "<group>";
@@ -279,6 +281,7 @@
 			children = (
 				77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */,
 				77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */,
+				77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */,
 			);
 			name = "Resutados Estudiantiles";
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
+				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
 				77A24CB91CDD052D006AA0B9 /* CursoCell.swift in Sources */,
 				77167A6E1CDD30F0004C91BC /* CriteriaLevelCell.swift in Sources */,
 				77167A5C1CDD16EB004C91BC /* ImprovementPlans.swift in Sources */,
@@ -551,7 +555,7 @@
 				77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */,
 				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
 				77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */,
-				77A24CA01CDC29C1006AA0B9 /* ObjetivoEdDetalleTVC.swift in Sources */,
+				77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */,
 				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
 				77A24CAB1CDCA6DF006AA0B9 /* Rubrics.swift in Sources */,
 				77A24CB71CDCFDDB006AA0B9 /* CursosTVC.swift in Sources */,
