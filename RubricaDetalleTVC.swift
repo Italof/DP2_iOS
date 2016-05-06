@@ -1,5 +1,5 @@
 //
-//  ResEdDetalleTVC.swift
+//  RubricaDetalleTVC.swift
 //  UASApp
 //
 //  Created by Karl Montenegro on 06/05/16.
@@ -8,16 +8,15 @@
 
 import UIKit
 
-class ResEdDetalleTVC: UITableViewController {
+class RubricaDetalleTVC: UITableViewController {
 
-    let data = ["RE001","2015-1","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]
-    let rubrics = ["Rubrica 1","Rubrica 2","Rubrica 3"]
-    let objEd = ["Objetivo Educacional 1","Objetivo Educacional 2","Objetivo Educacional 3"]
+    let data = "Rubrica 1"
+    let aspectos = ["Aspecto 1","Aspecto 2","Aspecto 3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,69 +28,38 @@ class ResEdDetalleTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 3 {
-            return self.rubrics.count
+        if section == 0 {
+            return 1
         } else {
-            if section == 4 {
-                return self.objEd.count
-            } else {
-                return 1
-            }
+            return self.aspectos.count
         }
     }
-    
+
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 2 {
-            return "Descripción:"
+        
+        if section == 1 {
+            return "Aspectos Asociados"
         } else {
-            if section == 3 {
-                return "Rúbricas:"
-            } else {
-                if section == 4 {
-                    return "Objetivos Educacionales:"
-                } else {
-                    return ""
-                }
-            }
+            return ""
         }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("rubCell", forIndexPath: indexPath)
+
         if indexPath.section == 0 {
-            cell.textLabel?.text = "Identificador:"
-            cell.detailTextLabel?.text = self.data[indexPath.section]
+            cell.textLabel?.text = "Nombre:"
+            cell.detailTextLabel?.text = self.data
             return cell
         } else {
-            if indexPath.section == 1 {
-                cell.textLabel?.text = "Ciclo de Registro:"
-                cell.detailTextLabel?.text = self.data[indexPath.section]
-                return cell
-            } else {
-                if indexPath.section == 2 {
-                    cell.textLabel?.text = self.data[indexPath.section]
-                    cell.detailTextLabel?.text = ""
-                    return cell
-                } else {
-                    if indexPath.section == 3 {
-                        cell.textLabel?.text = self.rubrics[indexPath.row]
-                        cell.detailTextLabel?.text = ""
-                        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-                        return cell
-                    } else {
-                        cell.textLabel?.text = self.objEd[indexPath.row]
-                        cell.detailTextLabel?.text = ""
-                        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-                        return cell
-                    }
-                }
-            }
+            cell.textLabel?.text = self.aspectos[indexPath.row]
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            return cell
         }
     }
     
