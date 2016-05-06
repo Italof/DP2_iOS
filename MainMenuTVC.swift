@@ -55,7 +55,23 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                 
                     break
             case 10: //Cerrar Sesion
-
+                let alertController = UIAlertController(title: "Atención", message:
+                    "¿Desea cerrar sesión?", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                // Delete action
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (alertController) -> Void in
+                    // Logs out
+                    //self.dismissViewControllerAnimated(true, completion: nil)
+                    self.performSegueWithIdentifier("logout", sender: self)
+                }))
+                
+                // Cancel action
+                alertController.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Default,handler: { (alertController) -> Void in
+                    
+                }))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
                     break
             default: break
         }
@@ -93,6 +109,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         if segue.identifier == "improvementSegue" {
             
         }
+        
     }
 
 }
