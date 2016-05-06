@@ -32,6 +32,8 @@
 		77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C9A1CDC1885006AA0B9 /* ObjetivosEdTVC.swift */; };
 		77A24CA01CDC29C1006AA0B9 /* ObjetivoEdDetalleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C9F1CDC29C1006AA0B9 /* ObjetivoEdDetalleTVC.swift */; };
 		77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CA11CDC2AD1006AA0B9 /* DescriptionCell.swift */; };
+		77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */; };
+		77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */; };
 		77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E198491CD7C85300782B72 /* AppDelegate.swift */; };
 		77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1984B1CD7C85300782B72 /* ViewController.swift */; };
 		77E1984F1CD7C85300782B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E1984D1CD7C85300782B72 /* Main.storyboard */; };
@@ -86,6 +88,8 @@
 		77A24C9A1CDC1885006AA0B9 /* ObjetivosEdTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjetivosEdTVC.swift; sourceTree = "<group>"; };
 		77A24C9F1CDC29C1006AA0B9 /* ObjetivoEdDetalleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjetivoEdDetalleTVC.swift; sourceTree = "<group>"; };
 		77A24CA11CDC2AD1006AA0B9 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResEdTVC.swift; sourceTree = "<group>"; };
+		77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResEdDetalleTVC.swift; sourceTree = "<group>"; };
 		77E198461CD7C85300782B72 /* UASApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UASApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E198491CD7C85300782B72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E1984B1CD7C85300782B72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		771470771CDAD89C009D5501 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				77A24CA41CDC8D63006AA0B9 /* Resutados Estudiantiles */,
 				77A24C9E1CDC29A9006AA0B9 /* Objetivos Educacionales */,
 				7783156F1CDAE621008D9209 /* EspecialidadTVC.swift */,
 				778315741CDBBA6C008D9209 /* HomeCVC.swift */,
@@ -179,6 +184,15 @@
 				77A24CA11CDC2AD1006AA0B9 /* DescriptionCell.swift */,
 			);
 			name = "Objetivos Educacionales";
+			sourceTree = "<group>";
+		};
+		77A24CA41CDC8D63006AA0B9 /* Resutados Estudiantiles */ = {
+			isa = PBXGroup;
+			children = (
+				77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */,
+				77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */,
+			);
+			name = "Resutados Estudiantiles";
 			sourceTree = "<group>";
 		};
 		77E1983D1CD7C85300782B72 = {
@@ -391,12 +405,14 @@
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
 				778315731CDBB835008D9209 /* Faculty.swift in Sources */,
 				77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */,
+				77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */,
 				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
 				77A24CA01CDC29C1006AA0B9 /* ObjetivoEdDetalleTVC.swift in Sources */,
 				7783157A1CDBC07F008D9209 /* EspecialtyCell.swift in Sources */,
 				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
 				77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */,
 				77E198521CD7C85300782B72 /* UASApp.xcdatamodeld in Sources */,
+				77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */,
 				778315751CDBBA6C008D9209 /* HomeCVC.swift in Sources */,
 				77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */,
 			);

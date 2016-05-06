@@ -67,9 +67,10 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "startSegue" {
-            let controller = (segue.destinationViewController as! UINavigationController).topViewController as! UITableViewController
-            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-            controller.navigationItem.leftItemsSupplementBackButton = true
+            let controller = (segue.destinationViewController as! UINavigationController).topViewController
+            
+            controller!.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller!.navigationItem.leftItemsSupplementBackButton = true
         }
         
         if segue.identifier == "edObjectivesSegue" {
