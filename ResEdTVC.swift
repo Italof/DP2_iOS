@@ -12,6 +12,8 @@ class ResEdTVC: UITableViewController {
 
     let array = ["Resultado Estudiantil 1","Resultado Estudiantil 2","Resultado Estudiantil 3","Resultado Estudiantil 4"]
     
+    let sem = ["2014-2", "2015-1", "2015-2", "2016-1"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,19 +29,22 @@ class ResEdTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return self.sem.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.array.count
+        return 1
     }
 
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sem[section]
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("resCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = self.array[indexPath.row]
+        cell.textLabel?.text = self.array[indexPath.section]
 
         return cell
     }

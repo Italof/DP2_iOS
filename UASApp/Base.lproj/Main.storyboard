@@ -471,7 +471,7 @@
                                 </tableViewCellContentView>
                                 <color key="tintColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="8ay-81-CQK" kind="show" id="KPj-kU-PDl"/>
+                                    <segue destination="8ay-81-CQK" kind="show" identifier="objectiveDetailSegue" id="KPj-kU-PDl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1948,7 +1948,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WBq-da-cRG"/>
+        <segue reference="mP9-cK-Hgs"/>
         <segue reference="ClM-dX-do7"/>
-        <segue reference="0A6-2X-7lb"/>
     </inferredMetricsTieBreakers>
 </document>

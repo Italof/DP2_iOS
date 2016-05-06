@@ -10,7 +10,8 @@ import UIKit
 
 class ObjetivosEdTVC: UITableViewController {
 
-    let array = ["Objetivo Educacional 1", "Objetivo Educacional 1", "Objetivo Educacional 2", "Objetivo Educacional 3"]
+    let array = ["Objetivo Educacional 1", "Objetivo Educacional 2", "Objetivo Educacional 3", "Objetivo Educacional 4"]
+    let sem = ["2014-2", "2015-1", "2015-2", "2016-1"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,24 +32,26 @@ class ObjetivosEdTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return self.sem.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.array.count
+        return 1
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("objEdCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = self.array[indexPath.row]
+        cell.textLabel?.text = self.array[indexPath.section]
 
         return cell
     }
     
-
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Ciclo: " + self.sem[section]
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -84,14 +87,15 @@ class ObjetivosEdTVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "objectiveDetailSegue" {
+            
+        }
     }
-    */
 
 }
