@@ -578,15 +578,15 @@
                                     <outlet property="lblDescription" destination="Y1K-AX-B4A" id="Abf-ZR-SDB"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="resultCell" textLabel="ZeL-gN-fEf" rowHeight="63" style="IBUITableViewCellStyleDefault" id="mT5-Yc-uBd" customClass="DescriptionCell" customModule="UASApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" textLabel="ZeL-gN-fEf" rowHeight="63" style="IBUITableViewCellStyleDefault" id="mT5-Yc-uBd" customClass="DescriptionCell" customModule="UASApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="258" width="600" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mT5-Yc-uBd" id="aAQ-FV-LPo">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="62.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="62.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZeL-gN-fEf">
-                                            <rect key="frame" x="15" y="0.0" width="550" height="62.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="62.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1984,7 +1984,7 @@
         <segue reference="WBq-da-cRG"/>
         <segue reference="FNz-fB-n7F"/>
         <segue reference="X6Y-a6-TN4"/>
-        <segue reference="mP9-cK-Hgs"/>
+        <segue reference="0A6-2X-7lb"/>
         <segue reference="ClM-dX-do7"/>
     </inferredMetricsTieBreakers>
 </document>

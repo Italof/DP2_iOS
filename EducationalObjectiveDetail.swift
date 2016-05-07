@@ -83,6 +83,7 @@ class EducationalObjectiveDetail: UITableViewController {
                 if indexPath.section == 2 {
                     let cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath) as! DescriptionCell
                     cell.lblDescription.text = self.objData[indexPath.section]
+                    
                     return cell
                     
                 } else {
