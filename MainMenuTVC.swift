@@ -32,29 +32,33 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
             case 1: //Inicio
                     self.performSegueWithIdentifier("startSegue", sender: self)
                     break
-            case 2: //Obj. Educacionales
+            case 2: //Facultades
+                    self.performSegueWithIdentifier("facultiesMenuSegue", sender: self)
+                    break
+            
+            case 3: //Obj. Educacionales
                     self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                     break
-            case 3: //Res. Estudiantiles
+            case 4: //Res. Estudiantiles
                     self.performSegueWithIdentifier("studentResSegue", sender: self)
                     break
-            case 4: //Rubricas
+            case 5: //Rubricas
                     self.performSegueWithIdentifier("rubricSegue", sender: self)
                     break
-            case 5: //Aspectos
+            case 6: //Aspectos
                     self.performSegueWithIdentifier("aspectSegue", sender: self)
                     break
 
-            case 6: //Cursos
+            case 7: //Cursos
                     self.performSegueWithIdentifier("coursesSegue", sender: self)
                     break
-            case 7: //Mejora Continua
+            case 8: //Mejora Continua
                     self.performSegueWithIdentifier("improvementSegue", sender: self)
                     break
-            case 8: //Resultados de Evaluaciones
+            case 9: //Resultados de Evaluaciones
                 
                     break
-            case 10: //Cerrar Sesion
+            case 11: //Cerrar Sesion
                 let alertController = UIAlertController(title: "Atención", message:
                     "¿Desea cerrar sesión?", preferredStyle: UIAlertControllerStyle.Alert)
                 
@@ -83,6 +87,10 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "startSegue" {
+            
+        }
+        
+        if segue.identifier == "facultiesMenuSegue" {
             
         }
         

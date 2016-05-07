@@ -94,7 +94,7 @@ class EspecialidadTVC: UITableViewController {
         // Delete action
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (alertController) -> Void in
             // Logs out
-            self.dismissViewControllerAnimated(true, completion: nil)
+            self.performSegueWithIdentifier("logoutSegue", sender: self)
         }))
         
         // Cancel action
@@ -110,6 +110,10 @@ class EspecialidadTVC: UITableViewController {
             let mainSVC = segue.destinationViewController as! UISplitViewController
             
             mainSVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        }
+        
+        if segue.identifier == "logoutSegue" {
+            
         }
     }
 
