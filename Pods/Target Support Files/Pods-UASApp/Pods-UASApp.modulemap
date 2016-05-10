@@ -1,0 +1,6 @@
+framework module Pods_UASApp {
+  umbrella header "Pods-UASApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

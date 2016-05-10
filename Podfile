@@ -6,6 +6,7 @@ use_frameworks!
 target 'UASApp' do
     
     pod 'Charts/Realm'
+    pod 'Alamofire', '~> 3.4'
     
 end
 
