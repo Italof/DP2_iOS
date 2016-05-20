@@ -1,13 +1,17 @@
 //
 //  Faculty.swift
-//  UASApp
+//  
 //
-//  Created by Karl Montenegro on 05/05/16.
-//  Copyright © 2016 puntobat. All rights reserved.
+//  Created by Karl Montenegro on 20/05/16.
+//
 //
 
 import Foundation
+import CoreData
 
-class Faculty{
-    var name:String = ""
+
+class Faculty: NSManagedObject {
+
+// Insert code here to add functionality to your managed object subclass
+
 }

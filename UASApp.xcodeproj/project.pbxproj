@@ -1,2443 +1,950 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>1ECEB7B40EC56702F44065AE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>47A29908FFCEF8327AC87990</string>
-				<string>F789B81BBD0D795DF386C07A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>47A29908FFCEF8327AC87990</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-UASApp.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-UASApp/Pods-UASApp.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6D2380F876F5553535F47D7C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-UASApp/Pods-UASApp-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>771470741CDACDFC009D5501</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77167A611CDD228F004C91BC</string>
-				<string>77167A5F1CDD2236004C91BC</string>
-				<string>77A24CC71CDD15EB006AA0B9</string>
-				<string>77A24CC51CDD1555006AA0B9</string>
-				<string>77A24C921CDBC91E006AA0B9</string>
-				<string>77A24C961CDBCFB5006AA0B9</string>
-				<string>778315761CDBBBF3008D9209</string>
-				<string>7783156D1CDAE525008D9209</string>
-				<string>771470951CDAE2AB009D5501</string>
-				<string>771470911CDAE23A009D5501</string>
-				<string>771470921CDAE23A009D5501</string>
-				<string>771470811CDAE034009D5501</string>
-				<string>771470831CDAE14D009D5501</string>
-				<string>771470841CDAE14D009D5501</string>
-				<string>771470851CDAE14D009D5501</string>
-				<string>771470861CDAE14D009D5501</string>
-				<string>771470871CDAE14D009D5501</string>
-				<string>771470881CDAE14D009D5501</string>
-				<string>771470891CDAE14D009D5501</string>
-				<string>771470751CDACE0C009D5501</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Icons</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470751CDACE0C009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>home-logo.png</string>
-			<key>path</key>
-			<string>UASApp/img/home-logo.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470761CDACE0C009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470751CDACE0C009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>771470771CDAD89C009D5501</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77167A681CDD3036004C91BC</string>
-				<string>77167A631CDD2324004C91BC</string>
-				<string>77167A561CDD16B7004C91BC</string>
-				<string>77167A551CDD16B0004C91BC</string>
-				<string>77A24CC21CDD10EF006AA0B9</string>
-				<string>77A24CB51CDCFDCA006AA0B9</string>
-				<string>77A24CAE1CDCACF9006AA0B9</string>
-				<string>77A24CA91CDCA6CF006AA0B9</string>
-				<string>77A24CA41CDC8D63006AA0B9</string>
-				<string>77A24C9E1CDC29A9006AA0B9</string>
-				<string>7783156F1CDAE621008D9209</string>
-				<string>77A24C941CDBCD98006AA0B9</string>
-				<string>77A24C981CDBD64E006AA0B9</string>
-				<string>77A24CB31CDCE1A1006AA0B9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7714707D1CDADB4E009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>UASApp-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>771470811CDAE034009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Home-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Home-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470821CDAE034009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470811CDAE034009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>771470831CDAE14D009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Aspectos-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Aspectos-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470841CDAE14D009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Criterios-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Criterios-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470851CDAE14D009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Cursos-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Cursos-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470861CDAE14D009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Especialidad-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Especialidad-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470871CDAE14D009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Objetivos-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Objetivos-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470881CDAE14D009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Resultados-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Resultados-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470891CDAE14D009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Rubricas-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Rubricas-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7714708A1CDAE14D009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470831CDAE14D009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7714708B1CDAE14D009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470841CDAE14D009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7714708C1CDAE14D009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470851CDAE14D009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7714708D1CDAE14D009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470861CDAE14D009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7714708E1CDAE14D009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470871CDAE14D009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7714708F1CDAE14D009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470881CDAE14D009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>771470901CDAE14D009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470891CDAE14D009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>771470911CDAE23A009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Evaluaciones-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Evaluaciones-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470921CDAE23A009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Mejora-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Mejora-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470931CDAE23A009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470911CDAE23A009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>771470941CDAE23A009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470921CDAE23A009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>771470951CDAE2AB009D5501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>person-placeholder.png</string>
-			<key>path</key>
-			<string>UASApp/img/person-placeholder.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>771470961CDAE2AB009D5501</key>
-		<dict>
-			<key>fileRef</key>
-			<string>771470951CDAE2AB009D5501</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A551CDD16B0004C91BC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77167A571CDD16C7004C91BC</string>
-				<string>77167A591CDD16DD004C91BC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Suggestions</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A561CDD16B7004C91BC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77167A5B1CDD16EB004C91BC</string>
-				<string>77167A5D1CDD1DBB004C91BC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ImprovementPlans</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A571CDD16C7004C91BC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SuggestionCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A581CDD16C7004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A571CDD16C7004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A591CDD16DD004C91BC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Suggestions.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A5A1CDD16DD004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A591CDD16DD004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A5B1CDD16EB004C91BC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ImprovementPlans.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A5C1CDD16EB004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A5B1CDD16EB004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A5D1CDD1DBB004C91BC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ImprovementCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A5E1CDD1DBB004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A5D1CDD1DBB004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A5F1CDD2236004C91BC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Download-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Download-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A601CDD2236004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A5F1CDD2236004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A611CDD228F004C91BC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Download-Filled-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Download-Filled-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A621CDD228F004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A611CDD228F004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A631CDD2324004C91BC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77167A641CDD233F004C91BC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>EvaluationResults</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A641CDD233F004C91BC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>EvaluationResults.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A651CDD233F004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A641CDD233F004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A661CDD2BAA004C91BC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>RubricCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A671CDD2BAA004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A661CDD2BAA004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A681CDD3036004C91BC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77167A6B1CDD30E2004C91BC</string>
-				<string>77167A6D1CDD30F0004C91BC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Criteria</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A6B1CDD30E2004C91BC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CriteriaDetail.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A6C1CDD30E2004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A6B1CDD30E2004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A6D1CDD30F0004C91BC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CriteriaLevelCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A6E1CDD30F0004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A6D1CDD30F0004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77167A6F1CDD3A81004C91BC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>EdResultDescriptionCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77167A701CDD3A81004C91BC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77167A6F1CDD3A81004C91BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7783156D1CDAE525008D9209</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Menu-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Menu-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7783156E1CDAE525008D9209</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7783156D1CDAE525008D9209</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7783156F1CDAE621008D9209</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>EspecialidadTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>778315701CDAE621008D9209</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7783156F1CDAE621008D9209</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>778315711CDBB828008D9209</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>778315721CDBB835008D9209</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Model</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>778315721CDBB835008D9209</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Faculty.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>778315731CDBB835008D9209</key>
-		<dict>
-			<key>fileRef</key>
-			<string>778315721CDBB835008D9209</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>778315761CDBBBF3008D9209</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>University-50.png</string>
-			<key>path</key>
-			<string>UASApp/img/University-50.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>778315771CDBBBF3008D9209</key>
-		<dict>
-			<key>fileRef</key>
-			<string>778315761CDBBBF3008D9209</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24C921CDBC91E006AA0B9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>University Filled-50.png</string>
-			<key>path</key>
-			<string>UASApp/img/University Filled-50.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24C931CDBC91E006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24C921CDBC91E006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24C941CDBCD98006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MainMenuTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24C951CDBCD98006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24C941CDBCD98006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24C961CDBCFB5006AA0B9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Salir-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Salir-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24C971CDBCFB5006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24C961CDBCFB5006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24C981CDBD64E006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MasterSVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24C991CDBD64E006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24C981CDBD64E006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24C9A1CDC1885006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ObjetivosEdTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24C9B1CDC1885006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24C9A1CDC1885006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24C9E1CDC29A9006AA0B9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77A24C9A1CDC1885006AA0B9</string>
-				<string>77A24CA11CDC2AD1006AA0B9</string>
-				<string>77A24C9F1CDC29C1006AA0B9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Objetivos Educacionales</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24C9F1CDC29C1006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>EducationalObjectiveDetail.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CA01CDC29C1006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24C9F1CDC29C1006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CA11CDC2AD1006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DescriptionCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CA21CDC2AD1006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CA11CDC2AD1006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CA41CDC8D63006AA0B9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77A24CA51CDC8D8C006AA0B9</string>
-				<string>77A24CA71CDC9777006AA0B9</string>
-				<string>77167A6F1CDD3A81004C91BC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resutados Estudiantiles</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CA51CDC8D8C006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ResEdTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CA61CDC8D8C006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CA51CDC8D8C006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CA71CDC9777006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ResEdDetalleTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CA81CDC9777006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CA71CDC9777006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CA91CDCA6CF006AA0B9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77A24CAA1CDCA6DF006AA0B9</string>
-				<string>77A24CAC1CDCA8E7006AA0B9</string>
-				<string>77167A661CDD2BAA004C91BC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Rubrics</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CAA1CDCA6DF006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Rubrics.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CAB1CDCA6DF006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CAA1CDCA6DF006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CAC1CDCA8E7006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>RubricDetail.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CAD1CDCA8E7006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CAC1CDCA8E7006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CAE1CDCACF9006AA0B9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77A24CAF1CDCAD0C006AA0B9</string>
-				<string>77A24CB11CDCADA7006AA0B9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Aspects</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CAF1CDCAD0C006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AspectosTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CB01CDCAD0C006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CAF1CDCAD0C006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CB11CDCADA7006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AspectoDetailTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CB21CDCADA7006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CB11CDCADA7006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CB31CDCE1A1006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>InicioVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CB41CDCE1A1006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CB31CDCE1A1006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CB51CDCFDCA006AA0B9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77A24CB61CDCFDDB006AA0B9</string>
-				<string>77A24CB81CDD052D006AA0B9</string>
-				<string>77A24CBA1CDD07C3006AA0B9</string>
-				<string>77A24CBE1CDD08FB006AA0B9</string>
-				<string>77A24CC01CDD0A5E006AA0B9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Cursos</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CB61CDCFDDB006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CursosTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CB71CDCFDDB006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CB61CDCFDDB006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CB81CDD052D006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CursoCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CB91CDD052D006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CB81CDD052D006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CBA1CDD07C3006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ProfesorCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CBB1CDD07C3006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CBA1CDD07C3006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CBE1CDD08FB006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CursoDetalleTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CBF1CDD08FB006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CBE1CDD08FB006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CC01CDD0A5E006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>TeacherCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CC11CDD0A5E006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CC01CDD0A5E006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CC21CDD10EF006AA0B9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77A24CC31CDD1106006AA0B9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Teachers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CC31CDD1106006AA0B9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>TeacherModal.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CC41CDD1106006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CC31CDD1106006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CC51CDD1555006AA0B9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Sugerencias-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Sugerencias-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CC61CDD1555006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CC51CDD1555006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77A24CC71CDD15EB006AA0B9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>name</key>
-			<string>Improve-30.png</string>
-			<key>path</key>
-			<string>UASApp/img/Improve-30.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77A24CC81CDD15EB006AA0B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A24CC71CDD15EB006AA0B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77E1983D1CD7C85300782B72</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>778315711CDBB828008D9209</string>
-				<string>771470771CDAD89C009D5501</string>
-				<string>771470741CDACDFC009D5501</string>
-				<string>77E198481CD7C85300782B72</string>
-				<string>77E198601CD7C85300782B72</string>
-				<string>77E1986B1CD7C85300782B72</string>
-				<string>77E198471CD7C85300782B72</string>
-				<string>1ECEB7B40EC56702F44065AE</string>
-				<string>C8A0BAB04DAE3554E00311AA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E1983E1CD7C85300782B72</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>puntobat</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>77E198451CD7C85300782B72</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>DevelopmentTeam</key>
-						<string>UH6DXP9SXY</string>
-					</dict>
-					<key>77E1985C1CD7C85300782B72</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>DevelopmentTeam</key>
-						<string>UH6DXP9SXY</string>
-						<key>TestTargetID</key>
-						<string>77E198451CD7C85300782B72</string>
-					</dict>
-					<key>77E198671CD7C85300782B72</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>DevelopmentTeam</key>
-						<string>UH6DXP9SXY</string>
-						<key>TestTargetID</key>
-						<string>77E198451CD7C85300782B72</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>77E198411CD7C85300782B72</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>77E1983D1CD7C85300782B72</string>
-			<key>productRefGroup</key>
-			<string>77E198471CD7C85300782B72</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>77E198451CD7C85300782B72</string>
-				<string>77E1985C1CD7C85300782B72</string>
-				<string>77E198671CD7C85300782B72</string>
-			</array>
-		</dict>
-		<key>77E198411CD7C85300782B72</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>77E1986F1CD7C85300782B72</string>
-				<string>77E198701CD7C85300782B72</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>77E198421CD7C85300782B72</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>77167A651CDD233F004C91BC</string>
-				<string>778315701CDAE621008D9209</string>
-				<string>77A24CBB1CDD07C3006AA0B9</string>
-				<string>77E1984C1CD7C85300782B72</string>
-				<string>77167A701CDD3A81004C91BC</string>
-				<string>77A24CB91CDD052D006AA0B9</string>
-				<string>77167A6E1CDD30F0004C91BC</string>
-				<string>77167A5C1CDD16EB004C91BC</string>
-				<string>77A24CAD1CDCA8E7006AA0B9</string>
-				<string>77167A581CDD16C7004C91BC</string>
-				<string>778315731CDBB835008D9209</string>
-				<string>77A24CC41CDD1106006AA0B9</string>
-				<string>77A24C951CDBCD98006AA0B9</string>
-				<string>77167A5E1CDD1DBB004C91BC</string>
-				<string>77167A671CDD2BAA004C91BC</string>
-				<string>77A24CA61CDC8D8C006AA0B9</string>
-				<string>77A24CC11CDD0A5E006AA0B9</string>
-				<string>77A24CBF1CDD08FB006AA0B9</string>
-				<string>77A24C991CDBD64E006AA0B9</string>
-				<string>77167A5A1CDD16DD004C91BC</string>
-				<string>77A24CA01CDC29C1006AA0B9</string>
-				<string>77A24C9B1CDC1885006AA0B9</string>
-				<string>77A24CAB1CDCA6DF006AA0B9</string>
-				<string>77A24CB71CDCFDDB006AA0B9</string>
-				<string>77A24CB41CDCE1A1006AA0B9</string>
-				<string>77167A6C1CDD30E2004C91BC</string>
-				<string>77A24CA21CDC2AD1006AA0B9</string>
-				<string>77E198521CD7C85300782B72</string>
-				<string>77A24CA81CDC9777006AA0B9</string>
-				<string>77A24CB21CDCADA7006AA0B9</string>
-				<string>77A24CB01CDCAD0C006AA0B9</string>
-				<string>77E1984A1CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>77E198431CD7C85300782B72</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A7415F5EF252708CA55CB8D5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>77E198441CD7C85300782B72</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>771470941CDAE23A009D5501</string>
-				<string>7714708A1CDAE14D009D5501</string>
-				<string>7714708D1CDAE14D009D5501</string>
-				<string>77A24C931CDBC91E006AA0B9</string>
-				<string>7783156E1CDAE525008D9209</string>
-				<string>7714708E1CDAE14D009D5501</string>
-				<string>77E198571CD7C85300782B72</string>
-				<string>77167A621CDD228F004C91BC</string>
-				<string>77E198541CD7C85300782B72</string>
-				<string>771470901CDAE14D009D5501</string>
-				<string>7714708F1CDAE14D009D5501</string>
-				<string>778315771CDBBBF3008D9209</string>
-				<string>771470961CDAE2AB009D5501</string>
-				<string>77A24CC81CDD15EB006AA0B9</string>
-				<string>77E1984F1CD7C85300782B72</string>
-				<string>771470821CDAE034009D5501</string>
-				<string>7714708B1CDAE14D009D5501</string>
-				<string>77167A601CDD2236004C91BC</string>
-				<string>77A24C971CDBCFB5006AA0B9</string>
-				<string>771470761CDACE0C009D5501</string>
-				<string>771470931CDAE23A009D5501</string>
-				<string>77A24CC61CDD1555006AA0B9</string>
-				<string>7714708C1CDAE14D009D5501</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>77E198451CD7C85300782B72</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>77E198711CD7C85300782B72</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F9AE39A5582319137AB50405</string>
-				<string>77E198421CD7C85300782B72</string>
-				<string>77E198431CD7C85300782B72</string>
-				<string>77E198441CD7C85300782B72</string>
-				<string>A2AB496746E2DACD540B7F30</string>
-				<string>6D2380F876F5553535F47D7C</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>UASApp</string>
-			<key>productName</key>
-			<string>UASApp</string>
-			<key>productReference</key>
-			<string>77E198461CD7C85300782B72</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>77E198461CD7C85300782B72</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>UASApp.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>77E198471CD7C85300782B72</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77E198461CD7C85300782B72</string>
-				<string>77E1985D1CD7C85300782B72</string>
-				<string>77E198681CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198481CD7C85300782B72</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7714707D1CDADB4E009D5501</string>
-				<string>77E198491CD7C85300782B72</string>
-				<string>77E1984B1CD7C85300782B72</string>
-				<string>77E1984D1CD7C85300782B72</string>
-				<string>77E198531CD7C85300782B72</string>
-				<string>77E198551CD7C85300782B72</string>
-				<string>77E198581CD7C85300782B72</string>
-				<string>77E198501CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>UASApp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198491CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E1984A1CD7C85300782B72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77E198491CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77E1984B1CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E1984C1CD7C85300782B72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77E1984B1CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77E1984D1CD7C85300782B72</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77E1984E1CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E1984E1CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E1984F1CD7C85300782B72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77E1984D1CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77E198501CD7C85300782B72</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77E198511CD7C85300782B72</string>
-			</array>
-			<key>currentVersion</key>
-			<string>77E198511CD7C85300782B72</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>path</key>
-			<string>UASApp.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>77E198511CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>UASApp.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198521CD7C85300782B72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77E198501CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77E198531CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198541CD7C85300782B72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77E198531CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77E198551CD7C85300782B72</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77E198561CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198561CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198571CD7C85300782B72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77E198551CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77E198581CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198591CD7C85300782B72</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>77E198621CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>77E1985A1CD7C85300782B72</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>77E1985B1CD7C85300782B72</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>77E1985C1CD7C85300782B72</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>77E198741CD7C85300782B72</string>
-			<key>buildPhases</key>
-			<array>
-				<string>77E198591CD7C85300782B72</string>
-				<string>77E1985A1CD7C85300782B72</string>
-				<string>77E1985B1CD7C85300782B72</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>77E1985F1CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>UASAppTests</string>
-			<key>productName</key>
-			<string>UASAppTests</string>
-			<key>productReference</key>
-			<string>77E1985D1CD7C85300782B72</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>77E1985D1CD7C85300782B72</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>UASAppTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>77E1985E1CD7C85300782B72</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>77E1983E1CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>77E198451CD7C85300782B72</string>
-			<key>remoteInfo</key>
-			<string>UASApp</string>
-		</dict>
-		<key>77E1985F1CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>77E198451CD7C85300782B72</string>
-			<key>targetProxy</key>
-			<string>77E1985E1CD7C85300782B72</string>
-		</dict>
-		<key>77E198601CD7C85300782B72</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77E198611CD7C85300782B72</string>
-				<string>77E198631CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>UASAppTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198611CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UASAppTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198621CD7C85300782B72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77E198611CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77E198631CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E198641CD7C85300782B72</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>77E1986D1CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>77E198651CD7C85300782B72</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>77E198661CD7C85300782B72</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>77E198671CD7C85300782B72</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>77E198771CD7C85300782B72</string>
-			<key>buildPhases</key>
-			<array>
-				<string>77E198641CD7C85300782B72</string>
-				<string>77E198651CD7C85300782B72</string>
-				<string>77E198661CD7C85300782B72</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>77E1986A1CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>UASAppUITests</string>
-			<key>productName</key>
-			<string>UASAppUITests</string>
-			<key>productReference</key>
-			<string>77E198681CD7C85300782B72</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>77E198681CD7C85300782B72</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>UASAppUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>77E198691CD7C85300782B72</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>77E1983E1CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>77E198451CD7C85300782B72</string>
-			<key>remoteInfo</key>
-			<string>UASApp</string>
-		</dict>
-		<key>77E1986A1CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>77E198451CD7C85300782B72</string>
-			<key>targetProxy</key>
-			<string>77E198691CD7C85300782B72</string>
-		</dict>
-		<key>77E1986B1CD7C85300782B72</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>77E1986C1CD7C85300782B72</string>
-				<string>77E1986E1CD7C85300782B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>UASAppUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E1986C1CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UASAppUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E1986D1CD7C85300782B72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77E1986C1CD7C85300782B72</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>77E1986E1CD7C85300782B72</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77E1986F1CD7C85300782B72</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>77E198701CD7C85300782B72</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>77E198711CD7C85300782B72</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>77E198721CD7C85300782B72</string>
-				<string>77E198731CD7C85300782B72</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>77E198721CD7C85300782B72</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>47A29908FFCEF8327AC87990</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>UASApp/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>puntobat.UASApp</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>UASApp-Bridging-Header.h</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>77E198731CD7C85300782B72</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F789B81BBD0D795DF386C07A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>UASApp/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>puntobat.UASApp</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>UASApp-Bridging-Header.h</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>77E198741CD7C85300782B72</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>77E198751CD7C85300782B72</string>
-				<string>77E198761CD7C85300782B72</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>77E198751CD7C85300782B72</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>UASAppTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>puntobat.UASAppTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/UASApp.app/UASApp</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>77E198761CD7C85300782B72</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>UASAppTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>puntobat.UASAppTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/UASApp.app/UASApp</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>77E198771CD7C85300782B72</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>77E198781CD7C85300782B72</string>
-				<string>77E198791CD7C85300782B72</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>77E198781CD7C85300782B72</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>UASAppUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>puntobat.UASAppUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>UASApp</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>77E198791CD7C85300782B72</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>UASAppUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>puntobat.UASAppUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>UASApp</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>91EC3011194695571EFCB348</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_UASApp.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A2AB496746E2DACD540B7F30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-UASApp/Pods-UASApp-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A7415F5EF252708CA55CB8D5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>91EC3011194695571EFCB348</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C8A0BAB04DAE3554E00311AA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>91EC3011194695571EFCB348</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F789B81BBD0D795DF386C07A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-UASApp.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-UASApp/Pods-UASApp.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F9AE39A5582319137AB50405</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>77E1983E1CD7C85300782B72</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		771470761CDACE0C009D5501 /* home-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470751CDACE0C009D5501 /* home-logo.png */; };
+		771470821CDAE034009D5501 /* Home-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470811CDAE034009D5501 /* Home-30.png */; };
+		7714708A1CDAE14D009D5501 /* Aspectos-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470831CDAE14D009D5501 /* Aspectos-30.png */; };
+		7714708B1CDAE14D009D5501 /* Criterios-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470841CDAE14D009D5501 /* Criterios-30.png */; };
+		7714708C1CDAE14D009D5501 /* Cursos-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470851CDAE14D009D5501 /* Cursos-30.png */; };
+		7714708D1CDAE14D009D5501 /* Especialidad-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470861CDAE14D009D5501 /* Especialidad-30.png */; };
+		7714708E1CDAE14D009D5501 /* Objetivos-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470871CDAE14D009D5501 /* Objetivos-30.png */; };
+		7714708F1CDAE14D009D5501 /* Resultados-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470881CDAE14D009D5501 /* Resultados-30.png */; };
+		771470901CDAE14D009D5501 /* Rubricas-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470891CDAE14D009D5501 /* Rubricas-30.png */; };
+		771470931CDAE23A009D5501 /* Evaluaciones-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470911CDAE23A009D5501 /* Evaluaciones-30.png */; };
+		771470941CDAE23A009D5501 /* Mejora-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470921CDAE23A009D5501 /* Mejora-30.png */; };
+		771470961CDAE2AB009D5501 /* person-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 771470951CDAE2AB009D5501 /* person-placeholder.png */; };
+		77167A581CDD16C7004C91BC /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A571CDD16C7004C91BC /* SuggestionCell.swift */; };
+		77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A591CDD16DD004C91BC /* Suggestions.swift */; };
+		77167A5C1CDD16EB004C91BC /* ImprovementPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A5B1CDD16EB004C91BC /* ImprovementPlans.swift */; };
+		77167A5E1CDD1DBB004C91BC /* ImprovementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A5D1CDD1DBB004C91BC /* ImprovementCell.swift */; };
+		77167A601CDD2236004C91BC /* Download-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77167A5F1CDD2236004C91BC /* Download-30.png */; };
+		77167A621CDD228F004C91BC /* Download-Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77167A611CDD228F004C91BC /* Download-Filled-30.png */; };
+		77167A651CDD233F004C91BC /* EvaluationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A641CDD233F004C91BC /* EvaluationResults.swift */; };
+		77167A671CDD2BAA004C91BC /* RubricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A661CDD2BAA004C91BC /* RubricCell.swift */; };
+		77167A6C1CDD30E2004C91BC /* CriteriaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6B1CDD30E2004C91BC /* CriteriaDetail.swift */; };
+		77167A6E1CDD30F0004C91BC /* CriteriaLevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6D1CDD30F0004C91BC /* CriteriaLevelCell.swift */; };
+		77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */; };
+		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
+		774724621CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */; };
+		774724631CEF97B4005C1464 /* AcademicUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245F1CEF97B4005C1464 /* AcademicUnit.swift */; };
+		774724641CEF97B4005C1464 /* Faculty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774724601CEF97B4005C1464 /* Faculty+CoreDataProperties.swift */; };
+		774724651CEF97B4005C1464 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774724611CEF97B4005C1464 /* Faculty.swift */; };
+		774724681CEF9D0D005C1464 /* FacultyTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774724671CEF9D0D005C1464 /* FacultyTransactions.swift */; };
+		776A236F1CE28E4600D1FA08 /* Pods_UASApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */; };
+		776A23701CE28E6D00D1FA08 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236C1CE28E3900D1FA08 /* Alamofire.framework */; };
+		7783156E1CDAE525008D9209 /* Menu-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7783156D1CDAE525008D9209 /* Menu-30.png */; };
+		778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783156F1CDAE621008D9209 /* EspecialidadTVC.swift */; };
+		778315771CDBBBF3008D9209 /* University-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778315761CDBBBF3008D9209 /* University-50.png */; };
+		77A24C931CDBC91E006AA0B9 /* University Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A24C921CDBC91E006AA0B9 /* University Filled-50.png */; };
+		77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C941CDBCD98006AA0B9 /* MainMenuTVC.swift */; };
+		77A24C971CDBCFB5006AA0B9 /* Salir-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A24C961CDBCFB5006AA0B9 /* Salir-30.png */; };
+		77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C981CDBD64E006AA0B9 /* MasterSVC.swift */; };
+		77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C9A1CDC1885006AA0B9 /* ObjetivosEdTVC.swift */; };
+		77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24C9F1CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift */; };
+		77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CA11CDC2AD1006AA0B9 /* DescriptionCell.swift */; };
+		77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */; };
+		77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */; };
+		77A24CAB1CDCA6DF006AA0B9 /* Rubrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CAA1CDCA6DF006AA0B9 /* Rubrics.swift */; };
+		77A24CAD1CDCA8E7006AA0B9 /* RubricDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CAC1CDCA8E7006AA0B9 /* RubricDetail.swift */; };
+		77A24CB01CDCAD0C006AA0B9 /* AspectosTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CAF1CDCAD0C006AA0B9 /* AspectosTVC.swift */; };
+		77A24CB21CDCADA7006AA0B9 /* AspectoDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CB11CDCADA7006AA0B9 /* AspectoDetailTVC.swift */; };
+		77A24CB41CDCE1A1006AA0B9 /* InicioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CB31CDCE1A1006AA0B9 /* InicioVC.swift */; };
+		77A24CB71CDCFDDB006AA0B9 /* CursosTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CB61CDCFDDB006AA0B9 /* CursosTVC.swift */; };
+		77A24CB91CDD052D006AA0B9 /* CursoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CB81CDD052D006AA0B9 /* CursoCell.swift */; };
+		77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CBA1CDD07C3006AA0B9 /* ProfesorCell.swift */; };
+		77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CBE1CDD08FB006AA0B9 /* CursoDetalleTVC.swift */; };
+		77A24CC11CDD0A5E006AA0B9 /* TeacherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CC01CDD0A5E006AA0B9 /* TeacherCell.swift */; };
+		77A24CC41CDD1106006AA0B9 /* TeacherModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CC31CDD1106006AA0B9 /* TeacherModal.swift */; };
+		77A24CC61CDD1555006AA0B9 /* Sugerencias-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A24CC51CDD1555006AA0B9 /* Sugerencias-30.png */; };
+		77A24CC81CDD15EB006AA0B9 /* Improve-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A24CC71CDD15EB006AA0B9 /* Improve-30.png */; };
+		77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E198491CD7C85300782B72 /* AppDelegate.swift */; };
+		77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1984B1CD7C85300782B72 /* ViewController.swift */; };
+		77E1984F1CD7C85300782B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E1984D1CD7C85300782B72 /* Main.storyboard */; };
+		77E198521CD7C85300782B72 /* UASApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77E198501CD7C85300782B72 /* UASApp.xcdatamodeld */; };
+		77E198541CD7C85300782B72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E198531CD7C85300782B72 /* Assets.xcassets */; };
+		77E198571CD7C85300782B72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E198551CD7C85300782B72 /* LaunchScreen.storyboard */; };
+		77E198621CD7C85300782B72 /* UASAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E198611CD7C85300782B72 /* UASAppTests.swift */; };
+		77E1986D1CD7C85300782B72 /* UASAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1986C1CD7C85300782B72 /* UASAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77E1985E1CD7C85300782B72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77E1983E1CD7C85300782B72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77E198451CD7C85300782B72;
+			remoteInfo = UASApp;
+		};
+		77E198691CD7C85300782B72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77E1983E1CD7C85300782B72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77E198451CD7C85300782B72;
+			remoteInfo = UASApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47A29908FFCEF8327AC87990 /* Pods-UASApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UASApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UASApp/Pods-UASApp.debug.xcconfig"; sourceTree = "<group>"; };
+		771470751CDACE0C009D5501 /* home-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-logo.png"; path = "UASApp/img/home-logo.png"; sourceTree = "<group>"; };
+		7714707D1CDADB4E009D5501 /* UASApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UASApp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		771470811CDAE034009D5501 /* Home-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Home-30.png"; path = "UASApp/img/Home-30.png"; sourceTree = "<group>"; };
+		771470831CDAE14D009D5501 /* Aspectos-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Aspectos-30.png"; path = "UASApp/img/Aspectos-30.png"; sourceTree = "<group>"; };
+		771470841CDAE14D009D5501 /* Criterios-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Criterios-30.png"; path = "UASApp/img/Criterios-30.png"; sourceTree = "<group>"; };
+		771470851CDAE14D009D5501 /* Cursos-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursos-30.png"; path = "UASApp/img/Cursos-30.png"; sourceTree = "<group>"; };
+		771470861CDAE14D009D5501 /* Especialidad-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Especialidad-30.png"; path = "UASApp/img/Especialidad-30.png"; sourceTree = "<group>"; };
+		771470871CDAE14D009D5501 /* Objetivos-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Objetivos-30.png"; path = "UASApp/img/Objetivos-30.png"; sourceTree = "<group>"; };
+		771470881CDAE14D009D5501 /* Resultados-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Resultados-30.png"; path = "UASApp/img/Resultados-30.png"; sourceTree = "<group>"; };
+		771470891CDAE14D009D5501 /* Rubricas-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Rubricas-30.png"; path = "UASApp/img/Rubricas-30.png"; sourceTree = "<group>"; };
+		771470911CDAE23A009D5501 /* Evaluaciones-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Evaluaciones-30.png"; path = "UASApp/img/Evaluaciones-30.png"; sourceTree = "<group>"; };
+		771470921CDAE23A009D5501 /* Mejora-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mejora-30.png"; path = "UASApp/img/Mejora-30.png"; sourceTree = "<group>"; };
+		771470951CDAE2AB009D5501 /* person-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "person-placeholder.png"; path = "UASApp/img/person-placeholder.png"; sourceTree = "<group>"; };
+		77167A571CDD16C7004C91BC /* SuggestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
+		77167A591CDD16DD004C91BC /* Suggestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestions.swift; sourceTree = "<group>"; };
+		77167A5B1CDD16EB004C91BC /* ImprovementPlans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprovementPlans.swift; sourceTree = "<group>"; };
+		77167A5D1CDD1DBB004C91BC /* ImprovementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprovementCell.swift; sourceTree = "<group>"; };
+		77167A5F1CDD2236004C91BC /* Download-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Download-30.png"; path = "UASApp/img/Download-30.png"; sourceTree = "<group>"; };
+		77167A611CDD228F004C91BC /* Download-Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Download-Filled-30.png"; path = "UASApp/img/Download-Filled-30.png"; sourceTree = "<group>"; };
+		77167A641CDD233F004C91BC /* EvaluationResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationResults.swift; sourceTree = "<group>"; };
+		77167A661CDD2BAA004C91BC /* RubricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RubricCell.swift; sourceTree = "<group>"; };
+		77167A6B1CDD30E2004C91BC /* CriteriaDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriteriaDetail.swift; sourceTree = "<group>"; };
+		77167A6D1CDD30F0004C91BC /* CriteriaLevelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriteriaLevelCell.swift; sourceTree = "<group>"; };
+		77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdResultDescriptionCell.swift; sourceTree = "<group>"; };
+		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AcademicUnit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7747245F1CEF97B4005C1464 /* AcademicUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicUnit.swift; sourceTree = "<group>"; };
+		774724601CEF97B4005C1464 /* Faculty+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Faculty+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		774724611CEF97B4005C1464 /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
+		774724671CEF9D0D005C1464 /* FacultyTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyTransactions.swift; sourceTree = "<group>"; };
+		776A236C1CE28E3900D1FA08 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
+		776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UASApp.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Pods_UASApp.framework"; sourceTree = "<group>"; };
+		7783156D1CDAE525008D9209 /* Menu-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu-30.png"; path = "UASApp/img/Menu-30.png"; sourceTree = "<group>"; };
+		7783156F1CDAE621008D9209 /* EspecialidadTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EspecialidadTVC.swift; sourceTree = "<group>"; };
+		778315761CDBBBF3008D9209 /* University-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "University-50.png"; path = "UASApp/img/University-50.png"; sourceTree = "<group>"; };
+		77A24C921CDBC91E006AA0B9 /* University Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "University Filled-50.png"; path = "UASApp/img/University Filled-50.png"; sourceTree = "<group>"; };
+		77A24C941CDBCD98006AA0B9 /* MainMenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuTVC.swift; sourceTree = "<group>"; };
+		77A24C961CDBCFB5006AA0B9 /* Salir-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Salir-30.png"; path = "UASApp/img/Salir-30.png"; sourceTree = "<group>"; };
+		77A24C981CDBD64E006AA0B9 /* MasterSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterSVC.swift; sourceTree = "<group>"; };
+		77A24C9A1CDC1885006AA0B9 /* ObjetivosEdTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjetivosEdTVC.swift; sourceTree = "<group>"; };
+		77A24C9F1CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalObjectiveDetail.swift; sourceTree = "<group>"; };
+		77A24CA11CDC2AD1006AA0B9 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResEdTVC.swift; sourceTree = "<group>"; };
+		77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResEdDetalleTVC.swift; sourceTree = "<group>"; };
+		77A24CAA1CDCA6DF006AA0B9 /* Rubrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rubrics.swift; sourceTree = "<group>"; };
+		77A24CAC1CDCA8E7006AA0B9 /* RubricDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RubricDetail.swift; sourceTree = "<group>"; };
+		77A24CAF1CDCAD0C006AA0B9 /* AspectosTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectosTVC.swift; sourceTree = "<group>"; };
+		77A24CB11CDCADA7006AA0B9 /* AspectoDetailTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectoDetailTVC.swift; sourceTree = "<group>"; };
+		77A24CB31CDCE1A1006AA0B9 /* InicioVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InicioVC.swift; sourceTree = "<group>"; };
+		77A24CB61CDCFDDB006AA0B9 /* CursosTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursosTVC.swift; sourceTree = "<group>"; };
+		77A24CB81CDD052D006AA0B9 /* CursoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursoCell.swift; sourceTree = "<group>"; };
+		77A24CBA1CDD07C3006AA0B9 /* ProfesorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfesorCell.swift; sourceTree = "<group>"; };
+		77A24CBE1CDD08FB006AA0B9 /* CursoDetalleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursoDetalleTVC.swift; sourceTree = "<group>"; };
+		77A24CC01CDD0A5E006AA0B9 /* TeacherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherCell.swift; sourceTree = "<group>"; };
+		77A24CC31CDD1106006AA0B9 /* TeacherModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherModal.swift; sourceTree = "<group>"; };
+		77A24CC51CDD1555006AA0B9 /* Sugerencias-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sugerencias-30.png"; path = "UASApp/img/Sugerencias-30.png"; sourceTree = "<group>"; };
+		77A24CC71CDD15EB006AA0B9 /* Improve-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Improve-30.png"; path = "UASApp/img/Improve-30.png"; sourceTree = "<group>"; };
+		77E198461CD7C85300782B72 /* UASApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UASApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E198491CD7C85300782B72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		77E1984B1CD7C85300782B72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77E1984E1CD7C85300782B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		77E198511CD7C85300782B72 /* UASApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UASApp.xcdatamodel; sourceTree = "<group>"; };
+		77E198531CD7C85300782B72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77E198561CD7C85300782B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77E198581CD7C85300782B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E1985D1CD7C85300782B72 /* UASAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UASAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E198611CD7C85300782B72 /* UASAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UASAppTests.swift; sourceTree = "<group>"; };
+		77E198631CD7C85300782B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E198681CD7C85300782B72 /* UASAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UASAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E1986C1CD7C85300782B72 /* UASAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UASAppUITests.swift; sourceTree = "<group>"; };
+		77E1986E1CD7C85300782B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91EC3011194695571EFCB348 /* Pods_UASApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UASApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UASApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-UASApp/Pods-UASApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77E198431CD7C85300782B72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				776A23701CE28E6D00D1FA08 /* Alamofire.framework in Frameworks */,
+				776A236F1CE28E4600D1FA08 /* Pods_UASApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E1985A1CD7C85300782B72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E198651CD7C85300782B72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1ECEB7B40EC56702F44065AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47A29908FFCEF8327AC87990 /* Pods-UASApp.debug.xcconfig */,
+				F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		771470741CDACDFC009D5501 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				77167A611CDD228F004C91BC /* Download-Filled-30.png */,
+				77167A5F1CDD2236004C91BC /* Download-30.png */,
+				77A24CC71CDD15EB006AA0B9 /* Improve-30.png */,
+				77A24CC51CDD1555006AA0B9 /* Sugerencias-30.png */,
+				77A24C921CDBC91E006AA0B9 /* University Filled-50.png */,
+				77A24C961CDBCFB5006AA0B9 /* Salir-30.png */,
+				778315761CDBBBF3008D9209 /* University-50.png */,
+				7783156D1CDAE525008D9209 /* Menu-30.png */,
+				771470951CDAE2AB009D5501 /* person-placeholder.png */,
+				771470911CDAE23A009D5501 /* Evaluaciones-30.png */,
+				771470921CDAE23A009D5501 /* Mejora-30.png */,
+				771470811CDAE034009D5501 /* Home-30.png */,
+				771470831CDAE14D009D5501 /* Aspectos-30.png */,
+				771470841CDAE14D009D5501 /* Criterios-30.png */,
+				771470851CDAE14D009D5501 /* Cursos-30.png */,
+				771470861CDAE14D009D5501 /* Especialidad-30.png */,
+				771470871CDAE14D009D5501 /* Objetivos-30.png */,
+				771470881CDAE14D009D5501 /* Resultados-30.png */,
+				771470891CDAE14D009D5501 /* Rubricas-30.png */,
+				771470751CDACE0C009D5501 /* home-logo.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		771470771CDAD89C009D5501 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77167A681CDD3036004C91BC /* Criteria */,
+				77167A631CDD2324004C91BC /* EvaluationResults */,
+				77167A561CDD16B7004C91BC /* ImprovementPlans */,
+				77167A551CDD16B0004C91BC /* Suggestions */,
+				77A24CC21CDD10EF006AA0B9 /* Teachers */,
+				77A24CB51CDCFDCA006AA0B9 /* Cursos */,
+				77A24CAE1CDCACF9006AA0B9 /* Aspects */,
+				77A24CA91CDCA6CF006AA0B9 /* Rubrics */,
+				77A24CA41CDC8D63006AA0B9 /* Resutados Estudiantiles */,
+				77A24C9E1CDC29A9006AA0B9 /* Objetivos Educacionales */,
+				7783156F1CDAE621008D9209 /* EspecialidadTVC.swift */,
+				77A24C941CDBCD98006AA0B9 /* MainMenuTVC.swift */,
+				77A24C981CDBD64E006AA0B9 /* MasterSVC.swift */,
+				77A24CB31CDCE1A1006AA0B9 /* InicioVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		77167A551CDD16B0004C91BC /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				77167A571CDD16C7004C91BC /* SuggestionCell.swift */,
+				77167A591CDD16DD004C91BC /* Suggestions.swift */,
+			);
+			name = Suggestions;
+			sourceTree = "<group>";
+		};
+		77167A561CDD16B7004C91BC /* ImprovementPlans */ = {
+			isa = PBXGroup;
+			children = (
+				77167A5B1CDD16EB004C91BC /* ImprovementPlans.swift */,
+				77167A5D1CDD1DBB004C91BC /* ImprovementCell.swift */,
+			);
+			name = ImprovementPlans;
+			sourceTree = "<group>";
+		};
+		77167A631CDD2324004C91BC /* EvaluationResults */ = {
+			isa = PBXGroup;
+			children = (
+				77167A641CDD233F004C91BC /* EvaluationResults.swift */,
+			);
+			name = EvaluationResults;
+			sourceTree = "<group>";
+		};
+		77167A681CDD3036004C91BC /* Criteria */ = {
+			isa = PBXGroup;
+			children = (
+				77167A6B1CDD30E2004C91BC /* CriteriaDetail.swift */,
+				77167A6D1CDD30F0004C91BC /* CriteriaLevelCell.swift */,
+			);
+			name = Criteria;
+			sourceTree = "<group>";
+		};
+		774724661CEF9949005C1464 /* Data Loading */ = {
+			isa = PBXGroup;
+			children = (
+				774724671CEF9D0D005C1464 /* FacultyTransactions.swift */,
+			);
+			name = "Data Loading";
+			sourceTree = "<group>";
+		};
+		778315711CDBB828008D9209 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */,
+				7747245F1CEF97B4005C1464 /* AcademicUnit.swift */,
+				774724601CEF97B4005C1464 /* Faculty+CoreDataProperties.swift */,
+				774724611CEF97B4005C1464 /* Faculty.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		77A24C9E1CDC29A9006AA0B9 /* Objetivos Educacionales */ = {
+			isa = PBXGroup;
+			children = (
+				77A24C9A1CDC1885006AA0B9 /* ObjetivosEdTVC.swift */,
+				77A24CA11CDC2AD1006AA0B9 /* DescriptionCell.swift */,
+				77A24C9F1CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift */,
+			);
+			name = "Objetivos Educacionales";
+			sourceTree = "<group>";
+		};
+		77A24CA41CDC8D63006AA0B9 /* Resutados Estudiantiles */ = {
+			isa = PBXGroup;
+			children = (
+				77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */,
+				77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */,
+				77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */,
+			);
+			name = "Resutados Estudiantiles";
+			sourceTree = "<group>";
+		};
+		77A24CA91CDCA6CF006AA0B9 /* Rubrics */ = {
+			isa = PBXGroup;
+			children = (
+				77A24CAA1CDCA6DF006AA0B9 /* Rubrics.swift */,
+				77A24CAC1CDCA8E7006AA0B9 /* RubricDetail.swift */,
+				77167A661CDD2BAA004C91BC /* RubricCell.swift */,
+			);
+			name = Rubrics;
+			sourceTree = "<group>";
+		};
+		77A24CAE1CDCACF9006AA0B9 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				77A24CAF1CDCAD0C006AA0B9 /* AspectosTVC.swift */,
+				77A24CB11CDCADA7006AA0B9 /* AspectoDetailTVC.swift */,
+			);
+			name = Aspects;
+			sourceTree = "<group>";
+		};
+		77A24CB51CDCFDCA006AA0B9 /* Cursos */ = {
+			isa = PBXGroup;
+			children = (
+				77A24CB61CDCFDDB006AA0B9 /* CursosTVC.swift */,
+				77A24CB81CDD052D006AA0B9 /* CursoCell.swift */,
+				77A24CBA1CDD07C3006AA0B9 /* ProfesorCell.swift */,
+				77A24CBE1CDD08FB006AA0B9 /* CursoDetalleTVC.swift */,
+				77A24CC01CDD0A5E006AA0B9 /* TeacherCell.swift */,
+			);
+			name = Cursos;
+			sourceTree = "<group>";
+		};
+		77A24CC21CDD10EF006AA0B9 /* Teachers */ = {
+			isa = PBXGroup;
+			children = (
+				77A24CC31CDD1106006AA0B9 /* TeacherModal.swift */,
+			);
+			name = Teachers;
+			sourceTree = "<group>";
+		};
+		77E1983D1CD7C85300782B72 = {
+			isa = PBXGroup;
+			children = (
+				774724661CEF9949005C1464 /* Data Loading */,
+				778315711CDBB828008D9209 /* Model */,
+				771470771CDAD89C009D5501 /* Controllers */,
+				771470741CDACDFC009D5501 /* Icons */,
+				77E198481CD7C85300782B72 /* UASApp */,
+				77E198601CD7C85300782B72 /* UASAppTests */,
+				77E1986B1CD7C85300782B72 /* UASAppUITests */,
+				77E198471CD7C85300782B72 /* Products */,
+				1ECEB7B40EC56702F44065AE /* Pods */,
+				C8A0BAB04DAE3554E00311AA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		77E198471CD7C85300782B72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77E198461CD7C85300782B72 /* UASApp.app */,
+				77E1985D1CD7C85300782B72 /* UASAppTests.xctest */,
+				77E198681CD7C85300782B72 /* UASAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77E198481CD7C85300782B72 /* UASApp */ = {
+			isa = PBXGroup;
+			children = (
+				7714707D1CDADB4E009D5501 /* UASApp-Bridging-Header.h */,
+				77E198491CD7C85300782B72 /* AppDelegate.swift */,
+				77E1984B1CD7C85300782B72 /* ViewController.swift */,
+				77E1984D1CD7C85300782B72 /* Main.storyboard */,
+				77E198531CD7C85300782B72 /* Assets.xcassets */,
+				77E198551CD7C85300782B72 /* LaunchScreen.storyboard */,
+				77E198581CD7C85300782B72 /* Info.plist */,
+				77E198501CD7C85300782B72 /* UASApp.xcdatamodeld */,
+				7747245C1CEF8781005C1464 /* Connection.swift */,
+			);
+			path = UASApp;
+			sourceTree = "<group>";
+		};
+		77E198601CD7C85300782B72 /* UASAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				77E198611CD7C85300782B72 /* UASAppTests.swift */,
+				77E198631CD7C85300782B72 /* Info.plist */,
+			);
+			path = UASAppTests;
+			sourceTree = "<group>";
+		};
+		77E1986B1CD7C85300782B72 /* UASAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				77E1986C1CD7C85300782B72 /* UASAppUITests.swift */,
+				77E1986E1CD7C85300782B72 /* Info.plist */,
+			);
+			path = UASAppUITests;
+			sourceTree = "<group>";
+		};
+		C8A0BAB04DAE3554E00311AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */,
+				776A236C1CE28E3900D1FA08 /* Alamofire.framework */,
+				91EC3011194695571EFCB348 /* Pods_UASApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77E198451CD7C85300782B72 /* UASApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77E198711CD7C85300782B72 /* Build configuration list for PBXNativeTarget "UASApp" */;
+			buildPhases = (
+				F9AE39A5582319137AB50405 /* Check Pods Manifest.lock */,
+				77E198421CD7C85300782B72 /* Sources */,
+				77E198431CD7C85300782B72 /* Frameworks */,
+				77E198441CD7C85300782B72 /* Resources */,
+				A2AB496746E2DACD540B7F30 /* Embed Pods Frameworks */,
+				6D2380F876F5553535F47D7C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UASApp;
+			productName = UASApp;
+			productReference = 77E198461CD7C85300782B72 /* UASApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		77E1985C1CD7C85300782B72 /* UASAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77E198741CD7C85300782B72 /* Build configuration list for PBXNativeTarget "UASAppTests" */;
+			buildPhases = (
+				77E198591CD7C85300782B72 /* Sources */,
+				77E1985A1CD7C85300782B72 /* Frameworks */,
+				77E1985B1CD7C85300782B72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77E1985F1CD7C85300782B72 /* PBXTargetDependency */,
+			);
+			name = UASAppTests;
+			productName = UASAppTests;
+			productReference = 77E1985D1CD7C85300782B72 /* UASAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		77E198671CD7C85300782B72 /* UASAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77E198771CD7C85300782B72 /* Build configuration list for PBXNativeTarget "UASAppUITests" */;
+			buildPhases = (
+				77E198641CD7C85300782B72 /* Sources */,
+				77E198651CD7C85300782B72 /* Frameworks */,
+				77E198661CD7C85300782B72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77E1986A1CD7C85300782B72 /* PBXTargetDependency */,
+			);
+			name = UASAppUITests;
+			productName = UASAppUITests;
+			productReference = 77E198681CD7C85300782B72 /* UASAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77E1983E1CD7C85300782B72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = puntobat;
+				TargetAttributes = {
+					77E198451CD7C85300782B72 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UH6DXP9SXY;
+					};
+					77E1985C1CD7C85300782B72 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UH6DXP9SXY;
+						TestTargetID = 77E198451CD7C85300782B72;
+					};
+					77E198671CD7C85300782B72 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UH6DXP9SXY;
+						TestTargetID = 77E198451CD7C85300782B72;
+					};
+				};
+			};
+			buildConfigurationList = 77E198411CD7C85300782B72 /* Build configuration list for PBXProject "UASApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77E1983D1CD7C85300782B72;
+			productRefGroup = 77E198471CD7C85300782B72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77E198451CD7C85300782B72 /* UASApp */,
+				77E1985C1CD7C85300782B72 /* UASAppTests */,
+				77E198671CD7C85300782B72 /* UASAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77E198441CD7C85300782B72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771470941CDAE23A009D5501 /* Mejora-30.png in Resources */,
+				7714708A1CDAE14D009D5501 /* Aspectos-30.png in Resources */,
+				7714708D1CDAE14D009D5501 /* Especialidad-30.png in Resources */,
+				77A24C931CDBC91E006AA0B9 /* University Filled-50.png in Resources */,
+				7783156E1CDAE525008D9209 /* Menu-30.png in Resources */,
+				7714708E1CDAE14D009D5501 /* Objetivos-30.png in Resources */,
+				77E198571CD7C85300782B72 /* LaunchScreen.storyboard in Resources */,
+				77167A621CDD228F004C91BC /* Download-Filled-30.png in Resources */,
+				77E198541CD7C85300782B72 /* Assets.xcassets in Resources */,
+				771470901CDAE14D009D5501 /* Rubricas-30.png in Resources */,
+				7714708F1CDAE14D009D5501 /* Resultados-30.png in Resources */,
+				778315771CDBBBF3008D9209 /* University-50.png in Resources */,
+				771470961CDAE2AB009D5501 /* person-placeholder.png in Resources */,
+				77A24CC81CDD15EB006AA0B9 /* Improve-30.png in Resources */,
+				77E1984F1CD7C85300782B72 /* Main.storyboard in Resources */,
+				771470821CDAE034009D5501 /* Home-30.png in Resources */,
+				7714708B1CDAE14D009D5501 /* Criterios-30.png in Resources */,
+				77167A601CDD2236004C91BC /* Download-30.png in Resources */,
+				77A24C971CDBCFB5006AA0B9 /* Salir-30.png in Resources */,
+				771470761CDACE0C009D5501 /* home-logo.png in Resources */,
+				771470931CDAE23A009D5501 /* Evaluaciones-30.png in Resources */,
+				77A24CC61CDD1555006AA0B9 /* Sugerencias-30.png in Resources */,
+				7714708C1CDAE14D009D5501 /* Cursos-30.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E1985B1CD7C85300782B72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E198661CD7C85300782B72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D2380F876F5553535F47D7C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UASApp/Pods-UASApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2AB496746E2DACD540B7F30 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UASApp/Pods-UASApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9AE39A5582319137AB50405 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77E198421CD7C85300782B72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77167A651CDD233F004C91BC /* EvaluationResults.swift in Sources */,
+				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
+				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
+				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
+				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
+				77A24CB91CDD052D006AA0B9 /* CursoCell.swift in Sources */,
+				774724621CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift in Sources */,
+				77167A6E1CDD30F0004C91BC /* CriteriaLevelCell.swift in Sources */,
+				77167A5C1CDD16EB004C91BC /* ImprovementPlans.swift in Sources */,
+				77A24CAD1CDCA8E7006AA0B9 /* RubricDetail.swift in Sources */,
+				77167A581CDD16C7004C91BC /* SuggestionCell.swift in Sources */,
+				774724641CEF97B4005C1464 /* Faculty+CoreDataProperties.swift in Sources */,
+				774724681CEF9D0D005C1464 /* FacultyTransactions.swift in Sources */,
+				77A24CC41CDD1106006AA0B9 /* TeacherModal.swift in Sources */,
+				77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */,
+				77167A5E1CDD1DBB004C91BC /* ImprovementCell.swift in Sources */,
+				77167A671CDD2BAA004C91BC /* RubricCell.swift in Sources */,
+				77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */,
+				77A24CC11CDD0A5E006AA0B9 /* TeacherCell.swift in Sources */,
+				77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */,
+				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
+				774724651CEF97B4005C1464 /* Faculty.swift in Sources */,
+				77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */,
+				77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */,
+				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
+				77A24CAB1CDCA6DF006AA0B9 /* Rubrics.swift in Sources */,
+				77A24CB71CDCFDDB006AA0B9 /* CursosTVC.swift in Sources */,
+				77A24CB41CDCE1A1006AA0B9 /* InicioVC.swift in Sources */,
+				77167A6C1CDD30E2004C91BC /* CriteriaDetail.swift in Sources */,
+				7747245D1CEF8781005C1464 /* Connection.swift in Sources */,
+				77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */,
+				774724631CEF97B4005C1464 /* AcademicUnit.swift in Sources */,
+				77E198521CD7C85300782B72 /* UASApp.xcdatamodeld in Sources */,
+				77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */,
+				77A24CB21CDCADA7006AA0B9 /* AspectoDetailTVC.swift in Sources */,
+				77A24CB01CDCAD0C006AA0B9 /* AspectosTVC.swift in Sources */,
+				77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E198591CD7C85300782B72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E198621CD7C85300782B72 /* UASAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E198641CD7C85300782B72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E1986D1CD7C85300782B72 /* UASAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77E1985F1CD7C85300782B72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77E198451CD7C85300782B72 /* UASApp */;
+			targetProxy = 77E1985E1CD7C85300782B72 /* PBXContainerItemProxy */;
+		};
+		77E1986A1CD7C85300782B72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77E198451CD7C85300782B72 /* UASApp */;
+			targetProxy = 77E198691CD7C85300782B72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		77E1984D1CD7C85300782B72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77E1984E1CD7C85300782B72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		77E198551CD7C85300782B72 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77E198561CD7C85300782B72 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77E1986F1CD7C85300782B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77E198701CD7C85300782B72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77E198721CD7C85300782B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A29908FFCEF8327AC87990 /* Pods-UASApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = UASApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = puntobat.UASApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UASApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		77E198731CD7C85300782B72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = UASApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = puntobat.UASApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UASApp-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		77E198751CD7C85300782B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UASAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = puntobat.UASAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UASApp.app/UASApp";
+			};
+			name = Debug;
+		};
+		77E198761CD7C85300782B72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UASAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = puntobat.UASAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UASApp.app/UASApp";
+			};
+			name = Release;
+		};
+		77E198781CD7C85300782B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UASAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = puntobat.UASAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UASApp;
+			};
+			name = Debug;
+		};
+		77E198791CD7C85300782B72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UASAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = puntobat.UASAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UASApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77E198411CD7C85300782B72 /* Build configuration list for PBXProject "UASApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E1986F1CD7C85300782B72 /* Debug */,
+				77E198701CD7C85300782B72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77E198711CD7C85300782B72 /* Build configuration list for PBXNativeTarget "UASApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E198721CD7C85300782B72 /* Debug */,
+				77E198731CD7C85300782B72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77E198741CD7C85300782B72 /* Build configuration list for PBXNativeTarget "UASAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E198751CD7C85300782B72 /* Debug */,
+				77E198761CD7C85300782B72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77E198771CD7C85300782B72 /* Build configuration list for PBXNativeTarget "UASAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E198781CD7C85300782B72 /* Debug */,
+				77E198791CD7C85300782B72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		77E198501CD7C85300782B72 /* UASApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				77E198511CD7C85300782B72 /* UASApp.xcdatamodel */,
+			);
+			currentVersion = 77E198511CD7C85300782B72 /* UASApp.xcdatamodel */;
+			path = UASApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 77E1983E1CD7C85300782B72 /* Project object */;
+}

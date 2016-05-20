@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import Alamofire
 
 class EspecialidadTVC: UITableViewController {
 
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let endpoint = Connection()
+    let transactor = FacultyTransactions()
     
-    let faculties = ["Informática","Electrónica","Civil", "Minas", "Telecomunicaciones", "Industrial"]
+    var facultyArray: Array<Faculty>? = nil
+    
+    override func viewWillAppear(animated: Bool) {
+        self.facultyArray = self.requestFaculties()!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,16 +39,17 @@ class EspecialidadTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.faculties.count
+        return self.facultyArray!.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("facultyCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = self.faculties[indexPath.row]
+        var faculty = self.facultyArray![indexPath.row]
         
-        // Configure the cell...
+        cell.textLabel?.text = faculty.nombre
+        cell.detailTextLabel?.text = faculty.descripcion
 
         return cell
     }
@@ -116,5 +124,22 @@ class EspecialidadTVC: UITableViewController {
             
         }
     }
-
+    
+    //Server Requests
+    
+    func requestFaculties() -> Array<Faculty>?{
+        
+        let token = self.defaults.objectForKey("token")!
+        
+        Alamofire.request(.GET, self.endpoint.url + "faculties?since=1463183832&token=\(token)")
+            .responseJSON { response in
+                switch response.result {
+                case .Success(let JSON):
+                    self.transactor.loadFaculties(JSON as? [AnyObject])
+                case .Failure(let error):
+                    print("Request failed with error: \(error)")
+                }
+        }
+        return self.transactor.all()
+    }
 }
