@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        self.defaults.setBool(false, forKey: "offline_session")
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +39,7 @@ class ViewController: UIViewController {
                 switch response.result {
                 case .Success(let JSON):
                     self.defaults.setObject(JSON.valueForKey("token"), forKey: "token")
+                    self.defaults.setBool(false, forKey: "offline_session")
                     self.performSegueWithIdentifier("facultyListSegue", sender: self)
                 case .Failure(let error):
                     print("Request failed with error: \(error)")
@@ -47,6 +48,11 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func offlineTapped(sender: AnyObject) {
+        self.defaults.setBool(true, forKey: "offline_session")
+        self.performSegueWithIdentifier("facultyListSegue", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "facultyListSegue" {

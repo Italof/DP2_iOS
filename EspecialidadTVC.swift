@@ -13,12 +13,14 @@ class EspecialidadTVC: UITableViewController {
 
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint = Connection()
-    let transactor = FacultyTransactions()
     
     var facultyArray: Array<Faculty>? = nil
     
     override func viewWillAppear(animated: Bool) {
-        self.facultyArray = self.requestFaculties()!
+        if !(self.defaults.boolForKey("offline_session")) {
+            self.loadFaculties()
+        }
+        self.facultyArray = FacultyTransactions().all()
     }
     
     override func viewDidLoad() {
@@ -46,7 +48,7 @@ class EspecialidadTVC: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("facultyCell", forIndexPath: indexPath)
 
-        var faculty = self.facultyArray![indexPath.row]
+        let faculty = self.facultyArray![indexPath.row]
         
         cell.textLabel?.text = faculty.nombre
         cell.detailTextLabel?.text = faculty.descripcion
@@ -64,25 +66,6 @@ class EspecialidadTVC: UITableViewController {
     */
 
     /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
@@ -94,6 +77,7 @@ class EspecialidadTVC: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     @IBAction func logoutTapped(sender: AnyObject) {
         
         let alertController = UIAlertController(title: "Atención", message:
@@ -127,19 +111,18 @@ class EspecialidadTVC: UITableViewController {
     
     //Server Requests
     
-    func requestFaculties() -> Array<Faculty>?{
+    func loadFaculties(){
         
         let token = self.defaults.objectForKey("token")!
         
         Alamofire.request(.GET, self.endpoint.url + "faculties?since=1463183832&token=\(token)")
             .responseJSON { response in
                 switch response.result {
-                case .Success(let JSON):
-                    self.transactor.loadFaculties(JSON as? [AnyObject])
-                case .Failure(let error):
-                    print("Request failed with error: \(error)")
+                    case .Success(let JSON):
+                        FacultyTransactions().loadFaculties(JSON as? [AnyObject])
+                    case .Failure(let error):
+                        print("Request failed with error: \(error)")
                 }
         }
-        return self.transactor.all()
     }
 }

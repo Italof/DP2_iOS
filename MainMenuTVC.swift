@@ -15,6 +15,10 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     @IBOutlet weak var userFullName: UILabel!
     @IBOutlet weak var userPosition: UILabel!
     @IBOutlet weak var userSpecialty: UILabel!
+    @IBOutlet weak var facultyName: UILabel!
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let endpoint = Connection()
     
     override func viewDidLoad() {
         super.viewDidLoad()

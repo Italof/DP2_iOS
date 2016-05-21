@@ -67,11 +67,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /*
          do{
-         try NSFileManager.defaultManager().removeItemAtURL(url)
+            try NSFileManager.defaultManager().removeItemAtURL(url)
          } catch {
-         print(error)
+            print(error)
          }
          */
+        
+         
         
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
