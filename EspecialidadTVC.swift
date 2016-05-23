@@ -16,15 +16,10 @@ class EspecialidadTVC: UITableViewController {
     
     var facultyArray: Array<Faculty>? = nil
     
-    override func viewWillAppear(animated: Bool) {
-        if !(self.defaults.boolForKey("offline_session")) {
-            self.loadFaculties()
-        }
-        self.facultyArray = FacultyTransactions().all()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.facultyArray = FacultyTransactions().all()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,15 +50,6 @@ class EspecialidadTVC: UITableViewController {
 
         return cell
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -106,23 +92,6 @@ class EspecialidadTVC: UITableViewController {
         
         if segue.identifier == "logoutSegue" {
             
-        }
-    }
-    
-    //Server Requests
-    
-    func loadFaculties(){
-        
-        let token = self.defaults.objectForKey("token")!
-        
-        Alamofire.request(.GET, self.endpoint.url + "faculties?since=1463183832&token=\(token)")
-            .responseJSON { response in
-                switch response.result {
-                    case .Success(let JSON):
-                        FacultyTransactions().loadFaculties(JSON as? [AnyObject])
-                    case .Failure(let error):
-                        print("Request failed with error: \(error)")
-                }
         }
     }
 }

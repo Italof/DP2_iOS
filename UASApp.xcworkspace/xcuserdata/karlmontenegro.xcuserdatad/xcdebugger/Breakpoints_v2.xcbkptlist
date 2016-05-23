@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FacultyTransactions.swift"
-            timestampString = "485483232.756559"
+            timestampString = "485734263.056799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "deleteAllFaculties()"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FacultyTransactions.swift"
-            timestampString = "485481672.962586"
+            timestampString = "485731103.076707"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
+            landmarkName = "loadFaculties(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FacultyTransactions.swift"
+            timestampString = "485734263.056799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "all()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FacultyTransactions.swift"
+            timestampString = "485730284.702109"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "loadFaculties(_:)"
             landmarkType = "5">
          </BreakpointContent>

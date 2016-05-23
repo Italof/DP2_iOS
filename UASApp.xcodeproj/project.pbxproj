@@ -33,9 +33,9 @@
 		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
 		774724621CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */; };
 		774724631CEF97B4005C1464 /* AcademicUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245F1CEF97B4005C1464 /* AcademicUnit.swift */; };
-		774724641CEF97B4005C1464 /* Faculty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774724601CEF97B4005C1464 /* Faculty+CoreDataProperties.swift */; };
-		774724651CEF97B4005C1464 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774724611CEF97B4005C1464 /* Faculty.swift */; };
 		774724681CEF9D0D005C1464 /* FacultyTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774724671CEF9D0D005C1464 /* FacultyTransactions.swift */; };
+		7747246C1CEFE745005C1464 /* Faculty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747246A1CEFE745005C1464 /* Faculty+CoreDataProperties.swift */; };
+		7747246D1CEFE745005C1464 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747246B1CEFE745005C1464 /* Faculty.swift */; };
 		776A236F1CE28E4600D1FA08 /* Pods_UASApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */; };
 		776A23701CE28E6D00D1FA08 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236C1CE28E3900D1FA08 /* Alamofire.framework */; };
 		7783156E1CDAE525008D9209 /* Menu-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7783156D1CDAE525008D9209 /* Menu-30.png */; };
@@ -119,9 +119,9 @@
 		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AcademicUnit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7747245F1CEF97B4005C1464 /* AcademicUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicUnit.swift; sourceTree = "<group>"; };
-		774724601CEF97B4005C1464 /* Faculty+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Faculty+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		774724611CEF97B4005C1464 /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
 		774724671CEF9D0D005C1464 /* FacultyTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyTransactions.swift; sourceTree = "<group>"; };
+		7747246A1CEFE745005C1464 /* Faculty+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Faculty+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7747246B1CEFE745005C1464 /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
 		776A236C1CE28E3900D1FA08 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
 		776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UASApp.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Pods_UASApp.framework"; sourceTree = "<group>"; };
 		7783156D1CDAE525008D9209 /* Menu-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu-30.png"; path = "UASApp/img/Menu-30.png"; sourceTree = "<group>"; };
@@ -297,10 +297,10 @@
 		778315711CDBB828008D9209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7747246A1CEFE745005C1464 /* Faculty+CoreDataProperties.swift */,
+				7747246B1CEFE745005C1464 /* Faculty.swift */,
 				7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */,
 				7747245F1CEF97B4005C1464 /* AcademicUnit.swift */,
-				774724601CEF97B4005C1464 /* Faculty+CoreDataProperties.swift */,
-				774724611CEF97B4005C1464 /* Faculty.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -643,6 +643,7 @@
 				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
+				7747246C1CEFE745005C1464 /* Faculty+CoreDataProperties.swift in Sources */,
 				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
 				77A24CB91CDD052D006AA0B9 /* CursoCell.swift in Sources */,
 				774724621CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift in Sources */,
@@ -650,7 +651,6 @@
 				77167A5C1CDD16EB004C91BC /* ImprovementPlans.swift in Sources */,
 				77A24CAD1CDCA8E7006AA0B9 /* RubricDetail.swift in Sources */,
 				77167A581CDD16C7004C91BC /* SuggestionCell.swift in Sources */,
-				774724641CEF97B4005C1464 /* Faculty+CoreDataProperties.swift in Sources */,
 				774724681CEF9D0D005C1464 /* FacultyTransactions.swift in Sources */,
 				77A24CC41CDD1106006AA0B9 /* TeacherModal.swift in Sources */,
 				77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */,
@@ -660,7 +660,6 @@
 				77A24CC11CDD0A5E006AA0B9 /* TeacherCell.swift in Sources */,
 				77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */,
 				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
-				774724651CEF97B4005C1464 /* Faculty.swift in Sources */,
 				77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */,
 				77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */,
 				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
@@ -676,6 +675,7 @@
 				77A24CB21CDCADA7006AA0B9 /* AspectoDetailTVC.swift in Sources */,
 				77A24CB01CDCAD0C006AA0B9 /* AspectosTVC.swift in Sources */,
 				77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */,
+				7747246D1CEFE745005C1464 /* Faculty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

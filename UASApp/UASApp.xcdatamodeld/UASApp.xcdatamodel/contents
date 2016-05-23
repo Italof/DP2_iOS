@@ -8,11 +8,12 @@
     <entity name="Faculty" representedClassName=".Faculty" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="unidadAcademica" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AcademicUnit" inverseName="facultades" inverseEntity="AcademicUnit" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Faculty" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Faculty" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="AcademicUnit" positionX="-54" positionY="18" width="128" height="90"/>
     </elements>
 </model>

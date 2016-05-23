@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.defaults.setBool(false, forKey: "offline_session")
+        self.defaults.setObject("", forKey: "token")
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,14 +39,18 @@ class ViewController: UIViewController {
             .responseJSON { response in
                 switch response.result {
                 case .Success(let JSON):
-                    self.defaults.setObject(JSON.valueForKey("token"), forKey: "token")
-                    self.defaults.setBool(false, forKey: "offline_session")
-                    self.performSegueWithIdentifier("facultyListSegue", sender: self)
-                case .Failure(let error):
-                    print("Request failed with error: \(error)")
+                
+                    if JSON.valueForKey("token") != nil {
+                        self.defaults.setObject(JSON.valueForKey("token"), forKey: "token")
+                        self.defaults.setBool(false, forKey: "offline_session")
+                        self.performSegueWithIdentifier("facultyListSegue", sender: self)
+                    } else {
+                        self.alertMessage("Usuario/Contrasena incorrectos.", winTitle: "Error")
+                    }
+                default:
+                    print(response)
                 }
         }
-        
     }
 
     @IBAction func offlineTapped(sender: AnyObject) {
@@ -56,8 +61,32 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "facultyListSegue" {
-            
+            if !self.defaults.boolForKey("offline_session") {
+                self.loadFaculties()
+            }
         }
+    }
+    
+    func loadFaculties(){
+        let token = self.defaults.objectForKey("token")!
+        Alamofire.request(.GET, self.endpoint.url + "faculties?since=1463183832&token=\(token)")
+            .responseJSON { response in
+                switch response.result {
+                case .Success(let JSON):
+                    FacultyTransactions().loadFaculties(JSON as? [AnyObject])
+                case .Failure(let error):
+                    print("Request failed with error: \(error)")
+                }
+        }
+    }
+    
+    func alertMessage(winMessage: String, winTitle: String){
+        let alertController = UIAlertController(title: winTitle, message: winMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (alertController) -> Void in
+        }))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
 }

@@ -17,6 +17,7 @@ extension Faculty {
     @NSManaged var codigo: String?
     @NSManaged var descripcion: String?
     @NSManaged var nombre: String?
+    @NSManaged var id: NSNumber?
     @NSManaged var unidadAcademica: AcademicUnit?
 
 }
