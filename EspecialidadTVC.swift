@@ -86,7 +86,12 @@ class EspecialidadTVC: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "presentMainMenuSegue" {
             let mainSVC = segue.destinationViewController as! UISplitViewController
+            let indexpath:NSIndexPath = self.tableView.indexPathForSelectedRow!
             
+            let menuC = mainSVC.viewControllers.first as! UINavigationController
+            let menu = menuC.viewControllers.first as! MainMenuTVC
+            
+            menu.faculty = self.facultyArray![indexpath.row]
             mainSVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         }
         

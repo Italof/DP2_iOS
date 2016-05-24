@@ -23,6 +23,7 @@ class FacultyTransactions {
             faculty.setValue(elem.valueForKey("Codigo"), forKey: "codigo")
             faculty.setValue(elem.valueForKey("Descripcion"), forKey: "descripcion")
             faculty.setValue(elem.valueForKey("Nombre"), forKey: "nombre")
+            faculty.setValue(elem.valueForKey("IdEspecialidad"), forKey: "id")
         }
         do {
             try context.save()

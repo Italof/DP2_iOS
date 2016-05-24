@@ -36,6 +36,13 @@
 		774724681CEF9D0D005C1464 /* FacultyTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774724671CEF9D0D005C1464 /* FacultyTransactions.swift */; };
 		7747246C1CEFE745005C1464 /* Faculty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747246A1CEFE745005C1464 /* Faculty+CoreDataProperties.swift */; };
 		7747246D1CEFE745005C1464 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747246B1CEFE745005C1464 /* Faculty.swift */; };
+		776067EA1CF3E9CB00787914 /* UserTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067E91CF3E9CB00787914 /* UserTransactions.swift */; };
+		776067F11CF3EDCD00787914 /* Professor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067EB1CF3EDCD00787914 /* Professor+CoreDataProperties.swift */; };
+		776067F21CF3EDCD00787914 /* Professor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067EC1CF3EDCD00787914 /* Professor.swift */; };
+		776067F31CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067ED1CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift */; };
+		776067F41CF3EDCD00787914 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067EE1CF3EDCD00787914 /* Coordinator.swift */; };
+		776067F51CF3EDCD00787914 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067EF1CF3EDCD00787914 /* User+CoreDataProperties.swift */; };
+		776067F61CF3EDCD00787914 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067F01CF3EDCD00787914 /* User.swift */; };
 		776A236F1CE28E4600D1FA08 /* Pods_UASApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */; };
 		776A23701CE28E6D00D1FA08 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236C1CE28E3900D1FA08 /* Alamofire.framework */; };
 		7783156E1CDAE525008D9209 /* Menu-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7783156D1CDAE525008D9209 /* Menu-30.png */; };
@@ -122,6 +129,13 @@
 		774724671CEF9D0D005C1464 /* FacultyTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyTransactions.swift; sourceTree = "<group>"; };
 		7747246A1CEFE745005C1464 /* Faculty+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Faculty+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7747246B1CEFE745005C1464 /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
+		776067E91CF3E9CB00787914 /* UserTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTransactions.swift; sourceTree = "<group>"; };
+		776067EB1CF3EDCD00787914 /* Professor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Professor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		776067EC1CF3EDCD00787914 /* Professor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professor.swift; sourceTree = "<group>"; };
+		776067ED1CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Coordinator+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		776067EE1CF3EDCD00787914 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		776067EF1CF3EDCD00787914 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		776067F01CF3EDCD00787914 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		776A236C1CE28E3900D1FA08 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
 		776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UASApp.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Pods_UASApp.framework"; sourceTree = "<group>"; };
 		7783156D1CDAE525008D9209 /* Menu-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu-30.png"; path = "UASApp/img/Menu-30.png"; sourceTree = "<group>"; };
@@ -290,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				774724671CEF9D0D005C1464 /* FacultyTransactions.swift */,
+				776067E91CF3E9CB00787914 /* UserTransactions.swift */,
 			);
 			name = "Data Loading";
 			sourceTree = "<group>";
@@ -297,6 +312,12 @@
 		778315711CDBB828008D9209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				776067EB1CF3EDCD00787914 /* Professor+CoreDataProperties.swift */,
+				776067EC1CF3EDCD00787914 /* Professor.swift */,
+				776067ED1CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift */,
+				776067EE1CF3EDCD00787914 /* Coordinator.swift */,
+				776067EF1CF3EDCD00787914 /* User+CoreDataProperties.swift */,
+				776067F01CF3EDCD00787914 /* User.swift */,
 				7747246A1CEFE745005C1464 /* Faculty+CoreDataProperties.swift */,
 				7747246B1CEFE745005C1464 /* Faculty.swift */,
 				7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */,
@@ -643,6 +664,7 @@
 				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
+				776067F51CF3EDCD00787914 /* User+CoreDataProperties.swift in Sources */,
 				7747246C1CEFE745005C1464 /* Faculty+CoreDataProperties.swift in Sources */,
 				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
 				77A24CB91CDD052D006AA0B9 /* CursoCell.swift in Sources */,
@@ -657,15 +679,20 @@
 				77167A5E1CDD1DBB004C91BC /* ImprovementCell.swift in Sources */,
 				77167A671CDD2BAA004C91BC /* RubricCell.swift in Sources */,
 				77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */,
+				776067F11CF3EDCD00787914 /* Professor+CoreDataProperties.swift in Sources */,
 				77A24CC11CDD0A5E006AA0B9 /* TeacherCell.swift in Sources */,
+				776067F41CF3EDCD00787914 /* Coordinator.swift in Sources */,
 				77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */,
 				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
+				776067EA1CF3E9CB00787914 /* UserTransactions.swift in Sources */,
+				776067F31CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift in Sources */,
 				77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */,
 				77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */,
 				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
 				77A24CAB1CDCA6DF006AA0B9 /* Rubrics.swift in Sources */,
 				77A24CB71CDCFDDB006AA0B9 /* CursosTVC.swift in Sources */,
 				77A24CB41CDCE1A1006AA0B9 /* InicioVC.swift in Sources */,
+				776067F61CF3EDCD00787914 /* User.swift in Sources */,
 				77167A6C1CDD30E2004C91BC /* CriteriaDetail.swift in Sources */,
 				7747245D1CEF8781005C1464 /* Connection.swift in Sources */,
 				77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */,
@@ -674,6 +701,7 @@
 				77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */,
 				77A24CB21CDCADA7006AA0B9 /* AspectoDetailTVC.swift in Sources */,
 				77A24CB01CDCAD0C006AA0B9 /* AspectosTVC.swift in Sources */,
+				776067F21CF3EDCD00787914 /* Professor.swift in Sources */,
 				77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */,
 				7747246D1CEFE745005C1464 /* Faculty.swift in Sources */,
 			);

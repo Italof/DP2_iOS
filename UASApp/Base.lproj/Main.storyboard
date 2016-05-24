@@ -494,7 +494,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzG-e1-tu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="415" y="319"/>
+            <point key="canvasLocation" x="391" y="341"/>
         </scene>
         <!--Objetivos Educacionales-->
         <scene sceneID="lfG-xq-tZI">
@@ -1529,7 +1529,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cw5-Z2-DDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-315" y="353"/>
+            <point key="canvasLocation" x="-242" y="353"/>
         </scene>
         <!--Especialidades-->
         <scene sceneID="pZR-Cf-xBq">
@@ -2003,7 +2003,7 @@
         <image name="person-placeholder.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xyX-CC-MBY"/>
+        <segue reference="m3r-Fg-C9E"/>
         <segue reference="X6Y-a6-TN4"/>
         <segue reference="WBq-da-cRG"/>
         <segue reference="ClM-dX-do7"/>

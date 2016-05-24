@@ -17,12 +17,15 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     @IBOutlet weak var userSpecialty: UILabel!
     @IBOutlet weak var facultyName: UILabel!
     
+    var faculty: Faculty? = nil
+    
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint = Connection()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(self.faculty)
+        self.userSpecialty.text = self.faculty?.nombre
     }
 
     override func didReceiveMemoryWarning() {
