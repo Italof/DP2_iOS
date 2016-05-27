@@ -13,9 +13,12 @@ class AspectosTVC: UITableViewController {
     let array = ["Aspecto 1","Aspecto 2","Aspecto 3","Aspecto 4"]
     let rubrics = ["Rubrica 1","Rubrica 2","Rubrica 3","Rubrica 4"]
     
+    var faculty: Faculty? = nil
+    var aspects: Array<Aspect>? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.aspects = TR_Aspect().get(self.faculty!.id!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,15 +35,15 @@ class AspectosTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.array.count
+        return (self.aspects?.count)!
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("aspectCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = self.array[indexPath.row]
-        cell.detailTextLabel?.text = "Rubricas a las que Pertenece: " + self.rubrics[indexPath.row]
+        cell.textLabel?.text = self.aspects![indexPath.row].nombre
+        
         return cell
     }
 
@@ -80,14 +83,19 @@ class AspectosTVC: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "aspectDetailSegue" {
+            let vc = segue.destinationViewController as! AspectoDetailTVC
+            let indexPath = self.tableView.indexPathForSelectedRow
+            
+            vc.aspecto = self.aspects![indexPath!.row]
+        }
+        
     }
-    */
 
 }

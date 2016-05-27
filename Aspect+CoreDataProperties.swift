@@ -20,5 +20,6 @@ extension Aspect {
     @NSManaged var updated_at: NSDate?
     @NSManaged var criteria: NSSet?
     @NSManaged var faculty: Faculty?
+    @NSManaged var idEspecialidad: NSNumber?
 
 }

@@ -11,14 +11,12 @@ import UIKit
 class AspectoDetailTVC: UITableViewController {
 
     var array = ["Criterio 1", "Criterio 2", "Criterio 3", "Criterio 4"]
+    
+    var aspecto: Aspect? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,14 +37,14 @@ class AspectoDetailTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.array.count
+        return (self.aspecto?.criteria?.allObjects.count)!
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("critCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = self.array[indexPath.row]
+        cell.textLabel?.text = (self.aspecto?.criteria?.allObjects[indexPath.row] as! Criterion).nombre
         
         return cell
     }

@@ -14,25 +14,45 @@ class TR_Aspect {
     
     let dateFormatter = NSDateFormatter()
     
-    func store(json: JSON) {
+    func store(json: JSON, faculty: Faculty) {
         
         //Clear previous data
-        Faculty.MR_truncateAll()
+        Aspect.MR_truncateAll()
         
         for (_,subJson):(String, JSON) in json {
-            let fac = Faculty.MR_createEntity()
-            fac?.id = Int(subJson["IdEspecialidad"].stringValue)
-            fac?.codigo = subJson["Codigo"].stringValue
-            fac?.nombre = subJson["Nombre"].stringValue
-            fac?.descripcion = subJson["Descripcion"].stringValue
-            fac?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)
+            let asp = Aspect.MR_createEntity()
+            
+            asp?.id = Int(subJson["IdAspecto"].stringValue)
+            asp?.idStudentResult = Int(subJson["IdResultadoEstudiantil"].stringValue)
+            asp?.nombre = subJson["Nombre"].stringValue
+            asp?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)
+            asp?.faculty = faculty
+            asp?.idEspecialidad = faculty.id
+            
+            for (_,crJson):(String, JSON) in json["criterion"] {
+                let crt = Criterion.MR_createEntity()
+                
+                crt?.id = Int(crJson["IdCriterio"].stringValue)
+                crt?.idAspect = Int(crJson["IdAspecto"].stringValue)
+                crt?.nombre = crJson["Nombre"].stringValue
+                crt?.updated_at = self.dateFormatter.dateFromString(crJson["updated_at"].stringValue)
+                
+                asp?.addCriteria(crt!)
+            }
         }
         
         NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
     }
     
-    func get()-> Array<Faculty>?{
-        return Faculty.MR_findAll() as! Array<Faculty>
+    func get(faculty_id: NSNumber)-> Array<Aspect>?{
+        
+        let predicate:NSPredicate = NSPredicate(format: "(idEspecialidad = %@)", faculty_id)
+        let request:NSFetchRequest = Aspect.MR_requestAllWithPredicate(predicate)
+        let sortDescriptor = NSSortDescriptor(key: "idEspecialidad", ascending: false)
+        
+        request.sortDescriptors = [sortDescriptor]
+        
+        return Aspect.MR_executeFetchRequest(request) as? Array<Aspect>
     }
     
     

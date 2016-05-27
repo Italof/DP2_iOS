@@ -2,6 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="Aspect" representedClassName=".Aspect" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idEspecialidad" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="idStudentResult" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
@@ -72,7 +73,7 @@
         <element name="Professor" positionX="-117" positionY="-54" width="128" height="135"/>
         <element name="StudentResult" positionX="259" positionY="201" width="128" height="148"/>
         <element name="User" positionX="70" positionY="-153" width="128" height="120"/>
-        <element name="Aspect" positionX="72" positionY="0" width="128" height="135"/>
+        <element name="Aspect" positionX="72" positionY="0" width="128" height="150"/>
         <element name="Criterion" positionX="81" positionY="9" width="128" height="120"/>
     </elements>
 </model>

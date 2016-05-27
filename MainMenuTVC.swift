@@ -92,7 +92,8 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     switch response.result {
                         case .Success:
                             let json = JSON(data: response.data!)
-                        self.performSegueWithIdentifier("aspectSegue", sender: self)
+                            TR_Aspect().store(json, faculty: self.faculty!)
+                            self.performSegueWithIdentifier("aspectSegue", sender: self)
                         case .Failure(let error):
                             print(error)
                     }
@@ -157,6 +158,9 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         }
         
         if segue.identifier == "aspectSegue"{
+            let nvc = segue.destinationViewController as! UINavigationController
+            let vc = nvc.viewControllers.first as! AspectosTVC
+            vc.faculty = self.faculty
             
         }
         
