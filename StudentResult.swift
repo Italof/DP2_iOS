@@ -9,9 +9,13 @@
 import Foundation
 import CoreData
 
-
 class StudentResult: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    @NSManaged var updated_at: NSDate?
+    @NSManaged var idEspecialidad: NSNumber?
+    @NSManaged var descripcion: String?
+    @NSManaged var identificador: String?
+    @NSManaged var id: NSNumber?
+    @NSManaged var cicloRegistro: String?
+    @NSManaged var educationalObjective: EducationalObjective?
 }

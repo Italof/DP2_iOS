@@ -11,9 +11,6 @@ import Alamofire
 import SwiftyJSON
 
 class ObjetivosEdTVC: UITableViewController {
-
-    let array = ["Objetivo Educacional 1", "Objetivo Educacional 2", "Objetivo Educacional 3", "Objetivo Educacional 4"]
-    let sem = ["2014-2", "2015-1", "2015-2", "2016-1"]
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint = Connection()
@@ -22,15 +19,12 @@ class ObjetivosEdTVC: UITableViewController {
     var edObjList:Array<EducationalObjective>? = nil
     
     override func viewWillAppear(animated: Bool) {
-        
-        self.loadDBWithJSON()
         self.edObjList = TR_Ed_Objective().get(self.faculty!.id!)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.edObjList = TR_Ed_Objective().get(Int(self.faculty!.id!))
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,12 +50,11 @@ class ObjetivosEdTVC: UITableViewController {
 
         cell.textLabel?.text = "Objetivo Educacional " + (self.edObjList![indexPath.row]).numero!.description
         
-        
         return cell
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Ciclo: " + self.sem[section]
+        return "Ciclo"
     }
     /*
     // Override to support conditional editing of the table view.
@@ -105,24 +98,11 @@ class ObjetivosEdTVC: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "objectiveDetailSegue" {
+            let vc = segue.destinationViewController as! EducationalObjectiveDetail
+            let indexPath = self.tableView.indexPathForSelectedRow
             
-        }
-    }
-    
-    func loadDBWithJSON() {
-        
-        let idFac = self.faculty?.id
-        
-        Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
-            .responseJSON { response in
-                switch response.result {
-                case .Success:
-                    let json = JSON(data: response.data!)
-                    TR_Ed_Objective().store(json, faculty: self.faculty!)
-                case .Failure(let error):
-                    print(error)
-                }
-                
+            vc.ed_objective = self.edObjList![(indexPath?.row)!]
+
         }
     }
 

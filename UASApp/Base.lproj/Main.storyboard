@@ -257,9 +257,6 @@
                                             <color key="backgroundColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="JPc-dF-zHm" kind="showDetail" identifier="edObjectivesSegue" trigger="accessoryAction" id="Ger-xf-dRO"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="F9H-Un-Y2m" imageView="L2H-KX-8Vr" style="IBUITableViewCellStyleDefault" id="m6g-bd-162">
                                         <rect key="frame" x="0.0" y="352" width="600" height="44"/>
@@ -490,6 +487,7 @@
                         <outlet property="userPosition" destination="teO-Se-ZIc" id="umc-Se-C34"/>
                         <outlet property="userProfileImage" destination="WSX-5F-GaZ" id="xlR-AU-1TF"/>
                         <outlet property="userSpecialty" destination="VmG-L5-IiI" id="4tl-yE-Hwh"/>
+                        <segue destination="JPc-dF-zHm" kind="showDetail" identifier="edObjectivesSegue" id="dfX-9E-1rQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzG-e1-tu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -617,7 +615,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="WqP-H9-Y7X" kind="show" id="0A6-2X-7lb"/>
+                                    <segue destination="WqP-H9-Y7X" kind="show" identifier="studentResultViewSegue" id="0A6-2X-7lb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1980,10 +1978,10 @@
         <image name="person-placeholder.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xyX-CC-MBY"/>
+        <segue reference="m3r-Fg-C9E"/>
         <segue reference="5Rg-R9-9NK"/>
         <segue reference="WBq-da-cRG"/>
         <segue reference="ClM-dX-do7"/>
-        <segue reference="mP9-cK-Hgs"/>
+        <segue reference="0A6-2X-7lb"/>
     </inferredMetricsTieBreakers>
 </document>

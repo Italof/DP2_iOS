@@ -13,7 +13,6 @@ import Foundation
 import CoreData
 
 extension EducationalObjective {
-
     @NSManaged var id: NSNumber?
     @NSManaged var numero: NSNumber?
     @NSManaged var descripcion: String?
@@ -22,5 +21,4 @@ extension EducationalObjective {
     @NSManaged var updated_at: NSDate?
     @NSManaged var faculty: Faculty?
     @NSManaged var studentResults: NSSet?
-
 }

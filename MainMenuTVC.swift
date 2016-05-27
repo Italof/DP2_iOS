@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
 
 protocol dataReceiveForMenu {
     func acceptData(faculty: Faculty)
@@ -50,6 +51,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                 
             }
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,7 +70,20 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     break
             
             case 3: //Obj. Educacionales
-                    self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
+                
+                    let idFac = self.faculty?.id
+                
+                    Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+                        .responseJSON { response in
+                            switch response.result {
+                            case .Success:
+                                let json = JSON(data: response.data!)
+                                TR_Ed_Objective().store(json, faculty: self.faculty!)
+                                self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
+                            case .Failure(let error):
+                                print(error)
+                            }
+                    }
                     break
             case 4: //Res. Estudiantiles
                     self.performSegueWithIdentifier("studentResSegue", sender: self)
@@ -115,6 +130,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "startSegue" {

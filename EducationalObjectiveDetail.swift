@@ -12,6 +12,10 @@ class EducationalObjectiveDetail: UITableViewController {
 
     var objData = ["1","2015-1","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]
     var arrayRes = ["Resultado Estudiantil 1","Resultado Estudiantil 2","Resultado Estudiantil 3"]
+    
+    
+    var ed_objective: EducationalObjective? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +36,7 @@ class EducationalObjectiveDetail: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 3 {
-            return self.arrayRes.count
+            return (self.ed_objective?.studentResults?.count)!
         } else {
             return 1
         }
@@ -71,25 +75,25 @@ class EducationalObjectiveDetail: UITableViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath)
             cell.textLabel?.text = "Nro:"
-            cell.detailTextLabel?.text = self.objData[indexPath.section]
+            cell.detailTextLabel?.text = self.ed_objective?.numero?.description
             return cell
         }else {
             if indexPath.section == 1 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath)
                 cell.textLabel?.text = "Ciclo de Registro"
-                cell.detailTextLabel?.text = self.objData[indexPath.section]
+                cell.detailTextLabel?.text = self.ed_objective?.cicloReg
                 return cell
             } else {
                 if indexPath.section == 2 {
                     let cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath) as! DescriptionCell
-                    cell.lblDescription.text = self.objData[indexPath.section]
+                    cell.lblDescription.text = self.ed_objective?.descripcion
                     
                     return cell
                     
                 } else {
                     let cell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath)
 
-                    cell.textLabel?.text = self.arrayRes[indexPath.row]
+                    cell.textLabel?.text = "Resultado Educacional: " + (self.ed_objective?.studentResults?.allObjects[indexPath.row] as! StudentResult).identificador!
                     return cell
                 }
             }
@@ -132,14 +136,21 @@ class EducationalObjectiveDetail: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "studentResultViewSegue" {
+            let vc = segue.destinationViewController as! ResEdDetalleTVC
+            
+            let indexPath = self.tableView.indexPathForSelectedRow
+            
+            if indexPath!.section > 2 {
+                vc.studentResult = self.ed_objective!.studentResults!.allObjects[(indexPath?.row)!] as? StudentResult
+            }
+        }
+        
     }
-    */
 
 }

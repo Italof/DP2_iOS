@@ -29,11 +29,21 @@ class TR_Ed_Objective {
             ed_obj?.cicloReg = subJson["CicloRegistro"].stringValue
             ed_obj?.faculty = faculty
             ed_obj?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)
-            /*
-            for (_, sresJson):(String, JSON) in json["students_results"] {
+            
+            for (_, sresJson):(String, JSON) in subJson["students_results"] {
+               
                 let st_res = StudentResult.MR_createEntity()
+                
+                st_res?.id = Int(sresJson["IdResultadoEstudiantil"].stringValue)
+                st_res?.idEspecialidad = Int(sresJson["IdEspecialidad"].stringValue)
+                st_res?.cicloRegistro = sresJson["CicloRegistro"].stringValue
+                st_res?.descripcion = sresJson["Descripcion"].stringValue
+                st_res?.identificador = sresJson["Identificador"].stringValue
+                st_res?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)
+                ed_obj?.addResult(st_res!)
+                
             }
-            */
+        
         }
         
         NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
