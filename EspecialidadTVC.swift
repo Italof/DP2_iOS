@@ -87,10 +87,9 @@ class EspecialidadTVC: UITableViewController {
             let indexpath = self.tableView.indexPathForSelectedRow
             
             
-            splitViewController.faculty = self.facultyList[indexpath!.row]
+            let menu = splitViewController.viewControllers.first as! MainMenuTVC
             
-            
-            print(self.facultyList[indexpath!.row].nombre)
+            menu.faculty = self.facultyList[indexpath!.row]
             
             //splitViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         }

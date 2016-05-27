@@ -33,6 +33,9 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         
         self.userJSON = JSON(data: self.defaults.objectForKey("user") as! NSData)
         
+        
+        self.facultyName.text = self.faculty?.nombre
+        
         if self.userJSON!["professor"] != nil {
             let info = self.userJSON!["professor"]
             self.userFullName.text = info["Nombre"].stringValue + " " + info["Apellido Materno"].stringValue + " " + info["ApellidoPaterno"].stringValue

@@ -58,14 +58,12 @@ class ViewController: UIViewController {
                             case .Success:
                                 let json = JSON(data: response.data!)
                                 TR_Faculty().store(json)
+                                self.performSegueWithIdentifier("facultyListSegue", sender: self)
                             case .Failure(let error):
                                 print(error)
                             }
                             
                     }
-                    
-                    self.performSegueWithIdentifier("facultyListSegue", sender: self)
-                    
                 case .Failure(let error):
                     self.alertMessage("Usuario/Contrasena incorrectos.", winTitle: "Error")
                 }

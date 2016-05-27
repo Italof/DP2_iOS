@@ -11,11 +11,10 @@ import Foundation
 
 class MasterSVC: UISplitViewController {
 
-    var faculty:Faculty!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
         navigationItem.leftItemsSupplementBackButton = true
     }
