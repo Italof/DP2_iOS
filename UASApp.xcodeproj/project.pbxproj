@@ -30,6 +30,11 @@
 		77167A6C1CDD30E2004C91BC /* CriteriaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6B1CDD30E2004C91BC /* CriteriaDetail.swift */; };
 		77167A6E1CDD30F0004C91BC /* CriteriaLevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6D1CDD30F0004C91BC /* CriteriaLevelCell.swift */; };
 		77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */; };
+		772A69911CF8B8D100E17335 /* AspectTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A69901CF8B8D100E17335 /* AspectTransactions.swift */; };
+		772A69961CF8BB3200E17335 /* Criterion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A69921CF8BB3200E17335 /* Criterion+CoreDataProperties.swift */; };
+		772A69971CF8BB3200E17335 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A69931CF8BB3200E17335 /* Criterion.swift */; };
+		772A69981CF8BB3200E17335 /* Aspect+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A69941CF8BB3200E17335 /* Aspect+CoreDataProperties.swift */; };
+		772A69991CF8BB3200E17335 /* Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A69951CF8BB3200E17335 /* Aspect.swift */; };
 		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
 		776A236F1CE28E4600D1FA08 /* Pods_UASApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */; };
 		776A23701CE28E6D00D1FA08 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236C1CE28E3900D1FA08 /* Alamofire.framework */; };
@@ -125,6 +130,11 @@
 		77167A6B1CDD30E2004C91BC /* CriteriaDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriteriaDetail.swift; sourceTree = "<group>"; };
 		77167A6D1CDD30F0004C91BC /* CriteriaLevelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriteriaLevelCell.swift; sourceTree = "<group>"; };
 		77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdResultDescriptionCell.swift; sourceTree = "<group>"; };
+		772A69901CF8B8D100E17335 /* AspectTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectTransactions.swift; sourceTree = "<group>"; };
+		772A69921CF8BB3200E17335 /* Criterion+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Criterion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		772A69931CF8BB3200E17335 /* Criterion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Criterion.swift; sourceTree = "<group>"; };
+		772A69941CF8BB3200E17335 /* Aspect+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Aspect+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		772A69951CF8BB3200E17335 /* Aspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aspect.swift; sourceTree = "<group>"; };
 		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		776A236C1CE28E3900D1FA08 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
 		776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UASApp.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Pods_UASApp.framework"; sourceTree = "<group>"; };
@@ -309,6 +319,7 @@
 			children = (
 				77D4A73B1CF6346C006878DD /* FacultyTransactions.swift */,
 				77D4A73D1CF644EB006878DD /* EducationalObjectiveTransactions.swift */,
+				772A69901CF8B8D100E17335 /* AspectTransactions.swift */,
 			);
 			name = "Data Loading";
 			sourceTree = "<group>";
@@ -316,6 +327,10 @@
 		778315711CDBB828008D9209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				772A69921CF8BB3200E17335 /* Criterion+CoreDataProperties.swift */,
+				772A69931CF8BB3200E17335 /* Criterion.swift */,
+				772A69941CF8BB3200E17335 /* Aspect+CoreDataProperties.swift */,
+				772A69951CF8BB3200E17335 /* Aspect.swift */,
 				77D4A74D1CF80C79006878DD /* EducationalObjective+CoreDataProperties.swift */,
 				77D4A74E1CF80C79006878DD /* EducationalObjective.swift */,
 				77D4A7481CF80B9C006878DD /* StudentResult+CoreDataProperties.swift */,
@@ -669,6 +684,7 @@
 				77D4A74B1CF80B9C006878DD /* StudentResult+CoreDataProperties.swift in Sources */,
 				77167A651CDD233F004C91BC /* EvaluationResults.swift in Sources */,
 				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
+				772A69981CF8BB3200E17335 /* Aspect+CoreDataProperties.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
 				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
@@ -685,6 +701,7 @@
 				77D4A7361CF590A4006878DD /* Coordinator.swift in Sources */,
 				77D4A74C1CF80B9C006878DD /* StudentResult.swift in Sources */,
 				77167A671CDD2BAA004C91BC /* RubricCell.swift in Sources */,
+				772A69961CF8BB3200E17335 /* Criterion+CoreDataProperties.swift in Sources */,
 				77D4A73A1CF590A4006878DD /* User.swift in Sources */,
 				77D4A7391CF590A4006878DD /* User+CoreDataProperties.swift in Sources */,
 				77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */,
@@ -697,6 +714,7 @@
 				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
 				77D4A7501CF80C79006878DD /* EducationalObjective.swift in Sources */,
 				77A24CAB1CDCA6DF006AA0B9 /* Rubrics.swift in Sources */,
+				772A69911CF8B8D100E17335 /* AspectTransactions.swift in Sources */,
 				77A24CB71CDCFDDB006AA0B9 /* CursosTVC.swift in Sources */,
 				77A24CB41CDCE1A1006AA0B9 /* InicioVC.swift in Sources */,
 				77167A6C1CDD30E2004C91BC /* CriteriaDetail.swift in Sources */,
@@ -705,7 +723,9 @@
 				7747245D1CEF8781005C1464 /* Connection.swift in Sources */,
 				77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */,
 				77D4A7331CF590A4006878DD /* Faculty+CoreDataProperties.swift in Sources */,
+				772A69991CF8BB3200E17335 /* Aspect.swift in Sources */,
 				77E198521CD7C85300782B72 /* UASApp.xcdatamodeld in Sources */,
+				772A69971CF8BB3200E17335 /* Criterion.swift in Sources */,
 				77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */,
 				77D4A7381CF590A4006878DD /* Professor.swift in Sources */,
 				77A24CB21CDCADA7006AA0B9 /* AspectoDetailTVC.swift in Sources */,

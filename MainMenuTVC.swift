@@ -60,7 +60,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        let idFac = self.faculty?.id
         switch indexPath.row {
             case 1: //Inicio
                     self.performSegueWithIdentifier("startSegue", sender: self)
@@ -70,8 +70,6 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     break
             
             case 3: //Obj. Educacionales
-                
-                    let idFac = self.faculty?.id
                 
                     Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
                         .responseJSON { response in
@@ -88,23 +86,30 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
             case 4: //Res. Estudiantiles
                     self.performSegueWithIdentifier("studentResSegue", sender: self)
                     break
-            case 5: //Rubricas
-                    self.performSegueWithIdentifier("rubricSegue", sender: self)
-                    break
-            case 6: //Aspectos
-                    self.performSegueWithIdentifier("aspectSegue", sender: self)
+            case 5: //Aspectos
+                
+                Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/aspects?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+                    switch response.result {
+                        case .Success:
+                            let json = JSON(data: response.data!)
+                        self.performSegueWithIdentifier("aspectSegue", sender: self)
+                        case .Failure(let error):
+                            print(error)
+                    }
+                    
+                }
                     break
 
-            case 7: //Cursos
+            case 6: //Cursos
                     self.performSegueWithIdentifier("coursesSegue", sender: self)
                     break
-            case 8: //Mejora Continua
+            case 7: //Mejora Continua
                     self.performSegueWithIdentifier("improvementSegue", sender: self)
                     break
-            case 9: //Resultados de Evaluaciones
+            case 8: //Resultados de Evaluaciones
                 
                     break
-            case 11: //Cerrar Sesion
+            case 10: //Cerrar Sesion
                 let alertController = UIAlertController(title: "Atención", message:
                     "¿Desea cerrar sesión?", preferredStyle: UIAlertControllerStyle.Alert)
                 
@@ -148,10 +153,6 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         }
         
         if segue.identifier == "studentResSegue" {
-            
-        }
-        
-        if segue.identifier == "rubricSegue" {
             
         }
         

@@ -20,5 +20,6 @@ extension Faculty {
     @NSManaged var codigo: String?
     @NSManaged var descripcion: String?
     @NSManaged var educationalObjectives: NSSet?
+    @NSManaged var aspects: NSSet?
     
 }

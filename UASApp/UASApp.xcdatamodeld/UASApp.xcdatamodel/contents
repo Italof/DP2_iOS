@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Aspect" representedClassName=".Aspect" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idStudentResult" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="criteria" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Criterion" inverseName="aspect" inverseEntity="Criterion" syncable="YES"/>
+        <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="aspects" inverseEntity="Faculty" syncable="YES"/>
+    </entity>
     <entity name="Coordinator" representedClassName=".Coordinator" syncable="YES">
         <attribute name="apellidos" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="nombres" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="coordinator" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Criterion" representedClassName=".Criterion" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idAspect" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="aspect" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Aspect" inverseName="criteria" inverseEntity="Aspect" syncable="YES"/>
     </entity>
     <entity name="EducationalObjective" representedClassName=".EducationalObjective" syncable="YES">
         <attribute name="cicloReg" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,6 +38,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="aspects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Aspect" inverseName="faculty" inverseEntity="Aspect" syncable="YES"/>
         <relationship name="educationalObjectives" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EducationalObjective" inverseName="faculty" inverseEntity="EducationalObjective" syncable="YES"/>
     </entity>
     <entity name="Professor" representedClassName=".Professor" syncable="YES">
@@ -51,10 +67,12 @@
     </entity>
     <elements>
         <element name="Coordinator" positionX="259" positionY="-36" width="128" height="120"/>
-        <element name="Faculty" positionX="-108" positionY="135" width="128" height="133"/>
-        <element name="Professor" positionX="-117" positionY="-54" width="128" height="135"/>
-        <element name="User" positionX="70" positionY="-153" width="128" height="120"/>
         <element name="EducationalObjective" positionX="72" positionY="150" width="128" height="165"/>
+        <element name="Faculty" positionX="-108" positionY="135" width="128" height="150"/>
+        <element name="Professor" positionX="-117" positionY="-54" width="128" height="135"/>
         <element name="StudentResult" positionX="259" positionY="201" width="128" height="148"/>
+        <element name="User" positionX="70" positionY="-153" width="128" height="120"/>
+        <element name="Aspect" positionX="72" positionY="0" width="128" height="135"/>
+        <element name="Criterion" positionX="81" positionY="9" width="128" height="120"/>
     </elements>
 </model>
