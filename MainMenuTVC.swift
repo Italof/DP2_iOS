@@ -128,7 +128,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         if segue.identifier == "edObjectivesSegue" {
             let nvc = segue.destinationViewController as! UINavigationController
             let vc = nvc.viewControllers.first as! ObjetivosEdTVC
-            //vc.faculty = self.faculty
+            vc.faculty = self.faculty
         }
         
         if segue.identifier == "studentResSegue" {

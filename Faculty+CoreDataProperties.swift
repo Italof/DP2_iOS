@@ -13,5 +13,12 @@ import Foundation
 import CoreData
 
 extension Faculty {
-
+    
+    @NSManaged var updated_at: NSDate?
+    @NSManaged var id: NSNumber?
+    @NSManaged var nombre: String?
+    @NSManaged var codigo: String?
+    @NSManaged var descripcion: String?
+    @NSManaged var educationalObjectives: NSSet?
+    
 }

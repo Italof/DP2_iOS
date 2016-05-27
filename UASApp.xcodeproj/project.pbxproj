@@ -68,8 +68,10 @@
 		77D4A73A1CF590A4006878DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A7321CF590A4006878DD /* User.swift */; };
 		77D4A73C1CF6346C006878DD /* FacultyTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A73B1CF6346C006878DD /* FacultyTransactions.swift */; };
 		77D4A73E1CF644EB006878DD /* EducationalObjectiveTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A73D1CF644EB006878DD /* EducationalObjectiveTransactions.swift */; };
-		77D4A7411CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A73F1CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift */; };
-		77D4A7421CF6461A006878DD /* EducationalObjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A7401CF6461A006878DD /* EducationalObjective.swift */; };
+		77D4A74B1CF80B9C006878DD /* StudentResult+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A7481CF80B9C006878DD /* StudentResult+CoreDataProperties.swift */; };
+		77D4A74C1CF80B9C006878DD /* StudentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A7491CF80B9C006878DD /* StudentResult.swift */; };
+		77D4A74F1CF80C79006878DD /* EducationalObjective+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A74D1CF80C79006878DD /* EducationalObjective+CoreDataProperties.swift */; };
+		77D4A7501CF80C79006878DD /* EducationalObjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A74E1CF80C79006878DD /* EducationalObjective.swift */; };
 		77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E198491CD7C85300782B72 /* AppDelegate.swift */; };
 		77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1984B1CD7C85300782B72 /* ViewController.swift */; };
 		77E1984F1CD7C85300782B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E1984D1CD7C85300782B72 /* Main.storyboard */; };
@@ -161,8 +163,10 @@
 		77D4A7321CF590A4006878DD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		77D4A73B1CF6346C006878DD /* FacultyTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyTransactions.swift; sourceTree = "<group>"; };
 		77D4A73D1CF644EB006878DD /* EducationalObjectiveTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalObjectiveTransactions.swift; sourceTree = "<group>"; };
-		77D4A73F1CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EducationalObjective+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		77D4A7401CF6461A006878DD /* EducationalObjective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalObjective.swift; sourceTree = "<group>"; };
+		77D4A7481CF80B9C006878DD /* StudentResult+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StudentResult+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77D4A7491CF80B9C006878DD /* StudentResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResult.swift; sourceTree = "<group>"; };
+		77D4A74D1CF80C79006878DD /* EducationalObjective+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EducationalObjective+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77D4A74E1CF80C79006878DD /* EducationalObjective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalObjective.swift; sourceTree = "<group>"; };
 		77E198461CD7C85300782B72 /* UASApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UASApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E198491CD7C85300782B72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E1984B1CD7C85300782B72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -312,8 +316,10 @@
 		778315711CDBB828008D9209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				77D4A73F1CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift */,
-				77D4A7401CF6461A006878DD /* EducationalObjective.swift */,
+				77D4A74D1CF80C79006878DD /* EducationalObjective+CoreDataProperties.swift */,
+				77D4A74E1CF80C79006878DD /* EducationalObjective.swift */,
+				77D4A7481CF80B9C006878DD /* StudentResult+CoreDataProperties.swift */,
+				77D4A7491CF80B9C006878DD /* StudentResult.swift */,
 				77D4A72B1CF590A4006878DD /* Faculty+CoreDataProperties.swift */,
 				77D4A72C1CF590A4006878DD /* Faculty.swift */,
 				77D4A72D1CF590A4006878DD /* Coordinator+CoreDataProperties.swift */,
@@ -660,8 +666,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D4A74B1CF80B9C006878DD /* StudentResult+CoreDataProperties.swift in Sources */,
 				77167A651CDD233F004C91BC /* EvaluationResults.swift in Sources */,
-				77D4A7411CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift in Sources */,
 				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
@@ -677,6 +683,7 @@
 				77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */,
 				77167A5E1CDD1DBB004C91BC /* ImprovementCell.swift in Sources */,
 				77D4A7361CF590A4006878DD /* Coordinator.swift in Sources */,
+				77D4A74C1CF80B9C006878DD /* StudentResult.swift in Sources */,
 				77167A671CDD2BAA004C91BC /* RubricCell.swift in Sources */,
 				77D4A73A1CF590A4006878DD /* User.swift in Sources */,
 				77D4A7391CF590A4006878DD /* User+CoreDataProperties.swift in Sources */,
@@ -685,15 +692,16 @@
 				77A24CC11CDD0A5E006AA0B9 /* TeacherCell.swift in Sources */,
 				77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */,
 				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
-				77D4A7421CF6461A006878DD /* EducationalObjective.swift in Sources */,
 				77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */,
 				77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */,
 				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
+				77D4A7501CF80C79006878DD /* EducationalObjective.swift in Sources */,
 				77A24CAB1CDCA6DF006AA0B9 /* Rubrics.swift in Sources */,
 				77A24CB71CDCFDDB006AA0B9 /* CursosTVC.swift in Sources */,
 				77A24CB41CDCE1A1006AA0B9 /* InicioVC.swift in Sources */,
 				77167A6C1CDD30E2004C91BC /* CriteriaDetail.swift in Sources */,
 				77D4A73C1CF6346C006878DD /* FacultyTransactions.swift in Sources */,
+				77D4A74F1CF80C79006878DD /* EducationalObjective+CoreDataProperties.swift in Sources */,
 				7747245D1CEF8781005C1464 /* Connection.swift in Sources */,
 				77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */,
 				77D4A7331CF590A4006878DD /* Faculty+CoreDataProperties.swift in Sources */,

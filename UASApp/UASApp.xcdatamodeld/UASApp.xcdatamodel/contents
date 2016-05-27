@@ -15,6 +15,7 @@
         <attribute name="numero" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="educationalObjectives" inverseEntity="Faculty" syncable="YES"/>
+        <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudentResult" inverseName="educationalObjective" inverseEntity="StudentResult" syncable="YES"/>
     </entity>
     <entity name="Faculty" representedClassName=".Faculty" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
@@ -32,6 +33,15 @@
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="professor" inverseEntity="User" syncable="YES"/>
     </entity>
+    <entity name="StudentResult" representedClassName=".StudentResult" syncable="YES">
+        <attribute name="cicloRegistro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="identificador" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idEspecialidad" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="educationalObjective" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EducationalObjective" inverseName="studentResults" inverseEntity="EducationalObjective" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="idCoordinador" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="idDocente" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -41,9 +51,10 @@
     </entity>
     <elements>
         <element name="Coordinator" positionX="259" positionY="-36" width="128" height="120"/>
-        <element name="Faculty" positionX="72" positionY="168" width="128" height="133"/>
+        <element name="Faculty" positionX="-108" positionY="135" width="128" height="133"/>
         <element name="Professor" positionX="-117" positionY="-54" width="128" height="135"/>
         <element name="User" positionX="70" positionY="-153" width="128" height="120"/>
-        <element name="EducationalObjective" positionX="72" positionY="0" width="128" height="150"/>
+        <element name="EducationalObjective" positionX="72" positionY="150" width="128" height="165"/>
+        <element name="StudentResult" positionX="259" positionY="201" width="128" height="148"/>
     </elements>
 </model>

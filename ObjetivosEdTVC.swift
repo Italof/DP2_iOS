@@ -24,7 +24,7 @@ class ObjetivosEdTVC: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         
         self.loadDBWithJSON()
-        
+        self.edObjList = TR_Ed_Objective().get(self.faculty!.id!)
     }
     
     override func viewDidLoad() {
@@ -42,20 +42,21 @@ class ObjetivosEdTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return self.sem.count
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return self.edObjList!.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("objEdCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = self.array[indexPath.section]
-
+        cell.textLabel?.text = "Objetivo Educacional " + (self.edObjList![indexPath.row]).numero!.description
+        
+        
         return cell
     }
     
@@ -110,21 +111,19 @@ class ObjetivosEdTVC: UITableViewController {
     
     func loadDBWithJSON() {
         
-        print(self.faculty!)
-        /*
-        Alamofire.request(.GET, self.endpoint.url + "faculties/ /educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+        let idFac = self.faculty?.id
+        
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
             .responseJSON { response in
                 switch response.result {
                 case .Success:
                     let json = JSON(data: response.data!)
-                    print(json)
-                    //TR_Ed_Objective().store(json)
+                    TR_Ed_Objective().store(json, faculty: self.faculty!)
                 case .Failure(let error):
                     print(error)
                 }
                 
         }
-         */
     }
 
 }
