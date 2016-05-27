@@ -2,78 +2,37 @@
 //  FacultyTransactions.swift
 //  UASApp
 //
-//  Created by Karl Montenegro on 20/05/16.
+//  Created by Karl Montenegro on 25/05/16.
 //  Copyright © 2016 puntobat. All rights reserved.
 //
 
 import Foundation
 import CoreData
-import Alamofire
+import SwiftyJSON
 
-class FacultyTransactions {
+class TR_Faculty {
     
-    //Faculty Load from JSON
-    func loadFaculties(array: [AnyObject]?) {
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDel.managedObjectContext
-        self.deleteAllFaculties()
+    let dateFormatter = NSDateFormatter()
+    
+    func store(json: JSON) {
         
-        for elem in array! {
-            let faculty = NSEntityDescription.insertNewObjectForEntityForName("Faculty",inManagedObjectContext: context)
-            faculty.setValue(elem.valueForKey("Codigo"), forKey: "codigo")
-            faculty.setValue(elem.valueForKey("Descripcion"), forKey: "descripcion")
-            faculty.setValue(elem.valueForKey("Nombre"), forKey: "nombre")
-            faculty.setValue(elem.valueForKey("IdEspecialidad"), forKey: "id")
+        //Clear previous data
+        Faculty.MR_truncateAll()
+        
+        for (index,subJson):(String, JSON) in json {
+            let fac = Faculty.MR_createEntity()
+            fac?.id = Int(subJson["IdEspecialidad"].stringValue)
+            fac?.codigo = subJson["Codigo"].stringValue
+            fac?.nombre = subJson["Nombre"].stringValue
+            fac?.descripcion = subJson["Descripcion"].stringValue
+            fac?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)
         }
-        do {
-            try context.save()
-        } catch {
-            print(error)
-        }
+        
+        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
     }
     
-    func deleteAllFaculties() {
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDel.managedObjectContext
-        let request = NSFetchRequest(entityName: "Faculty")
-        request.returnsObjectsAsFaults = false
-        
-        var results: Array<Faculty> = []
-        
-        do {
-            try results = context.executeFetchRequest(request) as! Array<Faculty>
-        } catch {
-            print(error)
-        }
-        
-        for elem in results {
-            context.deleteObject(elem)
-        }
-        
-        do{
-            try context.save()
-        } catch {
-            print(error)
-        }
+    func get()-> Array<Faculty>?{
+        return Faculty.MR_findAll() as! Array<Faculty>
     }
     
-    
-    //Get all faculties
-    
-    func all() -> Array<Faculty>? {
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDel.managedObjectContext
-        
-        let request = NSFetchRequest(entityName: "Faculty")
-        request.returnsObjectsAsFaults = false
-        
-        var results:Array<Faculty> = []
-        
-        do{
-            try results = context.executeFetchRequest(request) as! Array<Faculty>
-        }catch{
-            print(error)
-        }
-        return results
-    }
 }

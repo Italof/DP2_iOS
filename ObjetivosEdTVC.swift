@@ -7,20 +7,30 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ObjetivosEdTVC: UITableViewController {
 
     let array = ["Objetivo Educacional 1", "Objetivo Educacional 2", "Objetivo Educacional 3", "Objetivo Educacional 4"]
     let sem = ["2014-2", "2015-1", "2015-2", "2016-1"]
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let endpoint = Connection()
+    
+    var faculty:Faculty? = nil
+    var edObjList:Array<EducationalObjective>? = nil
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        self.loadDBWithJSON()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //self.edObjList = TR_Ed_Objective().get(Int(self.faculty!.id!))
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,6 +106,25 @@ class ObjetivosEdTVC: UITableViewController {
         if segue.identifier == "objectiveDetailSegue" {
             
         }
+    }
+    
+    func loadDBWithJSON() {
+        
+        print(self.faculty!)
+        /*
+        Alamofire.request(.GET, self.endpoint.url + "faculties/ /educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    let json = JSON(data: response.data!)
+                    print(json)
+                    //TR_Ed_Objective().store(json)
+                case .Failure(let error):
+                    print(error)
+                }
+                
+        }
+         */
     }
 
 }

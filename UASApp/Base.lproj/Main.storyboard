@@ -98,7 +98,7 @@
                     <connections>
                         <outlet property="txtPassword" destination="75F-ig-wkG" id="dGt-uG-9hU"/>
                         <outlet property="txtUsername" destination="rTZ-bP-wAg" id="c2L-Sq-52W"/>
-                        <segue destination="SgD-rq-oKN" kind="show" identifier="facultyListSegue" id="xyX-CC-MBY"/>
+                        <segue destination="SgD-rq-oKN" kind="presentation" identifier="facultyListSegue" id="xyX-CC-MBY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -126,7 +126,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingenieria Informática" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmG-L5-IiI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Especialidad&gt;" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmG-L5-IiI">
                                                     <rect key="frame" x="77" y="192" width="447" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="447" id="ZTc-u0-CFZ"/>
@@ -494,7 +494,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzG-e1-tu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391" y="341"/>
+            <point key="canvasLocation" x="400" y="353"/>
         </scene>
         <!--Objetivos Educacionales-->
         <scene sceneID="lfG-xq-tZI">
@@ -1522,9 +1522,9 @@
             <objects>
                 <splitViewController id="366-wT-Yur" customClass="MasterSVC" customModule="UASApp" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="952-lo-ejy" kind="relationship" relationship="masterViewController" id="Z38-gQ-yZd"/>
                         <segue destination="nDb-le-MEw" kind="relationship" relationship="detailViewController" id="CQ9-JS-all"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="logOutSegue" id="1JB-Bt-WiH"/>
+                        <segue destination="pAV-19-Jfj" kind="relationship" relationship="masterViewController" id="zHQ-Da-TOX"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cw5-Z2-DDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1609,29 +1609,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nje-1q-wyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="380" y="-403"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ikv-O5-b2E">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="952-lo-ejy" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qby-aQ-7aG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="pAV-19-Jfj" kind="relationship" relationship="rootViewController" id="HgM-rI-Jod"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m3Z-qB-NTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="380" y="353"/>
         </scene>
         <!--Sugerencias-->
         <scene sceneID="a6d-lo-xfH">
@@ -2003,8 +1980,8 @@
         <image name="person-placeholder.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m3r-Fg-C9E"/>
-        <segue reference="X6Y-a6-TN4"/>
+        <segue reference="xyX-CC-MBY"/>
+        <segue reference="5Rg-R9-9NK"/>
         <segue reference="WBq-da-cRG"/>
         <segue reference="ClM-dX-do7"/>
         <segue reference="mP9-cK-Hgs"/>

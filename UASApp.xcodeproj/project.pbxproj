@@ -31,18 +31,6 @@
 		77167A6E1CDD30F0004C91BC /* CriteriaLevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6D1CDD30F0004C91BC /* CriteriaLevelCell.swift */; };
 		77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */; };
 		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
-		774724621CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */; };
-		774724631CEF97B4005C1464 /* AcademicUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245F1CEF97B4005C1464 /* AcademicUnit.swift */; };
-		774724681CEF9D0D005C1464 /* FacultyTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774724671CEF9D0D005C1464 /* FacultyTransactions.swift */; };
-		7747246C1CEFE745005C1464 /* Faculty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747246A1CEFE745005C1464 /* Faculty+CoreDataProperties.swift */; };
-		7747246D1CEFE745005C1464 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747246B1CEFE745005C1464 /* Faculty.swift */; };
-		776067EA1CF3E9CB00787914 /* UserTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067E91CF3E9CB00787914 /* UserTransactions.swift */; };
-		776067F11CF3EDCD00787914 /* Professor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067EB1CF3EDCD00787914 /* Professor+CoreDataProperties.swift */; };
-		776067F21CF3EDCD00787914 /* Professor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067EC1CF3EDCD00787914 /* Professor.swift */; };
-		776067F31CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067ED1CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift */; };
-		776067F41CF3EDCD00787914 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067EE1CF3EDCD00787914 /* Coordinator.swift */; };
-		776067F51CF3EDCD00787914 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067EF1CF3EDCD00787914 /* User+CoreDataProperties.swift */; };
-		776067F61CF3EDCD00787914 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776067F01CF3EDCD00787914 /* User.swift */; };
 		776A236F1CE28E4600D1FA08 /* Pods_UASApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */; };
 		776A23701CE28E6D00D1FA08 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236C1CE28E3900D1FA08 /* Alamofire.framework */; };
 		7783156E1CDAE525008D9209 /* Menu-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7783156D1CDAE525008D9209 /* Menu-30.png */; };
@@ -70,6 +58,18 @@
 		77A24CC41CDD1106006AA0B9 /* TeacherModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A24CC31CDD1106006AA0B9 /* TeacherModal.swift */; };
 		77A24CC61CDD1555006AA0B9 /* Sugerencias-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A24CC51CDD1555006AA0B9 /* Sugerencias-30.png */; };
 		77A24CC81CDD15EB006AA0B9 /* Improve-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A24CC71CDD15EB006AA0B9 /* Improve-30.png */; };
+		77D4A7331CF590A4006878DD /* Faculty+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A72B1CF590A4006878DD /* Faculty+CoreDataProperties.swift */; };
+		77D4A7341CF590A4006878DD /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A72C1CF590A4006878DD /* Faculty.swift */; };
+		77D4A7351CF590A4006878DD /* Coordinator+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A72D1CF590A4006878DD /* Coordinator+CoreDataProperties.swift */; };
+		77D4A7361CF590A4006878DD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A72E1CF590A4006878DD /* Coordinator.swift */; };
+		77D4A7371CF590A4006878DD /* Professor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A72F1CF590A4006878DD /* Professor+CoreDataProperties.swift */; };
+		77D4A7381CF590A4006878DD /* Professor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A7301CF590A4006878DD /* Professor.swift */; };
+		77D4A7391CF590A4006878DD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A7311CF590A4006878DD /* User+CoreDataProperties.swift */; };
+		77D4A73A1CF590A4006878DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A7321CF590A4006878DD /* User.swift */; };
+		77D4A73C1CF6346C006878DD /* FacultyTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A73B1CF6346C006878DD /* FacultyTransactions.swift */; };
+		77D4A73E1CF644EB006878DD /* EducationalObjectiveTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A73D1CF644EB006878DD /* EducationalObjectiveTransactions.swift */; };
+		77D4A7411CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A73F1CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift */; };
+		77D4A7421CF6461A006878DD /* EducationalObjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4A7401CF6461A006878DD /* EducationalObjective.swift */; };
 		77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E198491CD7C85300782B72 /* AppDelegate.swift */; };
 		77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1984B1CD7C85300782B72 /* ViewController.swift */; };
 		77E1984F1CD7C85300782B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E1984D1CD7C85300782B72 /* Main.storyboard */; };
@@ -124,18 +124,6 @@
 		77167A6D1CDD30F0004C91BC /* CriteriaLevelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriteriaLevelCell.swift; sourceTree = "<group>"; };
 		77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdResultDescriptionCell.swift; sourceTree = "<group>"; };
 		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
-		7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AcademicUnit+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7747245F1CEF97B4005C1464 /* AcademicUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicUnit.swift; sourceTree = "<group>"; };
-		774724671CEF9D0D005C1464 /* FacultyTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyTransactions.swift; sourceTree = "<group>"; };
-		7747246A1CEFE745005C1464 /* Faculty+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Faculty+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7747246B1CEFE745005C1464 /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
-		776067E91CF3E9CB00787914 /* UserTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTransactions.swift; sourceTree = "<group>"; };
-		776067EB1CF3EDCD00787914 /* Professor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Professor+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		776067EC1CF3EDCD00787914 /* Professor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professor.swift; sourceTree = "<group>"; };
-		776067ED1CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Coordinator+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		776067EE1CF3EDCD00787914 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		776067EF1CF3EDCD00787914 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		776067F01CF3EDCD00787914 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		776A236C1CE28E3900D1FA08 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
 		776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UASApp.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Pods_UASApp.framework"; sourceTree = "<group>"; };
 		7783156D1CDAE525008D9209 /* Menu-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu-30.png"; path = "UASApp/img/Menu-30.png"; sourceTree = "<group>"; };
@@ -163,6 +151,18 @@
 		77A24CC31CDD1106006AA0B9 /* TeacherModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherModal.swift; sourceTree = "<group>"; };
 		77A24CC51CDD1555006AA0B9 /* Sugerencias-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sugerencias-30.png"; path = "UASApp/img/Sugerencias-30.png"; sourceTree = "<group>"; };
 		77A24CC71CDD15EB006AA0B9 /* Improve-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Improve-30.png"; path = "UASApp/img/Improve-30.png"; sourceTree = "<group>"; };
+		77D4A72B1CF590A4006878DD /* Faculty+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Faculty+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77D4A72C1CF590A4006878DD /* Faculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
+		77D4A72D1CF590A4006878DD /* Coordinator+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Coordinator+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77D4A72E1CF590A4006878DD /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		77D4A72F1CF590A4006878DD /* Professor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Professor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77D4A7301CF590A4006878DD /* Professor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professor.swift; sourceTree = "<group>"; };
+		77D4A7311CF590A4006878DD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77D4A7321CF590A4006878DD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		77D4A73B1CF6346C006878DD /* FacultyTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyTransactions.swift; sourceTree = "<group>"; };
+		77D4A73D1CF644EB006878DD /* EducationalObjectiveTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalObjectiveTransactions.swift; sourceTree = "<group>"; };
+		77D4A73F1CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EducationalObjective+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77D4A7401CF6461A006878DD /* EducationalObjective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalObjective.swift; sourceTree = "<group>"; };
 		77E198461CD7C85300782B72 /* UASApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UASApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E198491CD7C85300782B72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E1984B1CD7C85300782B72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -303,8 +303,8 @@
 		774724661CEF9949005C1464 /* Data Loading */ = {
 			isa = PBXGroup;
 			children = (
-				774724671CEF9D0D005C1464 /* FacultyTransactions.swift */,
-				776067E91CF3E9CB00787914 /* UserTransactions.swift */,
+				77D4A73B1CF6346C006878DD /* FacultyTransactions.swift */,
+				77D4A73D1CF644EB006878DD /* EducationalObjectiveTransactions.swift */,
 			);
 			name = "Data Loading";
 			sourceTree = "<group>";
@@ -312,16 +312,16 @@
 		778315711CDBB828008D9209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				776067EB1CF3EDCD00787914 /* Professor+CoreDataProperties.swift */,
-				776067EC1CF3EDCD00787914 /* Professor.swift */,
-				776067ED1CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift */,
-				776067EE1CF3EDCD00787914 /* Coordinator.swift */,
-				776067EF1CF3EDCD00787914 /* User+CoreDataProperties.swift */,
-				776067F01CF3EDCD00787914 /* User.swift */,
-				7747246A1CEFE745005C1464 /* Faculty+CoreDataProperties.swift */,
-				7747246B1CEFE745005C1464 /* Faculty.swift */,
-				7747245E1CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift */,
-				7747245F1CEF97B4005C1464 /* AcademicUnit.swift */,
+				77D4A73F1CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift */,
+				77D4A7401CF6461A006878DD /* EducationalObjective.swift */,
+				77D4A72B1CF590A4006878DD /* Faculty+CoreDataProperties.swift */,
+				77D4A72C1CF590A4006878DD /* Faculty.swift */,
+				77D4A72D1CF590A4006878DD /* Coordinator+CoreDataProperties.swift */,
+				77D4A72E1CF590A4006878DD /* Coordinator.swift */,
+				77D4A72F1CF590A4006878DD /* Professor+CoreDataProperties.swift */,
+				77D4A7301CF590A4006878DD /* Professor.swift */,
+				77D4A7311CF590A4006878DD /* User+CoreDataProperties.swift */,
+				77D4A7321CF590A4006878DD /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -661,49 +661,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				77167A651CDD233F004C91BC /* EvaluationResults.swift in Sources */,
+				77D4A7411CF6461A006878DD /* EducationalObjective+CoreDataProperties.swift in Sources */,
 				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
-				776067F51CF3EDCD00787914 /* User+CoreDataProperties.swift in Sources */,
-				7747246C1CEFE745005C1464 /* Faculty+CoreDataProperties.swift in Sources */,
 				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
+				77D4A7371CF590A4006878DD /* Professor+CoreDataProperties.swift in Sources */,
 				77A24CB91CDD052D006AA0B9 /* CursoCell.swift in Sources */,
-				774724621CEF97B4005C1464 /* AcademicUnit+CoreDataProperties.swift in Sources */,
 				77167A6E1CDD30F0004C91BC /* CriteriaLevelCell.swift in Sources */,
 				77167A5C1CDD16EB004C91BC /* ImprovementPlans.swift in Sources */,
 				77A24CAD1CDCA8E7006AA0B9 /* RubricDetail.swift in Sources */,
+				77D4A7341CF590A4006878DD /* Faculty.swift in Sources */,
 				77167A581CDD16C7004C91BC /* SuggestionCell.swift in Sources */,
-				774724681CEF9D0D005C1464 /* FacultyTransactions.swift in Sources */,
 				77A24CC41CDD1106006AA0B9 /* TeacherModal.swift in Sources */,
 				77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */,
 				77167A5E1CDD1DBB004C91BC /* ImprovementCell.swift in Sources */,
+				77D4A7361CF590A4006878DD /* Coordinator.swift in Sources */,
 				77167A671CDD2BAA004C91BC /* RubricCell.swift in Sources */,
+				77D4A73A1CF590A4006878DD /* User.swift in Sources */,
+				77D4A7391CF590A4006878DD /* User+CoreDataProperties.swift in Sources */,
 				77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */,
-				776067F11CF3EDCD00787914 /* Professor+CoreDataProperties.swift in Sources */,
+				77D4A73E1CF644EB006878DD /* EducationalObjectiveTransactions.swift in Sources */,
 				77A24CC11CDD0A5E006AA0B9 /* TeacherCell.swift in Sources */,
-				776067F41CF3EDCD00787914 /* Coordinator.swift in Sources */,
 				77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */,
 				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
-				776067EA1CF3E9CB00787914 /* UserTransactions.swift in Sources */,
-				776067F31CF3EDCD00787914 /* Coordinator+CoreDataProperties.swift in Sources */,
+				77D4A7421CF6461A006878DD /* EducationalObjective.swift in Sources */,
 				77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */,
 				77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */,
 				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
 				77A24CAB1CDCA6DF006AA0B9 /* Rubrics.swift in Sources */,
 				77A24CB71CDCFDDB006AA0B9 /* CursosTVC.swift in Sources */,
 				77A24CB41CDCE1A1006AA0B9 /* InicioVC.swift in Sources */,
-				776067F61CF3EDCD00787914 /* User.swift in Sources */,
 				77167A6C1CDD30E2004C91BC /* CriteriaDetail.swift in Sources */,
+				77D4A73C1CF6346C006878DD /* FacultyTransactions.swift in Sources */,
 				7747245D1CEF8781005C1464 /* Connection.swift in Sources */,
 				77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */,
-				774724631CEF97B4005C1464 /* AcademicUnit.swift in Sources */,
+				77D4A7331CF590A4006878DD /* Faculty+CoreDataProperties.swift in Sources */,
 				77E198521CD7C85300782B72 /* UASApp.xcdatamodeld in Sources */,
 				77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */,
+				77D4A7381CF590A4006878DD /* Professor.swift in Sources */,
 				77A24CB21CDCADA7006AA0B9 /* AspectoDetailTVC.swift in Sources */,
 				77A24CB01CDCAD0C006AA0B9 /* AspectosTVC.swift in Sources */,
-				776067F21CF3EDCD00787914 /* Professor.swift in Sources */,
+				77D4A7351CF590A4006878DD /* Coordinator+CoreDataProperties.swift in Sources */,
 				77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */,
-				7747246D1CEFE745005C1464 /* Faculty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

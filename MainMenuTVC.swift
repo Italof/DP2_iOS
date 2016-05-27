@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import SwiftyJSON
+
+protocol dataReceiveForMenu {
+    func acceptData(faculty: Faculty)
+}
 
 class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
 
@@ -17,15 +22,31 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     @IBOutlet weak var userSpecialty: UILabel!
     @IBOutlet weak var facultyName: UILabel!
     
-    var faculty: Faculty? = nil
+    var faculty:Faculty? = nil
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint = Connection()
+    var userJSON:JSON? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.faculty)
-        self.userSpecialty.text = self.faculty?.nombre
+        
+        self.userJSON = JSON(data: self.defaults.objectForKey("user") as! NSData)
+        
+        if self.userJSON!["professor"] != nil {
+            let info = self.userJSON!["professor"]
+            self.userFullName.text = info["Nombre"].stringValue + " " + info["Apellido Materno"].stringValue + " " + info["ApellidoPaterno"].stringValue
+            self.userPosition.text = "Profesor"
+            
+        } else {
+            if self.userJSON!["coordinador"] != nil {
+                
+                let info = self.userJSON!["coordinador"]
+                self.userFullName.text = info["Nombre"].stringValue + " " + info["Apellido Materno"].stringValue + " " + info["ApellidoPaterno"].stringValue
+                self.userPosition.text = "Coordinador"
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,7 +123,9 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         }
         
         if segue.identifier == "edObjectivesSegue" {
-           
+            let nvc = segue.destinationViewController as! UINavigationController
+            let vc = nvc.viewControllers.first as! ObjetivosEdTVC
+            //vc.faculty = self.faculty
         }
         
         if segue.identifier == "studentResSegue" {

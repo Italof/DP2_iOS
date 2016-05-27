@@ -2,7 +2,7 @@
 //  Faculty+CoreDataProperties.swift
 //  
 //
-//  Created by Karl Montenegro on 20/05/16.
+//  Created by Karl Montenegro on 25/05/16.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,11 +13,5 @@ import Foundation
 import CoreData
 
 extension Faculty {
-
-    @NSManaged var codigo: String?
-    @NSManaged var descripcion: String?
-    @NSManaged var nombre: String?
-    @NSManaged var id: NSNumber?
-    @NSManaged var unidadAcademica: AcademicUnit?
 
 }

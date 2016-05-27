@@ -7,24 +7,24 @@
 //
 
 import UIKit
-import Alamofire
+import SwiftyJSON
+
 
 class EspecialidadTVC: UITableViewController {
 
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint = Connection()
     
-    var facultyArray: Array<Faculty>? = nil
-    
+    var facultyList:Array<Faculty> = Faculty.MR_findAll() as! Array<Faculty>
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.facultyArray = FacultyTransactions().all()
+     
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Dispose of any resources thavaran be recreated.
     }
 
     // MARK: - Table view data source
@@ -36,18 +36,15 @@ class EspecialidadTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.facultyArray!.count
+        //return self.facultyArray!.count
+        return self.facultyList.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("facultyCell", forIndexPath: indexPath)
 
-        let faculty = self.facultyArray![indexPath.row]
-        
-        cell.textLabel?.text = faculty.nombre
-        cell.detailTextLabel?.text = faculty.descripcion
-
+        cell.textLabel?.text = self.facultyList[indexPath.row].nombre
         return cell
     }
 
@@ -72,7 +69,7 @@ class EspecialidadTVC: UITableViewController {
         // Delete action
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (alertController) -> Void in
             // Logs out
-            self.performSegueWithIdentifier("logoutSegue", sender: self)
+            self.performSegueWithIdentifier("logoutSegue", sender: sender)
         }))
         
         // Cancel action
@@ -85,18 +82,22 @@ class EspecialidadTVC: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "presentMainMenuSegue" {
-            let mainSVC = segue.destinationViewController as! UISplitViewController
-            let indexpath:NSIndexPath = self.tableView.indexPathForSelectedRow!
+            let splitViewController:MasterSVC = segue.destinationViewController as! MasterSVC
             
-            let menuC = mainSVC.viewControllers.first as! UINavigationController
-            let menu = menuC.viewControllers.first as! MainMenuTVC
+            let indexpath = self.tableView.indexPathForSelectedRow
             
-            menu.faculty = self.facultyArray![indexpath.row]
-            mainSVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+            
+            splitViewController.faculty = self.facultyList[indexpath!.row]
+            
+            
+            print(self.facultyList[indexpath!.row].nombre)
+            
+            //splitViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         }
         
         if segue.identifier == "logoutSegue" {
             
         }
     }
+    
 }

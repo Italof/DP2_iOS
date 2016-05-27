@@ -2,13 +2,12 @@
 //  User.swift
 //  
 //
-//  Created by Karl Montenegro on 23/05/16.
+//  Created by Karl Montenegro on 25/05/16.
 //
 //
 
 import Foundation
 import CoreData
-
 
 class User: NSManagedObject {
 

@@ -2,7 +2,7 @@
 //  Coordinator+CoreDataProperties.swift
 //  
 //
-//  Created by Karl Montenegro on 23/05/16.
+//  Created by Karl Montenegro on 25/05/16.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,8 +13,5 @@ import Foundation
 import CoreData
 
 extension Coordinator {
-
-    @NSManaged var id: NSNumber?
-    @NSManaged var user: NSManagedObject?
 
 }

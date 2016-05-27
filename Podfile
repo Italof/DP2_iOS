@@ -7,6 +7,8 @@ target 'UASApp' do
     
     pod 'Charts/Realm'
     pod 'Alamofire', '~> 3.4'
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+    pod 'MagicalRecord'
     
 end
 

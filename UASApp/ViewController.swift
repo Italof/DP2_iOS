@@ -8,6 +8,9 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+import CoreData
+
 
 class ViewController: UIViewController {
 
@@ -16,10 +19,11 @@ class ViewController: UIViewController {
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint: Connection = Connection()
+    let dateFormatter = NSDateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         self.defaults.setBool(false, forKey: "offline_session")
         self.defaults.setObject("", forKey: "token")
     }
@@ -35,22 +39,37 @@ class ViewController: UIViewController {
         let pass:String = (self.txtPassword?.text)!
         
         Alamofire.request(.POST, self.endpoint.url + "authenticate?user=\(user)&password=\(pass)")
-            .authenticate(user: user, password: pass)
+            .validate()
             .responseJSON { response in
                 switch response.result {
-                case .Success(let JSON):
-                
-                    if JSON.valueForKey("token") != nil {
-                        self.defaults.setObject(JSON.valueForKey("token"), forKey: "token")
-                        self.defaults.setBool(false, forKey: "offline_session")
-                        self.performSegueWithIdentifier("facultyListSegue", sender: self)
-                    } else {
-                        self.alertMessage("Usuario/Contrasena incorrectos.", winTitle: "Error")
+                case .Success:
+                    let json = JSON(data: response.data!)
+                    
+                    self.defaults.setObject(json["token"].stringValue, forKey: "token")
+                    do {
+                    try self.defaults.setObject(json["user"].rawData(), forKey: "user")
+                    } catch {
+                        print(error)
                     }
-                default:
-                    print(response)
+                    
+                    Alamofire.request(.GET, self.endpoint.url + "faculties?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+                        .responseJSON { response in
+                            switch response.result {
+                            case .Success:
+                                let json = JSON(data: response.data!)
+                                TR_Faculty().store(json)
+                            case .Failure(let error):
+                                print(error)
+                            }
+                            
+                    }
+                    
+                    self.performSegueWithIdentifier("facultyListSegue", sender: self)
+                    
+                case .Failure(let error):
+                    self.alertMessage("Usuario/Contrasena incorrectos.", winTitle: "Error")
                 }
-        }
+            }
     }
 
     @IBAction func offlineTapped(sender: AnyObject) {
@@ -61,24 +80,10 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "facultyListSegue" {
-            if !self.defaults.boolForKey("offline_session") {
-                self.loadFaculties()
-            }
+
         }
     }
     
-    func loadFaculties(){
-        let token = self.defaults.objectForKey("token")!
-        Alamofire.request(.GET, self.endpoint.url + "faculties?since=1463183832&token=\(token)")
-            .responseJSON { response in
-                switch response.result {
-                case .Success(let JSON):
-                    FacultyTransactions().loadFaculties(JSON as? [AnyObject])
-                case .Failure(let error):
-                    print("Request failed with error: \(error)")
-                }
-        }
-    }
     
     func alertMessage(winMessage: String, winTitle: String){
         let alertController = UIAlertController(title: winTitle, message: winMessage, preferredStyle: UIAlertControllerStyle.Alert)
@@ -88,6 +93,5 @@ class ViewController: UIViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-
 }
 
