@@ -60,4 +60,33 @@ class TR_Ed_Objective {
         return EducationalObjective.MR_executeFetchRequest(request) as? Array<EducationalObjective>
     }
     
+    func get(faculty_id: NSNumber)->Dictionary<String,Array<EducationalObjective>>? {
+            
+            let predicate:NSPredicate = NSPredicate(format: "(idEspecialidad = %@)", faculty_id)
+            let request:NSFetchRequest = EducationalObjective.MR_requestAllWithPredicate(predicate)
+            let sortDescriptor = NSSortDescriptor(key: "idEspecialidad", ascending: false)
+            
+            request.sortDescriptors = [sortDescriptor]
+            let array = EducationalObjective.MR_executeFetchRequest(request) as! Array<EducationalObjective>
+            return self.classifyObjectives(array)
+    }
+    
+    
+    func classifyObjectives(array: Array<EducationalObjective>) -> Dictionary<String,Array<EducationalObjective>>?{
+        
+        var edObjDictionary = Dictionary<String,Array<EducationalObjective>>()
+        var thisEdObj:String = ""
+        
+        for ed in array {
+            thisEdObj = ed.cicloReg!
+            
+            if edObjDictionary.indexForKey(thisEdObj) == nil {
+                edObjDictionary[thisEdObj] = []
+            }
+            
+            edObjDictionary[thisEdObj]?.append(ed)
+        }
+        
+        return edObjDictionary
+    }
 }

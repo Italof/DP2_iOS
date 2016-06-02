@@ -35,6 +35,8 @@
 		772A69971CF8BB3200E17335 /* Criterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A69931CF8BB3200E17335 /* Criterion.swift */; };
 		772A69981CF8BB3200E17335 /* Aspect+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A69941CF8BB3200E17335 /* Aspect+CoreDataProperties.swift */; };
 		772A69991CF8BB3200E17335 /* Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A69951CF8BB3200E17335 /* Aspect.swift */; };
+		774092071CFF40C3004A6668 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774092061CFF40C3004A6668 /* Charts.framework */; };
+		7740920A1D00D5E1004A6668 /* StudentResultTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774092091D00D5E1004A6668 /* StudentResultTransactions.swift */; };
 		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
 		776A236F1CE28E4600D1FA08 /* Pods_UASApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */; };
 		776A23701CE28E6D00D1FA08 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776A236C1CE28E3900D1FA08 /* Alamofire.framework */; };
@@ -135,6 +137,8 @@
 		772A69931CF8BB3200E17335 /* Criterion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Criterion.swift; sourceTree = "<group>"; };
 		772A69941CF8BB3200E17335 /* Aspect+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Aspect+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		772A69951CF8BB3200E17335 /* Aspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aspect.swift; sourceTree = "<group>"; };
+		774092061CFF40C3004A6668 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-ayybsxccyzjzkudbalgmhltvyjvj/Build/Products/Debug-iphonesimulator/Charts.framework"; sourceTree = "<group>"; };
+		774092091D00D5E1004A6668 /* StudentResultTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResultTransactions.swift; sourceTree = "<group>"; };
 		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		776A236C1CE28E3900D1FA08 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
 		776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UASApp.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-dovzznfjlgtrlseiqbkukitticls/Build/Products/Debug-iphonesimulator/Pods_UASApp.framework"; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				774092071CFF40C3004A6668 /* Charts.framework in Frameworks */,
 				776A23701CE28E6D00D1FA08 /* Alamofire.framework in Frameworks */,
 				776A236F1CE28E4600D1FA08 /* Pods_UASApp.framework in Frameworks */,
 			);
@@ -320,6 +325,7 @@
 				77D4A73B1CF6346C006878DD /* FacultyTransactions.swift */,
 				77D4A73D1CF644EB006878DD /* EducationalObjectiveTransactions.swift */,
 				772A69901CF8B8D100E17335 /* AspectTransactions.swift */,
+				774092091D00D5E1004A6668 /* StudentResultTransactions.swift */,
 			);
 			name = "Data Loading";
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 		C8A0BAB04DAE3554E00311AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				774092061CFF40C3004A6668 /* Charts.framework */,
 				776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */,
 				776A236C1CE28E3900D1FA08 /* Alamofire.framework */,
 				91EC3011194695571EFCB348 /* Pods_UASApp.framework */,
@@ -710,6 +717,7 @@
 				77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */,
 				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
 				77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */,
+				7740920A1D00D5E1004A6668 /* StudentResultTransactions.swift in Sources */,
 				77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */,
 				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
 				77D4A7501CF80C79006878DD /* EducationalObjective.swift in Sources */,

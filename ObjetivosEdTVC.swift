@@ -18,8 +18,14 @@ class ObjetivosEdTVC: UITableViewController {
     var faculty:Faculty? = nil
     var edObjList:Array<EducationalObjective>? = nil
     
+    var edObjDictionary:Dictionary<String,Array<EducationalObjective>>? = nil
+    var edObjKeys:Array<String>? = nil
+    
     override func viewWillAppear(animated: Bool) {
         self.edObjList = TR_Ed_Objective().get(self.faculty!.id!)
+        
+        self.edObjDictionary = TR_Ed_Objective().get(self.faculty!.id!)
+        self.edObjKeys = Array(self.edObjDictionary!.keys)
     }
     
     override func viewDidLoad() {
@@ -36,26 +42,31 @@ class ObjetivosEdTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return self.edObjKeys!.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.edObjList!.count
+        return self.edObjDictionary![self.edObjKeys![section]]!.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("objEdCell", forIndexPath: indexPath)
-
-        cell.textLabel?.text = "Objetivo Educacional " + (self.edObjList![indexPath.row]).numero!.description
+        
+        let key = self.edObjKeys![indexPath.section]
+        let obj = (self.edObjDictionary![key])![indexPath.row]
+        
+        cell.textLabel?.text = "Objetivo Educacional " + obj.numero!.description
         
         return cell
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Ciclo"
+        
+        return "Ciclo " + self.edObjKeys![section]
     }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

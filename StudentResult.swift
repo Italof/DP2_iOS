@@ -18,4 +18,5 @@ class StudentResult: NSManagedObject {
     @NSManaged var id: NSNumber?
     @NSManaged var cicloRegistro: String?
     @NSManaged var educationalObjective: EducationalObjective?
+    @NSManaged var idObjetivoEd: NSNumber?
 }
