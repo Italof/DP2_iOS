@@ -189,7 +189,9 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         }
         
         if segue.identifier == "coursesSegue" {
-            
+            let nvc = segue.destinationViewController as! UINavigationController
+            let vc = nvc.viewControllers.first as! CursosTVC
+            vc.faculty = self.faculty
         }
         
         if segue.identifier == "improvementSegue" {

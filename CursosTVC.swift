@@ -17,10 +17,14 @@ class CursosTVC: UITableViewController {
     var c3 = ["IEE245 - Desarrollo de Programas 1"]
     var c4 = ["IEE124 - Ing. de Sistemas 1"]
     
+    var courseDictionary:Dictionary<NSNumber,Array<Course>>? = nil
+    var courseKeys:Array<NSNumber>? = nil
+    var faculty:Faculty? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.courseDictionary = TR_Courses().get(self.faculty!.id!)
+        self.courseKeys = Array(self.courseDictionary!.keys)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,17 +35,18 @@ class CursosTVC: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.niveles[section]
+        return "Nivel " + self.courseKeys![section].description
     }
     
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return self.niveles.count
+        return self.courseKeys!.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        /*
         if section == 0 {
             return self.c1.count
         } else {
@@ -59,12 +64,15 @@ class CursosTVC: UITableViewController {
                 }
             }
         }
+         */
+        
+        return (self.courseDictionary![section]?.count)!
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cursoCell", forIndexPath: indexPath)
-
+        /*
         if indexPath.section == 0 {
             cell.textLabel?.text = self.c1[indexPath.row]
         } else {
@@ -80,7 +88,12 @@ class CursosTVC: UITableViewController {
                 }
             }
         }
-
+         */
+        
+        let key = self.courseKeys![indexPath.section]
+        let reg = (self.courseDictionary![key]!)[indexPath.row]
+        
+        cell.textLabel?.text = reg.codigo! + " - " + reg.nombre!
         return cell
     }
     
