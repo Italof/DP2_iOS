@@ -68,5 +68,19 @@ class FacultiesTest: XCTestCase {
         XCTAssert(usernameField.exists)
         
     }
+    
+    func testCanEnterFaculty() {
+        login()
+        
+        let app = XCUIApplication()
+        
+        let firstOption = app.tables.cells.elementBoundByIndex(0)
+        firstOption.tap()
+        
+        let tablesQuery = XCUIApplication().tables
+        let firstOptionInMenuExists = tablesQuery.staticTexts["Inicio"].exists
+        
+        XCTAssert(firstOptionInMenuExists)
+    }
 
 }

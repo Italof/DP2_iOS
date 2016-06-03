@@ -34,9 +34,10 @@ class UASAppUITests: XCTestCase {
         
         let app = XCUIApplication()
         app.buttons["Iniciar Sesión"].tap()
-        let errorAlert = app.alerts["Error"]
         
-        XCTAssert(errorAlert.exists)
+        let usernameField = app.textFields["Usuario"]
+        
+        XCTAssert(usernameField.exists)
         
     }
     

@@ -1570,7 +1570,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nje-1q-wyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="-403"/>
+            <point key="canvasLocation" x="132" y="-351"/>
         </scene>
         <!--Sugerencias-->
         <scene sceneID="a6d-lo-xfH">
@@ -1942,8 +1942,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="m3r-Fg-C9E"/>
+        <segue reference="X6Y-a6-TN4"/>
         <segue reference="WBq-da-cRG"/>
-        <segue reference="5Rg-R9-9NK"/>
         <segue reference="ClM-dX-do7"/>
         <segue reference="0A6-2X-7lb"/>
     </inferredMetricsTieBreakers>
