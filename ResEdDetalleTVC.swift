@@ -10,12 +10,12 @@ import UIKit
 
 class ResEdDetalleTVC: UITableViewController {
 
-    let objEd = ["Objetivo Educacional 1","Objetivo Educacional 2","Objetivo Educacional 3"]
     
     var studentResult: StudentResult? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(self.studentResult)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,11 +32,7 @@ class ResEdDetalleTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-            if section == 4 {
-                return self.objEd.count
-            } else {
-                return 1
-            }
+            return 1
         
     }
     
@@ -84,8 +80,7 @@ class ResEdDetalleTVC: UITableViewController {
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
-                    cell.textLabel?.text = self.objEd[indexPath.row]
-                    cell.detailTextLabel?.text = ""
+                    //cell.textLabel?.text = "Objetivo " + (self.studentResult?.educationalObjective!.numero?.description)!
                     cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
                     return cell
                 }

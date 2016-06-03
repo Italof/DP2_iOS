@@ -84,8 +84,19 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     }
                     break
             case 4: //Res. Estudiantiles
-                    self.performSegueWithIdentifier("studentResSegue", sender: self)
-                    break
+                
+                Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+                    .responseJSON { response in
+                        switch response.result {
+                        case .Success:
+                            let json = JSON(data: response.data!)
+                            TR_Ed_Objective().store(json, faculty: self.faculty!)
+                            self.performSegueWithIdentifier("studentResSegue", sender: self)
+                        case .Failure(let error):
+                            print(error)
+                        }
+                }
+                break
             case 5: //Aspectos
                 
                 Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/aspects?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
@@ -102,7 +113,18 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     break
 
             case 6: //Cursos
-                    self.performSegueWithIdentifier("coursesSegue", sender: self)
+                
+                Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/evaluated_courses", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+                    switch response.result {
+                    case .Success:
+                        let json = JSON(data: response.data!)
+                        TR_Courses().store(json, faculty: self.faculty!)
+                        self.performSegueWithIdentifier("coursesSegue", sender: self)
+                    case .Failure(let error):
+                        print(error)
+                    }
+                    
+                }
                     break
             case 7: //Mejora Continua
                     self.performSegueWithIdentifier("improvementSegue", sender: self)
@@ -154,7 +176,9 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         }
         
         if segue.identifier == "studentResSegue" {
-            
+            let nvc = segue.destinationViewController as! UINavigationController
+            let vc = nvc.viewControllers.first as! ResEdTVC
+            vc.faculty = self.faculty
         }
         
         if segue.identifier == "aspectSegue"{

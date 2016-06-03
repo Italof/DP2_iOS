@@ -1394,7 +1394,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="WqP-H9-Y7X" kind="show" id="mP9-cK-Hgs"/>
+                                    <segue destination="WqP-H9-Y7X" kind="show" identifier="educationalResultSegue" id="mP9-cK-Hgs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

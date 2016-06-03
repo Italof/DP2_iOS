@@ -14,10 +14,16 @@ class ResEdTVC: UITableViewController {
     
     let sem = ["2014-2", "2015-1", "2015-2", "2016-1"]
     
+    var faculty:Faculty? = nil
+    
+    var studentResDictionary:Dictionary<String,Array<StudentResult>>? = nil
+    var studentResKeys:Array<String>? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.studentResDictionary = TR_StudentResults().get(self.faculty!.id!)
+        self.studentResKeys = Array(self.studentResDictionary!.keys)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,22 +35,25 @@ class ResEdTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return self.sem.count
+        return self.studentResKeys!.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return self.studentResDictionary![self.studentResKeys![section]]!.count
     }
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.sem[section]
+        return "Ciclo " + self.studentResKeys![section]
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("resCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = self.array[indexPath.section]
+        let key = self.studentResKeys![indexPath.section]
+        let res = self.studentResDictionary![key]
+        
+        cell.textLabel?.text = "Resultado " + res![indexPath.row].identificador!
 
         return cell
     }
@@ -85,14 +94,20 @@ class ResEdTVC: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "educationalResultSegue" {
+            let vc = segue.destinationViewController as! ResEdDetalleTVC
+            
+            let indexPath = self.tableView.indexPathForSelectedRow
+            
+            let key = self.studentResKeys![(indexPath?.section)!]
+            
+            vc.studentResult = (self.studentResDictionary![key])![indexPath!.row]
+        }
     }
-    */
 
 }

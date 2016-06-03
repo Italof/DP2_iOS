@@ -1,5 +1,5 @@
 //
-//  Professor+CoreDataProperties.swift
+//  Timetable+CoreDataProperties.swift
 //  
 //
 //  Created by Karl Montenegro on 03/06/16.
@@ -12,14 +12,12 @@
 import Foundation
 import CoreData
 
-extension Professor {
+extension Timetable {
 
-    @NSManaged var apellidos: String?
-    @NSManaged var descripcion: String?
     @NSManaged var id: NSNumber?
-    @NSManaged var nombres: String?
-    @NSManaged var updated_at: NSDate?
-    @NSManaged var user: User?
-    @NSManaged var horarios: NSSet?
+    @NSManaged var codigo: String?
+    @NSManaged var alumnos: NSNumber?
+    @NSManaged var profesor: Professor?
+    @NSManaged var curso: Course?
 
 }
