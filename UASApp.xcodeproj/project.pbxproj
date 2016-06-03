@@ -87,6 +87,7 @@
 		77E198571CD7C85300782B72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E198551CD7C85300782B72 /* LaunchScreen.storyboard */; };
 		77E198621CD7C85300782B72 /* UASAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E198611CD7C85300782B72 /* UASAppTests.swift */; };
 		77E1986D1CD7C85300782B72 /* UASAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1986C1CD7C85300782B72 /* UASAppUITests.swift */; };
+		C041BB4E1D0159F8008A077A /* FacultiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041BB4D1D0159F8008A077A /* FacultiesTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +197,7 @@
 		77E1986C1CD7C85300782B72 /* UASAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UASAppUITests.swift; sourceTree = "<group>"; };
 		77E1986E1CD7C85300782B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91EC3011194695571EFCB348 /* Pods_UASApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UASApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C041BB4D1D0159F8008A077A /* FacultiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultiesTest.swift; sourceTree = "<group>"; };
 		F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UASApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-UASApp/Pods-UASApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -468,6 +470,7 @@
 			children = (
 				77E1986C1CD7C85300782B72 /* UASAppUITests.swift */,
 				77E1986E1CD7C85300782B72 /* Info.plist */,
+				C041BB4D1D0159F8008A077A /* FacultiesTest.swift */,
 			);
 			path = UASAppUITests;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C041BB4E1D0159F8008A077A /* FacultiesTest.swift in Sources */,
 				77E1986D1CD7C85300782B72 /* UASAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
