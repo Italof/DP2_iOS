@@ -20,6 +20,7 @@ class CursosTVC: UITableViewController {
     var courseDictionary:Dictionary<NSNumber,Array<Course>>? = nil
     var courseKeys:Array<NSNumber>? = nil
     var faculty:Faculty? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -133,14 +134,21 @@ class CursosTVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "" {
+            let tvc = segue.destinationViewController as! CursoDetalleTVC
+            let indexPath = self.tableView.indexPathForSelectedRow
+            
+            let key = self.courseKeys![indexPath!.section]
+            tvc.course = (self.courseDictionary![key]!)[indexPath!.row]
+            tvc.faculty = self.faculty
+        }
+        
     }
-    */
 
 }

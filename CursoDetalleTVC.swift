@@ -18,10 +18,13 @@ class CursoDetalleTVC: UITableViewController {
     var p1 = ["Andrés Melgar","19950102"]
     var p2 = ["Ronny Cueva","20012992"]
     
+    var course:Course? = nil
+    var faculty:Faculty? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.courseTitle.title = "Ingenieria de Software"
+        self.courseTitle.title = self.course?.nombre
         
     }
 
@@ -67,9 +70,9 @@ class CursoDetalleTVC: UITableViewController {
 
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("infoCell", forIndexPath: indexPath) as! CursoCell
-            cell.lblCodigoCurso.text = self.data[0]
-            cell.lblNivelCurso.text = self.data[2]
-            cell.lblEspecialidadCurso.text = self.data[1]
+            cell.lblCodigoCurso.text = self.course?.codigo
+            cell.lblNivelCurso.text = self.course?.nivel?.description
+            cell.lblEspecialidadCurso.text = self.faculty?.nombre
             
             return cell
         } else {
