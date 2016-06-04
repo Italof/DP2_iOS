@@ -1941,10 +1941,10 @@
         <image name="person-placeholder.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WBq-da-cRG"/>
         <segue reference="m3r-Fg-C9E"/>
         <segue reference="5Rg-R9-9NK"/>
-        <segue reference="0A6-2X-7lb"/>
+        <segue reference="WBq-da-cRG"/>
         <segue reference="ClM-dX-do7"/>
+        <segue reference="0A6-2X-7lb"/>
     </inferredMetricsTieBreakers>
 </document>

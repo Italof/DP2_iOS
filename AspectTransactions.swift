@@ -18,6 +18,7 @@ class TR_Aspect {
         
         //Clear previous data
         Aspect.MR_truncateAll()
+        Criterion.MR_truncateAll()
         
         for (_,subJson):(String, JSON) in json {
             let asp = Aspect.MR_createEntity()
@@ -37,6 +38,7 @@ class TR_Aspect {
                 crt?.nombre = crJson["Nombre"].stringValue
                 crt?.updated_at = self.dateFormatter.dateFromString(crJson["updated_at"].stringValue)
                 
+                crt?.aspect = asp!
                 asp?.addCriteria(crt!)
             }
         }

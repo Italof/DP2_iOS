@@ -32,7 +32,7 @@ class ResEdDetalleTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-            return 1
+        return 1
         
     }
     
@@ -80,8 +80,9 @@ class ResEdDetalleTVC: UITableViewController {
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
-                    //cell.textLabel?.text = "Objetivo " + (self.studentResult?.educationalObjective!.numero?.description)!
-                    cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                    cell.textLabel?.text = "Objetivo " + (self.studentResult?.educationalObjective!.numero?.description)!
+                    cell.detailTextLabel?.text = ""
+                    cell.accessoryType = UITableViewCellAccessoryType.None
                     return cell
                 }
             }

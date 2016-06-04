@@ -57,7 +57,7 @@ class ObjetivosEdTVC: UITableViewController {
         let key = self.edObjKeys![indexPath.section]
         let obj = (self.edObjDictionary![key])![indexPath.row]
         
-        cell.textLabel?.text = "Objetivo Educacional " + obj.numero!.description
+        cell.textLabel?.text = "Objetivo Educacional " + obj.numero!.description + ": " + obj.descripcion!
         
         return cell
     }
