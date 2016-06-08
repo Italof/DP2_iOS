@@ -19,6 +19,7 @@ class TR_Courses  {
         
         Course.MR_truncateAll()
         Timetable.MR_truncateAll()
+        Professor.MR_truncateAll()
         
         for (_,subJson):(String, JSON) in json {
             let course = Course.MR_createEntity()
@@ -48,6 +49,8 @@ class TR_Courses  {
                     pr_reg?.descripcion = proJson["Descripcion"].stringValue
                     pr_reg?.updated_at = self.dateFormatter.dateFromString(proJson["updated_at"].stringValue)
                     
+                    tm_reg?.profesor = pr_reg!
+                    pr_reg?.addTimeTable(tm_reg!)
                 }
             }
             
@@ -64,6 +67,7 @@ class TR_Courses  {
         
         request.sortDescriptors = [sortDescriptor]
         let array = Course.MR_executeFetchRequest(request) as! Array<Course>
+        
         return self.classifyResults(array)
     }
     

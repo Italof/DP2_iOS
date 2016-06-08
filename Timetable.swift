@@ -2,7 +2,7 @@
 //  Timetable.swift
 //  
 //
-//  Created by Karl Montenegro on 03/06/16.
+//  Created by Karl Montenegro on 07/06/16.
 //
 //
 
@@ -12,5 +12,6 @@ import CoreData
 
 class Timetable: NSManagedObject {
 
+// Insert code here to add functionality to your managed object subclass
 
 }

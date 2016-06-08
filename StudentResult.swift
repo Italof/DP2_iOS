@@ -2,21 +2,16 @@
 //  StudentResult.swift
 //  
 //
-//  Created by Karl Montenegro on 26/05/16.
+//  Created by Karl Montenegro on 07/06/16.
 //
 //
 
 import Foundation
 import CoreData
 
+
 class StudentResult: NSManagedObject {
 
-    @NSManaged var updated_at: NSDate?
-    @NSManaged var idEspecialidad: NSNumber?
-    @NSManaged var descripcion: String?
-    @NSManaged var identificador: String?
-    @NSManaged var id: NSNumber?
-    @NSManaged var cicloRegistro: String?
-    @NSManaged var educationalObjective: EducationalObjective?
-    @NSManaged var idObjetivoEd: NSNumber?
+// Insert code here to add functionality to your managed object subclass
+
 }

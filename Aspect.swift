@@ -2,7 +2,7 @@
 //  Aspect.swift
 //  
 //
-//  Created by Karl Montenegro on 27/05/16.
+//  Created by Karl Montenegro on 07/06/16.
 //
 //
 
@@ -12,9 +12,6 @@ import CoreData
 
 class Aspect: NSManagedObject {
 
-    func addCriteria(crt: Criterion){
-        let criteria = self.mutableSetValueForKey("criteria")
-        criteria.addObject(crt)
-    }
+// Insert code here to add functionality to your managed object subclass
 
 }
