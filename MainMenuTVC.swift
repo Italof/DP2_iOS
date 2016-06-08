@@ -60,7 +60,6 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let idFac = self.faculty?.id
         switch indexPath.row {
             case 1: //Inicio
                     self.performSegueWithIdentifier("startSegue", sender: self)
@@ -71,26 +70,27 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
             
             case 3: //Obj. Educacionales
                 
-                    Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+                    Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
                         .responseJSON { response in
-                            switch response.result {
+                        switch response.result {
                             case .Success:
                                 let json = JSON(data: response.data!)
                                 EdObjectiveDataLoader().refresh_objectives(json)
                                 self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                             case .Failure(let error):
-                                print(error)
-                            }
+                            print(error)
+                        }
                     }
+                
                     break
             case 4: //Res. Estudiantiles
                 
-                Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
                     .responseJSON { response in
                         switch response.result {
                         case .Success:
                             let json = JSON(data: response.data!)
-                            TR_Ed_Objective().store(json, faculty: self.faculty!)
+                            //TR_Ed_Objective().store(json, faculty: self.faculty!)
                             self.performSegueWithIdentifier("studentResSegue", sender: self)
                         case .Failure(let error):
                             print(error)
@@ -99,7 +99,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                 break
             case 5: //Aspectos
                 
-                Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/aspects?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/aspects?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
                     switch response.result {
                         case .Success:
                             let json = JSON(data: response.data!)
@@ -114,7 +114,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
 
             case 6: //Cursos
                 
-                Alamofire.request(.GET, self.endpoint.url + "faculties/" + idFac!.description + "/evaluated_courses", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/evaluated_courses", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
                     switch response.result {
                     case .Success:
                         let json = JSON(data: response.data!)

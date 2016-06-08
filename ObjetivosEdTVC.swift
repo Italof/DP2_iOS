@@ -16,15 +16,13 @@ class ObjetivosEdTVC: UITableViewController {
     let endpoint = Connection()
     
     var faculty:Faculty? = nil
-    var edObjList:Array<EducationalObjective>? = nil
     
     var edObjDictionary:Dictionary<String,Array<EducationalObjective>>? = nil
     var edObjKeys:Array<String>? = nil
     
     override func viewWillAppear(animated: Bool) {
-        //self.edObjList = TR_Ed_Objective().get(self.faculty!.id!)
         
-        //self.edObjDictionary = TR_Ed_Objective().get(self.faculty!.id!)
+        self.edObjDictionary = EdObjectiveDataLoader().get_all(faculty!)
         self.edObjKeys = Array(self.edObjDictionary!.keys)
     }
     
@@ -112,7 +110,7 @@ class ObjetivosEdTVC: UITableViewController {
             let vc = segue.destinationViewController as! EducationalObjectiveDetail
             let indexPath = self.tableView.indexPathForSelectedRow
             
-            vc.ed_objective = self.edObjList![(indexPath?.row)!]
+            //vc.ed_objective = self.edObjList![(indexPath?.row)!]
 
         }
     }

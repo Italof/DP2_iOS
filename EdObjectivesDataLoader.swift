@@ -38,7 +38,7 @@ class EdObjectiveDataLoader {
                     obj?.descripcion = subJson["Descripcion"].stringValue
                     obj?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                     
-                    //obj?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
+                    obj?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
                 }
                 
             } else {
@@ -51,10 +51,30 @@ class EdObjectiveDataLoader {
                 obj?.descripcion = subJson["Descripcion"].stringValue
                 obj?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                 
-                //obj?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
+                obj?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
                 
             }
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         }
     }
+    
+    func get_all(faculty: Faculty) -> Dictionary<String, Array<EducationalObjective>>? {
+        
+        let array: Array<EducationalObjective> = faculty.educationalObjective?.allObjects as! Array<EducationalObjective>
+        
+        var objDictionary = Dictionary<String,Array<EducationalObjective>>()
+        var thisObj:String = ""
+        
+        for obj in array {
+            thisObj = obj.cicloRegistro!
+            
+            if objDictionary.indexForKey(thisObj) == nil {
+                objDictionary[thisObj] = []
+            }
+            
+            objDictionary[thisObj]?.append(obj)
+        }
+        return objDictionary
+    }
+    
 }

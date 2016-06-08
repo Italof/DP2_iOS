@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
 
 
 class EspecialidadTVC: UITableViewController {
@@ -19,7 +20,6 @@ class EspecialidadTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +47,8 @@ class EspecialidadTVC: UITableViewController {
         cell.textLabel?.text = self.facultyList[indexPath.row].nombre
         return cell
     }
-
+    
+    
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -81,16 +82,11 @@ class EspecialidadTVC: UITableViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "presentMainMenuSegue" {
             
-            //Load the rest of the data
-            
-            
             let splitViewController:MasterSVC = segue.destinationViewController as! MasterSVC
-            
             let indexpath = self.tableView.indexPathForSelectedRow
-            
-            
             let menu = splitViewController.viewControllers.first as! MainMenuTVC
             
             menu.faculty = self.facultyList[indexpath!.row]

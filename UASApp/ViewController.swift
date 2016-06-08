@@ -60,8 +60,9 @@ class ViewController: UIViewController {
                                 
                                 //Step Two: Read the JSON
                                 FacultyDataLoader().refresh_faculties(json)
-                                self.performSegueWithIdentifier("facultyListSegue", sender: self)
                                 
+                                self.performSegueWithIdentifier("facultyListSegue", sender: self)
+                                break
                             case .Failure(let error):
                                 print(error)
                                 
@@ -96,6 +97,7 @@ class ViewController: UIViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
 }
 
 extension NSDate {
