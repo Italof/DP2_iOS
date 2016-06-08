@@ -32,7 +32,8 @@ class EducationalObjectiveDetail: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 3 {
-            return (self.ed_objective?.studentResults?.count)!
+            return 2
+            //return (self.ed_objective?.studentResults?.count)!
         } else {
             return 1
         }
@@ -71,7 +72,7 @@ class EducationalObjectiveDetail: UITableViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath)
             cell.textLabel?.text = "Nro:"
-            cell.detailTextLabel?.text = self.ed_objective?.numero?.description
+            //cell.detailTextLabel?.text = self.ed_objective?.numero?.description
             return cell
         }else {
             if indexPath.section == 1 {
@@ -82,14 +83,14 @@ class EducationalObjectiveDetail: UITableViewController {
             } else {
                 if indexPath.section == 2 {
                     let cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell", forIndexPath: indexPath) as! DescriptionCell
-                    cell.lblDescription.text = self.ed_objective?.descripcion
+                    //cell.lblDescription.text = self.ed_objective?.descripcion
                     
                     return cell
                     
                 } else {
                     let cell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath)
 
-                    cell.textLabel?.text = "Resultado Educacional: " + (self.ed_objective?.studentResults?.allObjects[indexPath.row] as! StudentResult).identificador!
+                    //cell.textLabel?.text = "Resultado Educacional: " + (self.ed_objective?.studentResults?.allObjects[indexPath.row] as! StudentResult).identificador!
                     return cell
                 }
             }

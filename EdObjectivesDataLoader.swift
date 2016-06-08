@@ -39,6 +39,8 @@ class EdObjectiveDataLoader {
                     obj?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                     
                     obj?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
+                    
+                    StudentResultsDataLoader().refresh_results(subJson["students_results"])
                 }
                 
             } else {
@@ -53,6 +55,7 @@ class EdObjectiveDataLoader {
                 
                 obj?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
                 
+                StudentResultsDataLoader().refresh_results(subJson["students_results"])
             }
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         }
