@@ -49,6 +49,7 @@
 		773F6DA31D07AE6200B70FF5 /* Timetable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DA11D07AE6200B70FF5 /* Timetable+CoreDataProperties.swift */; };
 		773F6DA41D07AE6200B70FF5 /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DA21D07AE6200B70FF5 /* Timetable.swift */; };
 		773F6DA61D07B00900B70FF5 /* FacultyDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DA51D07B00900B70FF5 /* FacultyDataLoader.swift */; };
+		773F6DA81D07D41100B70FF5 /* EdObjectivesDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DA71D07D41100B70FF5 /* EdObjectivesDataLoader.swift */; };
 		774092071CFF40C3004A6668 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774092061CFF40C3004A6668 /* Charts.framework */; };
 		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
 		7761A1341D078772004B2B9A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A1331D078772004B2B9A /* Reachability.swift */; };
@@ -153,6 +154,7 @@
 		773F6DA11D07AE6200B70FF5 /* Timetable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timetable+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		773F6DA21D07AE6200B70FF5 /* Timetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timetable.swift; sourceTree = "<group>"; };
 		773F6DA51D07B00900B70FF5 /* FacultyDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyDataLoader.swift; sourceTree = "<group>"; };
+		773F6DA71D07D41100B70FF5 /* EdObjectivesDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdObjectivesDataLoader.swift; sourceTree = "<group>"; };
 		774092061CFF40C3004A6668 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-ayybsxccyzjzkudbalgmhltvyjvj/Build/Products/Debug-iphonesimulator/Charts.framework"; sourceTree = "<group>"; };
 		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		7761A1331D078772004B2B9A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			children = (
 				77D4A73D1CF644EB006878DD /* EducationalObjectiveTransactions.swift */,
 				773F6DA51D07B00900B70FF5 /* FacultyDataLoader.swift */,
+				773F6DA71D07D41100B70FF5 /* EdObjectivesDataLoader.swift */,
 			);
 			name = "Data Loading";
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				773F6D851D07A99700B70FF5 /* Faculty+CoreDataProperties.swift in Sources */,
 				77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */,
 				773F6D981D07AD0C00B70FF5 /* Criterion.swift in Sources */,
+				773F6DA81D07D41100B70FF5 /* EdObjectivesDataLoader.swift in Sources */,
 				773F6D861D07A99700B70FF5 /* Faculty.swift in Sources */,
 				773F6D991D07AD0C00B70FF5 /* StudentResult+CoreDataProperties.swift in Sources */,
 				773F6D971D07AD0C00B70FF5 /* Criterion+CoreDataProperties.swift in Sources */,

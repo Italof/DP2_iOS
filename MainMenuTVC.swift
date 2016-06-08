@@ -76,7 +76,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                             switch response.result {
                             case .Success:
                                 let json = JSON(data: response.data!)
-                                TR_Ed_Objective().store(json, faculty: self.faculty!)
+                                EdObjectiveDataLoader().refresh_objectives(json)
                                 self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                             case .Failure(let error):
                                 print(error)

@@ -27,7 +27,7 @@
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="course" inverseEntity="Faculty" syncable="YES"/>
-        <relationship name="timetables" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Timetable" inverseName="course" inverseEntity="Timetable" syncable="YES"/>
+        <relationship name="timetables" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Timetable" inverseName="course" inverseEntity="Timetable" syncable="YES"/>
     </entity>
     <entity name="Criterion" representedClassName=".Criterion" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -43,7 +43,7 @@
         <attribute name="numero" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="educationalObjective" inverseEntity="Faculty" syncable="YES"/>
-        <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudentResult" inverseName="educationalObjective" inverseEntity="StudentResult" syncable="YES"/>
+        <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudentResult" inverseName="educationalObjective" inverseEntity="StudentResult" syncable="YES"/>
     </entity>
     <entity name="Faculty" representedClassName=".Faculty" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
@@ -51,16 +51,16 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="aspect" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Aspect" inverseName="faculty" inverseEntity="Aspect" syncable="YES"/>
-        <relationship name="coordinator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordinator" inverseName="faculty" inverseEntity="Coordinator" syncable="YES"/>
+        <relationship name="aspect" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Aspect" inverseName="faculty" inverseEntity="Aspect" syncable="YES"/>
+        <relationship name="coordinator" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Coordinator" inverseName="faculty" inverseEntity="Coordinator" syncable="YES"/>
         <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="faculty" inverseEntity="Course" syncable="YES"/>
-        <relationship name="criterion" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Criterion" inverseName="faculty" inverseEntity="Criterion" syncable="YES"/>
-        <relationship name="educationalObjective" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EducationalObjective" inverseName="faculty" inverseEntity="EducationalObjective" syncable="YES"/>
-        <relationship name="improvementPlan" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImprovementPlan" inverseName="faculty" inverseEntity="ImprovementPlan" syncable="YES"/>
-        <relationship name="professor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Professor" inverseName="faculty" inverseEntity="Professor" syncable="YES"/>
-        <relationship name="studentResult" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudentResult" inverseName="faculty" inverseEntity="StudentResult" syncable="YES"/>
-        <relationship name="suggestion" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Suggestion" inverseName="faculty" inverseEntity="Suggestion" syncable="YES"/>
-        <relationship name="timetable" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Timetable" inverseName="faculty" inverseEntity="Timetable" syncable="YES"/>
+        <relationship name="criterion" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Criterion" inverseName="faculty" inverseEntity="Criterion" syncable="YES"/>
+        <relationship name="educationalObjective" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EducationalObjective" inverseName="faculty" inverseEntity="EducationalObjective" syncable="YES"/>
+        <relationship name="improvementPlan" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImprovementPlan" inverseName="faculty" inverseEntity="ImprovementPlan" syncable="YES"/>
+        <relationship name="professor" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Professor" inverseName="faculty" inverseEntity="Professor" syncable="YES"/>
+        <relationship name="studentResult" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudentResult" inverseName="faculty" inverseEntity="StudentResult" syncable="YES"/>
+        <relationship name="suggestion" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Suggestion" inverseName="faculty" inverseEntity="Suggestion" syncable="YES"/>
+        <relationship name="timetable" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Timetable" inverseName="faculty" inverseEntity="Timetable" syncable="YES"/>
     </entity>
     <entity name="ImprovementPlan" representedClassName=".ImprovementPlan" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -86,7 +86,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="identificador" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="aspects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Aspect" inverseName="studentResult" inverseEntity="Aspect" syncable="YES"/>
+        <relationship name="aspects" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Aspect" inverseName="studentResult" inverseEntity="Aspect" syncable="YES"/>
         <relationship name="educationalObjective" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EducationalObjective" inverseName="studentResults" inverseEntity="EducationalObjective" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="studentResult" inverseEntity="Faculty" syncable="YES"/>
     </entity>
