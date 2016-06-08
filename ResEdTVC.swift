@@ -22,7 +22,7 @@ class ResEdTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.studentResDictionary = TR_StudentResults().get(self.faculty!.id!)
+        //self.studentResDictionary = TR_StudentResults().get(self.faculty!.id!)
         self.studentResKeys = Array(self.studentResDictionary!.keys)
     }
 

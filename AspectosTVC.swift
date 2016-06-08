@@ -18,7 +18,7 @@ class AspectosTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.aspects = TR_Aspect().get(self.faculty!.id!)
+        //self.aspects = TR_Aspect().get(self.faculty!.id!)
     }
 
     override func didReceiveMemoryWarning() {

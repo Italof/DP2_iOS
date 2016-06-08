@@ -77,7 +77,7 @@ class EducationalObjectiveDetail: UITableViewController {
             if indexPath.section == 1 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath)
                 cell.textLabel?.text = "Ciclo de Registro"
-                cell.detailTextLabel?.text = self.ed_objective?.cicloReg
+                //cell.detailTextLabel?.text = self.ed_objective?.cicloReg
                 return cell
             } else {
                 if indexPath.section == 2 {

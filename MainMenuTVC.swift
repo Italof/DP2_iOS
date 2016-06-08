@@ -103,7 +103,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     switch response.result {
                         case .Success:
                             let json = JSON(data: response.data!)
-                            TR_Aspect().store(json, faculty: self.faculty!)
+                            //TR_Aspect().store(json, faculty: self.faculty!)
                             self.performSegueWithIdentifier("aspectSegue", sender: self)
                         case .Failure(let error):
                             print(error)
@@ -118,7 +118,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     switch response.result {
                     case .Success:
                         let json = JSON(data: response.data!)
-                        TR_Courses().store(json, faculty: self.faculty!)
+                        //TR_Courses().store(json, faculty: self.faculty!)
                         self.performSegueWithIdentifier("coursesSegue", sender: self)
                     case .Failure(let error):
                         print(error)

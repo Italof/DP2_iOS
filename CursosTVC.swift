@@ -24,7 +24,7 @@ class CursosTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.courseDictionary = TR_Courses().get(self.faculty!.id!)
+        //self.courseDictionary = TR_Courses().get(self.faculty!.id!)
         self.courseKeys = Array(self.courseDictionary!.keys)
     }
 

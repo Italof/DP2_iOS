@@ -57,7 +57,7 @@ class ViewController: UIViewController {
                             switch response.result {
                             case .Success:
                                 let json = JSON(data: response.data!)
-                                TR_Faculty().store(json)
+                                //TR_Faculty().store(json)
                                 self.performSegueWithIdentifier("facultyListSegue", sender: self)
                             case .Failure(let error):
                                 print(error)

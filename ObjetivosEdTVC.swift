@@ -24,7 +24,7 @@ class ObjetivosEdTVC: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         self.edObjList = TR_Ed_Objective().get(self.faculty!.id!)
         
-        self.edObjDictionary = TR_Ed_Objective().get(self.faculty!.id!)
+        //self.edObjDictionary = TR_Ed_Objective().get(self.faculty!.id!)
         self.edObjKeys = Array(self.edObjDictionary!.keys)
     }
     

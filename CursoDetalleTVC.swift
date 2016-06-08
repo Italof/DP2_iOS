@@ -71,7 +71,7 @@ class CursoDetalleTVC: UITableViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("infoCell", forIndexPath: indexPath) as! CursoCell
             cell.lblCodigoCurso.text = self.course?.codigo
-            cell.lblNivelCurso.text = self.course?.nivel?.description
+            //cell.lblNivelCurso.text = self.course?.nivel?.description
             cell.lblEspecialidadCurso.text = self.faculty?.nombre
             
             return cell
