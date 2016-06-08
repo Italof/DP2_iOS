@@ -82,6 +82,10 @@ class EspecialidadTVC: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "presentMainMenuSegue" {
+            
+            //Load the rest of the data
+            
+            
             let splitViewController:MasterSVC = segue.destinationViewController as! MasterSVC
             
             let indexpath = self.tableView.indexPathForSelectedRow
