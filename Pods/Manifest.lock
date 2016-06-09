@@ -1,9 +1,10 @@
 PODS:
   - Alamofire (3.4.0)
-  - Charts/Core (2.2.4)
-  - Charts/Realm (2.2.4):
+  - Charts/Core (2.2.5)
+  - Charts/Realm (2.2.5):
     - Charts/Core
     - RealmSwift (~> 0.97)
+  - DZNEmptyDataSet (1.8.1)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
@@ -17,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - Charts/Realm
+  - DZNEmptyDataSet
   - MagicalRecord
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -31,7 +33,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
-  Charts: a9e735c83c6d376ade20f6612dcf0ba217394a49
+  Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Realm: 448f0416079fe5b0ed947e7d86f3c4e1c75826cb
   RealmSwift: 8a45cc8f02dfac093b72a3b5a01d567e27e15891
