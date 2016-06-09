@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
-class ResEdTVC: UITableViewController {
+class ResEdTVC: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 
     let array = ["Resultado Estudiantil 1","Resultado Estudiantil 2","Resultado Estudiantil 3","Resultado Estudiantil 4"]
     
@@ -22,15 +23,40 @@ class ResEdTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         //self.studentResDictionary = TR_StudentResults().get(self.faculty!.id!)
         //self.studentResKeys = Array(self.studentResDictionary!.keys)
+        
+        self.tableView.emptyDataSetSource = self;
+        self.tableView.emptyDataSetDelegate = self;
+        
+        self.tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    // METH: - Empty Data Set Configuration
+    
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let str = "No hay Resultados Educacionales"
+        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let str = "La especialidad no ha registrado resultados educacionales"
+        
+        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+        return UIImage(named: "Empty_Result_Placeholder")
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

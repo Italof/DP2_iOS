@@ -104,7 +104,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     switch response.result {
                         case .Success:
                             let json = JSON(data: response.data!)
-                            //TR_Aspect().store(json, faculty: self.faculty!)
+                            AspectDataLoader().refresh_aspects(json)
                             self.performSegueWithIdentifier("aspectSegue", sender: self)
                         case .Failure(let error):
                             print(error)

@@ -9,8 +9,9 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import DZNEmptyDataSet
 
-class ObjetivosEdTVC: UITableViewController {
+class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint = Connection()
@@ -28,19 +29,45 @@ class ObjetivosEdTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.tableView.emptyDataSetSource = self;
+        self.tableView.emptyDataSetDelegate = self;
+        
+        self.tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    // METH: - Empty Data Set Configuration
+    
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let str = "No hay Objetivos Estudiantiles"
+        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let str = "La especialidad no ha registrado objetivos aun"
+        
+        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+        return UIImage(named: "Empty_EO_Placeholder")
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return self.edObjKeys!.count
+        
+        if self.edObjKeys != nil {
+            return self.edObjKeys!.count
+        } else {
+            return 0
+        }
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

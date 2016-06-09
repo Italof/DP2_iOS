@@ -51,6 +51,10 @@
 		773F6DA61D07B00900B70FF5 /* FacultyDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DA51D07B00900B70FF5 /* FacultyDataLoader.swift */; };
 		773F6DA81D07D41100B70FF5 /* EdObjectivesDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DA71D07D41100B70FF5 /* EdObjectivesDataLoader.swift */; };
 		773F6DAA1D08BA9F00B70FF5 /* StudentResultsDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DA91D08BA9F00B70FF5 /* StudentResultsDataLoader.swift */; };
+		773F6DAD1D090A4500B70FF5 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773F6DAC1D090A4500B70FF5 /* DZNEmptyDataSet.framework */; };
+		773F6DAF1D090D3800B70FF5 /* Empty_EO_Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 773F6DAE1D090D3800B70FF5 /* Empty_EO_Placeholder.png */; };
+		773F6DB11D091BE700B70FF5 /* Empty_Result_Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 773F6DB01D091BE700B70FF5 /* Empty_Result_Placeholder.png */; };
+		773F6DB31D091F7300B70FF5 /* AspectDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */; };
 		774092071CFF40C3004A6668 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774092061CFF40C3004A6668 /* Charts.framework */; };
 		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
 		7761A1341D078772004B2B9A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A1331D078772004B2B9A /* Reachability.swift */; };
@@ -157,6 +161,10 @@
 		773F6DA51D07B00900B70FF5 /* FacultyDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyDataLoader.swift; sourceTree = "<group>"; };
 		773F6DA71D07D41100B70FF5 /* EdObjectivesDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdObjectivesDataLoader.swift; sourceTree = "<group>"; };
 		773F6DA91D08BA9F00B70FF5 /* StudentResultsDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResultsDataLoader.swift; sourceTree = "<group>"; };
+		773F6DAC1D090A4500B70FF5 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DZNEmptyDataSet.framework; path = "Pods/../build/Debug-iphoneos/DZNEmptyDataSet.framework"; sourceTree = "<group>"; };
+		773F6DAE1D090D3800B70FF5 /* Empty_EO_Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Empty_EO_Placeholder.png; path = UASApp/img/Empty_EO_Placeholder.png; sourceTree = "<group>"; };
+		773F6DB01D091BE700B70FF5 /* Empty_Result_Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Empty_Result_Placeholder.png; path = UASApp/img/Empty_Result_Placeholder.png; sourceTree = "<group>"; };
+		773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectDataLoader.swift; sourceTree = "<group>"; };
 		774092061CFF40C3004A6668 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-ayybsxccyzjzkudbalgmhltvyjvj/Build/Products/Debug-iphonesimulator/Charts.framework"; sourceTree = "<group>"; };
 		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		7761A1331D078772004B2B9A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -212,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773F6DAD1D090A4500B70FF5 /* DZNEmptyDataSet.framework in Frameworks */,
 				774092071CFF40C3004A6668 /* Charts.framework in Frameworks */,
 				776A23701CE28E6D00D1FA08 /* Alamofire.framework in Frameworks */,
 				776A236F1CE28E4600D1FA08 /* Pods_UASApp.framework in Frameworks */,
@@ -247,7 +256,9 @@
 		771470741CDACDFC009D5501 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				773F6DB01D091BE700B70FF5 /* Empty_Result_Placeholder.png */,
 				77167A611CDD228F004C91BC /* Download-Filled-30.png */,
+				773F6DAE1D090D3800B70FF5 /* Empty_EO_Placeholder.png */,
 				77167A5F1CDD2236004C91BC /* Download-30.png */,
 				77A24CC71CDD15EB006AA0B9 /* Improve-30.png */,
 				77A24CC51CDD1555006AA0B9 /* Sugerencias-30.png */,
@@ -334,6 +345,7 @@
 				773F6DA51D07B00900B70FF5 /* FacultyDataLoader.swift */,
 				773F6DA71D07D41100B70FF5 /* EdObjectivesDataLoader.swift */,
 				773F6DA91D08BA9F00B70FF5 /* StudentResultsDataLoader.swift */,
+				773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */,
 			);
 			name = "Data Loading";
 			sourceTree = "<group>";
@@ -487,6 +499,7 @@
 		C8A0BAB04DAE3554E00311AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				773F6DAC1D090A4500B70FF5 /* DZNEmptyDataSet.framework */,
 				774092061CFF40C3004A6668 /* Charts.framework */,
 				776A236E1CE28E4600D1FA08 /* Pods_UASApp.framework */,
 				776A236C1CE28E3900D1FA08 /* Alamofire.framework */,
@@ -615,11 +628,13 @@
 				77167A621CDD228F004C91BC /* Download-Filled-30.png in Resources */,
 				77E198541CD7C85300782B72 /* Assets.xcassets in Resources */,
 				771470901CDAE14D009D5501 /* Rubricas-30.png in Resources */,
+				773F6DB11D091BE700B70FF5 /* Empty_Result_Placeholder.png in Resources */,
 				7714708F1CDAE14D009D5501 /* Resultados-30.png in Resources */,
 				778315771CDBBBF3008D9209 /* University-50.png in Resources */,
 				771470961CDAE2AB009D5501 /* person-placeholder.png in Resources */,
 				77A24CC81CDD15EB006AA0B9 /* Improve-30.png in Resources */,
 				77E1984F1CD7C85300782B72 /* Main.storyboard in Resources */,
+				773F6DAF1D090D3800B70FF5 /* Empty_EO_Placeholder.png in Resources */,
 				771470821CDAE034009D5501 /* Home-30.png in Resources */,
 				7714708B1CDAE14D009D5501 /* Criterios-30.png in Resources */,
 				77167A601CDD2236004C91BC /* Download-30.png in Resources */,
@@ -742,6 +757,7 @@
 				773F6DA41D07AE6200B70FF5 /* Timetable.swift in Sources */,
 				77A24CA21CDC2AD1006AA0B9 /* DescriptionCell.swift in Sources */,
 				77E198521CD7C85300782B72 /* UASApp.xcdatamodeld in Sources */,
+				773F6DB31D091F7300B70FF5 /* AspectDataLoader.swift in Sources */,
 				773F6D851D07A99700B70FF5 /* Faculty+CoreDataProperties.swift in Sources */,
 				77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */,
 				773F6D981D07AD0C00B70FF5 /* Criterion.swift in Sources */,
@@ -901,6 +917,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = UASApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -917,6 +937,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = UASApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

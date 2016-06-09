@@ -4,7 +4,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="criteria" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Criterion" inverseName="aspect" inverseEntity="Criterion" syncable="YES"/>
+        <relationship name="criteria" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Criterion" inverseName="aspect" inverseEntity="Criterion" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="aspect" inverseEntity="Faculty" syncable="YES"/>
         <relationship name="studentResult" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StudentResult" inverseName="aspects" inverseEntity="StudentResult" syncable="YES"/>
     </entity>
