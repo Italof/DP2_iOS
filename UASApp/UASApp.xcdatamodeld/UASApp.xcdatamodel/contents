@@ -43,7 +43,7 @@
         <attribute name="numero" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="educationalObjective" inverseEntity="Faculty" syncable="YES"/>
-        <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudentResult" inverseName="educationalObjective" inverseEntity="StudentResult" syncable="YES"/>
+        <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudentResult" inverseName="educationalObjectives" inverseEntity="StudentResult" syncable="YES"/>
     </entity>
     <entity name="Faculty" representedClassName=".Faculty" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
@@ -87,7 +87,7 @@
         <attribute name="identificador" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="aspects" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Aspect" inverseName="studentResult" inverseEntity="Aspect" syncable="YES"/>
-        <relationship name="educationalObjective" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EducationalObjective" inverseName="studentResults" inverseEntity="EducationalObjective" syncable="YES"/>
+        <relationship name="educationalObjectives" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EducationalObjective" inverseName="studentResults" inverseEntity="EducationalObjective" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="studentResult" inverseEntity="Faculty" syncable="YES"/>
     </entity>
     <entity name="Suggestion" representedClassName=".Suggestion" syncable="YES">

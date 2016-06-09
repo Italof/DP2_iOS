@@ -20,7 +20,7 @@ extension StudentResult {
     @NSManaged var descripcion: String?
     @NSManaged var cicloRegistro: String?
     @NSManaged var faculty: Faculty?
-    @NSManaged var educationalObjective: EducationalObjective?
+    @NSManaged var educationalObjectives: NSSet?
     @NSManaged var aspects: NSSet?
 
 }

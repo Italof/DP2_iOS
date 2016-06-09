@@ -41,8 +41,6 @@ class TR_Ed_Objective {
                 st_res?.descripcion = sresJson["Descripcion"].stringValue
                 st_res?.identificador = sresJson["Identificador"].stringValue
                 st_res?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)
-                st_res?.educationalObjective = ed_obj
-                //ed_obj?.addResult(st_res!)
                 
             }
         

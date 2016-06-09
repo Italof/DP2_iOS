@@ -18,7 +18,8 @@ class EdObjectiveDataLoader {
     
     func refresh_objectives (json: JSON) {
         
-        EducationalObjective.MR_truncateAll()
+        //EducationalObjective.MR_truncateAll()
+        //StudentResult.MR_truncateAll()
         
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
@@ -40,14 +41,39 @@ class EdObjectiveDataLoader {
                     
                     obj?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
                     
-                    StudentResultsDataLoader().refresh_results(subJson["students_results"])
+                    obj?.valueForKey("studentResults")?.removeAllObjects()
+                    
+                    for (_,resJson):(String, JSON) in subJson["students_results"] {
+                        
+                        var res = StudentResult.MR_findFirstByAttribute("id", withValue: Int(resJson["IdResultadoEstudiantil"].stringValue)!)
+                        
+                        if res != nil { //Result found, we update it
+                            
+                            let date:NSDate = self.dateFormatter.dateFromString(resJson["updated_at"].stringValue)!
+                            
+                            if date.isGreaterThanDate(res!.updated_at!) {
+                                obj?.addResult(res!)
+                            }
+                            
+                        } else { //Result not found, we create it
+                            res = StudentResult.MR_createEntity()
+                            
+                            res?.id = Int(subJson["IdResultadoEstudiantil"].stringValue)
+                            res?.identificador = resJson["Identificador"].stringValue
+                            res?.cicloRegistro = resJson["CicloRegistro"].stringValue
+                            res?.descripcion = resJson["Descripcion"].stringValue
+                            
+                            res?.updated_at = self.dateFormatter.dateFromString(resJson["updated_at"].stringValue)!
+                            obj?.addResult(res!)
+                        }
+                    }
                 }
                 
             } else {
                 //If it doesn't, we create it
                 obj = EducationalObjective.MR_createEntity()
                 
-                obj?.id = Int(subJson["IdObjectivoEducacional"].stringValue)
+                obj?.id = Int(subJson["IdObjetivoEducacional"].stringValue)
                 obj?.numero = Int(subJson["Numero"].stringValue)
                 obj?.cicloRegistro = subJson["CicloRegistro"].stringValue
                 obj?.descripcion = subJson["Descripcion"].stringValue
@@ -55,7 +81,30 @@ class EdObjectiveDataLoader {
                 
                 obj?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
                 
-                StudentResultsDataLoader().refresh_results(subJson["students_results"])
+                for (_,resJson):(String, JSON) in subJson["students_results"] {
+                    
+                    var res = StudentResult.MR_findFirstByAttribute("id", withValue: Int(resJson["IdResultadoEstudiantil"].stringValue)!)
+                    
+                    if res != nil { //Result found, we update it
+                        
+                        let date:NSDate = self.dateFormatter.dateFromString(resJson["updated_at"].stringValue)!
+                        
+                        if date.isGreaterThanDate(res!.updated_at!) {
+                            obj?.addResult(res!)
+                        }
+                        
+                    } else { //Result not found, we create it
+                        res = StudentResult.MR_createEntity()
+                        
+                        res?.id = Int(subJson["IdResultadoEstudiantil"].stringValue)
+                        res?.identificador = resJson["Identificador"].stringValue
+                        res?.cicloRegistro = resJson["CicloRegistro"].stringValue
+                        res?.descripcion = resJson["Descripcion"].stringValue
+                        
+                        res?.updated_at = self.dateFormatter.dateFromString(resJson["updated_at"].stringValue)!
+                        obj?.addResult(res!)
+                    }
+                }
             }
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         }

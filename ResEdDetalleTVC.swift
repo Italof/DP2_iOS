@@ -80,7 +80,7 @@ class ResEdDetalleTVC: UITableViewController {
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
-                    cell.textLabel?.text = "Objetivo " + (self.studentResult?.educationalObjective!.numero?.description)!
+                    //cell.textLabel?.text = "Objetivo " + (self.studentResult?.educationalObjective!.numero?.description)!
                     cell.detailTextLabel?.text = ""
                     cell.accessoryType = UITableViewCellAccessoryType.None
                     return cell

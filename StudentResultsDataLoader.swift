@@ -18,7 +18,7 @@ class StudentResultsDataLoader  {
     func refresh_results (json: JSON) {
         
         StudentResult.MR_truncateAll()
-        
+
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
         
@@ -37,10 +37,6 @@ class StudentResultsDataLoader  {
                     res?.descripcion = subJson["Descripcion"].stringValue
                     res?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                     res?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
-                    
-                    let jPivot:JSON = subJson["pivot"]
-                    
-                    res?.educationalObjective = EducationalObjective.MR_findFirstByAttribute("id", withValue: Int(jPivot["IdObjetivoEducacional"].stringValue)!)
                 }
                 
             } else {
@@ -54,10 +50,6 @@ class StudentResultsDataLoader  {
                 
                 res?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                 res?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
-                
-                let jPivot:JSON = subJson["pivot"]
-                
-                res?.educationalObjective = EducationalObjective.MR_findFirstByAttribute("id", withValue: Int(jPivot["IdObjetivoEducacional"].stringValue)!)
                 
             }
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()

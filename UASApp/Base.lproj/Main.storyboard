@@ -475,7 +475,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="objEdCell" textLabel="cKs-6m-v3p" rowHeight="83" style="IBUITableViewCellStyleDefault" id="8di-Ol-2hv">
-                                <rect key="frame" x="0.0" y="92" width="600" height="83"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8di-Ol-2hv" id="XDt-0y-9UY">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="82.5"/>
@@ -519,7 +519,7 @@
                         <color key="sectionIndexBackgroundColor" red="0.37647058820000001" green="0.45098039220000002" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" textLabel="oTR-ge-she" detailTextLabel="kpm-db-vJb" rowHeight="61" style="IBUITableViewCellStyleValue1" id="7b4-PS-IQi">
-                                <rect key="frame" x="0.0" y="92" width="600" height="61"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7b4-PS-IQi" id="brb-yI-rzo">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="60.5"/>
@@ -543,7 +543,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="descriptionCell" rowHeight="105" id="1dQ-vT-Qw5" customClass="DescriptionCell" customModule="UASApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="153" width="600" height="105"/>
+                                <rect key="frame" x="0.0" y="89" width="600" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1dQ-vT-Qw5" id="SV6-oz-Ej5">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="104.5"/>
@@ -558,7 +558,6 @@
                                         </textView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Y1K-AX-B4A" firstAttribute="centerX" secondItem="SV6-oz-Ej5" secondAttribute="centerX" id="Bko-p3-0Us"/>
                                         <constraint firstItem="Y1K-AX-B4A" firstAttribute="leading" secondItem="SV6-oz-Ej5" secondAttribute="leadingMargin" constant="15" id="CGP-qv-R2m"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Y1K-AX-B4A" secondAttribute="bottom" constant="10.5" id="bRc-Cy-QGk"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Y1K-AX-B4A" secondAttribute="trailing" constant="14" id="kLk-sP-WBZ"/>
@@ -570,7 +569,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" textLabel="ZeL-gN-fEf" rowHeight="63" style="IBUITableViewCellStyleDefault" id="mT5-Yc-uBd" customClass="DescriptionCell" customModule="UASApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="258" width="600" height="63"/>
+                                <rect key="frame" x="0.0" y="194" width="600" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mT5-Yc-uBd" id="aAQ-FV-LPo">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="62.5"/>
@@ -611,7 +610,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resEdCell" textLabel="i2X-Wx-wCe" detailTextLabel="bNf-LP-dOK" rowHeight="57" style="IBUITableViewCellStyleValue1" id="r8Y-04-Hcr">
-                                <rect key="frame" x="0.0" y="92" width="600" height="57"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r8Y-04-Hcr" id="lqW-zK-g0b">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="56.5"/>
@@ -635,7 +634,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="descriptionCell" rowHeight="107" id="5hx-MT-bcB" customClass="EdResultDescriptionCell" customModule="UASApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="149" width="600" height="107"/>
+                                <rect key="frame" x="0.0" y="85" width="600" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5hx-MT-bcB" id="wKW-rK-PLG">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="106.5"/>
@@ -819,7 +818,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="aspectCell" textLabel="ABe-9h-Y3H" rowHeight="83" style="IBUITableViewCellStyleDefault" id="d9H-Aa-EHt">
-                                <rect key="frame" x="0.0" y="92" width="600" height="83"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d9H-Aa-EHt" id="KS4-Ij-3qk">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="82.5"/>
@@ -860,7 +859,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="critCell" textLabel="5Bz-w7-M5b" rowHeight="70" style="IBUITableViewCellStyleDefault" id="dMq-xO-dhN">
-                                <rect key="frame" x="0.0" y="92" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dMq-xO-dhN" id="ffW-5Z-i9a">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="69.5"/>
@@ -901,7 +900,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="levelCell" rowHeight="144" id="rqC-fJ-ZMQ" customClass="CriteriaLevelCell" customModule="UASApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="144"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rqC-fJ-ZMQ" id="rcw-y6-gC1">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="143.5"/>
@@ -972,7 +971,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cursoCell" textLabel="FW7-XZ-V1z" rowHeight="46" style="IBUITableViewCellStyleDefault" id="7yv-nR-Ijh">
-                                <rect key="frame" x="0.0" y="92" width="600" height="46"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7yv-nR-Ijh" id="1yU-y2-vJ0">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="45.5"/>
@@ -1031,7 +1030,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="184" id="gnh-5e-rte" customClass="CursoCell" customModule="UASApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="184"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="184"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gnh-5e-rte" id="nql-1e-imi">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="183.5"/>
@@ -1114,7 +1113,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teacherCell" rowHeight="112" id="PXT-ay-8wZ" customClass="TeacherCell" customModule="UASApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="276" width="600" height="112"/>
+                                <rect key="frame" x="0.0" y="212" width="600" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PXT-ay-8wZ" id="KF2-Fb-3eW">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="111.5"/>
@@ -1378,7 +1377,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="resCell" textLabel="JKg-e8-0Ws" rowHeight="83" style="IBUITableViewCellStyleDefault" id="aQc-Oy-QFm">
-                                <rect key="frame" x="0.0" y="92" width="600" height="83"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aQc-Oy-QFm" id="idP-4J-E0X">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="82.5"/>
@@ -1503,7 +1502,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="facultyCell" textLabel="LBK-qP-ZCq" imageView="yB1-G8-PLh" rowHeight="100" style="IBUITableViewCellStyleDefault" id="vAt-q2-eSD">
-                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vAt-q2-eSD" id="kfk-cA-B2Z">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="99.5"/>
@@ -1601,7 +1600,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="suggestionCell" rowHeight="277" id="Fyn-6V-twN" customClass="SuggestionCell" customModule="UASApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="277"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="277"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fyn-6V-twN" id="SDR-2B-d9p">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="276.5"/>
@@ -1748,7 +1747,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="improvementCell" rowHeight="327" id="1BD-Yt-52f" customClass="ImprovementCell" customModule="UASApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="327"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="327"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1BD-Yt-52f" id="037-ph-IVp">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="326.5"/>
@@ -1942,9 +1941,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="m3r-Fg-C9E"/>
+        <segue reference="X6Y-a6-TN4"/>
         <segue reference="WBq-da-cRG"/>
-        <segue reference="5Rg-R9-9NK"/>
         <segue reference="ClM-dX-do7"/>
-        <segue reference="mP9-cK-Hgs"/>
+        <segue reference="0A6-2X-7lb"/>
     </inferredMetricsTieBreakers>
 </document>

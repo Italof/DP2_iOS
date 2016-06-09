@@ -12,6 +12,9 @@ import CoreData
 
 class EducationalObjective: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    func addResult(obj: StudentResult){
+        let results = self.mutableSetValueForKey("studentResults")
+        results.addObject(obj)
+    }
+    
 }

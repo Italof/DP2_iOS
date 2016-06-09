@@ -85,12 +85,13 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     break
             case 4: //Res. Estudiantiles
                 
-                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/students-results?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
                     .responseJSON { response in
                         switch response.result {
                         case .Success:
                             let json = JSON(data: response.data!)
-                            //TR_Ed_Objective().store(json, faculty: self.faculty!)
+                            
+                            StudentResultsDataLoader().refresh_results(json)
                             self.performSegueWithIdentifier("studentResSegue", sender: self)
                         case .Failure(let error):
                             print(error)

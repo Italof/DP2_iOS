@@ -110,7 +110,10 @@ class ObjetivosEdTVC: UITableViewController {
             let vc = segue.destinationViewController as! EducationalObjectiveDetail
             let indexPath = self.tableView.indexPathForSelectedRow
             
-            //vc.ed_objective = self.edObjList![(indexPath?.row)!]
+            let key = self.edObjKeys![indexPath!.section]
+            let obj = (self.edObjDictionary![key])![indexPath!.row]
+            
+            vc.ed_objective = obj
 
         }
     }
