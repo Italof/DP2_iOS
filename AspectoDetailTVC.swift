@@ -37,14 +37,14 @@ class AspectoDetailTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (self.aspecto?.criteria?.allObjects.count)!
+        return 1
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("critCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = (self.aspecto?.criteria?.allObjects[indexPath.row] as! Criterion).nombre
+        cell.textLabel?.text = self.aspecto?.criteria?.nombre
         
         return cell
     }
