@@ -42,6 +42,7 @@ class SuggestionDataLoader {
                     suggestion?.titulo = subJson["Titulo"].stringValue
                     suggestion?.descripcion = subJson["Descripcion"].stringValue
                     suggestion?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
+                    suggestion?.faculty = faculty
                 }
                 
             } else { //Doesn't exists, we create it
@@ -53,6 +54,7 @@ class SuggestionDataLoader {
                 suggestion?.titulo = subJson["Titulo"].stringValue
                 suggestion?.descripcion = subJson["Descripcion"].stringValue
                 suggestion?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
+                suggestion?.faculty = faculty
             }
             
             let tJson = subJson["teacher"]

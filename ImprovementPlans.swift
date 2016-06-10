@@ -43,10 +43,10 @@ class ImprovementPlans: UITableViewController {
         
         let plan = self.plans![indexPath.row]
         
-        cell.lblUserName.text = (plan.professor?.nombres)! + " " + (plan.professor?.apellidos)!
+        cell.lblCreator.text = (plan.professor?.nombres)! + " " + (plan.professor?.apellidos)!
         cell.lblAnalysis.text = plan.analisisCausal
         cell.lblDescription.text = plan.descripcion
-        cell.lblCreator.text = plan.planType!.codigo
+        cell.lblTipo.text = plan.planType!.codigo
         cell.lblStartDate.text = self.dateFormatter.stringFromDate(plan.fechaImplementacion!)
         
         return cell

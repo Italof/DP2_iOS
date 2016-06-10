@@ -10,8 +10,9 @@ import UIKit
 
 class ImprovementCell: UITableViewCell {
 
-    @IBOutlet weak var lblUserName: UILabel!
+
     @IBOutlet weak var lblCreator: UILabel!
+    @IBOutlet weak var lblTipo: UILabel!
     @IBOutlet weak var lblStartDate: UILabel!
     @IBOutlet weak var lblAnalysis: UITextView!
     @IBOutlet weak var lblDescription: UITextView!

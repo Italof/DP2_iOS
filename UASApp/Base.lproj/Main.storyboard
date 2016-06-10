@@ -1656,7 +1656,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="276.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS8-Xq-Klt">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profesor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS8-Xq-Klt">
                                             <rect key="frame" x="18" y="20" width="82" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="82" id="30T-jm-7kk"/>
@@ -1674,7 +1674,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGE-Ml-pxY">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGE-Ml-pxY">
                                             <rect key="frame" x="295" y="20" width="73" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="73" id="Lqv-ug-g59"/>
@@ -1940,10 +1940,10 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="lblAnalysis" destination="Obc-2q-CuD" id="mVZ-97-X6c"/>
-                                    <outlet property="lblCreator" destination="MSQ-7Z-JwT" id="Fj6-pk-hRs"/>
+                                    <outlet property="lblCreator" destination="omK-WE-Ygr" id="ew2-SD-Ie7"/>
                                     <outlet property="lblDescription" destination="dok-pk-oHH" id="bIz-jo-zgH"/>
                                     <outlet property="lblStartDate" destination="MFZ-gP-XKt" id="j7m-xn-vgl"/>
-                                    <outlet property="lblUserName" destination="omK-WE-Ygr" id="tc5-aq-IV1"/>
+                                    <outlet property="lblTipo" destination="MSQ-7Z-JwT" id="Ltr-Ul-Gj0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
