@@ -53,7 +53,7 @@
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="aspect" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Aspect" inverseName="faculty" inverseEntity="Aspect" syncable="YES"/>
         <relationship name="coordinator" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Coordinator" inverseName="faculty" inverseEntity="Coordinator" syncable="YES"/>
-        <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="faculty" inverseEntity="Course" syncable="YES"/>
+        <relationship name="course" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Course" inverseName="faculty" inverseEntity="Course" syncable="YES"/>
         <relationship name="criterion" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Criterion" inverseName="faculty" inverseEntity="Criterion" syncable="YES"/>
         <relationship name="educationalObjective" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EducationalObjective" inverseName="faculty" inverseEntity="EducationalObjective" syncable="YES"/>
         <relationship name="improvementPlan" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImprovementPlan" inverseName="faculty" inverseEntity="ImprovementPlan" syncable="YES"/>

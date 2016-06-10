@@ -55,6 +55,7 @@
 		773F6DAF1D090D3800B70FF5 /* Empty_EO_Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 773F6DAE1D090D3800B70FF5 /* Empty_EO_Placeholder.png */; };
 		773F6DB11D091BE700B70FF5 /* Empty_Result_Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 773F6DB01D091BE700B70FF5 /* Empty_Result_Placeholder.png */; };
 		773F6DB31D091F7300B70FF5 /* AspectDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */; };
+		773F6DB51D0A376000B70FF5 /* CoursesDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB41D0A376000B70FF5 /* CoursesDataLoader.swift */; };
 		774092071CFF40C3004A6668 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774092061CFF40C3004A6668 /* Charts.framework */; };
 		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
 		7761A1341D078772004B2B9A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A1331D078772004B2B9A /* Reachability.swift */; };
@@ -165,6 +166,7 @@
 		773F6DAE1D090D3800B70FF5 /* Empty_EO_Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Empty_EO_Placeholder.png; path = UASApp/img/Empty_EO_Placeholder.png; sourceTree = "<group>"; };
 		773F6DB01D091BE700B70FF5 /* Empty_Result_Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Empty_Result_Placeholder.png; path = UASApp/img/Empty_Result_Placeholder.png; sourceTree = "<group>"; };
 		773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectDataLoader.swift; sourceTree = "<group>"; };
+		773F6DB41D0A376000B70FF5 /* CoursesDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesDataLoader.swift; sourceTree = "<group>"; };
 		774092061CFF40C3004A6668 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-ayybsxccyzjzkudbalgmhltvyjvj/Build/Products/Debug-iphonesimulator/Charts.framework"; sourceTree = "<group>"; };
 		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		7761A1331D078772004B2B9A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				773F6DA71D07D41100B70FF5 /* EdObjectivesDataLoader.swift */,
 				773F6DA91D08BA9F00B70FF5 /* StudentResultsDataLoader.swift */,
 				773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */,
+				773F6DB41D0A376000B70FF5 /* CoursesDataLoader.swift */,
 			);
 			name = "Data Loading";
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				77A24CC41CDD1106006AA0B9 /* TeacherModal.swift in Sources */,
 				77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */,
 				773F6D9A1D07AD0C00B70FF5 /* StudentResult.swift in Sources */,
+				773F6DB51D0A376000B70FF5 /* CoursesDataLoader.swift in Sources */,
 				77167A5E1CDD1DBB004C91BC /* ImprovementCell.swift in Sources */,
 				77167A671CDD2BAA004C91BC /* RubricCell.swift in Sources */,
 				77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */,

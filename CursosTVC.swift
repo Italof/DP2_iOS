@@ -9,13 +9,6 @@
 import UIKit
 
 class CursosTVC: UITableViewController {
-
-    var niveles = ["Nivel 1","Nivel 2","Nivel 3","Nivel 4"]
-    
-    var c1 = ["IEE222 - Ing. de Software"]
-    var c2 = ["IEE256 - Teoria de Comunicaciones"]
-    var c3 = ["IEE245 - Desarrollo de Programas 1"]
-    var c4 = ["IEE124 - Ing. de Sistemas 1"]
     
     var courseDictionary:Dictionary<NSNumber,Array<Course>>? = nil
     var courseKeys:Array<NSNumber>? = nil
@@ -24,7 +17,7 @@ class CursosTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.courseDictionary = TR_Courses().get(self.faculty!.id!)
+        self.courseDictionary = CourseDataLoader().get_all(self.faculty!)
         self.courseKeys = Array(self.courseDictionary!.keys)
     }
 
@@ -47,54 +40,20 @@ class CursosTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        /*
-        if section == 0 {
-            return self.c1.count
-        } else {
-            if section == 1 {
-                return self.c2.count
-            } else {
-                if section == 2 {
-                    return self.c3.count
-                } else {
-                    if section == 3 {
-                        return self.c4.count
-                    } else {
-                        return 0
-                    }
-                }
-            }
-        }
-         */
         
-        return (self.courseDictionary![section]?.count)!
+        let key = self.courseKeys![section]
+        
+        return ((self.courseDictionary![key])?.count)!
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cursoCell", forIndexPath: indexPath)
-        /*
-        if indexPath.section == 0 {
-            cell.textLabel?.text = self.c1[indexPath.row]
-        } else {
-            if indexPath.section == 1 {
-               cell.textLabel?.text = self.c2[indexPath.row]
-            } else {
-                if indexPath.section == 2 {
-                    cell.textLabel?.text = self.c3[indexPath.row]
-                } else {
-                    if indexPath.section == 3 {
-                        cell.textLabel?.text = self.c4[indexPath.row]
-                    }
-                }
-            }
-        }
-         */
         
         let key = self.courseKeys![indexPath.section]
-        let reg = (self.courseDictionary![key]!)[indexPath.row]
+        let obj = (self.courseDictionary![key])![indexPath.row]
         
-        cell.textLabel?.text = reg.codigo! + " - " + reg.nombre!
+        cell.textLabel?.text = obj.codigo! + " - " + obj.nombre!
         return cell
     }
     
@@ -140,12 +99,13 @@ class CursosTVC: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "" {
+        if segue.identifier == "courseDetailSegue" {
             let tvc = segue.destinationViewController as! CursoDetalleTVC
             let indexPath = self.tableView.indexPathForSelectedRow
             
             let key = self.courseKeys![indexPath!.section]
             tvc.course = (self.courseDictionary![key]!)[indexPath!.row]
+            
             tvc.faculty = self.faculty
         }
         
