@@ -122,7 +122,7 @@ class FacultiesTest: XCTestCase {
         tablesQuery.staticTexts["Ingeniería Informática"].tap()
         XCUIApplication().tables.staticTexts["Resultados Estudiantiles"].tap()
         tablesQuery.staticTexts["Ingeniería Informática"].tap()
-        
+        XCUIApplication().tables.staticTexts["Resultado A"].tap()
     }
     
     func testAspects() {
