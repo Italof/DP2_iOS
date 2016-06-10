@@ -122,6 +122,7 @@ class FacultiesTest: XCTestCase {
         tablesQuery.staticTexts["Ingeniería Informática"].tap()
         XCUIApplication().tables.staticTexts["Resultados Estudiantiles"].tap()
         tablesQuery.staticTexts["Ingeniería Informática"].tap()
+        
     }
     
     func testAspects() {
@@ -148,10 +149,22 @@ class FacultiesTest: XCTestCase {
     func testCourses() {
         login()
         XCUIApplication().tables.staticTexts["Ingeniería Informática"].tap()
+        XCUIDevice.sharedDevice().orientation = .LandscapeLeft
+        
+        let app = XCUIApplication()
+        app.tables.staticTexts["Cursos"].tap()
+        
+        }
+    
+    func testEnterCourses() {
+        login()
+        XCUIApplication().tables.staticTexts["Ingeniería Informática"].tap()
+        XCUIDevice.sharedDevice().orientation = .LandscapeLeft
+        
+        let app = XCUIApplication()
+        app.tables.staticTexts["Cursos"].tap()
+        XCUIApplication().tables.staticTexts["INF245 - Tesis 1"].tap()
 
-    
-        print()
-    
     }
     
     func testContinuosImprovement() {
