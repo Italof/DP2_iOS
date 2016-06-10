@@ -83,4 +83,90 @@ class FacultiesTest: XCTestCase {
         XCTAssert(firstOptionInMenuExists)
     }
 
+    func testOE() {
+        login()
+        
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Ingeniería Informática"].tap()
+        tablesQuery.staticTexts["Objetivos Educacionales"].tap()
+    }
+    
+    func testEnterOE() {
+        login()
+        
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Ingeniería Informática"].tap()
+        tablesQuery.staticTexts["Objetivos Educacionales"].tap()
+        tablesQuery.staticTexts["Objetivo Educacional 3: Diseñar sistemas, componentes o procesos que satisfagan las necesidades presentadas"].tap()
+    }
+    
+    func testRE() {
+        login()
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Ingeniería Informática"].tap()
+        XCUIApplication().tables.staticTexts["Resultados Estudiantiles"].tap()
+        tablesQuery.staticTexts["Ingeniería Informática"].tap()
+    }
+    
+    func testEnterRE() {
+        login()
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Ingeniería Informática"].tap()
+        XCUIApplication().tables.staticTexts["Resultados Estudiantiles"].tap()
+        tablesQuery.staticTexts["Ingeniería Informática"].tap()
+    }
+    
+    func testAspects() {
+        login()
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Ingeniería Informática"].tap()
+        tablesQuery.staticTexts["Aspectos"].tap()
+        
+    }
+    
+    func testEnterAspects() {
+        login()
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Ingeniería Informática"].tap()
+        tablesQuery.staticTexts["Aspectos"].tap()
+        tablesQuery.staticTexts["Matematicas"].tap()
+        
+    }
+    
+    func testCourses() {
+        login()
+        XCUIApplication().tables.staticTexts["Ingeniería Informática"].tap()
+
+    
+        print()
+    
+    }
+    
+    func testContinuosImprovement() {
+        login()
+        XCUIApplication().tables.staticTexts["Ingeniería Informática"].tap()
+        XCUIApplication().tables.staticTexts["Mejora Contínua"].tap()
+        
+    }
+    
+    func testSugerencias() {
+        login()
+        XCUIApplication().tables.staticTexts["Ingeniería Informática"].tap()
+        
+        XCUIApplication().tables.staticTexts["Mejora Contínua"].tap()
+        XCUIApplication().tabBars.buttons["Sugerencias"].tap()
+        
+    }
 }
