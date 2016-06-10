@@ -47,7 +47,7 @@ class EducationalObjectiveDetail: UITableViewController {
                 if section == 2 {
                     return "Descripción"
                 } else {
-                    return ""
+                    return "Resultados Estudiantiles Asociados"
                 }
             }
         }

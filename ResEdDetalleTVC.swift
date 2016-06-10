@@ -41,7 +41,7 @@ class ResEdDetalleTVC: UITableViewController {
             return "Descripción:"
         } else {
             if section == 3 {
-                return "Objetivos Educacionales Asociados al Resultado:"
+                return "" //"Objetivos Educacionales Asociados al Resultado:"
             } else {
                 return ""
                 }

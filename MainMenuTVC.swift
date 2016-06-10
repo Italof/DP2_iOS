@@ -78,7 +78,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                                 EdObjectiveDataLoader().refresh_objectives(json)
                                 self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                             case .Failure(let error):
-                                print(error)
+                                //print(error)
                                 self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                         }
                     }
@@ -95,7 +95,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                             StudentResultsDataLoader().refresh_results(json)
                             self.performSegueWithIdentifier("studentResSegue", sender: self)
                         case .Failure(let error):
-                            print(error)
+                            //print(error)
                             self.performSegueWithIdentifier("studentResSegue", sender: self)
                         }
                 }
@@ -109,7 +109,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                             AspectDataLoader().refresh_aspects(json)
                             self.performSegueWithIdentifier("aspectSegue", sender: self)
                         case .Failure(let error):
-                            print(error)
+                            //print(error)
                             self.performSegueWithIdentifier("aspectSegue", sender: self)
                     }
                     
@@ -125,7 +125,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                             CourseDataLoader().refresh_courses(json)
                         self.performSegueWithIdentifier("coursesSegue", sender: self)
                     case .Failure(let error):
-                        print(error)
+                        //print(error)
                         self.performSegueWithIdentifier("coursesSegue", sender: self)
                     }
                     
@@ -148,7 +148,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                                 
                                 self.performSegueWithIdentifier("improvementSegue", sender: self)
                             case .Failure(let error):
-                                print(error)
+                                //print(error)
                                 self.performSegueWithIdentifier("improvementSegue", sender: self)
                             }
                             
