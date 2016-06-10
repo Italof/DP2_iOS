@@ -36,19 +36,6 @@ class AspectDataLoader {
                     asp?.studentResult = StudentResult.MR_findFirstByAttribute("id", withValue: Int(subJson["IdResultadoEstudiantil"].stringValue)!)
                 }
                 
-                var crJson:JSON = subJson["criterion"]
-                
-                //var criteria = Criterion.MR_findFirstByAttribute("id", withValue: Int(crJson["IdCriterio"].stringValue)!)
-                /*
-                if criteria == nil {
-                    criteria = Criterion.MR_createEntity()
-                    
-                    criteria?.id = Int(crJson["IdCriterio"].stringValue)!
-                    criteria?.nombre = crJson["Nombre"].stringValue
-                    criteria?.updated_at = self.dateFormatter.dateFromString(crJson["updated_at"].stringValue)!
-                }
-                asp?.criteria = criteria*/
-                
             } else {
                 //If it doesn't, we create it
                 asp = Aspect.MR_createEntity()
@@ -59,22 +46,23 @@ class AspectDataLoader {
                 asp?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                 
                 asp?.studentResult = StudentResult.MR_findFirstByAttribute("id", withValue: Int(subJson["IdResultadoEstudiantil"].stringValue)!)
-                
-                var crJson:JSON = subJson["criterion"]
-                
-                //var criteria = Criterion.MR_findFirstByAttribute("id", withValue: Int(crJson["IdCriterio"].stringValue)!)
-                
-                /*
-                if criteria == nil {
-                    criteria = Criterion.MR_createEntity()
-                    
-                    criteria?.id = Int(crJson["IdCriterio"].stringValue)!
-                    criteria?.nombre = crJson["Nombre"].stringValue
-                    criteria?.updated_at = self.dateFormatter.dateFromString(crJson["updated_at"].stringValue)!
-                }
-                */
-                //asp?.criteria = criteria
             }
+            
+            var crJson:JSON = subJson["criterion"]
+            
+            var criteria = Criterion.MR_findFirstByAttribute("id", withValue: Int(crJson["IdCriterio"].stringValue)!)
+            
+            
+             if criteria == nil {
+             criteria = Criterion.MR_createEntity()
+             
+             criteria?.id = Int(crJson["IdCriterio"].stringValue)!
+             criteria?.nombre = crJson["Nombre"].stringValue
+             criteria?.updated_at = self.dateFormatter.dateFromString(crJson["updated_at"].stringValue)!
+             }
+            
+            asp?.criteria = criteria
+            
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         }
     }
