@@ -12,6 +12,9 @@ import CoreData
 
 class Timetable: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
+    func addProfessor(obj: Professor){
+        let professors = self.mutableSetValueForKey("professor")
+        professors.addObject(obj)
+    }
 
 }

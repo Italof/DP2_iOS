@@ -11,7 +11,10 @@ import CoreData
 
 
 class Course: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
+    
+    func addTimeTable(obj: Timetable){
+        let timetables = self.mutableSetValueForKey("timetables")
+        timetables.addObject(obj)
+    }
 
 }

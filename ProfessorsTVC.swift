@@ -1,29 +1,21 @@
 //
-//  CursoDetalleTVC.swift
+//  ProfessorsTVC.swift
 //  UASApp
 //
-//  Created by Karl Montenegro on 06/05/16.
+//  Created by Karl Montenegro on 09/06/16.
 //  Copyright © 2016 puntobat. All rights reserved.
 //
 
 import UIKit
 
-class CursoDetalleTVC: UITableViewController {
+class ProfessorsTVC: UITableViewController {
 
-
-    @IBOutlet weak var courseTitle: UINavigationItem!
-    
-    var data = ["IEE256","Ing. Informatica","8"]
-    
-    var p1 = ["Andrés Melgar","19950102"]
-    var p2 = ["Ronny Cueva","20012992"]
-    
-    var course:Course? = nil
-    var faculty:Faculty? = nil
+    var timetable: Timetable? = nil
+    var professors: Array<Professor>? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.courseTitle.title = self.course?.nombre
+        self.professors = (self.timetable?.professor?.allObjects) as? Array<Professor>
         
     }
 
@@ -36,56 +28,26 @@ class CursoDetalleTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 0 {
-            return 1
-        } else {
-            return (self.course?.timetables?.count)!
-        }
+        return (self.professors?.count)!
     }
 
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 1 {
-            return "Horarios del Curso"
-        } else {
-            return ""
-        }
-    }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 184.0
-        } else {
-            return 112.0
-        }
-    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("teacherCell", forIndexPath: indexPath)
 
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("infoCell", forIndexPath: indexPath) as! CursoCell
-            cell.lblCodigoCurso.text = self.course?.codigo
-            cell.lblNivelCurso.text = self.course?.nivelAcademico?.description
-            cell.lblEspecialidadCurso.text = self.faculty?.nombre
-            
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("teacherCell", forIndexPath: indexPath) as! TeacherCell
-            
-            let sch = (self.course?.timetables?.allObjects)![indexPath.row] as? Timetable
-            
-            cell.lblCodigoProf.text =  sch?.totalAlumnos?.description
-            cell.lblNombreProfesor.text = sch?.codigo
-            
-            return cell
-        }
+        let professor = self.professors![indexPath.row]
+        
+        cell.textLabel?.text = professor.codigo
+        cell.detailTextLabel?.text = (professor.nombres)! + " " + (professor.apellidos)!
+
+        return cell
     }
-    
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -122,17 +84,16 @@ class CursoDetalleTVC: UITableViewController {
     }
     */
 
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "teacherListSegue" {
-            let vc = segue.destinationViewController as! ProfessorsTVC
+        if segue.identifier == "professorDetailSegue" {
+            let vc = segue.destinationViewController as! TeacherModal
             let indexPath = self.tableView.indexPathForSelectedRow
+            vc.professor = self.professors![indexPath!.row]
             
-            vc.timetable = (self.course?.timetables?.allObjects)![indexPath!.row] as? Timetable
         }
     }
 

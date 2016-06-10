@@ -15,13 +15,15 @@ class TeacherModal: UIViewController {
     @IBOutlet weak var lblTeacherRef: UITextView!
     @IBOutlet weak var teacherImg: UIImageView!
     
+    var professor: Professor? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.lblTeacherName.text = "Andres Melgar"
-        self.lblTeacherDegree.text = "PhD"
         
-        self.lblTeacherRef.text = "Egresado de la PUCP"
+        self.lblTeacherName.text = self.professor?.nombres
+        self.lblTeacherDegree.text = self.professor?.apellidos
+        
+        self.lblTeacherRef.text = self.professor?.descripcion
     }
 
     override func didReceiveMemoryWarning() {

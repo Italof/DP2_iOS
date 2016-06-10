@@ -56,6 +56,7 @@
 		773F6DB11D091BE700B70FF5 /* Empty_Result_Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 773F6DB01D091BE700B70FF5 /* Empty_Result_Placeholder.png */; };
 		773F6DB31D091F7300B70FF5 /* AspectDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */; };
 		773F6DB51D0A376000B70FF5 /* CoursesDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB41D0A376000B70FF5 /* CoursesDataLoader.swift */; };
+		773F6DB71D0A791600B70FF5 /* ProfessorsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB61D0A791600B70FF5 /* ProfessorsTVC.swift */; };
 		774092071CFF40C3004A6668 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774092061CFF40C3004A6668 /* Charts.framework */; };
 		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
 		7761A1341D078772004B2B9A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A1331D078772004B2B9A /* Reachability.swift */; };
@@ -167,6 +168,7 @@
 		773F6DB01D091BE700B70FF5 /* Empty_Result_Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Empty_Result_Placeholder.png; path = UASApp/img/Empty_Result_Placeholder.png; sourceTree = "<group>"; };
 		773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectDataLoader.swift; sourceTree = "<group>"; };
 		773F6DB41D0A376000B70FF5 /* CoursesDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesDataLoader.swift; sourceTree = "<group>"; };
+		773F6DB61D0A791600B70FF5 /* ProfessorsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessorsTVC.swift; sourceTree = "<group>"; };
 		774092061CFF40C3004A6668 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-ayybsxccyzjzkudbalgmhltvyjvj/Build/Products/Debug-iphonesimulator/Charts.framework"; sourceTree = "<group>"; };
 		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		7761A1331D078772004B2B9A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				77A24CC31CDD1106006AA0B9 /* TeacherModal.swift */,
+				773F6DB61D0A791600B70FF5 /* ProfessorsTVC.swift */,
 			);
 			name = Teachers;
 			sourceTree = "<group>";
@@ -721,6 +724,7 @@
 				773F6DA01D07AD6200B70FF5 /* Course.swift in Sources */,
 				77167A651CDD233F004C91BC /* EvaluationResults.swift in Sources */,
 				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
+				773F6DB71D0A791600B70FF5 /* ProfessorsTVC.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
 				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
