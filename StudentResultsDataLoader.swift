@@ -54,4 +54,27 @@ class StudentResultsDataLoader  {
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         }
     }
+    
+    func get_all(faculty: Faculty) -> Dictionary<String, Array<StudentResult>>? {
+        
+        let predicate:NSPredicate = NSPredicate(format: "(faculty.id = %@)", faculty.id!)
+        let request:NSFetchRequest = StudentResult.MR_requestAllWithPredicate(predicate)
+        
+        let array: Array<StudentResult> = StudentResult.MR_executeFetchRequest(request) as! Array<StudentResult>
+        
+        var resDictionary = Dictionary<String,Array<StudentResult>>()
+        var thisRes:String = ""
+        
+        for res in array {
+            thisRes = res.cicloRegistro!
+            
+            if resDictionary.indexForKey(thisRes) == nil {
+                resDictionary[thisRes] = []
+            }
+            
+            resDictionary[thisRes]?.append(res)
+        }
+        return resDictionary
+    }
+    
 }

@@ -23,9 +23,8 @@ class ResEdTVC: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        //self.studentResDictionary = TR_StudentResults().get(self.faculty!.id!)
-        //self.studentResKeys = Array(self.studentResDictionary!.keys)
+        self.studentResDictionary = StudentResultsDataLoader().get_all(self.faculty!)
+        self.studentResKeys = Array(self.studentResDictionary!.keys)
         
         self.tableView.emptyDataSetSource = self;
         self.tableView.emptyDataSetDelegate = self;
@@ -61,27 +60,25 @@ class ResEdTVC: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDel
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        //return self.studentResKeys!.count
-        return 0
+        return self.studentResKeys!.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        //return self.studentResDictionary![self.studentResKeys![section]]!.count
-        return 0
+        return self.studentResDictionary![self.studentResKeys![section]]!.count
     }
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Ciclo " //+ self.studentResKeys![section]
+        return "Ciclo " + self.studentResKeys![section]
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("resCell", forIndexPath: indexPath)
 
-        //let key = self.studentResKeys![indexPath.section]
-        //let res = self.studentResDictionary![key]
+        let key = self.studentResKeys![indexPath.section]
+        let res = self.studentResDictionary![key]
         
-        //cell.textLabel?.text = "Resultado " + res![indexPath.row].identificador!
+        cell.textLabel?.text = "Resultado " + res![indexPath.row].identificador!
 
         return cell
     }
