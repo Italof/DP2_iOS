@@ -133,8 +133,21 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     switch response.result {
                     case .Success:
                         let json = JSON(data: response.data!)
+                        
                         ImprovementDataLoader().refresh_plans(json)
-                        self.performSegueWithIdentifier("improvementSegue", sender: self)
+                        
+                        Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/suggestions", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+                            switch response.result {
+                            case .Success:
+                                let json = JSON(data: response.data!)
+                                SuggestionDataLoader().refresh_suggestions(json)
+                                
+                                self.performSegueWithIdentifier("improvementSegue", sender: self)
+                            case .Failure(let error):
+                                print(error)
+                            }
+                            
+                        }
                     case .Failure(let error):
                         print(error)
                     }
@@ -209,13 +222,15 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         
         if segue.identifier == "improvementSegue" {
             let nvc = segue.destinationViewController as! UITabBarController
-            let vc = nvc.viewControllers![0]
+            let tab_one = nvc.viewControllers![0]
+            let tab_two = nvc.viewControllers![1]
             
-            //let suggestions = vc.childViewControllers[1] as! Suggestions
-            let improvementPlans = vc.childViewControllers.first as! ImprovementPlans
+            let suggestions = tab_two.childViewControllers.first as? Suggestions
+            let improvementPlans = tab_one.childViewControllers.first as? ImprovementPlans
             
-            //suggestions.faculty = self.faculty
-            improvementPlans.faculty = self.faculty
+            
+            suggestions!.faculty = self.faculty
+            improvementPlans!.faculty = self.faculty
             
         }
         

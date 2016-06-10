@@ -15,7 +15,7 @@ class ImprovementDataLoader {
     let dateFormatter = NSDateFormatter()
     
     func refresh_plans(json: JSON) {
-        print(json)
+        
         ImprovementPlan.MR_truncateAll()
         PlanType.MR_truncateAll()
         

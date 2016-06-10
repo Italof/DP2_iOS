@@ -26,5 +26,6 @@ extension Professor {
     @NSManaged var faculty: Faculty?
     @NSManaged var timetable: NSSet?
     @NSManaged var plans: NSSet?
+    @NSManaged var suggestions: NSSet?
 
 }

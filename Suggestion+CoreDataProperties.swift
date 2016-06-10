@@ -18,5 +18,9 @@ extension Suggestion {
     @NSManaged var updated_at: NSDate?
     @NSManaged var faculty: Faculty?
     @NSManaged var improvementPlan: ImprovementPlan?
+    @NSManaged var fecha: NSDate?
+    @NSManaged var titulo: String?
+    @NSManaged var descripcion: String?
+    @NSManaged var professor: Professor?
 
 }

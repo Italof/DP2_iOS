@@ -11,16 +11,11 @@ import UIKit
 class Suggestions: UITableViewController {
 
     var faculty:Faculty? = nil
-    
+    var list: Array<Suggestion>? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.list = SuggestionDataLoader().get_all(self.faculty!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,13 +32,15 @@ class Suggestions: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return (self.list?.count)!
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("suggestionCell", forIndexPath: indexPath) as! SuggestionCell
 
+        
+        
         return cell
     }
     
