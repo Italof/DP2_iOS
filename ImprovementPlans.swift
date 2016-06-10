@@ -10,10 +10,14 @@ import UIKit
 
 class ImprovementPlans: UITableViewController {
 
+    var faculty: Faculty? = nil
+    var plans: Array<ImprovementPlan>? = nil
+    var dateFormatter = NSDateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        self.plans = ImprovementDataLoader().get_plans(self.faculty!)
+        self.dateFormatter.dateFormat = "dd/MM/yyyy"
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,13 +34,21 @@ class ImprovementPlans: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return (self.plans?.count)!
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("improvementCell", forIndexPath: indexPath) as! ImprovementCell
-
+        
+        let plan = self.plans![indexPath.row]
+        
+        cell.lblUserName.text = (plan.professor?.nombres)! + " " + (plan.professor?.apellidos)!
+        cell.lblAnalysis.text = plan.analisisCausal
+        cell.lblDescription.text = plan.descripcion
+        cell.lblCreator.text = plan.planType!.codigo
+        cell.lblStartDate.text = self.dateFormatter.stringFromDate(plan.fechaImplementacion!)
+        
         return cell
     }
     

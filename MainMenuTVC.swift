@@ -128,7 +128,19 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                 }
                     break
             case 7: //Mejora Continua
-                    self.performSegueWithIdentifier("improvementSegue", sender: self)
+                
+                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/improvement_plans?since=0", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+                    switch response.result {
+                    case .Success:
+                        let json = JSON(data: response.data!)
+                        ImprovementDataLoader().refresh_plans(json)
+                        self.performSegueWithIdentifier("improvementSegue", sender: self)
+                    case .Failure(let error):
+                        print(error)
+                    }
+                    
+                }
+                
                     break
             case 8: //Resultados de Evaluaciones
                 
@@ -196,6 +208,14 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         }
         
         if segue.identifier == "improvementSegue" {
+            let nvc = segue.destinationViewController as! UITabBarController
+            let vc = nvc.viewControllers![0]
+            
+            //let suggestions = vc.childViewControllers[1] as! Suggestions
+            let improvementPlans = vc.childViewControllers.first as! ImprovementPlans
+            
+            //suggestions.faculty = self.faculty
+            improvementPlans.faculty = self.faculty
             
         }
         

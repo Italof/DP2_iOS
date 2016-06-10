@@ -57,6 +57,14 @@
 		773F6DB31D091F7300B70FF5 /* AspectDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */; };
 		773F6DB51D0A376000B70FF5 /* CoursesDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB41D0A376000B70FF5 /* CoursesDataLoader.swift */; };
 		773F6DB71D0A791600B70FF5 /* ProfessorsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB61D0A791600B70FF5 /* ProfessorsTVC.swift */; };
+		773F6DB91D0B1EF400B70FF5 /* ImprovementDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DB81D0B1EF400B70FF5 /* ImprovementDataLoader.swift */; };
+		773F6DC01D0B20EC00B70FF5 /* ImprovementPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DBA1D0B20EC00B70FF5 /* ImprovementPlan+CoreDataProperties.swift */; };
+		773F6DC11D0B20EC00B70FF5 /* ImprovementPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DBB1D0B20EC00B70FF5 /* ImprovementPlan.swift */; };
+		773F6DC21D0B20EC00B70FF5 /* PlanType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DBC1D0B20EC00B70FF5 /* PlanType+CoreDataProperties.swift */; };
+		773F6DC31D0B20EC00B70FF5 /* PlanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DBD1D0B20EC00B70FF5 /* PlanType.swift */; };
+		773F6DC41D0B20EC00B70FF5 /* Suggestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DBE1D0B20EC00B70FF5 /* Suggestion+CoreDataProperties.swift */; };
+		773F6DC51D0B20EC00B70FF5 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DBF1D0B20EC00B70FF5 /* Suggestion.swift */; };
+		773F6DC71D0B2ED700B70FF5 /* SuggestionDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F6DC61D0B2ED700B70FF5 /* SuggestionDataLoader.swift */; };
 		774092071CFF40C3004A6668 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774092061CFF40C3004A6668 /* Charts.framework */; };
 		7747245D1CEF8781005C1464 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747245C1CEF8781005C1464 /* Connection.swift */; };
 		7761A1341D078772004B2B9A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A1331D078772004B2B9A /* Reachability.swift */; };
@@ -169,6 +177,14 @@
 		773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectDataLoader.swift; sourceTree = "<group>"; };
 		773F6DB41D0A376000B70FF5 /* CoursesDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesDataLoader.swift; sourceTree = "<group>"; };
 		773F6DB61D0A791600B70FF5 /* ProfessorsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessorsTVC.swift; sourceTree = "<group>"; };
+		773F6DB81D0B1EF400B70FF5 /* ImprovementDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprovementDataLoader.swift; sourceTree = "<group>"; };
+		773F6DBA1D0B20EC00B70FF5 /* ImprovementPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImprovementPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		773F6DBB1D0B20EC00B70FF5 /* ImprovementPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprovementPlan.swift; sourceTree = "<group>"; };
+		773F6DBC1D0B20EC00B70FF5 /* PlanType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlanType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		773F6DBD1D0B20EC00B70FF5 /* PlanType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanType.swift; sourceTree = "<group>"; };
+		773F6DBE1D0B20EC00B70FF5 /* Suggestion+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Suggestion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		773F6DBF1D0B20EC00B70FF5 /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		773F6DC61D0B2ED700B70FF5 /* SuggestionDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionDataLoader.swift; sourceTree = "<group>"; };
 		774092061CFF40C3004A6668 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/UASApp-ayybsxccyzjzkudbalgmhltvyjvj/Build/Products/Debug-iphonesimulator/Charts.framework"; sourceTree = "<group>"; };
 		7747245C1CEF8781005C1464 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		7761A1331D078772004B2B9A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -351,6 +367,8 @@
 				773F6DA91D08BA9F00B70FF5 /* StudentResultsDataLoader.swift */,
 				773F6DB21D091F7300B70FF5 /* AspectDataLoader.swift */,
 				773F6DB41D0A376000B70FF5 /* CoursesDataLoader.swift */,
+				773F6DB81D0B1EF400B70FF5 /* ImprovementDataLoader.swift */,
+				773F6DC61D0B2ED700B70FF5 /* SuggestionDataLoader.swift */,
 			);
 			name = "Data Loading";
 			sourceTree = "<group>";
@@ -358,6 +376,12 @@
 		778315711CDBB828008D9209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				773F6DBA1D0B20EC00B70FF5 /* ImprovementPlan+CoreDataProperties.swift */,
+				773F6DBB1D0B20EC00B70FF5 /* ImprovementPlan.swift */,
+				773F6DBC1D0B20EC00B70FF5 /* PlanType+CoreDataProperties.swift */,
+				773F6DBD1D0B20EC00B70FF5 /* PlanType.swift */,
+				773F6DBE1D0B20EC00B70FF5 /* Suggestion+CoreDataProperties.swift */,
+				773F6DBF1D0B20EC00B70FF5 /* Suggestion.swift */,
 				773F6DA11D07AE6200B70FF5 /* Timetable+CoreDataProperties.swift */,
 				773F6DA21D07AE6200B70FF5 /* Timetable.swift */,
 				773F6D9D1D07AD6200B70FF5 /* Course+CoreDataProperties.swift */,
@@ -725,10 +749,13 @@
 				77167A651CDD233F004C91BC /* EvaluationResults.swift in Sources */,
 				778315701CDAE621008D9209 /* EspecialidadTVC.swift in Sources */,
 				773F6DB71D0A791600B70FF5 /* ProfessorsTVC.swift in Sources */,
+				773F6DC51D0B20EC00B70FF5 /* Suggestion.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
+				773F6DC21D0B20EC00B70FF5 /* PlanType+CoreDataProperties.swift in Sources */,
 				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
 				77A24CB91CDD052D006AA0B9 /* CursoCell.swift in Sources */,
+				773F6DC41D0B20EC00B70FF5 /* Suggestion+CoreDataProperties.swift in Sources */,
 				77167A6E1CDD30F0004C91BC /* CriteriaLevelCell.swift in Sources */,
 				77167A5C1CDD16EB004C91BC /* ImprovementPlans.swift in Sources */,
 				773F6DA31D07AE6200B70FF5 /* Timetable+CoreDataProperties.swift in Sources */,
@@ -749,12 +776,15 @@
 				773F6D9B1D07AD0C00B70FF5 /* Aspect+CoreDataProperties.swift in Sources */,
 				77A24CA01CDC29C1006AA0B9 /* EducationalObjectiveDetail.swift in Sources */,
 				77A24C9B1CDC1885006AA0B9 /* ObjetivosEdTVC.swift in Sources */,
+				773F6DB91D0B1EF400B70FF5 /* ImprovementDataLoader.swift in Sources */,
 				773F6D871D07A99700B70FF5 /* Professor+CoreDataProperties.swift in Sources */,
 				7761A1341D078772004B2B9A /* Reachability.swift in Sources */,
 				77A24CAB1CDCA6DF006AA0B9 /* Rubrics.swift in Sources */,
 				773F6DA61D07B00900B70FF5 /* FacultyDataLoader.swift in Sources */,
+				773F6DC71D0B2ED700B70FF5 /* SuggestionDataLoader.swift in Sources */,
 				773F6D831D07A99700B70FF5 /* Coordinator+CoreDataProperties.swift in Sources */,
 				77A24CB71CDCFDDB006AA0B9 /* CursosTVC.swift in Sources */,
+				773F6DC01D0B20EC00B70FF5 /* ImprovementPlan+CoreDataProperties.swift in Sources */,
 				773F6D9C1D07AD0C00B70FF5 /* Aspect.swift in Sources */,
 				773F6D8C1D07ABF100B70FF5 /* EducationalObjective.swift in Sources */,
 				77A24CB41CDCE1A1006AA0B9 /* InicioVC.swift in Sources */,
@@ -770,7 +800,9 @@
 				77A24CA81CDC9777006AA0B9 /* ResEdDetalleTVC.swift in Sources */,
 				773F6D981D07AD0C00B70FF5 /* Criterion.swift in Sources */,
 				773F6DA81D07D41100B70FF5 /* EdObjectivesDataLoader.swift in Sources */,
+				773F6DC31D0B20EC00B70FF5 /* PlanType.swift in Sources */,
 				773F6D861D07A99700B70FF5 /* Faculty.swift in Sources */,
+				773F6DC11D0B20EC00B70FF5 /* ImprovementPlan.swift in Sources */,
 				773F6D991D07AD0C00B70FF5 /* StudentResult+CoreDataProperties.swift in Sources */,
 				773F6D971D07AD0C00B70FF5 /* Criterion+CoreDataProperties.swift in Sources */,
 				77A24CB21CDCADA7006AA0B9 /* AspectoDetailTVC.swift in Sources */,

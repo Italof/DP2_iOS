@@ -10,6 +10,8 @@ import UIKit
 
 class Suggestions: UITableViewController {
 
+    var faculty:Faculty? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

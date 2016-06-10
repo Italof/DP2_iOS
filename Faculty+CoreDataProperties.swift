@@ -28,6 +28,7 @@ extension Faculty {
     @NSManaged var criterion: NSSet?
     @NSManaged var timetable: NSSet?
     @NSManaged var professor: NSSet?
+    @NSManaged var planTypes: NSSet?
     @NSManaged var coordinator: Coordinator?
 
 }
