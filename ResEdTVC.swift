@@ -10,10 +10,6 @@ import UIKit
 import DZNEmptyDataSet
 
 class ResEdTVC: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
-
-    let array = ["Resultado Estudiantil 1","Resultado Estudiantil 2","Resultado Estudiantil 3","Resultado Estudiantil 4"]
-    
-    let sem = ["2014-2", "2015-1", "2015-2", "2016-1"]
     
     var faculty:Faculty? = nil
     

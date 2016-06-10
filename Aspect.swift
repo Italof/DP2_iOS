@@ -12,6 +12,9 @@ import CoreData
 
 class Aspect: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
+    func addCriterion(obj: Criterion){
+        let criteria = self.mutableSetValueForKey("criteria")
+        criteria.addObject(obj)
+    }
 
 }

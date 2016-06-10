@@ -18,7 +18,7 @@ extension Aspect {
     @NSManaged var updated_at: NSDate?
     @NSManaged var nombre: String?
     @NSManaged var faculty: Faculty?
-    @NSManaged var criteria: Criterion?
+    @NSManaged var criteria: NSSet?
     @NSManaged var studentResult: StudentResult?
 
 }

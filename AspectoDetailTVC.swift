@@ -9,14 +9,14 @@
 import UIKit
 
 class AspectoDetailTVC: UITableViewController {
-
-    var array = ["Criterio 1", "Criterio 2", "Criterio 3", "Criterio 4"]
     
+    var faculty: Faculty? = nil
     var aspecto: Aspect? = nil
+    var list: Array<Criterion>? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.list = AspectDataLoader().get_criteria(self.aspecto!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,14 +37,16 @@ class AspectoDetailTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return (self.list?.count)!
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("critCell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = self.aspecto?.criteria?.nombre
+        let crt = self.list![indexPath.row]
+        
+        cell.textLabel?.text = crt.nombre
         
         return cell
     }

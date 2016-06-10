@@ -17,6 +17,7 @@ class AspectDataLoader {
     func refresh_aspects (json: JSON) {
         
         Aspect.MR_truncateAll()
+        Criterion.MR_truncateAll()
         
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
@@ -24,6 +25,7 @@ class AspectDataLoader {
         for (_,subJson):(String, JSON) in json {
             
             var asp = Aspect.MR_findFirstByAttribute("id", withValue: Int(subJson["IdAspecto"].stringValue)!)
+        
             
             if asp != nil {
                 //If the result exists, we update it's information
@@ -47,21 +49,20 @@ class AspectDataLoader {
                 
                 asp?.studentResult = StudentResult.MR_findFirstByAttribute("id", withValue: Int(subJson["IdResultadoEstudiantil"].stringValue)!)
             }
+            var crJson = subJson["criterion"]
             
-            var crJson:JSON = subJson["criterion"]
-            
-            var criteria = Criterion.MR_findFirstByAttribute("id", withValue: Int(crJson["IdCriterio"].stringValue)!)
-            
-            
-             if criteria == nil {
-             criteria = Criterion.MR_createEntity()
-             
-             criteria?.id = Int(crJson["IdCriterio"].stringValue)!
-             criteria?.nombre = crJson["Nombre"].stringValue
-             criteria?.updated_at = self.dateFormatter.dateFromString(crJson["updated_at"].stringValue)!
-             }
-            
-            asp?.criteria = criteria
+            for (_,cr):(String,JSON) in crJson {
+                var criteria = Criterion.MR_findFirstByAttribute("id", withValue: Int(cr["IdCriterio"].stringValue)!)
+                
+                if criteria == nil {
+                    criteria = Criterion.MR_createEntity()
+                    
+                    criteria?.id = Int(cr["IdCriterio"].stringValue)!
+                    criteria?.nombre = cr["Nombre"].stringValue
+                    criteria?.updated_at = self.dateFormatter.dateFromString(cr["updated_at"].stringValue)!
+                }
+                asp?.addCriterion(criteria!)
+            }
             
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         }
@@ -69,5 +70,13 @@ class AspectDataLoader {
     
     func get_all(faculty: Faculty) -> Array<Aspect>? {
         return nil
+    }
+    
+    func get_criteria(aspect: Aspect) -> Array<Criterion>? {
+        
+        let predicate:NSPredicate = NSPredicate(format: "(aspect.id = %@)", aspect.id!)
+        let request:NSFetchRequest = Criterion.MR_requestAllWithPredicate(predicate)
+        
+        return Criterion.MR_executeFetchRequest(request) as? Array<Criterion>
     }
 }

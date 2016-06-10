@@ -95,6 +95,7 @@ class AspectosTVC: UITableViewController {
             let indexPath = self.tableView.indexPathForSelectedRow
             
             vc.aspecto = self.aspects![indexPath!.row]
+            vc.faculty = self.faculty
         }
         
     }
