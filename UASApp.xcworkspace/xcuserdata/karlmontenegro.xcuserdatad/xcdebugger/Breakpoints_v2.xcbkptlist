@@ -443,5 +443,66 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EvaluationResultsVC.swift"
+            timestampString = "487888148.623214"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UASApp.EvaluationResultsVC.__deallocating_deinit"
+                  moduleName = "UASApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karlmontenegro/Sites/DP2/uas_ios/EvaluationResultsVC.swift"
+                  timestampString = "487888148.664841"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UASApp.EvaluationResultsVC.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; UASApp.EvaluationResultsVC"
+                  moduleName = "UASApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karlmontenegro/Sites/DP2/uas_ios/EvaluationResultsVC.swift"
+                  timestampString = "487888148.665014"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UASApp.EvaluationResultsVC.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;UASApp.EvaluationResultsVC&gt;"
+                  moduleName = "UASApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karlmontenegro/Sites/DP2/uas_ios/EvaluationResultsVC.swift"
+                  timestampString = "487888148.665105"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

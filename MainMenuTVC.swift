@@ -244,6 +244,10 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
             
         }
         
+        if segue.identifier == "evaluationResultsSegue" {
+            
+        }
+        
     }
 
 }
