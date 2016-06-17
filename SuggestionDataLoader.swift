@@ -16,7 +16,7 @@ class SuggestionDataLoader {
     
     func refresh_suggestions(json: JSON) {
         
-        Suggestion.MR_truncateAll()
+        //Suggestion.MR_truncateAll()
         
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")

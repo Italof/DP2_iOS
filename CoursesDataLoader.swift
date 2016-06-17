@@ -15,9 +15,9 @@ class CourseDataLoader {
     let dateFormatter = NSDateFormatter()
     
     func refresh_courses(json: JSON) {
-        Course.MR_truncateAll()
-        Timetable.MR_truncateAll()
-        Professor.MR_truncateAll()
+        //Course.MR_truncateAll()
+        //Timetable.MR_truncateAll()
+        //Professor.MR_truncateAll()
         
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")

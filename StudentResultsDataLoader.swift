@@ -16,7 +16,7 @@ class StudentResultsDataLoader  {
     
     func refresh_results (json: JSON) {
         
-        StudentResult.MR_truncateAll()
+        //StudentResult.MR_truncateAll()
 
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")

@@ -22,7 +22,7 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
     var edObjKeys:Array<String>? = nil
     
     override func viewWillAppear(animated: Bool) {
-        
+
         self.edObjDictionary = EdObjectiveDataLoader().get_all(faculty!)
         self.edObjKeys = Array(self.edObjDictionary!.keys)
     }
@@ -34,11 +34,22 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
         self.tableView.emptyDataSetDelegate = self;
         
         self.tableView.tableFooterView = UIView()
+        
+        self.refreshControl?.addTarget(self, action: #selector(self.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func refresh(sender:AnyObject)
+    {
+        // Updating your data here...
+        
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
     // METH: - Empty Data Set Configuration
     

@@ -16,8 +16,8 @@ class AspectDataLoader {
     
     func refresh_aspects (json: JSON) {
         
-        Aspect.MR_truncateAll()
-        Criterion.MR_truncateAll()
+        //Aspect.MR_truncateAll()
+        //Criterion.MR_truncateAll()
         
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")

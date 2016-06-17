@@ -17,8 +17,8 @@ class EdObjectiveDataLoader {
     
     func refresh_objectives (json: JSON) {
         
-        EducationalObjective.MR_truncateAll()
-        StudentResult.MR_truncateAll()
+        //EducationalObjective.MR_truncateAll()
+        //StudentResult.MR_truncateAll()
         
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
@@ -127,5 +127,4 @@ class EdObjectiveDataLoader {
         }
         return objDictionary
     }
-    
 }

@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint: Connection = Connection()
+    
     let dateFormatter = NSDateFormatter()
     
     override func viewDidLoad() {
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
         
         let user:String = (self.txtUsername?.text)!
         let pass:String = (self.txtPassword?.text)!
+          
         
         Alamofire.request(.POST, self.endpoint.url + "authenticate?user=\(user)&password=\(pass)")
             .validate()
@@ -52,22 +54,49 @@ class ViewController: UIViewController {
                         print(error)
                     }
                     
-                    Alamofire.request(.GET, self.endpoint.url + "faculties?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
-                        .responseJSON { response in
-                            switch response.result {
-                            case .Success:
-                                let json = JSON(data: response.data!)
-                                
-                                //Step Two: Read the JSON
-                                FacultyDataLoader().refresh_faculties(json)
-                                
-                                self.performSegueWithIdentifier("facultyListSegue", sender: self)
-                                break
-                            case .Failure(let error):
-                                print(error)
+                    self.getFaculties() {
+                        json, error in
+                        FacultyDataLoader().refresh_faculties(json!)
+                    }
+                    
+                    let facultyList = Faculty.MR_findAll() as! Array<Faculty>
+                    var count = 0
+                    
+                    self.performSegueWithIdentifier("facultyListSegue", sender: self)
+                    
+                    for fac in facultyList {
+                        
+                            self.getObjectives(fac){
+                                json, error in
+                                EdObjectiveDataLoader().refresh_objectives(json!)
+                            
+                            }
+                            self.getStudentResults(fac){
+                                json, error in
+                                StudentResultsDataLoader().refresh_results(json!)
+                            }
+                            self.getAspects(fac){
+                                json, error in
+                                AspectDataLoader().refresh_aspects(json!)
                                 
                             }
-                            
+                            self.getCourses(fac){
+                                json, error in
+                                CourseDataLoader().refresh_courses(json!)
+                            }
+                            self.getImprovement(fac) {
+                                json, error in
+                                ImprovementDataLoader().refresh_plans(json!)
+                            }
+                            self.getSuggestions(fac) {
+                                json, error in
+                                SuggestionDataLoader().refresh_suggestions(json!)
+                            }
+                        count += 1
+                        if count == facultyList.count {
+                            count = 0
+                            self.performSegueWithIdentifier("facultyListSegue", sender: self)
+                        }
                     }
                     
                 case .Failure(_):
@@ -75,19 +104,12 @@ class ViewController: UIViewController {
                 }
             }
     }
-
+    
+    
     @IBAction func offlineTapped(sender: AnyObject) {
         self.defaults.setBool(true, forKey: "offline_session")
         self.performSegueWithIdentifier("facultyListSegue", sender: self)
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "facultyListSegue" {
-
-        }
-    }
-    
     
     func alertMessage(winMessage: String, winTitle: String){
         let alertController = UIAlertController(title: winTitle, message: winMessage, preferredStyle: UIAlertControllerStyle.Alert)
@@ -98,6 +120,152 @@ class ViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    //Calls
+    
+    func authenticateUser(user: String, pass: String, completionHandler: (JSON?,NSError?)->()) {
+        authenticateUserCall(user, pass: pass, completionHandler: completionHandler)
+    }
+    
+    func authenticateUserCall(user: String, pass: String, completionHandler: (JSON?,NSError?)->()){
+        
+        Alamofire.request(.POST, self.endpoint.url + "authenticate?user=\(user)&password=\(pass)")
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    let json = JSON(data: response.data!)
+                    completionHandler(json, nil)
+                case .Failure(let error):
+                    completionHandler(nil, error)
+            }
+        }
+    }
+    
+    func getFaculties(completionHandler: (JSON?, NSError?)->()) {
+        getFacultiesCall(completionHandler)
+    }
+    
+    func getObjectives(fac: Faculty, completionHandler: (JSON?, NSError?) -> ()) {
+        getObjectivesCall(fac, completionHandler: completionHandler)
+    }
+    
+    func getStudentResults(fac: Faculty, completionHandler: (JSON?, NSError?) -> ()) {
+        getStudentResultsCall(fac, completionHandler: completionHandler)
+    }
+    
+    func getAspects(fac: Faculty, completionHandler: (JSON?, NSError?)->()){
+        getAspectsCall(fac, completionHandler: completionHandler)
+    }
+    
+    func getCourses(fac: Faculty, completionHandler: (JSON?,NSError?)->()){
+        getCoursesCall(fac, completionHandler: completionHandler)
+    }
+    
+    func getImprovement(fac: Faculty, completionHandler: (JSON?,NSError?)->()) {
+        getImprovementCall(fac, completionHandler: completionHandler)
+    }
+    
+    func getSuggestions(fac: Faculty, completionHandler: (JSON?,NSError?)->()) {
+        getSuggestionsCall(fac, completionHandler: completionHandler)
+    }
+    
+    func getFacultiesCall(completionHandler: (JSON?, NSError?)->()) {
+        Alamofire.request(.GET, self.endpoint.url + "faculties?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    let json = JSON(data: response.data!)
+                    completionHandler(json, nil)
+                    break
+                case .Failure(let error):
+                    completionHandler(nil,error)
+                }
+        }
+    }
+    
+    func getObjectivesCall(fac: Faculty, completionHandler: (JSON?, NSError?) -> ()) {
+        
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    let json = JSON(data: response.data!)
+                    completionHandler(json, nil)
+                case .Failure(let error):
+                    completionHandler(nil, error)
+                }
+        }
+        
+    }
+    
+    func getStudentResultsCall(fac: Faculty, completionHandler: (JSON?, NSError?)->()) {
+        
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/students-results?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    let json = JSON(data: response.data!)
+                    completionHandler(json, nil)
+                case .Failure(let error):
+                    completionHandler(nil, error)
+                }
+        }
+    }
+    
+    func getAspectsCall(fac: Faculty, completionHandler: (JSON?,NSError?)->()){
+        
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/aspects?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+            switch response.result {
+            case .Success:
+                let json = JSON(data: response.data!)
+                completionHandler(json,nil)
+            case .Failure(let error):
+                completionHandler(nil, error)
+            }
+            
+        }
+    }
+    
+    func getCoursesCall(fac: Faculty, completionHandler: (JSON?,NSError?)->()){
+        
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/evaluated_courses", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+            switch response.result {
+            case .Success:
+                let json = JSON(data: response.data!)
+                completionHandler(json, nil)
+            case .Failure(let error):
+                completionHandler(nil, error)
+            }
+            
+        }
+    }
+    
+    func getImprovementCall(fac: Faculty, completionHandler: (JSON?,NSError?)->()) {
+        
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/improvement_plans?since=0", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+            switch response.result {
+            case .Success:
+                let json = JSON(data: response.data!)
+                completionHandler(json, nil)
+            case .Failure(let error):
+                completionHandler(nil, error)
+            }
+            
+        }
+    }
+    
+    func getSuggestionsCall(fac: Faculty, completionHandler: (JSON?,NSError?)->()){
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/suggestions", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+            switch response.result {
+            case .Success:
+                let json = JSON(data: response.data!)
+                completionHandler(json, nil)
+            case .Failure(let error):
+                completionHandler(nil, error)
+            }
+            
+        }
+    }
 }
 
 extension NSDate {

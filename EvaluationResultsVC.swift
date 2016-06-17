@@ -1,14 +1,14 @@
 //
-//  EvaluationResults.swift
+//  EvaluationResultsVC.swift
 //  UASApp
 //
-//  Created by Karl Montenegro on 06/05/16.
+//  Created by Karl Montenegro on 17/06/16.
 //  Copyright © 2016 puntobat. All rights reserved.
 //
 
 import UIKit
 
-class EvaluationResults: UIViewController {
+class EvaluationResultsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,8 +16,8 @@ class ImprovementDataLoader {
     
     func refresh_plans(json: JSON) {
         
-        ImprovementPlan.MR_truncateAll()
-        PlanType.MR_truncateAll()
+        //ImprovementPlan.MR_truncateAll()
+        //PlanType.MR_truncateAll()
         
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")

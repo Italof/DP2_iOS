@@ -52,6 +52,8 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
             }
         }
         
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "header_bg"))
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +71,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     break
             
             case 3: //Obj. Educacionales
-                
+                    /*
                     Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
                         .responseJSON { response in
                         switch response.result {
@@ -81,11 +83,11 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                                 //print(error)
                                 self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                         }
-                    }
-                
+                    }*/
+                self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                     break
             case 4: //Res. Estudiantiles
-                
+                /*
                 Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/students-results?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
                     .responseJSON { response in
                         switch response.result {
@@ -98,10 +100,11 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                             //print(error)
                             self.performSegueWithIdentifier("studentResSegue", sender: self)
                         }
-                }
+                }*/
+                self.performSegueWithIdentifier("studentResSegue", sender: self)
                 break
             case 5: //Aspectos
-                
+                /*
                 Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/aspects?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
                     switch response.result {
                         case .Success:
@@ -113,11 +116,12 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                             self.performSegueWithIdentifier("aspectSegue", sender: self)
                     }
                     
-                }
+                }*/
+                self.performSegueWithIdentifier("aspectSegue", sender: self)
                     break
 
             case 6: //Cursos
-                
+                /*
                 Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/evaluated_courses", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
                     switch response.result {
                     case .Success:
@@ -129,10 +133,11 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                         self.performSegueWithIdentifier("coursesSegue", sender: self)
                     }
                     
-                }
+                }*/
+                self.performSegueWithIdentifier("coursesSegue", sender: self)
                     break
             case 7: //Mejora Continua
-                
+                /*
                 Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/improvement_plans?since=0", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
                     switch response.result {
                     case .Success:
@@ -157,11 +162,11 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                         print(error)
                     }
                     
-                }
+                }*/
                 
                     break
             case 8: //Resultados de Evaluaciones
-                
+                self.performSegueWithIdentifier("evaluationResultsSegue", sender: self)
                     break
             case 10: //Cerrar Sesion
                 let alertController = UIAlertController(title: "Atención", message:
