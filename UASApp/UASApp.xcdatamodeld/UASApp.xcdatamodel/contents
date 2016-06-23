@@ -39,6 +39,8 @@
     <entity name="EducationalObjective" representedClassName=".EducationalObjective" syncable="YES">
         <attribute name="cicloRegistro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="especialidad" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="numero" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
@@ -103,6 +105,7 @@
     <entity name="StudentResult" representedClassName=".StudentResult" syncable="YES">
         <attribute name="cicloRegistro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="identificador" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
@@ -134,12 +137,12 @@
         <element name="Coordinator" positionX="18" positionY="126" width="128" height="195"/>
         <element name="Course" positionX="0" positionY="45" width="128" height="150"/>
         <element name="Criterion" positionX="-9" positionY="36" width="128" height="120"/>
-        <element name="EducationalObjective" positionX="-54" positionY="-9" width="128" height="150"/>
+        <element name="EducationalObjective" positionX="-54" positionY="-9" width="128" height="180"/>
         <element name="Faculty" positionX="-63" positionY="-18" width="128" height="285"/>
         <element name="ImprovementPlan" positionX="36" positionY="81" width="128" height="210"/>
         <element name="PlanType" positionX="27" positionY="162" width="128" height="150"/>
         <element name="Professor" positionX="9" positionY="54" width="128" height="240"/>
-        <element name="StudentResult" positionX="-36" positionY="9" width="128" height="165"/>
+        <element name="StudentResult" positionX="-36" positionY="9" width="128" height="180"/>
         <element name="Suggestion" positionX="18" positionY="63" width="128" height="165"/>
         <element name="Timetable" positionX="0" positionY="45" width="128" height="150"/>
     </elements>

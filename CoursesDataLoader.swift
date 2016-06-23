@@ -50,7 +50,7 @@ class CourseDataLoader {
                 course?.nivelAcademico = Int(subJson["NivelAcademico"].stringValue)!
                 course?.nombre = subJson["Nombre"].stringValue
                 course?.codigo = subJson["Codigo"].stringValue
-                course?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
+                //course?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                 course?.faculty = faculty
             }
 

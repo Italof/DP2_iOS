@@ -68,29 +68,30 @@ class ViewController: UIViewController {
                         
                             self.getObjectives(fac){
                                 json, error in
-                                EdObjectiveDataLoader().refresh_objectives(json!)
+                                DS_Objectives().storeObjectives(json!)
+                                //EdObjectiveDataLoader().refresh_objectives(json!)
                             
                             }
                             self.getStudentResults(fac){
                                 json, error in
-                                StudentResultsDataLoader().refresh_results(json!)
+                                //StudentResultsDataLoader().refresh_results(json!)
                             }
                             self.getAspects(fac){
                                 json, error in
-                                AspectDataLoader().refresh_aspects(json!)
+                                //AspectDataLoader().refresh_aspects(json!)
                                 
                             }
                             self.getCourses(fac){
                                 json, error in
-                                CourseDataLoader().refresh_courses(json!)
+                                //CourseDataLoader().refresh_courses(json!)
                             }
                             self.getImprovement(fac) {
                                 json, error in
-                                ImprovementDataLoader().refresh_plans(json!)
+                                //ImprovementDataLoader().refresh_plans(json!)
                             }
                             self.getSuggestions(fac) {
                                 json, error in
-                                SuggestionDataLoader().refresh_suggestions(json!)
+                                //SuggestionDataLoader().refresh_suggestions(json!)
                             }
                         count += 1
                         if count == facultyList.count {
@@ -266,6 +267,31 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    func deleteAll() {
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDel.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "EducationalObjective")
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        var results : Array<EducationalObjective> = []
+        
+        do{
+            results = try context.executeFetchRequest(fetchRequest) as! Array<EducationalObjective>
+        }catch{
+            
+        }
+        
+        for managedObject in results {
+            context.deleteObject(managedObject)
+        }
+        
+        do{
+            try context.save()
+        } catch {
+            print(error)
+        }
+    }
 }
 
 extension NSDate {
@@ -307,5 +333,7 @@ extension NSDate {
         //Return Result
         return isEqualTo
     }
+    
+    
 }
 

@@ -21,10 +21,14 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
     var edObjDictionary:Dictionary<String,Array<EducationalObjective>>? = nil
     var edObjKeys:Array<String>? = nil
     
+    var edObjList : Array<EducationalObjective>?
+    
     override func viewWillAppear(animated: Bool) {
 
-        self.edObjDictionary = EdObjectiveDataLoader().get_all(faculty!)
+        self.edObjDictionary = DS_Objectives().getAll(self.faculty!.id!)
         self.edObjKeys = Array(self.edObjDictionary!.keys)
+        
+        self.edObjList = DS_Objectives().getAll(self.faculty!.id!)
     }
     
     override func viewDidLoad() {
@@ -75,7 +79,7 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         if self.edObjKeys != nil {
-            return self.edObjKeys!.count
+            return (self.edObjList?.count)!
         } else {
             return 0
         }
@@ -83,24 +87,38 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.edObjDictionary![self.edObjKeys![section]]!.count
+        //return self.edObjDictionary![self.edObjKeys![section]]!.count
+        return 1
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("objEdCell", forIndexPath: indexPath)
         
-        let key = self.edObjKeys![indexPath.section]
-        let obj = (self.edObjDictionary![key])![indexPath.row]
+        let obj = self.edObjList![indexPath.row]
         
-        cell.textLabel?.text = "Objetivo Educacional " + obj.numero!.description + ": " + obj.descripcion!
+        var imageView : UIImageView
+        var imageName : String
+        imageView  = UIImageView(frame:CGRectMake(20, 20, 30, 30))
+        
+        if obj.estado! == 1 {
+            imageName = "Green-Circle-30"
+        } else {
+            imageName = "Red-Circle-30"
+        }
+        
+        imageView.image = UIImage(named: imageName)
+        
+        cell.textLabel?.text = "Objetivo Educacional " + obj.numero!.description
+        cell.detailTextLabel?.text = obj.descripcion!
+        cell.accessoryView = imageView
         
         return cell
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return "Ciclo " + self.edObjKeys![section]
+        return ""
     }
     
     /*

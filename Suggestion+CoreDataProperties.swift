@@ -22,5 +22,6 @@ extension Suggestion {
     @NSManaged var titulo: String?
     @NSManaged var descripcion: String?
     @NSManaged var professor: Professor?
+    @NSManaged var estado: NSNumber?
 
 }
