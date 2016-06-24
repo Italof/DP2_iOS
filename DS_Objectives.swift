@@ -16,11 +16,17 @@ class DS_Objectives {
     let dateFormatter = NSDateFormatter()
     
     func storeObjectives(json: JSON) {
-        
+
         let context:NSManagedObjectContext = appDel.managedObjectContext
+        
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
         
+        //let list = self.getAll()
+        /*
+        for obj in list {
+            context.deleteObject(obj)
+        }*/
         
         for (_,subJson):(String, JSON) in json {
             
@@ -61,7 +67,7 @@ class DS_Objectives {
     }
     
     func getAll(fac_id: NSNumber)->Dictionary<String,Array<EducationalObjective>>?{
-        
+
         let context:NSManagedObjectContext = appDel.managedObjectContext
         let request = NSFetchRequest(entityName: "EducationalObjective")
         let pred = NSPredicate(format: "(especialidad = %@)", fac_id)
@@ -92,18 +98,35 @@ class DS_Objectives {
         
     }
     
-    func getAll(fac_id: NSNumber)->Array<EducationalObjective>? {
-        
+    func getAll(fac_id: NSNumber)->Array<EducationalObjective> {
+
         let context:NSManagedObjectContext = appDel.managedObjectContext
         let request = NSFetchRequest(entityName: "EducationalObjective")
         let pred = NSPredicate(format: "(especialidad = %@)", fac_id)
         request.predicate = pred
         request.returnsObjectsAsFaults = false
         
-        var results:Array<EducationalObjective> = []
+        var results : Array<EducationalObjective> = []
         
         do{
-            try results = context.executeFetchRequest(request) as! Array<EducationalObjective>
+            results = try context.executeFetchRequest(request) as! [EducationalObjective]
+        }catch{
+            print(error)
+        }
+        
+        return results
+    }
+    
+    func getAll()->Array<EducationalObjective> {
+        
+        let context:NSManagedObjectContext = appDel.managedObjectContext
+        let request = NSFetchRequest(entityName: "EducationalObjective")
+        request.returnsObjectsAsFaults = false
+        
+        var results : Array<EducationalObjective> = []
+        
+        do{
+            results = try context.executeFetchRequest(request) as! [EducationalObjective]
         }catch{
             print(error)
         }
@@ -114,6 +137,7 @@ class DS_Objectives {
     //MARK - Auxiliary functions
     
     private func findObjective(id: NSNumber)->EducationalObjective? {
+        
         let context:NSManagedObjectContext = appDel.managedObjectContext
         let entity = NSEntityDescription.entityForName("EducationalObjective", inManagedObjectContext: context)
         let request = NSFetchRequest()
@@ -134,6 +158,7 @@ class DS_Objectives {
     }
     
     private func findStudentResult(id: NSNumber)->StudentResult? {
+       
         let context:NSManagedObjectContext = appDel.managedObjectContext
         let entity = NSEntityDescription.entityForName("StudentResult", inManagedObjectContext: context)
         let request = NSFetchRequest()
@@ -154,7 +179,7 @@ class DS_Objectives {
     }
     
     func deleteAll() {
-        
+     
         let context:NSManagedObjectContext = appDel.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "EducationalObjective")
         fetchRequest.returnsObjectsAsFaults = false

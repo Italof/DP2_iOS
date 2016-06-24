@@ -17,8 +17,8 @@ class EdObjectiveDataLoader {
     
     func refresh_objectives (json: JSON) {
         
-        //EducationalObjective.MR_truncateAll()
-        //StudentResult.MR_truncateAll()
+        EducationalObjective.MR_truncateAll()
+        StudentResult.MR_truncateAll()
         
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
@@ -107,6 +107,16 @@ class EdObjectiveDataLoader {
             }
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         }
+    }
+    
+    func get_all(faculty: Faculty) -> Array<EducationalObjective>? {
+        
+        let predicate:NSPredicate = NSPredicate(format: "(especialidad = %@)", faculty.id!)
+        let request:NSFetchRequest = EducationalObjective.MR_requestAllWithPredicate(predicate)
+        
+        let array: Array<EducationalObjective> = EducationalObjective.MR_executeFetchRequest(request) as! Array<EducationalObjective>
+    
+        return array
     }
     
     func get_all(faculty: Faculty) -> Dictionary<String, Array<EducationalObjective>>? {

@@ -78,17 +78,17 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        if self.edObjKeys != nil {
-            return (self.edObjList?.count)!
-        } else {
-            return 0
-        }
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //return self.edObjDictionary![self.edObjKeys![section]]!.count
-        return 1
+        if self.edObjList != nil {
+            return self.edObjList!.count
+        } else {
+            return 0
+        }
     }
 
     
@@ -98,13 +98,18 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
         let obj = self.edObjList![indexPath.row]
         
         var imageView : UIImageView
-        var imageName : String
+        var imageName : String = ""
         imageView  = UIImageView(frame:CGRectMake(20, 20, 30, 30))
         
-        if obj.estado! == 1 {
-            imageName = "Green-Circle-30"
-        } else {
-            imageName = "Red-Circle-30"
+        
+        
+        if obj.estado != nil {
+            
+            if obj.estado! == 1{
+                imageName = "Green-Circle-30"
+            } else {
+                imageName = "Red-Circle-30"
+            }
         }
         
         imageView.image = UIImage(named: imageName)
@@ -163,13 +168,13 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "objectiveDetailSegue" {
-            let vc = segue.destinationViewController as! EducationalObjectiveDetail
+            let vc = segue.destinationViewController as! EducationalObjectiveDetailViewController
             let indexPath = self.tableView.indexPathForSelectedRow
             
-            let key = self.edObjKeys![indexPath!.section]
-            let obj = (self.edObjDictionary![key])![indexPath!.row]
+            //let key = self.edObjKeys![indexPath!.section]
+            let obj = self.edObjList![indexPath!.row]
             
-            vc.ed_objective = obj
+            vc.educationalObjective = obj
 
         }
     }
