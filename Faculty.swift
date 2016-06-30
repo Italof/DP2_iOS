@@ -26,7 +26,6 @@ class Faculty: NSManagedObject {
     @NSManaged var codigo: String?
     @NSManaged var descripcion: String?
     @NSManaged var educationalObjective: NSSet?
-    @NSManaged var aspect: NSSet?
     @NSManaged var course: NSSet?
     @NSManaged var studentResult: NSSet?
     @NSManaged var suggestion: NSSet?

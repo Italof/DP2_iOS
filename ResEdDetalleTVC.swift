@@ -13,9 +13,12 @@ class ResEdDetalleTVC: UITableViewController {
     
     var studentResult: StudentResult? = nil
     
+    @IBOutlet weak var titleNav: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.studentResult)
+        
+        self.titleNav.title = "Resultado Estudiantil " + self.studentResult!.identificador!
     }
 
     override func didReceiveMemoryWarning() {

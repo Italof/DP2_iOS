@@ -24,7 +24,7 @@ class EducationalObjectiveDetailViewController: UIViewController, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.resultListArray = self.educationalObjective!.studentResults?.allObjects as! Array<StudentResult>
+        self.resultListArray = StudentResult.getResultsByObjective(self.educationalObjective!, ctx: globalCtx)
         
         self.nroObjetivo.text = self.educationalObjective?.numero.description
         
@@ -111,14 +111,19 @@ class EducationalObjectiveDetailViewController: UIViewController, UITableViewDel
         return ""
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "studentResultViewSegue" {
+            let vc = segue.destinationViewController as! StudentResultDetailViewController
+            
+            let indexPath = self.resultList.indexPathForSelectedRow
+            
+            vc.studentResult = self.resultListArray[indexPath!.row]
+        }
+        
     }
-    */
 
 }

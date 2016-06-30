@@ -9,17 +9,14 @@
 import UIKit
 
 class AspectosTVC: UITableViewController {
-
-    let array = ["Aspecto 1","Aspecto 2","Aspecto 3","Aspecto 4"]
-    let rubrics = ["Rubrica 1","Rubrica 2","Rubrica 3","Rubrica 4"]
     
     var faculty: Faculty? = nil
-    var aspects: Array<Aspect>? = nil
+    var aspects: Array<Aspect> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.aspects = TR_Aspect().get(self.faculty!.id!)
-        self.aspects = Aspect.MR_findAll() as? Array<Aspect>
+        
+        self.aspects = Aspect.getAllAspects(globalCtx)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,14 +33,31 @@ class AspectosTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (self.aspects?.count)!
+        return self.aspects.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("aspectCell", forIndexPath: indexPath)
-
-        cell.textLabel?.text = self.aspects![indexPath.row].nombre
+        
+        let aspect = self.aspects[indexPath.row]
+        
+        var imageView : UIImageView
+        var imageName : String = ""
+        imageView  = UIImageView(frame:CGRectMake(20, 20, 30, 30))
+        
+        if (aspect.estado != nil) {
+            
+            if (aspect.estado?.boolValue)! {
+                imageName = "Green-Circle-30"
+            } else {
+                imageName = "Red-Circle-30"
+            }
+        }
+        
+        imageView.image = UIImage(named: imageName)
+        cell.textLabel?.text = aspect.nombre
+        cell.accessoryView = imageView
         
         return cell
     }
@@ -94,8 +108,8 @@ class AspectosTVC: UITableViewController {
             let vc = segue.destinationViewController as! AspectoDetailTVC
             let indexPath = self.tableView.indexPathForSelectedRow
             
-            vc.aspecto = self.aspects![indexPath!.row]
-            vc.faculty = self.faculty
+            vc.aspecto = self.aspects[indexPath!.row]
+            //vc.faculty = self.faculty
         }
         
     }

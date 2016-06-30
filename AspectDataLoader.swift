@@ -42,7 +42,7 @@ class AspectDataLoader {
                 //If it doesn't, we create it
                 asp = Aspect.MR_createEntity()
                 
-                asp?.id = Int(subJson["IdAspecto"].stringValue)
+                //asp?.id = Int(subJson["IdAspecto"].stringValue)
                 asp?.nombre = subJson["Nombre"].stringValue
                 
                 asp?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
@@ -74,9 +74,9 @@ class AspectDataLoader {
     
     func get_criteria(aspect: Aspect) -> Array<Criterion>? {
         
-        let predicate:NSPredicate = NSPredicate(format: "(aspect.id = %@)", aspect.id!)
-        let request:NSFetchRequest = Criterion.MR_requestAllWithPredicate(predicate)
+        //et predicate:NSPredicate = NSPredicate(format: "(aspect.id = %@)", aspect.id!)
+        //let request:NSFetchRequest = Criterion.MR_requestAllWithPredicate(predicate)
         
-        return Criterion.MR_executeFetchRequest(request) as? Array<Criterion>
+        return nil//Criterion.MR_executeFetchRequest(request) as? Array<Criterion>
     }
 }

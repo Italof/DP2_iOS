@@ -16,6 +16,7 @@ let ResultIdentifierKey = "Identificador"
 let ResultDescriptionKey = "Descripcion"
 let ResultCicloRegistroKey = "CicloRegistro"
 let ResultStatusKey = "Estado"
+let ResultAspectKey = "aspects"
 
 /*
  {
@@ -89,7 +90,25 @@ extension StudentResult {
         }
         
         for (_,result):(String, JSON) in json {
-            newStoredResults.append(StudentResult.updateOrCreateWithJson(result, ctx: ctx)!)
+            
+            let newResult = StudentResult.updateOrCreateWithJson(result, ctx: ctx)!
+            newStoredResults.append(newResult)
+            
+            //Aspects
+            
+            let persistedAspects = Aspect.getAspectByResult(newResult, ctx: ctx)
+            
+            for aspect in persistedAspects {
+                ctx.deleteObject(aspect)
+            }
+            
+            for (_,aspect):(String, JSON) in result[ResultAspectKey] {
+                
+                let newAspect = Aspect.updateOrCreateWithJson(aspect, ctx: ctx)
+                
+                let aspects = newResult.mutableSetValueForKey("aspects")
+                aspects.addObject(newAspect!)
+            }
         }
         
         return newStoredResults
@@ -162,24 +181,5 @@ extension StudentResult {
         let results = try! ctx.executeFetchRequest(fetchRequest) as? Array<StudentResult>
         return results ?? Array<StudentResult>()
     }
-    /*
-    internal class func getOrderedResults(faculty: Faculty) -> Dictionary<String, Array<StudentResult>>? {
-        
-        let array: Array<StudentResult> = StudentResult.getResultsByFaculty(faculty, ctx: globalCtx)
-        
-        var resDictionary = Dictionary<String,Array<StudentResult>>()
-        var thisObj:String?
-        
-        for res in array {
-            thisObj =
-            
-            if objDictionary.indexForKey(thisObj) == nil {
-                objDictionary[thisObj] = []
-            }
-            
-            objDictionary[thisObj]?.append(obj)
-        }
-        return objDictionary
-    }*/
 }
 

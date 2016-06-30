@@ -85,6 +85,7 @@ class ViewController: UIViewController {
                                         try! globalCtx.save()
                                     }
                                 }
+                                
                             }
                             self.performSegueWithIdentifier("facultyListSegue", sender: self)
                         }

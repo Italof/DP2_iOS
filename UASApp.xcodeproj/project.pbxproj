@@ -121,6 +121,7 @@
 		77E198571CD7C85300782B72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E198551CD7C85300782B72 /* LaunchScreen.storyboard */; };
 		77E198621CD7C85300782B72 /* UASAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E198611CD7C85300782B72 /* UASAppTests.swift */; };
 		77E1986D1CD7C85300782B72 /* UASAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1986C1CD7C85300782B72 /* UASAppUITests.swift */; };
+		77E2E0DD1D24E51200787F3C /* StudentResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0DC1D24E51200787F3C /* StudentResultDetailViewController.swift */; };
 		C041BB4E1D0159F8008A077A /* FacultiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041BB4D1D0159F8008A077A /* FacultiesTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -264,6 +265,7 @@
 		77E198681CD7C85300782B72 /* UASAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UASAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E1986C1CD7C85300782B72 /* UASAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UASAppUITests.swift; sourceTree = "<group>"; };
 		77E1986E1CD7C85300782B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E2E0DC1D24E51200787F3C /* StudentResultDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResultDetailViewController.swift; sourceTree = "<group>"; };
 		91EC3011194695571EFCB348 /* Pods_UASApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UASApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C041BB4D1D0159F8008A077A /* FacultiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultiesTest.swift; sourceTree = "<group>"; };
 		F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UASApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-UASApp/Pods-UASApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 				77A24CA51CDC8D8C006AA0B9 /* ResEdTVC.swift */,
 				77A24CA71CDC9777006AA0B9 /* ResEdDetalleTVC.swift */,
 				77167A6F1CDD3A81004C91BC /* EdResultDescriptionCell.swift */,
+				77E2E0DC1D24E51200787F3C /* StudentResultDetailViewController.swift */,
 			);
 			name = "Resutados Estudiantiles";
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				77CC0B891D190308009620AA /* DS_Objectives.swift in Sources */,
 				773F6D881D07A99700B70FF5 /* Professor.swift in Sources */,
 				77A24CB01CDCAD0C006AA0B9 /* AspectosTVC.swift in Sources */,
+				77E2E0DD1D24E51200787F3C /* StudentResultDetailViewController.swift in Sources */,
 				773F6D9F1D07AD6200B70FF5 /* Course+CoreDataProperties.swift in Sources */,
 				77E1984A1CD7C85300782B72 /* AppDelegate.swift in Sources */,
 				773F6DAA1D08BA9F00B70FF5 /* StudentResultsDataLoader.swift in Sources */,

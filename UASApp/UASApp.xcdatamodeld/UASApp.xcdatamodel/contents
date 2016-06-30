@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15F34" minimumToolsVersion="Automatic">
     <entity name="Aspect" representedClassName=".Aspect" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="criteria" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Criterion" inverseName="aspect" inverseEntity="Criterion" syncable="YES"/>
-        <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="aspect" inverseEntity="Faculty" syncable="YES"/>
         <relationship name="studentResult" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StudentResult" inverseName="aspects" inverseEntity="StudentResult" syncable="YES"/>
     </entity>
     <entity name="Coordinator" representedClassName=".Coordinator" syncable="YES">
@@ -45,7 +45,7 @@
         <attribute name="numero" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="educationalObjective" inverseEntity="Faculty" syncable="YES"/>
-        <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudentResult" inverseName="educationalObjectives" inverseEntity="StudentResult" syncable="YES"/>
+        <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudentResult" inverseName="educationalObjectives" inverseEntity="StudentResult" syncable="YES"/>
     </entity>
     <entity name="Faculty" representedClassName=".Faculty" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
@@ -53,7 +53,6 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="aspect" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Aspect" inverseName="faculty" inverseEntity="Aspect" syncable="YES"/>
         <relationship name="coordinator" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Coordinator" inverseName="faculty" inverseEntity="Coordinator" syncable="YES"/>
         <relationship name="course" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Course" inverseName="faculty" inverseEntity="Course" syncable="YES"/>
         <relationship name="criterion" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Criterion" inverseName="faculty" inverseEntity="Criterion" syncable="YES"/>
@@ -139,7 +138,7 @@
         <element name="Course" positionX="0" positionY="45" width="128" height="150"/>
         <element name="Criterion" positionX="-9" positionY="36" width="128" height="120"/>
         <element name="EducationalObjective" positionX="-54" positionY="-9" width="128" height="180"/>
-        <element name="Faculty" positionX="-63" positionY="-18" width="128" height="285"/>
+        <element name="Faculty" positionX="-63" positionY="-18" width="128" height="270"/>
         <element name="ImprovementPlan" positionX="36" positionY="81" width="128" height="210"/>
         <element name="PlanType" positionX="27" positionY="162" width="128" height="150"/>
         <element name="Professor" positionX="9" positionY="54" width="128" height="240"/>

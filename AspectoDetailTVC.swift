@@ -10,13 +10,15 @@ import UIKit
 
 class AspectoDetailTVC: UITableViewController {
     
-    var faculty: Faculty? = nil
-    var aspecto: Aspect? = nil
-    var list: Array<Criterion>? = nil
+    var aspecto: Aspect?
+    var list: Array<Criterion> = []
+    
+    @IBOutlet weak var aspectTitle: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.list = AspectDataLoader().get_criteria(self.aspecto!)
+        self.aspectTitle.title = self.aspecto?.nombre
+        //self.list = AspectDataLoader().get_criteria(self.aspecto!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,16 +39,16 @@ class AspectoDetailTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (self.list?.count)!
+        return self.list.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("critCell", forIndexPath: indexPath)
 
-        let crt = self.list![indexPath.row]
+        //let crt = self.list[indexPath.row]
         
-        cell.textLabel?.text = crt.nombre
+        //cell.textLabel?.text = crt.nombre
         
         return cell
     }

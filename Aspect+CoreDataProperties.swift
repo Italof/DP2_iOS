@@ -14,11 +14,6 @@ import CoreData
 
 extension Aspect {
 
-    @NSManaged var id: NSNumber?
-    @NSManaged var updated_at: NSDate?
-    @NSManaged var nombre: String?
-    @NSManaged var faculty: Faculty?
-    @NSManaged var criteria: NSSet?
-    @NSManaged var studentResult: StudentResult?
+    
 
 }

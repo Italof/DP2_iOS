@@ -78,9 +78,16 @@ extension EducationalObjective {
                 ctx.deleteObject(result)
             }
             
+            //print("OBJECTIVE:")
+            //print("============")
+            //print(newObjective)
+            //print("RESULTS")
+            //print("============")
+            
             for (_,result):(String, JSON) in objective[ObjectiveResultsKey] {
                 
                 let newResult = StudentResult.updateOrCreateWithJson(result, ctx: ctx)
+                //print(newResult?.identificador)
                 let results = newObjective.mutableSetValueForKey("studentResults")
                 results.addObject(newResult!)
             }
