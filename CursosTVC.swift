@@ -10,15 +10,17 @@ import UIKit
 
 class CursosTVC: UITableViewController {
     
-    var courseDictionary:Dictionary<NSNumber,Array<Course>>? = nil
-    var courseKeys:Array<NSNumber>? = nil
+    @IBOutlet weak var cicloActual: UILabel!
+    
+    var courseDictionary:Dictionary<Int32,Array<Course>> = Dictionary<Int32,Array<Course>>()
+    var courseKeys:Array<Int32> = []
     var faculty:Faculty? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.courseDictionary = CourseDataLoader().get_all(self.faculty!)
-        self.courseKeys = Array(self.courseDictionary!.keys)
+        self.courseDictionary = Course.getClassifiedCoursesByLevel(self.faculty!, ctx: globalCtx)!
+        self.courseKeys = Array(self.courseDictionary.keys).sort { $0 > $1 }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,35 +31,43 @@ class CursosTVC: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Nivel " + self.courseKeys![section].description
+        return "Nivel " + self.courseKeys[section].description
     }
     
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return self.courseKeys!.count
+        return self.courseKeys.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        let key = self.courseKeys![section]
+        let key = self.courseKeys[section]
         
-        return ((self.courseDictionary![key])?.count)!
+        return ((self.courseDictionary[key])?.count)!
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cursoCell", forIndexPath: indexPath)
         
-        let key = self.courseKeys![indexPath.section]
-        let obj = (self.courseDictionary![key])![indexPath.row]
+        let key = self.courseKeys[indexPath.section]
+        let obj = (self.courseDictionary[key])![indexPath.row]
         
         cell.textLabel?.text = obj.codigo! + " - " + obj.nombre!
         return cell
     }
     
-
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let label : UILabel = UILabel()
+        label.backgroundColor = UIColor(red: 232/256, green: 232/256, blue: 232/256, alpha: 0.9)
+        label.textColor = UIColor(red: 169/256, green: 169/256, blue: 169/256, alpha: 0.9)
+        label.text = "    Resultado Estudiantil " + self.courseKeys[section].description
+        label.font = UIFont.boldSystemFontOfSize(17.0)
+        return label
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -100,13 +110,13 @@ class CursosTVC: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "courseDetailSegue" {
-            let tvc = segue.destinationViewController as! CursoDetalleTVC
+            let vc = segue.destinationViewController as! CourseDetailViewController
             let indexPath = self.tableView.indexPathForSelectedRow
             
-            let key = self.courseKeys![indexPath!.section]
-            tvc.course = (self.courseDictionary![key]!)[indexPath!.row]
+            let key = self.courseKeys[indexPath!.section]
+            vc.course = (self.courseDictionary[key]!)[indexPath!.row]
             
-            tvc.faculty = self.faculty
+            vc.faculty = self.faculty
         }
         
     }

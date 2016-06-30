@@ -8,57 +8,26 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>Charts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>DZNEmptyDataSet.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>MagicalRecord.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-UASApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>Realm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
-		<key>RealmSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -68,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2EC599FEC8987F8EB8FCAB22B198DD49</key>
+		<key>1FCD5325F88D812B58270F72BB373EA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>439BB5030F3F8E1CC6D092AA75F7A617</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -78,27 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86FCAFBE3ACE0BF6FEB45151E8D15D55</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D58D76EC529B4A92F3E5EDADE0A96661</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EB750965E67AC1523FE41CC71607E1FF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F831852D7F125168B1EF17FC76AB893C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FA073A2B6A40241050D91303EE6DF561</key>
 		<dict>
 			<key>primary</key>
 			<true/>

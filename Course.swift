@@ -130,4 +130,22 @@ extension Course {
         let courses = try! ctx.executeFetchRequest(fetchRequest) as? Array<Course>
         return courses ?? Array<Course>()
     }
+    
+    internal class func getClassifiedCoursesByLevel(fac: Faculty, ctx: NSManagedObjectContext) -> Dictionary<Int32, Array<Course>>? {
+        
+        let courses:Array<Course> = Course.getCoursesByFaculty(fac, ctx: ctx)
+        var dictionary = Dictionary<Int32,Array<Course>>()
+        var thisCourse:Int32 = 0
+        
+        for course in courses {
+            thisCourse = course.nivelAcademico
+            if dictionary.indexForKey(thisCourse) == nil {
+                dictionary[thisCourse] = []
+            }
+            dictionary[thisCourse]?.append(course)
+        }
+        
+        return dictionary
+        
+    }
 }

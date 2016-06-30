@@ -85,19 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-UASApp/Alamofire.framework"
-  install_framework "Pods-UASApp/Charts.framework"
   install_framework "Pods-UASApp/DZNEmptyDataSet.framework"
   install_framework "Pods-UASApp/MagicalRecord.framework"
-  install_framework "Pods-UASApp/Realm.framework"
-  install_framework "Pods-UASApp/RealmSwift.framework"
   install_framework "Pods-UASApp/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-UASApp/Alamofire.framework"
-  install_framework "Pods-UASApp/Charts.framework"
   install_framework "Pods-UASApp/DZNEmptyDataSet.framework"
   install_framework "Pods-UASApp/MagicalRecord.framework"
-  install_framework "Pods-UASApp/Realm.framework"
-  install_framework "Pods-UASApp/RealmSwift.framework"
   install_framework "Pods-UASApp/SwiftyJSON.framework"
 fi

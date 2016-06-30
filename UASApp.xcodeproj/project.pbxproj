@@ -126,6 +126,7 @@
 		77E2E0E11D25076400787F3C /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0DF1D25076400787F3C /* Semester.swift */; };
 		77E2E0E41D25CD3E00787F3C /* Active-Circle-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E2E0E21D25CD3E00787F3C /* Active-Circle-30.png */; };
 		77E2E0E51D25CD3E00787F3C /* Inactive-Circle-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E2E0E31D25CD3E00787F3C /* Inactive-Circle-30.png */; };
+		77E2E0E71D25D72900787F3C /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0E61D25D72900787F3C /* CourseDetailViewController.swift */; };
 		C041BB4E1D0159F8008A077A /* FacultiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041BB4D1D0159F8008A077A /* FacultiesTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -274,6 +275,7 @@
 		77E2E0DF1D25076400787F3C /* Semester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		77E2E0E21D25CD3E00787F3C /* Active-Circle-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Active-Circle-30.png"; path = "UASApp/img/Active-Circle-30.png"; sourceTree = "<group>"; };
 		77E2E0E31D25CD3E00787F3C /* Inactive-Circle-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Inactive-Circle-30.png"; path = "UASApp/img/Inactive-Circle-30.png"; sourceTree = "<group>"; };
+		77E2E0E61D25D72900787F3C /* CourseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		91EC3011194695571EFCB348 /* Pods_UASApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UASApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C041BB4D1D0159F8008A077A /* FacultiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultiesTest.swift; sourceTree = "<group>"; };
 		F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UASApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-UASApp/Pods-UASApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 				77A24CBA1CDD07C3006AA0B9 /* ProfesorCell.swift */,
 				77A24CBE1CDD08FB006AA0B9 /* CursoDetalleTVC.swift */,
 				77A24CC01CDD0A5E006AA0B9 /* TeacherCell.swift */,
+				77E2E0E61D25D72900787F3C /* CourseDetailViewController.swift */,
 			);
 			name = Cursos;
 			sourceTree = "<group>";
@@ -893,6 +896,7 @@
 				773F6D981D07AD0C00B70FF5 /* Criterion.swift in Sources */,
 				773F6DA81D07D41100B70FF5 /* EdObjectivesDataLoader.swift in Sources */,
 				773F6DC31D0B20EC00B70FF5 /* PlanType.swift in Sources */,
+				77E2E0E71D25D72900787F3C /* CourseDetailViewController.swift in Sources */,
 				773F6D861D07A99700B70FF5 /* Faculty.swift in Sources */,
 				773F6DC11D0B20EC00B70FF5 /* ImprovementPlan.swift in Sources */,
 				773F6D991D07AD0C00B70FF5 /* StudentResult+CoreDataProperties.swift in Sources */,
