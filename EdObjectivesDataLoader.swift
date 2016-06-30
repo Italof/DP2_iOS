@@ -33,7 +33,7 @@ class EdObjectiveDataLoader {
                 
                 if date.isGreaterThanDate(obj!.updated_at!) {
                     
-                    obj?.numero = Int(subJson["Numero"].stringValue)
+                    obj?.numero = 0 //Int(subJson["Numero"].stringValue)
                     obj?.cicloRegistro = subJson["CicloRegistro"].stringValue
                     obj?.descripcion = subJson["Descripcion"].stringValue
                     obj?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
@@ -51,19 +51,19 @@ class EdObjectiveDataLoader {
                             let date:NSDate = self.dateFormatter.dateFromString(resJson["updated_at"].stringValue)!
                             
                             if date.isGreaterThanDate(res!.updated_at!) {
-                                obj?.addResult(res!)
+                                //obj?.addResult(res!)
                             }
                             
                         } else { //Result not found, we create it
                             res = StudentResult.MR_createEntity()
                             
-                            res?.id = Int(subJson["IdResultadoEstudiantil"].stringValue)
+                            res?.id = 0//Int(subJson["IdResultadoEstudiantil"].stringValue)
                             res?.identificador = resJson["Identificador"].stringValue
                             res?.cicloRegistro = resJson["CicloRegistro"].stringValue
                             res?.descripcion = resJson["Descripcion"].stringValue
                             
                             res?.updated_at = self.dateFormatter.dateFromString(resJson["updated_at"].stringValue)!
-                            obj?.addResult(res!)
+                            //obj?.addResult(res!)
                         }
                     }
                 }
@@ -72,8 +72,8 @@ class EdObjectiveDataLoader {
                 //If it doesn't, we create it
                 obj = EducationalObjective.MR_createEntity()
                 
-                obj?.id = Int(subJson["IdObjetivoEducacional"].stringValue)
-                obj?.numero = Int(subJson["Numero"].stringValue)
+                obj?.id = 0 //Int(subJson["IdObjetivoEducacional"].stringValue)
+                obj?.numero = 0 //Int(subJson["Numero"].stringValue)
                 obj?.cicloRegistro = subJson["CicloRegistro"].stringValue
                 obj?.descripcion = subJson["Descripcion"].stringValue
                 obj?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
@@ -89,19 +89,19 @@ class EdObjectiveDataLoader {
                         let date:NSDate = self.dateFormatter.dateFromString(resJson["updated_at"].stringValue)!
                         
                         if date.isGreaterThanDate(res!.updated_at!) {
-                            obj?.addResult(res!)
+                            //obj?.addResult(res!)
                         }
                         
                     } else { //Result not found, we create it
                         res = StudentResult.MR_createEntity()
                         
-                        res?.id = Int(subJson["IdResultadoEstudiantil"].stringValue)
+                        res?.id = 0//Int(subJson["IdResultadoEstudiantil"].stringValue)
                         res?.identificador = resJson["Identificador"].stringValue
                         res?.cicloRegistro = resJson["CicloRegistro"].stringValue
                         res?.descripcion = resJson["Descripcion"].stringValue
                         
                         res?.updated_at = self.dateFormatter.dateFromString(resJson["updated_at"].stringValue)!
-                        obj?.addResult(res!)
+                        //obj?.addResult(res!)
                     }
                 }
             }
@@ -111,7 +111,7 @@ class EdObjectiveDataLoader {
     
     func get_all(faculty: Faculty) -> Array<EducationalObjective>? {
         
-        let predicate:NSPredicate = NSPredicate(format: "(especialidad = %@)", faculty.id!)
+        let predicate:NSPredicate = NSPredicate(format: "(especialidad = %@)", faculty.id)
         let request:NSFetchRequest = EducationalObjective.MR_requestAllWithPredicate(predicate)
         
         let array: Array<EducationalObjective> = EducationalObjective.MR_executeFetchRequest(request) as! Array<EducationalObjective>

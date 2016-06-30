@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 import CoreData
 
+let globalCtx : NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
 class ViewController: UIViewController {
 
@@ -46,63 +47,104 @@ class ViewController: UIViewController {
                 switch response.result {
                 case .Success:
                     let json = JSON(data: response.data!)
+                    var facultyList : Array<Faculty> = []
+                    var count = 0
                     
-                    self.defaults.setObject(json["token"].stringValue, forKey: "token")
                     do {
-                    try self.defaults.setObject(json["user"].rawData(), forKey: "user")
+                        self.defaults.setObject(json["token"].stringValue, forKey: "token")
+                        try self.defaults.setObject(json["user"].rawData(), forKey: "user")
+                        
                     } catch {
                         print(error)
                     }
                     
                     self.getFaculties() {
                         json, error in
-                        FacultyDataLoader().refresh_faculties(json!)
+                        
+                        if error == nil {
+                            facultyList = Faculty.syncWithJson(json!, ctx: globalCtx)!
+                            try! globalCtx.save()
+                            
+                            //Saved all faculties
+                            
+                            for fac in facultyList {
+
+                                self.getObjectives(fac){
+                                    json, error in
+                                    
+                                    if error == nil {
+                                        EducationalObjective.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                        try! globalCtx.save()
+                                    }
+                                }
+                                self.getStudentResults(fac){
+                                    json, error in
+                                    
+                                    if error == nil {
+                                        StudentResult.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                        try! globalCtx.save()
+                                    }
+                                }
+                            }
+                            self.performSegueWithIdentifier("facultyListSegue", sender: self)
+                        }
                     }
+                case .Failure(_):
+                    self.alertMessage("Usuario/Contrasena incorrectos.", winTitle: "Error")
+                }
+                
                     
-                    let facultyList = Faculty.MR_findAll() as! Array<Faculty>
-                    var count = 0
-                    
-                    self.performSegueWithIdentifier("facultyListSegue", sender: self)
-                    
+                    /*
                     for fac in facultyList {
                         
                             self.getObjectives(fac){
                                 json, error in
-                                DS_Objectives().storeObjectives(json!)
+                                //DS_Objectives().storeObjectives(json!)
+                                
                                 //EdObjectiveDataLoader().refresh_objectives(json!)
                             
-                            }
-                            self.getStudentResults(fac){
-                                json, error in
-                                //StudentResultsDataLoader().refresh_results(json!)
-                            }
-                            self.getAspects(fac){
-                                json, error in
-                                //AspectDataLoader().refresh_aspects(json!)
                                 
                             }
-                            self.getCourses(fac){
-                                json, error in
-                                //CourseDataLoader().refresh_courses(json!)
-                            }
-                            self.getImprovement(fac) {
-                                json, error in
-                                //ImprovementDataLoader().refresh_plans(json!)
-                            }
-                            self.getSuggestions(fac) {
-                                json, error in
-                                //SuggestionDataLoader().refresh_suggestions(json!)
-                            }
+                        self.getStudentResults(fac){
+                            json, error in
+                            StudentResultsDataLoader().refresh_results(json!)
+                            
+                            
+                        }
+                        self.getAspects(fac){
+                            json, error in
+                            AspectDataLoader().refresh_aspects(json!)
+                            
+                            
+                        }
+                        self.getCourses(fac){
+                            json, error in
+                            CourseDataLoader().refresh_courses(json!)
+                            
+                            
+                        }
+                        self.getImprovement(fac) {
+                            json, error in
+                            ImprovementDataLoader().refresh_plans(json!)
+                            
+                            
+                        }
+                        self.getSuggestions(fac) {
+                            json, error in
+                            SuggestionDataLoader().refresh_suggestions(json!)
+                            
+                        }
+                        
+                        
+                        
+                        
                         count += 1
                         if count == facultyList.count {
                             count = 0
-                            self.performSegueWithIdentifier("facultyListSegue", sender: self)
+                            //self.performSegueWithIdentifier("facultyListSegue", sender: self)
                         }
                     }
-                    
-                case .Failure(_):
-                    self.alertMessage("Usuario/Contrasena incorrectos.", winTitle: "Error")
-                }
+                    */
             }
     }
     
@@ -186,7 +228,7 @@ class ViewController: UIViewController {
     
     func getObjectivesCall(fac: Faculty, completionHandler: (JSON?, NSError?) -> ()) {
         
-        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
             .responseJSON { response in
                 switch response.result {
                 case .Success:
@@ -201,7 +243,7 @@ class ViewController: UIViewController {
     
     func getStudentResultsCall(fac: Faculty, completionHandler: (JSON?, NSError?)->()) {
         
-        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/students-results?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/students-results?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
             .responseJSON { response in
                 switch response.result {
                 case .Success:
@@ -215,7 +257,7 @@ class ViewController: UIViewController {
     
     func getAspectsCall(fac: Faculty, completionHandler: (JSON?,NSError?)->()){
         
-        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/aspects?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/aspects?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
             switch response.result {
             case .Success:
                 let json = JSON(data: response.data!)
@@ -229,7 +271,7 @@ class ViewController: UIViewController {
     
     func getCoursesCall(fac: Faculty, completionHandler: (JSON?,NSError?)->()){
         
-        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/evaluated_courses", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/evaluated_courses", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
             switch response.result {
             case .Success:
                 let json = JSON(data: response.data!)
@@ -243,7 +285,7 @@ class ViewController: UIViewController {
     
     func getImprovementCall(fac: Faculty, completionHandler: (JSON?,NSError?)->()) {
         
-        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/improvement_plans?since=0", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/improvement_plans?since=0", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
             switch response.result {
             case .Success:
                 let json = JSON(data: response.data!)
@@ -256,7 +298,7 @@ class ViewController: UIViewController {
     }
     
     func getSuggestionsCall(fac: Faculty, completionHandler: (JSON?,NSError?)->()){
-        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id!.description + "/suggestions", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/suggestions", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
             switch response.result {
             case .Success:
                 let json = JSON(data: response.data!)

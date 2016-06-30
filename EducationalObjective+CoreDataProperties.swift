@@ -14,14 +14,6 @@ import CoreData
 
 extension EducationalObjective {
 
-    @NSManaged var id: NSNumber?
-    @NSManaged var updated_at: NSDate?
-    @NSManaged var numero: NSNumber?
-    @NSManaged var descripcion: String?
-    @NSManaged var cicloRegistro: String?
-    @NSManaged var faculty: Faculty?
-    @NSManaged var studentResults: NSSet?
-    @NSManaged var estado: NSNumber?
-    @NSManaged var especialidad: NSNumber?
+    
 
 }

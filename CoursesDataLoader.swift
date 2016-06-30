@@ -63,7 +63,7 @@ class CourseDataLoader {
                     timetable = Timetable.MR_createEntity()
                     timetable?.id = Int(sch["IdHorario"].stringValue)!
                     timetable?.codigo = sch["Codigo"].stringValue
-                    timetable?.totalAlumnos = Int(sch["TotalAlumnos"].stringValue)!
+                    //timetable?.totalAlumnos = Int(sch["TotalAlumnos"].stringValue)!
                 }
                 course?.addTimeTable(timetable!)
                 

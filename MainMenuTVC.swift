@@ -84,6 +84,8 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                                 self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                         }
                     }*/
+            
+                
                 self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                     break
             case 4: //Res. Estudiantiles

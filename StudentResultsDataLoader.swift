@@ -36,19 +36,21 @@ class StudentResultsDataLoader  {
                     res?.descripcion = subJson["Descripcion"].stringValue
                     res?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                     res?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
+                    res?.estado = Int(subJson["Estado"].stringValue)
                 }
                 
             } else {
                 //If it doesn't, we create it
                 res = StudentResult.MR_createEntity()
                 
-                res?.id = Int(subJson["IdResultadoEstudiantil"].stringValue)
+                res?.id = 0//Int(subJson["IdResultadoEstudiantil"].stringValue)
                 res?.identificador = subJson["Identificador"].stringValue
                 res?.cicloRegistro = subJson["CicloRegistro"].stringValue
                 res?.descripcion = subJson["Descripcion"].stringValue
                 
                 res?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                 res?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(subJson["IdEspecialidad"].stringValue)!)
+                res?.estado = Int(subJson["Estado"].stringValue)
                 
             }
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
@@ -57,7 +59,7 @@ class StudentResultsDataLoader  {
     
     func get_all(faculty: Faculty) -> Dictionary<String, Array<StudentResult>>? {
         
-        let predicate:NSPredicate = NSPredicate(format: "(faculty.id = %@)", faculty.id!)
+        let predicate:NSPredicate = NSPredicate(format: "(faculty.id = %@)", faculty.id)
         let request:NSFetchRequest = StudentResult.MR_requestAllWithPredicate(predicate)
         
         let array: Array<StudentResult> = StudentResult.MR_executeFetchRequest(request) as! Array<StudentResult>

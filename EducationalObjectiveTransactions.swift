@@ -23,9 +23,9 @@ class TR_Ed_Objective {
         for (_,subJson):(String, JSON) in json {
             let ed_obj = EducationalObjective.MR_createEntity()
             
-            ed_obj?.id = Int(subJson["IdObjetivoEducacional"].stringValue)
+            ed_obj?.id = 0//Int(subJson["IdObjetivoEducacional"].stringValue)
             //ed_obj?.idEspecialidad = Int(subJson["IdEspecialidad"].stringValue)
-            ed_obj?.numero = Int(subJson["Numero"].stringValue)
+            ed_obj?.numero = 0 //Int(subJson["Numero"].stringValue)
             ed_obj?.descripcion = subJson["Descripcion"].stringValue
             //ed_obj?.cicloReg = subJson["CicloRegistro"].stringValue
             ed_obj?.faculty = faculty
@@ -35,7 +35,7 @@ class TR_Ed_Objective {
                
                 let st_res = StudentResult.MR_createEntity()
                 
-                st_res?.id = Int(sresJson["IdResultadoEstudiantil"].stringValue)
+                st_res?.id = 0//Int(sresJson["IdResultadoEstudiantil"].stringValue)
                 //st_res?.idEspecialidad = Int(sresJson["IdEspecialidad"].stringValue)
                 st_res?.cicloRegistro = sresJson["CicloRegistro"].stringValue
                 st_res?.descripcion = sresJson["Descripcion"].stringValue

@@ -668,6 +668,7 @@
 				TargetAttributes = {
 					77E198451CD7C85300782B72 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 8T7Y68JUC9;
 					};
 					77E1985C1CD7C85300782B72 = {
 						CreatedOnToolsVersion = 7.3;
@@ -1039,7 +1040,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = UASApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Puntobat.UASApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1063,7 +1064,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = UASApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Puntobat.UASApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

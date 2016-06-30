@@ -70,7 +70,7 @@ class EducationalObjectiveDetail: UITableViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath)
             cell.textLabel?.text = "Nro:"
-            cell.detailTextLabel?.text = self.ed_objective?.numero?.description
+            cell.detailTextLabel?.text = self.ed_objective?.numero.description
             return cell
         }else {
             if indexPath.section == 1 {

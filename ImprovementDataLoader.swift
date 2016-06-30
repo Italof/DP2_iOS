@@ -101,7 +101,7 @@ class ImprovementDataLoader {
     
     func get_plans(faculty: Faculty) -> Array<ImprovementPlan>? {
         
-        let predicate:NSPredicate = NSPredicate(format: "(faculty.id = %@)", faculty.id!)
+        let predicate:NSPredicate = NSPredicate(format: "(faculty.id = %@)", faculty.id)
         let request:NSFetchRequest = ImprovementPlan.MR_requestAllWithPredicate(predicate)
         
         return ImprovementPlan.MR_executeFetchRequest(request) as? Array<ImprovementPlan>

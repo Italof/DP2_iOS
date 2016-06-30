@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import CoreData
 
 
 class EspecialidadTVC: UITableViewController {
@@ -16,10 +17,15 @@ class EspecialidadTVC: UITableViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint = Connection()
     
-    var facultyList:Array<Faculty> = Faculty.MR_findAll() as! Array<Faculty>
+    var facultyList:Array<Faculty> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.ctx = globalAppDelegate.managedObjectContext
+        
+        self.facultyList = Faculty.getAllFaculties(globalCtx)
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,13 +14,4 @@ import CoreData
 
 extension StudentResult {
 
-    @NSManaged var id: NSNumber?
-    @NSManaged var updated_at: NSDate?
-    @NSManaged var identificador: String?
-    @NSManaged var descripcion: String?
-    @NSManaged var cicloRegistro: String?
-    @NSManaged var faculty: Faculty?
-    @NSManaged var educationalObjectives: NSSet?
-    @NSManaged var aspects: NSSet?
-
 }

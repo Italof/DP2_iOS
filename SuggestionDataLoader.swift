@@ -78,7 +78,7 @@ class SuggestionDataLoader {
     }
     
     func get_all(faculty: Faculty)-> Array<Suggestion>? {
-        let predicate:NSPredicate = NSPredicate(format: "(faculty.id = %@)", faculty.id!)
+        let predicate:NSPredicate = NSPredicate(format: "(faculty.id = %@)", faculty.id)
         let request:NSFetchRequest = Suggestion.MR_requestAllWithPredicate(predicate)
         
         return Suggestion.MR_executeFetchRequest(request) as? Array<Suggestion>

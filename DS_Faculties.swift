@@ -20,10 +20,6 @@ class DS_Faculties {
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
     }
     
-    func storeObjectives(json: JSON) {
-        
-    }
-    
     func getAll()->Array<Faculty>?{
         let context:NSManagedObjectContext = appDel.managedObjectContext
         let request = NSFetchRequest(entityName: "Faculty")

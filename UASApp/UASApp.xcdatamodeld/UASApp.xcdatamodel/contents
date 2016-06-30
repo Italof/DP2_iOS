@@ -41,16 +41,16 @@
         <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="especialidad" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="estado" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="numero" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numero" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="educationalObjective" inverseEntity="Faculty" syncable="YES"/>
-        <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudentResult" inverseName="educationalObjectives" inverseEntity="StudentResult" syncable="YES"/>
+        <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudentResult" inverseName="educationalObjectives" inverseEntity="StudentResult" syncable="YES"/>
     </entity>
     <entity name="Faculty" representedClassName=".Faculty" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="aspect" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Aspect" inverseName="faculty" inverseEntity="Aspect" syncable="YES"/>
@@ -105,8 +105,9 @@
     <entity name="StudentResult" representedClassName=".StudentResult" syncable="YES">
         <attribute name="cicloRegistro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="especialidad" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="estado" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="identificador" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="aspects" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Aspect" inverseName="studentResult" inverseEntity="Aspect" syncable="YES"/>
@@ -142,7 +143,7 @@
         <element name="ImprovementPlan" positionX="36" positionY="81" width="128" height="210"/>
         <element name="PlanType" positionX="27" positionY="162" width="128" height="150"/>
         <element name="Professor" positionX="9" positionY="54" width="128" height="240"/>
-        <element name="StudentResult" positionX="-36" positionY="9" width="128" height="180"/>
+        <element name="StudentResult" positionX="-36" positionY="9" width="128" height="195"/>
         <element name="Suggestion" positionX="18" positionY="63" width="128" height="165"/>
         <element name="Timetable" positionX="0" positionY="45" width="128" height="150"/>
     </elements>

@@ -16,19 +16,13 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint = Connection()
     
-    var faculty:Faculty? = nil
-    
-    var edObjDictionary:Dictionary<String,Array<EducationalObjective>>? = nil
-    var edObjKeys:Array<String>? = nil
+    var faculty:Faculty?
     
     var edObjList : Array<EducationalObjective>?
     
     override func viewWillAppear(animated: Bool) {
-
-        self.edObjDictionary = DS_Objectives().getAll(self.faculty!.id!)
-        self.edObjKeys = Array(self.edObjDictionary!.keys)
         
-        self.edObjList = DS_Objectives().getAll(self.faculty!.id!)
+        self.edObjList = EducationalObjective.getObjectivesByFaculty(faculty!, ctx: globalCtx)
     }
     
     override func viewDidLoad() {
@@ -105,7 +99,7 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
         
         if obj.estado != nil {
             
-            if obj.estado! == 1{
+            if (obj.estado?.boolValue)! {
                 imageName = "Green-Circle-30"
             } else {
                 imageName = "Red-Circle-30"
@@ -114,7 +108,7 @@ class ObjetivosEdTVC: UITableViewController,DZNEmptyDataSetSource, DZNEmptyDataS
         
         imageView.image = UIImage(named: imageName)
         
-        cell.textLabel?.text = "Objetivo Educacional " + obj.numero!.description
+        cell.textLabel?.text = "Objetivo Educacional " + obj.numero.description
         cell.detailTextLabel?.text = obj.descripcion!
         cell.accessoryView = imageView
         

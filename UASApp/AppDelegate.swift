@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         MagicalRecord.setupCoreDataStackWithStoreNamed("UASApp")
@@ -67,6 +66,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("UASApp.sqlite")
+        
+        /*
+        do{
+            try NSFileManager.defaultManager().removeItemAtURL(url)
+        } catch {
+            print(error)
+        }*/
         
         var failureReason = "There was an error creating or loading the application's saved data."
         do {

@@ -74,8 +74,28 @@ class ResEdTVC: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDel
         let key = self.studentResKeys![indexPath.section]
         let res = self.studentResDictionary![key]
         
+        var imageView : UIImageView
+        var imageName : String = ""
+        imageView  = UIImageView(frame:CGRectMake(20, 20, 30, 30))
+        
+        let r = res![indexPath.row]
+        
+        if r.estado != nil {
+            
+            if r.estado! == 1{
+                imageName = "Green-Circle-30"
+            } else {
+                imageName = "Red-Circle-30"
+            }
+        }
+        
+        imageView.image = UIImage(named: imageName)
+        
+        
         cell.textLabel?.text = "Resultado " + res![indexPath.row].identificador!
-
+        cell.detailTextLabel?.text = res![indexPath.row].descripcion
+        cell.accessoryView = imageView
+        
         return cell
     }
     

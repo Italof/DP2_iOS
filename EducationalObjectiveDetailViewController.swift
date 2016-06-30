@@ -19,11 +19,14 @@ class EducationalObjectiveDetailViewController: UIViewController, UITableViewDel
     @IBOutlet weak var resultList: UITableView!
 
     var educationalObjective : EducationalObjective?
+    var resultListArray : Array<StudentResult> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.nroObjetivo.text = self.educationalObjective?.numero?.description
+        self.resultListArray = self.educationalObjective!.studentResults?.allObjects as! Array<StudentResult>
+        
+        self.nroObjetivo.text = self.educationalObjective?.numero.description
         
         if self.educationalObjective?.estado! == 1 {
             self.estado.text = "Activo"
@@ -76,7 +79,7 @@ class EducationalObjectiveDetailViewController: UIViewController, UITableViewDel
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.resultListArray.count
     }
     
     
@@ -86,10 +89,19 @@ class EducationalObjectiveDetailViewController: UIViewController, UITableViewDel
         var imageView : UIImageView
         var imageName : String = ""
         imageView  = UIImageView(frame:CGRectMake(20, 20, 30, 30))
+        let res = self.resultListArray[indexPath.row]
+        
+        if (res.estado?.boolValue)! {
+            imageName = "Green-Circle-30"
+        } else {
+            imageName = "Red-Circle-30"
+        }
         
         imageView.image = UIImage(named: imageName)
         
-        
+        cell.textLabel?.text = "Resulado " + self.resultListArray[indexPath.row].identificador!
+        cell.detailTextLabel?.text = self.resultListArray[indexPath.row].descripcion
+        cell.accessoryView = imageView
         
         return cell
     }

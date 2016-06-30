@@ -14,13 +14,14 @@ class FacultyDataLoader {
     
     let endpoint: Connection = Connection()
     let dateFormatter = NSDateFormatter()
+    let context = NSManagedObjectContext.MR_defaultContext()
     
-    func refresh_faculties (json: JSON) {
-        
-        //Faculty.MR_truncateAll()
+    func refresh_faculties (json: JSON, completion: (Bool)->()) {
         
         self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         self.dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
+
+        //Faculty.MR_truncateAll()
         
         for (_,subJson):(String, JSON) in json {
             
@@ -40,21 +41,28 @@ class FacultyDataLoader {
                     fac?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                 }
                 
-                
             } else { //If faculty doesn't exists, we create it
                 
-                fac = Faculty.MR_createEntity()!
+                fac = Faculty.MR_createEntity()
                 
-                fac?.id = Int(subJson["IdEspecialidad"].stringValue)
+                //fac?.id = Int(subJson["IdEspecialidad"].stringValue)
                 fac?.codigo = subJson["Codigo"].stringValue
                 fac?.nombre = subJson["Nombre"].stringValue
                 fac?.descripcion = subJson["Descripcion"].stringValue
                 fac?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
                 
             }
-            
-            NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
         }
+        
+        NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreWithCompletion(){
+            comp, error in
+            if error != nil {
+                completion(comp)
+            } else {
+                completion(comp)
+            }
+        }
+        
     }
     
 }
