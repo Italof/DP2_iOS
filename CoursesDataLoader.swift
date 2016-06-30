@@ -46,7 +46,7 @@ class CourseDataLoader {
                 //We create it
                 course = Course.MR_createEntity()
                 
-                course?.id = Int(subJson["IdCurso"].stringValue)!
+                //course?.id = Int(subJson["IdCurso"].stringValue)!
                 course?.nivelAcademico = Int(subJson["NivelAcademico"].stringValue)!
                 course?.nombre = subJson["Nombre"].stringValue
                 course?.codigo = subJson["Codigo"].stringValue

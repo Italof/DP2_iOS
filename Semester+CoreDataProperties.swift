@@ -1,8 +1,8 @@
 //
-//  Course+CoreDataProperties.swift
+//  Semester+CoreDataProperties.swift
 //  
 //
-//  Created by Karl Montenegro on 07/06/16.
+//  Created by Karl Montenegro on 30/06/16.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,8 +12,9 @@
 import Foundation
 import CoreData
 
-extension Course {
+extension Semester {
 
-    
+    @NSManaged var id: NSNumber?
+    @NSManaged var course: Course?
 
 }

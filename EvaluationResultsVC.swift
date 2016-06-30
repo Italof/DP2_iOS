@@ -11,13 +11,15 @@ import UIKit
 class EvaluationResultsVC: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
+    var faculty : Faculty?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         // Do any additional setup after loading the view, typically from a nib.
-        let localfilePath = NSBundle.mainBundle().URLForResource("reports", withExtension: "html");
-        let myRequest = NSURLRequest(URL: localfilePath!);
+        let fileURL = DocumentDirURL.URLByAppendingPathComponent("report_faculty_" + self.faculty!.id.description).URLByAppendingPathExtension("html")
+        //let localfilePath = NSBundle.mainBundle().URLForResource("reports", withExtension: "html");
+        let myRequest = NSURLRequest(URL: fileURL);
         self.webView.loadRequest(myRequest);
     }
 

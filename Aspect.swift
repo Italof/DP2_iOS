@@ -173,4 +173,21 @@ extension Aspect {
         let aspects = try! ctx.executeFetchRequest(fetchRequest) as? Array<Aspect>
         return aspects ?? Array<Aspect>()
     }
+    
+    internal class func getClassifiedAspectsByResult(fac: Faculty, ctx: NSManagedObjectContext) -> Dictionary<String,Array<Aspect>>? {
+        
+        let aspects:Array<Aspect> = Aspect.getAllAspects(ctx)
+        var dictionary = Dictionary<String,Array<Aspect>>()
+        var thisObj:String = ""
+        
+        for asp in aspects {
+            thisObj = (asp.studentResult?.identificador!)!
+            if dictionary.indexForKey(thisObj) == nil {
+                dictionary[thisObj] = []
+            }
+            dictionary[thisObj]?.append(asp)
+        }
+        
+        return dictionary
+    }
 }

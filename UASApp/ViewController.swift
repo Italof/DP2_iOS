@@ -12,20 +12,24 @@ import SwiftyJSON
 import CoreData
 
 let globalCtx : NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+let DocumentDirURL = try! NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint: Connection = Connection()
     
     let dateFormatter = NSDateFormatter()
+    var fileManager = NSFileManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.activityIndicator.hidden = true
         self.defaults.setBool(false, forKey: "offline_session")
         self.defaults.setObject("", forKey: "token")
     }
@@ -40,7 +44,7 @@ class ViewController: UIViewController {
         let user:String = (self.txtUsername?.text)!
         let pass:String = (self.txtPassword?.text)!
           
-        
+        self.activityIndicator.startAnimating()
         Alamofire.request(.POST, self.endpoint.url + "authenticate?user=\(user)&password=\(pass)")
             .validate()
             .responseJSON { response in
@@ -85,12 +89,20 @@ class ViewController: UIViewController {
                                         try! globalCtx.save()
                                     }
                                 }
-                                
+                                self.getReport(fac){
+                                    json, error in
+                                    
+                                    if error == nil {
+                                        self.reportManager("report_faculty_" + fac.id.description, content: json!)
+                                    }
+                                }
                             }
                             self.performSegueWithIdentifier("facultyListSegue", sender: self)
+                            self.activityIndicator.stopAnimating()
                         }
                     }
                 case .Failure(_):
+                    self.activityIndicator.stopAnimating()
                     self.alertMessage("Usuario/Contrasena incorrectos.", winTitle: "Error")
                 }
                 
@@ -148,11 +160,18 @@ class ViewController: UIViewController {
                     */
             }
     }
+
+    //File management
     
-    
-    @IBAction func offlineTapped(sender: AnyObject) {
-        self.defaults.setBool(true, forKey: "offline_session")
-        self.performSegueWithIdentifier("facultyListSegue", sender: self)
+    func reportManager(fileName: String, content: String){
+        
+        let fileURL = DocumentDirURL.URLByAppendingPathComponent(fileName).URLByAppendingPathExtension("html")
+        do {
+            // Write to the file
+            try content.writeToURL(fileURL, atomically: true, encoding: NSUTF8StringEncoding)
+        } catch let error as NSError {
+            print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+        }
     }
     
     func alertMessage(winMessage: String, winTitle: String){
@@ -211,6 +230,10 @@ class ViewController: UIViewController {
     
     func getSuggestions(fac: Faculty, completionHandler: (JSON?,NSError?)->()) {
         getSuggestionsCall(fac, completionHandler: completionHandler)
+    }
+    
+    func getReport(fac: Faculty, completionHandler: (String?,NSError?)->()){
+        getReportCall(fac, completionHandler: completionHandler)
     }
     
     func getFacultiesCall(completionHandler: (JSON?, NSError?)->()) {
@@ -303,6 +326,20 @@ class ViewController: UIViewController {
             switch response.result {
             case .Success:
                 let json = JSON(data: response.data!)
+                completionHandler(json, nil)
+            case .Failure(let error):
+                completionHandler(nil, error)
+            }
+            
+        }
+    }
+    
+    func getReportCall(fac: Faculty, completionHandler: (String?,NSError?)->()){
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/measure_report", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
+            .responseString { response in
+            switch response.result {
+            case .Success:
+                let json = response.result.value
                 completionHandler(json, nil)
             case .Failure(let error):
                 completionHandler(nil, error)

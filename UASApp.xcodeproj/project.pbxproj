@@ -122,6 +122,8 @@
 		77E198621CD7C85300782B72 /* UASAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E198611CD7C85300782B72 /* UASAppTests.swift */; };
 		77E1986D1CD7C85300782B72 /* UASAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1986C1CD7C85300782B72 /* UASAppUITests.swift */; };
 		77E2E0DD1D24E51200787F3C /* StudentResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0DC1D24E51200787F3C /* StudentResultDetailViewController.swift */; };
+		77E2E0E01D25076400787F3C /* Semester+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0DE1D25076400787F3C /* Semester+CoreDataProperties.swift */; };
+		77E2E0E11D25076400787F3C /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0DF1D25076400787F3C /* Semester.swift */; };
 		C041BB4E1D0159F8008A077A /* FacultiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041BB4D1D0159F8008A077A /* FacultiesTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -266,6 +268,8 @@
 		77E1986C1CD7C85300782B72 /* UASAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UASAppUITests.swift; sourceTree = "<group>"; };
 		77E1986E1CD7C85300782B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77E2E0DC1D24E51200787F3C /* StudentResultDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResultDetailViewController.swift; sourceTree = "<group>"; };
+		77E2E0DE1D25076400787F3C /* Semester+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Semester+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77E2E0DF1D25076400787F3C /* Semester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		91EC3011194695571EFCB348 /* Pods_UASApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UASApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C041BB4D1D0159F8008A077A /* FacultiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultiesTest.swift; sourceTree = "<group>"; };
 		F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UASApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-UASApp/Pods-UASApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -422,6 +426,8 @@
 		778315711CDBB828008D9209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77E2E0DE1D25076400787F3C /* Semester+CoreDataProperties.swift */,
+				77E2E0DF1D25076400787F3C /* Semester.swift */,
 				773F6DBA1D0B20EC00B70FF5 /* ImprovementPlan+CoreDataProperties.swift */,
 				773F6DBB1D0B20EC00B70FF5 /* ImprovementPlan.swift */,
 				773F6DBC1D0B20EC00B70FF5 /* PlanType+CoreDataProperties.swift */,
@@ -823,6 +829,7 @@
 				773F6DC51D0B20EC00B70FF5 /* Suggestion.swift in Sources */,
 				77A24CBB1CDD07C3006AA0B9 /* ProfesorCell.swift in Sources */,
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
+				77E2E0E01D25076400787F3C /* Semester+CoreDataProperties.swift in Sources */,
 				773F6DC21D0B20EC00B70FF5 /* PlanType+CoreDataProperties.swift in Sources */,
 				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
 				77A24CB91CDD052D006AA0B9 /* CursoCell.swift in Sources */,
@@ -841,6 +848,7 @@
 				77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */,
 				77D4A73E1CF644EB006878DD /* EducationalObjectiveTransactions.swift in Sources */,
 				77B063491D1CBD4400FE563C /* EducationalObjectiveDetailViewController.swift in Sources */,
+				77E2E0E11D25076400787F3C /* Semester.swift in Sources */,
 				77A24CC11CDD0A5E006AA0B9 /* TeacherCell.swift in Sources */,
 				77CC0B8C1D191DA4009620AA /* DS_Faculties.swift in Sources */,
 				77085EF01D0BA85C00755DD4 /* EvaluationSettingsDataLoader.swift in Sources */,

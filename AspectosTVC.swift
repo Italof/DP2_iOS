@@ -12,10 +12,13 @@ class AspectosTVC: UITableViewController {
     
     var faculty: Faculty? = nil
     var aspects: Array<Aspect> = []
+    var aspectDictionary = Dictionary<String,Array<Aspect>>()
+    var aspectKeys : Array<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.aspectDictionary = Aspect.getClassifiedAspectsByResult(self.faculty!, ctx: globalCtx)!
+        self.aspectKeys = Array(self.aspectDictionary.keys).sort()
         self.aspects = Aspect.getAllAspects(globalCtx)
     }
 
@@ -28,19 +31,22 @@ class AspectosTVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return self.aspectKeys.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.aspects.count
+        let key = self.aspectKeys[section]
+        
+        return (self.aspectDictionary[key]?.count)!
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("aspectCell", forIndexPath: indexPath)
         
-        let aspect = self.aspects[indexPath.row]
+        let key = self.aspectKeys[indexPath.section]
+        let aspect = (self.aspectDictionary[key])![indexPath.row]
         
         var imageView : UIImageView
         var imageName : String = ""
@@ -62,6 +68,15 @@ class AspectosTVC: UITableViewController {
         return cell
     }
 
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let label : UILabel = UILabel()
+        label.backgroundColor = UIColor(red: 232/256, green: 232/256, blue: 232/256, alpha: 0.9)
+        label.textColor = UIColor(red: 169/256, green: 169/256, blue: 169/256, alpha: 0.9)
+        label.text = "    Resultado Estudiantil " + self.aspectKeys[section]
+        label.font = UIFont.boldSystemFontOfSize(17.0)
+        return label
+    }
 
     /*
     // Override to support conditional editing of the table view.
