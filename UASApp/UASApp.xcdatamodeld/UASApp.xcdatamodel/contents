@@ -121,7 +121,7 @@
     <entity name="Suggestion" representedClassName=".Suggestion" syncable="YES">
         <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fecha" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="suggestion" inverseEntity="Faculty" syncable="YES"/>

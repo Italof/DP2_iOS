@@ -18,7 +18,7 @@ class EvaluationResultsVC: UIViewController {
     
         // Do any additional setup after loading the view, typically from a nib.
         let fileURL = DocumentDirURL.URLByAppendingPathComponent("report_faculty_" + self.faculty!.id.description).URLByAppendingPathExtension("html")
-        //let localfilePath = NSBundle.mainBundle().URLForResource("reports", withExtension: "html");
+
         let myRequest = NSURLRequest(URL: fileURL);
         self.webView.loadRequest(myRequest);
     }
