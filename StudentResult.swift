@@ -85,30 +85,37 @@ extension StudentResult {
         let persistedResults = StudentResult.getResultsByFaculty(fac, ctx: ctx)
         var newStoredResults:Array<StudentResult> = []
         
-        for result in persistedResults {
-            ctx.deleteObject(result)
-        }
-        
         for (_,result):(String, JSON) in json {
             
             let newResult = StudentResult.updateOrCreateWithJson(result, ctx: ctx)!
             newStoredResults.append(newResult)
             
             //Aspects
-            
+        
             let persistedAspects = Aspect.getAspectByResult(newResult, ctx: ctx)
-            
-            for aspect in persistedAspects {
-                ctx.deleteObject(aspect)
-            }
+            var newStoredAspects : Array<Aspect> = []
             
             for (_,aspect):(String, JSON) in result[ResultAspectKey] {
                 
                 let newAspect = Aspect.updateOrCreateWithJson(aspect, ctx: ctx)
-                
+                newAspect?.faculty = fac
                 let aspects = newResult.mutableSetValueForKey("aspects")
                 aspects.addObject(newAspect!)
+                newStoredAspects.append(newAspect!)
+                
             }
+            
+            let forDeletion = Array(Set(persistedAspects).subtract(newStoredAspects))
+            
+            for aspect in forDeletion {
+                ctx.deleteObject(aspect)
+            }
+        }
+        
+        let forDeletion = Array(Set(persistedResults).subtract(newStoredResults))
+        
+        for result in forDeletion {
+            ctx.deleteObject(result)
         }
         
         return newStoredResults

@@ -79,40 +79,40 @@ extension Aspect {
     
     internal class func syncWithJson(fac: Faculty, json: JSON, ctx: NSManagedObjectContext)->Array<Aspect>? {
         
-        let persistedAspects = Aspect.getAllAspects(ctx)
+        let persistedAspects = Aspect.getAspectByFaculty(fac, ctx: ctx)
         var newStoredAspects:Array<Aspect> = []
-        
-        for aspect in persistedAspects {
-            ctx.deleteObject(aspect)
-        }
         
         for (_,aspect):(String, JSON) in json {
             
             let newAspect = Aspect.updateOrCreateWithJson(aspect, ctx: ctx)!
-            
+            newAspect.faculty = fac
             newStoredAspects.append(newAspect)
             
-            // Student Results Associated to the Objectives
-            /*
-            let persistedResults = StudentResult.getResultsByFaculty(fac, ctx: ctx)
+            let persistedCriteria = Criterion.getCriterionByAspect(newAspect, ctx: ctx)
+            var newStoredCriteria : Array<Criterion> = []
             
-            for result in persistedResults {
-                ctx.deleteObject(result)
-            }*/
-            
-            //print("OBJECTIVE:")
-            //print("============")
-            //print(newObjective)
-            //print("RESULTS")
-            //print("============")
-            /*
-            for (_,result):(String, JSON) in objective[ObjectiveResultsKey] {
+            for (_,criterion):(String, JSON) in aspect[AspectCriteriaKey] {
                 
-                let newResult = StudentResult.updateOrCreateWithJson(result, ctx: ctx)
-                //print(newResult?.identificador)
-                let results = newObjective.mutableSetValueForKey("studentResults")
-                results.addObject(newResult!)
-            }*/
+                let newCriterion = Criterion.updateOrCreateWithJson(criterion, ctx: ctx)
+                newCriterion?.faculty = fac
+                
+                let criteria = newAspect.mutableSetValueForKey("criteria")
+                criteria.addObject(newCriterion!)
+                newStoredCriteria.append(newCriterion!)
+                
+            }
+            
+            let forDeletion = Array(Set(persistedCriteria).subtract(newStoredCriteria))
+            
+            for criterion in forDeletion {
+                ctx.deleteObject(criterion)
+            }
+        }
+        
+        let forDeletion = Array(Set(persistedAspects).subtract(newStoredAspects))
+        
+        for aspect in forDeletion {
+            ctx.deleteObject(aspect)
         }
         
         return newStoredAspects
@@ -174,9 +174,22 @@ extension Aspect {
         return aspects ?? Array<Aspect>()
     }
     
+    internal class func getAspectByFaculty(fac: Faculty, ctx: NSManagedObjectContext) -> Array<Aspect> {
+        let fetchRequest = NSFetchRequest()
+        fetchRequest.entity = NSEntityDescription.entityForName("Aspect", inManagedObjectContext: ctx)
+        let predicate = NSPredicate(format: "(faculty = %@)", fac)
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let aspects = try! ctx.executeFetchRequest(fetchRequest) as? Array<Aspect>
+        return aspects ?? Array<Aspect>()
+    }
+    
+    
     internal class func getClassifiedAspectsByResult(fac: Faculty, ctx: NSManagedObjectContext) -> Dictionary<String,Array<Aspect>>? {
         
-        let aspects:Array<Aspect> = Aspect.getAllAspects(ctx)
+        let aspects:Array<Aspect> = Aspect.getAspectByFaculty(fac, ctx: ctx)
         var dictionary = Dictionary<String,Array<Aspect>>()
         var thisObj:String = ""
         

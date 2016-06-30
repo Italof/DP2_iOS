@@ -60,10 +60,6 @@ extension EducationalObjective {
         let persistedObjectives = EducationalObjective.getObjectivesByFaculty(fac, ctx: ctx)
         var newStoredObjectives:Array<EducationalObjective> = []
         
-        for objective in persistedObjectives {
-            ctx.deleteObject(objective)
-        }
-        
         for (_,objective):(String, JSON) in json {
             
             let newObjective = EducationalObjective.updateOrCreateWithJson(objective, ctx: ctx)!
@@ -72,25 +68,29 @@ extension EducationalObjective {
             
             // Student Results Associated to the Objectives
             
-            let persistedResults = StudentResult.getResultsByFaculty(fac, ctx: ctx)
-            
-            for result in persistedResults {
-                ctx.deleteObject(result)
-            }
-            
-            //print("OBJECTIVE:")
-            //print("============")
-            //print(newObjective)
-            //print("RESULTS")
-            //print("============")
+            let persistedResults = StudentResult.getResultsByObjective(newObjective, ctx: ctx)
+            var newStoredResults : Array<StudentResult> = []
             
             for (_,result):(String, JSON) in objective[ObjectiveResultsKey] {
                 
                 let newResult = StudentResult.updateOrCreateWithJson(result, ctx: ctx)
-                //print(newResult?.identificador)
                 let results = newObjective.mutableSetValueForKey("studentResults")
                 results.addObject(newResult!)
+                newStoredResults.append(newResult!)
             }
+            
+            let forDeletion = Array(Set(persistedResults).subtract(newStoredResults))
+            
+            for result in forDeletion {
+                ctx.deleteObject(result)
+            }
+            
+        }
+        
+        let forDeletion = Array(Set(persistedObjectives).subtract(newStoredObjectives))
+        
+        for objective in forDeletion {
+            ctx.deleteObject(objective)
         }
         
         return newStoredObjectives

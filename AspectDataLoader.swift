@@ -57,7 +57,7 @@ class AspectDataLoader {
                 if criteria == nil {
                     criteria = Criterion.MR_createEntity()
                     
-                    criteria?.id = Int(cr["IdCriterio"].stringValue)!
+                    //criteria?.id = Int(cr["IdCriterio"].stringValue)!
                     criteria?.nombre = cr["Nombre"].stringValue
                     criteria?.updated_at = self.dateFormatter.dateFromString(cr["updated_at"].stringValue)!
                 }

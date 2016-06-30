@@ -30,6 +30,7 @@ let SuggestionDateKey = "Fecha"
 let SuggestionTitleKey = "Titulo"
 let SuggestionDescriptionKey = "Descripcion"
 let SuggestionProfessorKey = "IdDocente"
+let SuggestionProfessorDataKey = "teacher"
 
 class Suggestion: NSManagedObject {
 
@@ -57,7 +58,6 @@ extension Suggestion {
         self.faculty = Faculty.getFacultyById(json[SuggestionFacultyKey].int32Value, ctx: ctx)
         self.improvementPlan = ImprovementPlan.getPlanById(json[SuggestionImprovementPlanKey].int32Value, ctx: ctx)
         self.descripcion = json[SuggestionDescriptionKey].stringValue
-        self.professor = Professor.getProfessorById(json[SuggestionProfessorKey].int32Value, ctx: ctx)
         self.fecha = dateFormatter.dateFromString(json[SuggestionDateKey].stringValue)
         
     }
@@ -74,17 +74,21 @@ extension Suggestion {
         let persistedSuggestions = Suggestion.getSuggestionsByFaculty(fac, ctx: ctx)
         var newStoredSuggestions:Array<Suggestion> = []
         
-        for result in persistedSuggestions {
-            ctx.deleteObject(result)
-        }
-        
         for (_,suggestion):(String, JSON) in json {
             
             let newSuggestion = Suggestion.updateOrCreateWithJson(suggestion, ctx: ctx)!
             newStoredSuggestions.append(newSuggestion)
             
+            let newTeacher = Professor.updateOrCreateWithJson(suggestion[SuggestionProfessorDataKey], ctx: globalCtx)
+            newSuggestion.professor = newTeacher
         }
         
+        let forDeletion = Array(Set(persistedSuggestions).subtract(newStoredSuggestions))
+        
+        for result in forDeletion {
+            ctx.deleteObject(result)
+        }
+
         return newStoredSuggestions
     }
     

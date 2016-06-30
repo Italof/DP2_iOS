@@ -11,12 +11,12 @@ import UIKit
 class ImprovementPlans: UITableViewController {
 
     var faculty: Faculty? = nil
-    var plans: Array<ImprovementPlan>? = nil
+    var plans: Array<ImprovementPlan> = []
     var dateFormatter = NSDateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.plans = ImprovementDataLoader().get_plans(self.faculty!)
+        self.plans = ImprovementPlan.getPlansByFaculty(self.faculty!, ctx: globalCtx)
         self.dateFormatter.dateFormat = "dd/MM/yyyy"
     }
 
@@ -34,16 +34,16 @@ class ImprovementPlans: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (self.plans?.count)!
+        return self.plans.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("improvementCell", forIndexPath: indexPath) as! ImprovementCell
         
-        let plan = self.plans![indexPath.row]
+        let plan = self.plans[indexPath.row]
         
-        //cell.lblCreator.text = (plan.professor?.nombres)! + " " + (plan.professor?.apellidos)!
+        cell.lblCreator.text = plan.professor!.nombres! + " " + plan.professor!.apellidos!
         cell.lblAnalysis.text = plan.analisisCausal
         cell.lblDescription.text = plan.descripcion
         cell.lblTipo.text = plan.planType!.codigo

@@ -11,7 +11,6 @@ import UIKit
 class AspectosTVC: UITableViewController {
     
     var faculty: Faculty? = nil
-    var aspects: Array<Aspect> = []
     var aspectDictionary = Dictionary<String,Array<Aspect>>()
     var aspectKeys : Array<String> = []
     
@@ -19,7 +18,6 @@ class AspectosTVC: UITableViewController {
         super.viewDidLoad()
         self.aspectDictionary = Aspect.getClassifiedAspectsByResult(self.faculty!, ctx: globalCtx)!
         self.aspectKeys = Array(self.aspectDictionary.keys).sort()
-        self.aspects = Aspect.getAllAspects(globalCtx)
     }
 
     override func didReceiveMemoryWarning() {
@@ -123,7 +121,9 @@ class AspectosTVC: UITableViewController {
             let vc = segue.destinationViewController as! AspectoDetailTVC
             let indexPath = self.tableView.indexPathForSelectedRow
             
-            vc.aspecto = self.aspects[indexPath!.row]
+            let key = self.aspectKeys[indexPath!.section]
+            
+            vc.aspecto = (self.aspectDictionary[key])![indexPath!.row]
             //vc.faculty = self.faculty
         }
         

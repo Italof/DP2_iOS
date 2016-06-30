@@ -35,6 +35,7 @@ class Faculty: NSManagedObject {
     @NSManaged var professor: NSSet?
     @NSManaged var planTypes: NSSet?
     @NSManaged var coordinator: Coordinator?
+    @NSManaged var aspects: NSSet?
 
 }
 
@@ -65,12 +66,14 @@ extension Faculty {
         let persistedFaculties = Faculty.getAllFaculties(ctx)
         var newStoredFaculties:Array<Faculty> = []
         
-        for faculty in persistedFaculties {
-            ctx.deleteObject(faculty)
-        }
-        
         for (_,faculty):(String, JSON) in json {
             newStoredFaculties.append(Faculty.updateOrCreateWithJson(faculty, ctx: ctx)!)
+        }
+        
+        let forDeletion = Array(Set(persistedFaculties).subtract(newStoredFaculties))
+        
+        for faculty in forDeletion {
+            ctx.deleteObject(faculty)
         }
         
         return newStoredFaculties

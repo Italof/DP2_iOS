@@ -50,7 +50,7 @@ class ImprovementDataLoader {
                 
                 plan = ImprovementPlan.MR_createEntity()!
                 
-                plan?.id = Int(subJson["IdPlanMejora"].stringValue)!
+                //plan?.id = Int(subJson["IdPlanMejora"].stringValue)!
                 plan?.descripcion = subJson["Descripcion"].stringValue
                 plan?.analisisCausal = subJson["AnalisisCausal"].stringValue
                 plan?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
@@ -67,7 +67,7 @@ class ImprovementDataLoader {
             if professor == nil { //Professor doesn't exist, we create it
                 professor = Professor.MR_createEntity()
                 
-                professor?.id = Int(subJson["IdDocente"].stringValue)!
+                //professor?.id = Int(subJson["IdDocente"].stringValue)!
                 professor?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(tJson["IdEspecialidad"].stringValue)!)
                 professor?.codigo = tJson["Codigo"].stringValue
                 professor?.nombres = tJson["Nombre"].stringValue
@@ -84,7 +84,7 @@ class ImprovementDataLoader {
             if type == nil {
                 type = PlanType.MR_createEntity()
                 
-                type?.id = Int(pJson["IdTipoPlanMejora"].stringValue)!
+                //type?.id = Int(pJson["IdTipoPlanMejora"].stringValue)!
                 type?.codigo = pJson["Codigo"].stringValue
                 type?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(pJson["IdEspecialidad"].stringValue)!)
                 type?.tema = pJson["Tema"].stringValue

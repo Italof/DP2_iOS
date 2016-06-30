@@ -18,7 +18,7 @@ class AspectoDetailTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.aspectTitle.title = self.aspecto?.nombre
-        //self.list = AspectDataLoader().get_criteria(self.aspecto!)
+        self.list = Criterion.getCriterionByAspect(self.aspecto!, ctx: globalCtx)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,9 +46,9 @@ class AspectoDetailTVC: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("critCell", forIndexPath: indexPath)
 
-        //let crt = self.list[indexPath.row]
+        let crt = self.list[indexPath.row]
         
-        //cell.textLabel?.text = crt.nombre
+        cell.textLabel?.text = crt.nombre
         
         return cell
     }

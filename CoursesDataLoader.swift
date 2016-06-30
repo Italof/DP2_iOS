@@ -74,7 +74,7 @@ class CourseDataLoader {
                     if professor == nil {
                         professor = Professor.MR_createEntity()
                     
-                        professor?.id = Int(prs["IdDocente"].stringValue)!
+                        //professor?.id = Int(prs["IdDocente"].stringValue)!
                         professor?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(prs["IdEspecialidad"].stringValue)!)
                         professor?.codigo = prs["Codigo"].stringValue
                         professor?.nombres = prs["Nombre"].stringValue

@@ -89,6 +89,31 @@ class ViewController: UIViewController {
                                         try! globalCtx.save()
                                     }
                                 }
+                                self.getAspects(fac){
+                                    json, error in
+                                    
+                                    if error != nil {
+                                        Aspect.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                        try! globalCtx.save()
+                                    }
+                                }
+                                self.getImprovement(fac) {
+                                    json, error in
+                                    
+                                    if error == nil {
+                                        ImprovementPlan.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                        try! globalCtx.save()
+                                    }
+                                    
+                                }
+                                self.getSuggestions(fac) {
+                                    json, error in
+                                    
+                                    if error == nil {
+                                        Suggestion.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                        try! globalCtx.save()
+                                    }
+                                }
                                 self.getReport(fac){
                                     json, error in
                                     
@@ -96,6 +121,7 @@ class ViewController: UIViewController {
                                         self.reportManager("report_faculty_" + fac.id.description, content: json!)
                                     }
                                 }
+                                
                             }
                             self.performSegueWithIdentifier("facultyListSegue", sender: self)
                             self.activityIndicator.stopAnimating()
@@ -309,7 +335,7 @@ class ViewController: UIViewController {
     
     func getImprovementCall(fac: Faculty, completionHandler: (JSON?,NSError?)->()) {
         
-        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/improvement_plans?since=0", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/improvement_plans", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
             switch response.result {
             case .Success:
                 let json = JSON(data: response.data!)
@@ -335,6 +361,8 @@ class ViewController: UIViewController {
     }
     
     func getReportCall(fac: Faculty, completionHandler: (String?,NSError?)->()){
+        
+        
         Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/measure_report", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
             .responseString { response in
             switch response.result {

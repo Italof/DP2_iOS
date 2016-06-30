@@ -23,8 +23,6 @@ class ImprovementCell: UITableViewCell {
         // Initialization code
     }
 
-    @IBAction func downloadTapped(sender: AnyObject) {
-    }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

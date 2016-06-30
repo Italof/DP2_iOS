@@ -48,7 +48,7 @@ class SuggestionDataLoader {
             } else { //Doesn't exists, we create it
                 suggestion = Suggestion.MR_createEntity()
                 
-                suggestion?.id = Int(subJson["IdSugerencia"].stringValue)!
+                //suggestion?.id = Int(subJson["IdSugerencia"].stringValue)!
                 suggestion?.improvementPlan = plan
                 suggestion?.fecha = self.dateFormatter.dateFromString(subJson["Fecha"].stringValue)
                 suggestion?.titulo = subJson["Titulo"].stringValue
@@ -62,7 +62,7 @@ class SuggestionDataLoader {
             if professor == nil {
                 professor = Professor.MR_createEntity()
                 
-                professor?.id = Int(subJson["IdDocente"].stringValue)!
+                //professor?.id = Int(subJson["IdDocente"].stringValue)!
                 professor?.faculty = Faculty.MR_findFirstByAttribute("id", withValue: Int(tJson["IdEspecialidad"].stringValue)!)
                 professor?.codigo = tJson["Codigo"].stringValue
                 professor?.nombres = tJson["Nombre"].stringValue

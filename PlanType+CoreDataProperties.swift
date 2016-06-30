@@ -12,14 +12,10 @@
 import Foundation
 import CoreData
 
+
+
 extension PlanType {
 
-    @NSManaged var id: NSNumber?
-    @NSManaged var updated_at: NSDate?
-    @NSManaged var codigo: String?
-    @NSManaged var tema: String?
-    @NSManaged var descripcion: String?
-    @NSManaged var plans: NSSet?
-    @NSManaged var faculty: Faculty?
+    
 
 }

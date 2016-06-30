@@ -16,54 +16,9 @@ let PlanFacultyKey = "IdEspecialidad"
 let PlanProfessorKey = "IdDocente"
 let PlanDateKey = "FechaImplementacion"
 let PlanAnalisysKey = "AnalisisCausal"
-let PlanDescriptionKey = "Mejor nivel en exposiciones"
+let PlanDescriptionKey = "Descripcion"
 let PlanTypeDataKey = "type_improvement_plan"
 let PlanProfessorDataKey = "teacher"
-
-/*
- {
- "IdPlanMejora": 2,
- "IdTipoPlanMejora": "2",
- "IdEspecialidad": "1",
- "IdArchivoEntrada": "5",
- "IdDocente": "1",
- "Identificador": null,
- "AnalisisCausal": "Falta de habilidades blandas",
- "Hallazgo": "Se detectó un nivel deficiente en exposiciones",
- "Descripcion": "Mejor nivel en exposiciones",
- "FechaImplementacion": "2016-06-30 00:00:00",
- "Estado": "Pendiente",
- "deleted_at": null,
- "created_at": "2016-06-24 16:26:31",
- "updated_at": "2016-06-24 20:08:54",
- "file_url": "",
- "type_improvement_plan": {
- "IdTipoPlanMejora": 2,
- "IdEspecialidad": "1",
- "Codigo": "SOUT-L",
- "Tema": "Resultados Estudiante",
- "Descripcion": "Gestión de proyectos",
- "deleted_at": null,
- "created_at": "2016-05-27 21:56:00",
- "updated_at": "2016-05-27 21:56:00"
- },
- "teacher": {
- "IdDocente": 1,
- "IdEspecialidad": "1",
- "IdUsuario": "2",
- "Codigo": "19960275",
- "Nombre": "Luis Alberto",
- "ApellidoPaterno": "Flores",
- "ApellidoMaterno": "García",
- "Correo": " luis.flores@pucp.edu.pe",
- "Cargo": "Profesor Contratado",
- "Vigente": "1",
- "Descripcion": "Ingeniería de Software, Gestión de Proyectos, Gestión de Procesos\r\nIngeniería de Software  ",
- "deleted_at": null,
- "created_at": "2016-06-18 17:24:00",
- "updated_at": "2016-06-18 17:24:00"
- }
- */
 
 
 class ImprovementPlan: NSManagedObject {
@@ -111,10 +66,6 @@ extension ImprovementPlan {
         let persistedPlans = ImprovementPlan.getPlansByFaculty(fac, ctx: ctx)
         var newStoredPlans:Array<ImprovementPlan> = []
         
-        for plan in persistedPlans {
-            ctx.deleteObject(plan)
-        }
-        
         for (_,plan):(String, JSON) in json {
             
             let newPlan = ImprovementPlan.updateOrCreateWithJson(plan, ctx: ctx)!
@@ -124,8 +75,14 @@ extension ImprovementPlan {
             newPlan.planType = newType
             
             let newProfessor = Professor.updateOrCreateWithJson(plan[PlanProfessorDataKey], ctx: ctx)!
-            newPlan.professor = newType
+            newPlan.professor = newProfessor
             
+        }
+        
+        let forDeletion = Array(Set(persistedPlans).subtract(newStoredPlans))
+        
+        for plan in forDeletion {
+            ctx.deleteObject(plan)
         }
         
         return newStoredPlans

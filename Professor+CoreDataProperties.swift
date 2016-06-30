@@ -14,18 +14,6 @@ import CoreData
 
 extension Professor {
 
-    @NSManaged var id: NSNumber?
-    @NSManaged var updated_at: NSDate?
-    @NSManaged var codigo: String?
-    @NSManaged var nombres: String?
-    @NSManaged var apellidos: String?
-    @NSManaged var email: String?
-    @NSManaged var cargo: String?
-    @NSManaged var vigente: NSNumber?
-    @NSManaged var descripcion: String?
-    @NSManaged var faculty: Faculty?
-    @NSManaged var timetable: NSSet?
-    @NSManaged var plans: NSSet?
-    @NSManaged var suggestions: NSSet?
+    
 
 }

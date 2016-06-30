@@ -11,12 +11,12 @@ import UIKit
 class Suggestions: UITableViewController {
 
     var faculty:Faculty? = nil
-    var list: Array<Suggestion>? = nil
+    var list: Array<Suggestion> = []
     var dateFormatter = NSDateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.list = SuggestionDataLoader().get_all(self.faculty!)
+        self.list = Suggestion.getSuggestionsByFaculty(self.faculty!, ctx: globalCtx)
         self.dateFormatter.dateFormat = "dd/MM/yyyy"
     }
 
@@ -34,24 +34,24 @@ class Suggestions: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (self.list?.count)!
+        return self.list.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("suggestionCell", forIndexPath: indexPath) as! SuggestionCell
 
-        let sgtn = self.list![indexPath.row]
+        let sgtn = self.list[indexPath.row]
         
         if sgtn.fecha != nil {
             cell.lblSuggestionDate.text = self.dateFormatter.stringFromDate(sgtn.fecha!)
         } else {
-            cell.lblSuggestionDate.text = "(Sin Fecha)"
+            cell.lblSuggestionDate.text = "-"
         }
         
-        //cell.lblUserName.text = (sgtn.professor?.nombres)! + " " + (sgtn.professor?.apellidos)!
-        cell.lblSuggestion.text = sgtn.descripcion
-        cell.lblSuggestionStatus.text = sgtn.titulo
+        cell.lblUserName?.text = sgtn.professor!.nombres! + " " + sgtn.professor!.apellidos!
+        cell.lblSuggestion?.text = sgtn.descripcion
+        cell.lblSuggestionStatus?.text = sgtn.titulo
         
         return cell
     }
