@@ -71,7 +71,7 @@
         <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fechaImplementacion" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="hallazgo" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="improvementPlan" inverseEntity="Faculty" syncable="YES"/>
         <relationship name="planType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlanType" inverseName="plans" inverseEntity="PlanType" syncable="YES"/>

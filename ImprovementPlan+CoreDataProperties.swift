@@ -14,16 +14,4 @@ import CoreData
 
 extension ImprovementPlan {
 
-    @NSManaged var id: NSNumber?
-    @NSManaged var updated_at: NSDate?
-    @NSManaged var analisisCausal: String?
-    @NSManaged var hallazgo: String?
-    @NSManaged var descripcion: String?
-    @NSManaged var fechaImplementacion: NSDate?
-    @NSManaged var estado: String?
-    @NSManaged var faculty: Faculty?
-    @NSManaged var planType: PlanType?
-    @NSManaged var professor: Professor?
-    @NSManaged var suggestions: NSSet?
-
 }
