@@ -10,11 +10,20 @@ import Foundation
 import CoreData
 import SwiftyJSON
 
+let CourseIdKey = "IdCurso"
+let CourseFacultyKey = "IdEspecialidad"
+let CourseLevelKey = "NivelAcademico"
+let CourseCodeKey = "Codigo"
+let CourseNameKey = "Nombre"
+let CourseSchedulesKey = "schedules"
+let CourseEvidencesKey = "course_evidences"
+let CourseSemestersKey = "semesters"
+
 class Course: NSManagedObject {
     
     @NSManaged var id: Int32
     @NSManaged var updated_at: NSDate?
-    @NSManaged var nivelAcademico: NSNumber?
+    @NSManaged var nivelAcademico: Int32
     @NSManaged var codigo: String?
     @NSManaged var nombre: String?
     @NSManaged var faculty: Faculty?
@@ -24,110 +33,101 @@ class Course: NSManagedObject {
 }
 
 extension Course {
+    
+    func setDataFromJson(json: JSON, ctx: NSManagedObjectContext){
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
+        
+        self.id = json[CourseIdKey].int32Value
+        self.faculty = Faculty.getFacultyById(json[CourseFacultyKey].int32Value, ctx: ctx)
+        self.codigo = json[CourseCodeKey].stringValue
+        self.nombre = json[CourseNameKey].stringValue
+        self.nivelAcademico = json[CourseLevelKey].int32Value
+    }
+    
+}
+
+extension Course {
     func addTimeTable(obj: Timetable){
         let timetables = self.mutableSetValueForKey("timetables")
         timetables.addObject(obj)
     }
     
     internal class func syncWithJson(fac: Faculty, json: JSON, ctx: NSManagedObjectContext)->Array<Course>? {
-        /*
-        let persistedCourses = Course.getCoursesByFaculty(fac, ctx: ctx)*/
+        
+        let persistedCourses = Course.getCoursesByFaculty(fac, ctx: ctx)
         var newStoredCourses:Array<Course> = []
-        /*
-        for course in persistedCourses {
-            ctx.deleteObject(course)
-        }
         
         for (_,course):(String, JSON) in json {
             
             let newCourse = Course.updateOrCreateWithJson(course, ctx: ctx)!
             newStoredCourses.append(newCourse)
             
-            //Aspects
-            
-            let persistedAspects = Course.getCourseByFaculty(newResult, ctx: ctx)
-            
-            for aspect in persistedAspects {
-                ctx.deleteObject(aspect)
-            }
-            
-            for (_,aspect):(String, JSON) in result[ResultAspectKey] {
-                
-                let newAspect = Aspect.updateOrCreateWithJson(aspect, ctx: ctx)
-                
-                let aspects = newResult.mutableSetValueForKey("aspects")
-                aspects.addObject(newAspect!)
-            }
         }
-        */
+        
+        let forDeletion = Array(Set(persistedCourses).subtract(newStoredCourses))
+        
+        for course in forDeletion {
+            ctx.deleteObject(course)
+        }
+        
         return newStoredCourses
     }
     
-    private class func findOrCreateWithId(id: Int32, ctx: NSManagedObjectContext) -> StudentResult {
-        var result: StudentResult? = getResultById(id, ctx: ctx)
-        if (result == nil) {
-            result = NSEntityDescription.insertNewObjectForEntityForName("StudentResult", inManagedObjectContext: ctx) as? StudentResult
-            result!.id = id
+    private class func findOrCreateWithId(id: Int32, ctx: NSManagedObjectContext) -> Course {
+        var course: Course? = getCourseById(id, ctx: ctx)
+        if (course == nil) {
+            course = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: ctx) as? Course
+            course!.id = id
         }
-        return result!
+        return course!
     }
     
-    internal class func updateOrCreateWithJson(json: JSON, ctx: NSManagedObjectContext) -> StudentResult? {
-        var result: StudentResult?
+    internal class func updateOrCreateWithJson(json: JSON, ctx: NSManagedObjectContext) -> Course? {
+        var course: Course?
         
-        let resultId = json[ResultIdKey].int32Value
+        let courseId = json[ResultIdKey].int32Value
         
-        result = findOrCreateWithId(resultId, ctx: ctx)
-        result?.setDataFromJson(json, ctx: ctx)
+        course = findOrCreateWithId(courseId, ctx: ctx)
+        course?.setDataFromJson(json, ctx: ctx)
         
-        return result
+        return course
     }
     
-    internal class func getResultById(id: Int32, ctx: NSManagedObjectContext) -> StudentResult? {
+    internal class func getCourseById(id: Int32, ctx: NSManagedObjectContext) -> Course? {
         let fetchRequest = NSFetchRequest()
-        fetchRequest.entity = NSEntityDescription.entityForName("StudentResult", inManagedObjectContext: ctx)
+        fetchRequest.entity = NSEntityDescription.entityForName("Course", inManagedObjectContext: ctx)
         fetchRequest.predicate = NSPredicate(format: "(id = %d)", Int(id))
         
-        let results = try! ctx.executeFetchRequest(fetchRequest) as? Array<StudentResult>
+        let courses = try! ctx.executeFetchRequest(fetchRequest) as? Array<Course>
         
-        if (results != nil && results!.count > 0) {
-            return results![0]
+        if (courses != nil && courses!.count > 0) {
+            return courses![0]
         }
         return nil
     }
     
-    internal class func getAllReults(ctx: NSManagedObjectContext) -> Array<StudentResult> {
+    internal class func getAllCourses(ctx: NSManagedObjectContext) -> Array<Course> {
         let fetchRequest = NSFetchRequest()
-        fetchRequest.entity = NSEntityDescription.entityForName("StudentResult", inManagedObjectContext: ctx)
+        fetchRequest.entity = NSEntityDescription.entityForName("Course", inManagedObjectContext: ctx)
         
         let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        let results = try! ctx.executeFetchRequest(fetchRequest) as? Array<StudentResult>
-        return results ?? Array<StudentResult>()
+        let courses = try! ctx.executeFetchRequest(fetchRequest) as? Array<Course>
+        return courses ?? Array<Course>()
     }
     
-    internal class func getResultsByFaculty(fac: Faculty, ctx: NSManagedObjectContext) -> Array<StudentResult> {
+    internal class func getCoursesByFaculty(fac: Faculty, ctx: NSManagedObjectContext) -> Array<Course> {
         let fetchRequest = NSFetchRequest()
-        fetchRequest.entity = NSEntityDescription.entityForName("StudentResult", inManagedObjectContext: ctx)
+        fetchRequest.entity = NSEntityDescription.entityForName("Course", inManagedObjectContext: ctx)
         let predicate = NSPredicate(format: "(faculty = %@)", fac)
-        let sortDescriptor = NSSortDescriptor(key: "identificador", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        let results = try! ctx.executeFetchRequest(fetchRequest) as? Array<StudentResult>
-        return results ?? Array<StudentResult>()
-    }
-    
-    internal class func getResultsByObjective(obj: EducationalObjective, ctx: NSManagedObjectContext) -> Array<StudentResult> {
-        let fetchRequest = NSFetchRequest()
-        fetchRequest.entity = NSEntityDescription.entityForName("StudentResult", inManagedObjectContext: ctx)
-        let predicate = NSPredicate(format: "ANY educationalObjectives.id == %d", Int(obj.id))
-        let sortDescriptor = NSSortDescriptor(key: "identificador", ascending: true)
-        fetchRequest.predicate = predicate
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        let results = try! ctx.executeFetchRequest(fetchRequest) as? Array<StudentResult>
-        return results ?? Array<StudentResult>()
+        let courses = try! ctx.executeFetchRequest(fetchRequest) as? Array<Course>
+        return courses ?? Array<Course>()
     }
 }

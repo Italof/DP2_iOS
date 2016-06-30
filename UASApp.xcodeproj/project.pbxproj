@@ -124,6 +124,8 @@
 		77E2E0DD1D24E51200787F3C /* StudentResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0DC1D24E51200787F3C /* StudentResultDetailViewController.swift */; };
 		77E2E0E01D25076400787F3C /* Semester+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0DE1D25076400787F3C /* Semester+CoreDataProperties.swift */; };
 		77E2E0E11D25076400787F3C /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0DF1D25076400787F3C /* Semester.swift */; };
+		77E2E0E41D25CD3E00787F3C /* Active-Circle-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E2E0E21D25CD3E00787F3C /* Active-Circle-30.png */; };
+		77E2E0E51D25CD3E00787F3C /* Inactive-Circle-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E2E0E31D25CD3E00787F3C /* Inactive-Circle-30.png */; };
 		C041BB4E1D0159F8008A077A /* FacultiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041BB4D1D0159F8008A077A /* FacultiesTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -270,6 +272,8 @@
 		77E2E0DC1D24E51200787F3C /* StudentResultDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResultDetailViewController.swift; sourceTree = "<group>"; };
 		77E2E0DE1D25076400787F3C /* Semester+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Semester+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		77E2E0DF1D25076400787F3C /* Semester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
+		77E2E0E21D25CD3E00787F3C /* Active-Circle-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Active-Circle-30.png"; path = "UASApp/img/Active-Circle-30.png"; sourceTree = "<group>"; };
+		77E2E0E31D25CD3E00787F3C /* Inactive-Circle-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Inactive-Circle-30.png"; path = "UASApp/img/Inactive-Circle-30.png"; sourceTree = "<group>"; };
 		91EC3011194695571EFCB348 /* Pods_UASApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UASApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C041BB4D1D0159F8008A077A /* FacultiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultiesTest.swift; sourceTree = "<group>"; };
 		F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UASApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-UASApp/Pods-UASApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 		771470741CDACDFC009D5501 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				77E2E0E21D25CD3E00787F3C /* Active-Circle-30.png */,
+				77E2E0E31D25CD3E00787F3C /* Inactive-Circle-30.png */,
 				77CC0B8E1D19251F009620AA /* Red-Circle-30.png */,
 				77CC0B8D1D19251F009620AA /* Green-Circle-30.png */,
 				77DC66E71D148DA7003279F8 /* Check File-30.png */,
@@ -734,10 +740,12 @@
 				77DC66F21D14A87B003279F8 /* reports3.html in Resources */,
 				7714708F1CDAE14D009D5501 /* Resultados-30.png in Resources */,
 				77DC66E61D148CB2003279F8 /* Dashboard-30.png in Resources */,
+				77E2E0E51D25CD3E00787F3C /* Inactive-Circle-30.png in Resources */,
 				77DC66F01D14A4F5003279F8 /* reports2.html in Resources */,
 				778315771CDBBBF3008D9209 /* University-50.png in Resources */,
 				77CC0B901D19251F009620AA /* Red-Circle-30.png in Resources */,
 				771470961CDAE2AB009D5501 /* person-placeholder.png in Resources */,
+				77E2E0E41D25CD3E00787F3C /* Active-Circle-30.png in Resources */,
 				77A24CC81CDD15EB006AA0B9 /* Improve-30.png in Resources */,
 				770507201D0B97180007E63C /* ic_launcher.png in Resources */,
 				77E1984F1CD7C85300782B72 /* Main.storyboard in Resources */,

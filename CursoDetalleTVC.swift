@@ -13,11 +13,6 @@ class CursoDetalleTVC: UITableViewController {
 
     @IBOutlet weak var courseTitle: UINavigationItem!
     
-    var data = ["IEE256","Ing. Informatica","8"]
-    
-    var p1 = ["Andrés Melgar","19950102"]
-    var p2 = ["Ronny Cueva","20012992"]
-    
     var course:Course? = nil
     var faculty:Faculty? = nil
     
@@ -70,7 +65,7 @@ class CursoDetalleTVC: UITableViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("infoCell", forIndexPath: indexPath) as! CursoCell
             cell.lblCodigoCurso.text = self.course?.codigo
-            cell.lblNivelCurso.text = self.course?.nivelAcademico?.description
+            //cell.lblNivelCurso.text = self.course?.nivelAcademico?.description
             cell.lblEspecialidadCurso.text = self.faculty?.nombre
             
             return cell

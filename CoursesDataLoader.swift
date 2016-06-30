@@ -34,7 +34,7 @@ class CourseDataLoader {
                 
                 if date.isGreaterThanDate(course!.updated_at!) {
                     
-                    course?.nivelAcademico = Int(subJson["NivelAcademico"].stringValue)!
+                    //course?.nivelAcademico = Int(subJson["NivelAcademico"].stringValue)!
                     course?.nombre = subJson["Nombre"].stringValue
                     course?.codigo = subJson["Codigo"].stringValue
                     course?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
@@ -47,7 +47,7 @@ class CourseDataLoader {
                 course = Course.MR_createEntity()
                 
                 //course?.id = Int(subJson["IdCurso"].stringValue)!
-                course?.nivelAcademico = Int(subJson["NivelAcademico"].stringValue)!
+                //course?.nivelAcademico = Int(subJson["NivelAcademico"].stringValue)!
                 course?.nombre = subJson["Nombre"].stringValue
                 course?.codigo = subJson["Codigo"].stringValue
                 //course?.updated_at = self.dateFormatter.dateFromString(subJson["updated_at"].stringValue)!
@@ -101,7 +101,7 @@ class CourseDataLoader {
         var thisCourse:NSNumber = 0
         
         for course in array {
-            thisCourse = course.nivelAcademico!
+            //thisCourse = course.nivelAcademico
             
             if courseDictionary.indexForKey(thisCourse) == nil {
                 courseDictionary[thisCourse] = []

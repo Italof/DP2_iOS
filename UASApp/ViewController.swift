@@ -92,10 +92,19 @@ class ViewController: UIViewController {
                                 self.getAspects(fac){
                                     json, error in
                                     
-                                    if error != nil {
+                                    if error == nil {
                                         Aspect.syncWithJson(fac, json: json!, ctx: globalCtx)
                                         try! globalCtx.save()
                                     }
+                                }
+                                self.getCourses(fac){
+                                    json, error in
+                                  
+                                    if error == nil {
+                                        Course.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                        try! globalCtx.save()
+                                    }
+                                    
                                 }
                                 self.getImprovement(fac) {
                                     json, error in

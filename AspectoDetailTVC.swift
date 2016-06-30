@@ -48,7 +48,22 @@ class AspectoDetailTVC: UITableViewController {
 
         let crt = self.list[indexPath.row]
         
+        var imageView : UIImageView
+        var imageName : String = ""
+        imageView  = UIImageView(frame:CGRectMake(20, 20, 30, 30))
+        
+        if (crt.estado != nil) {
+            
+            if (crt.estado?.boolValue)! {
+                imageName = "Active-Circle-30"
+            } else {
+                imageName = "Inactive-Circle-30"
+            }
+        }
+        
+        imageView.image = UIImage(named: imageName)
         cell.textLabel?.text = crt.nombre
+        cell.accessoryView = imageView
         
         return cell
     }
