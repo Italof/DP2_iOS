@@ -14,6 +14,7 @@ class CourseDetailViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var codigo: UILabel!
     @IBOutlet weak var nivel: UILabel!
     @IBOutlet weak var especialidad: UILabel!
+    @IBOutlet weak var timetableTableView: UITableView!
     
     var faculty : Faculty?
     var course : Course?
@@ -52,6 +53,9 @@ class CourseDetailViewController: UIViewController, UITableViewDelegate, UITable
         
         let cell = tableView.dequeueReusableCellWithIdentifier("timetableCell", forIndexPath: indexPath) as! TimetableTableViewCell
         
+        cell.professorButton.addTarget(self, action: #selector(CourseDetailViewController.showProfessors), forControlEvents: .TouchUpInside)
+        cell.downloadButton.addTarget(self, action: #selector(CourseDetailViewController.downloadEvidence), forControlEvents: .TouchUpInside)
+
         let timetable = self.timetables[indexPath.row]
         
         cell.timetableCode.text = timetable.codigo
@@ -59,16 +63,27 @@ class CourseDetailViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
+    //MARK: - Functions
     
-
-    /*
+    func showProfessors(){
+        self.performSegueWithIdentifier("professorDetailSegue", sender: self)
+    }
+    
+    func downloadEvidence(){
+        
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "professorDetailSegue" {
+            let indexPath = self.timetableTableView.indexPathForView(self.timetableTableView)
+            let tvc = segue.destinationViewController as! ProfessorsTVC
+            tvc.timetable = self.timetables[indexPath!.row]
+        }
     }
-    */
 
 }

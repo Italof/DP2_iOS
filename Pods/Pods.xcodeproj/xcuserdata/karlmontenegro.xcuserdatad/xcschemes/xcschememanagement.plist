@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MagicalRecord.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-UASApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,22 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1FCD5325F88D812B58270F72BB373EA2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>439BB5030F3F8E1CC6D092AA75F7A617</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D58D76EC529B4A92F3E5EDADE0A96661</key>
+		<key>B9CF8CE20FB073EB8B110FA8A0DA6663</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7A14967E61F6148FD7FDFF5820E8F70</key>
 		<dict>
 			<key>primary</key>
 			<true/>

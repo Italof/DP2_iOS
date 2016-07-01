@@ -11,11 +11,11 @@ import UIKit
 class ProfessorsTVC: UITableViewController {
 
     var timetable: Timetable? = nil
-    var professors: Array<Professor>? = nil
+    var professors: Array<Professor> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.professors = (self.timetable?.professor?.allObjects) as? Array<Professor>
+        self.professors = Professor.getProfessorsByTimetable(self.timetable!, ctx: globalCtx)
         
     }
 
@@ -33,14 +33,14 @@ class ProfessorsTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (self.professors?.count)!
+        return self.professors.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("teacherCell", forIndexPath: indexPath)
 
-        let professor = self.professors![indexPath.row]
+        let professor = self.professors[indexPath.row]
         
         cell.textLabel?.text = professor.codigo
         cell.detailTextLabel?.text = (professor.nombres)! + " " + (professor.apellidos)!
@@ -92,7 +92,7 @@ class ProfessorsTVC: UITableViewController {
         if segue.identifier == "professorDetailSegue" {
             let vc = segue.destinationViewController as! TeacherModal
             let indexPath = self.tableView.indexPathForSelectedRow
-            vc.professor = self.professors![indexPath!.row]
+            vc.professor = self.professors[indexPath!.row]
             
         }
     }

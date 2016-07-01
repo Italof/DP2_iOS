@@ -142,4 +142,16 @@ extension Professor {
         let professors = try! ctx.executeFetchRequest(fetchRequest) as? Array<Professor>
         return professors ?? Array<Professor>()
     }
+    
+    internal class func getProfessorsByTimetable(tbl: Timetable, ctx: NSManagedObjectContext) -> Array<Professor> {
+        let fetchRequest = NSFetchRequest()
+        fetchRequest.entity = NSEntityDescription.entityForName("Professor", inManagedObjectContext: ctx)
+        let predicate = NSPredicate(format: "ANY timetable.id == %d", tbl.id)
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let professors = try! ctx.executeFetchRequest(fetchRequest) as? Array<Professor>
+        return professors ?? Array<Professor>()
+    }
 }

@@ -69,6 +69,25 @@ extension Course {
                 let newTimetable = Timetable.updateOrCreateWithJson(timetable, ctx: ctx)!
                 newTimetable.course = newCourse
                 newStoredTimetables.append(newTimetable)
+                
+                
+                let persistedProfessors = Professor.getProfessorsByFaculty(fac, ctx: ctx)
+                var newStoredProfessors:Array<Professor> = []
+                
+                for(_,professor):(String,JSON) in timetable[TimetableProfessorsKey] {
+                    
+                    let newProfessor = Professor.updateOrCreateWithJson(professor, ctx: ctx)!
+                    let professors = newTimetable.professor?.mutableSetValueForKey("professor")
+                    professors!.addObject(newProfessor)
+                    
+                    newStoredProfessors.append(newProfessor)
+                }
+                
+                let forDeletion = Array(Set(persistedProfessors).subtract(newStoredProfessors))
+                
+                for professor in forDeletion {
+                    ctx.deleteObject(professor)
+                }
             }
             
             let forDeletion = Array(Set(persitedTimetables).subtract(newStoredTimetables))

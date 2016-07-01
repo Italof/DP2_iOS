@@ -11,18 +11,15 @@ import UIKit
 class TimetableTableViewCell: UITableViewCell {
 
     @IBOutlet weak var timetableCode: UILabel!
+
+    @IBOutlet weak var downloadButton: UIButton!
+    @IBOutlet weak var professorButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
-    @IBAction func downloadTapped(sender: AnyObject) {
-        
-    }
-    @IBAction func seeTeachersTapped(sender: AnyObject) {
-        
-    }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

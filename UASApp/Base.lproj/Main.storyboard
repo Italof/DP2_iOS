@@ -1159,20 +1159,6 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-z2-Pwk">
-                                                    <rect key="frame" x="298" y="59" width="188" height="46"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="46" id="fSg-xT-YH1"/>
-                                                        <constraint firstAttribute="width" constant="188" id="hsS-ho-fel"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="Ver Profesores">
-                                                        <color key="titleColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="seeTeachersTapped:" destination="xJL-Eu-Phm" eventType="touchUpInside" id="kOC-Mu-GtP"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfp-5b-lD5">
                                                     <rect key="frame" x="75" y="59" width="188" height="46"/>
                                                     <constraints>
@@ -1183,9 +1169,17 @@
                                                     <state key="normal" title="Descargar Evidencias">
                                                         <color key="titleColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="downloadTapped:" destination="xJL-Eu-Phm" eventType="touchUpInside" id="MP1-wQ-4fK"/>
-                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-z2-Pwk">
+                                                    <rect key="frame" x="298" y="59" width="188" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="46" id="fSg-xT-YH1"/>
+                                                        <constraint firstAttribute="width" constant="188" id="hsS-ho-fel"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Ver Profesores">
+                                                        <color key="titleColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1200,6 +1194,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="downloadButton" destination="tfp-5b-lD5" id="UNt-kW-EyA"/>
+                                            <outlet property="professorButton" destination="ZpC-z2-Pwk" id="Bvc-wa-ud6"/>
                                             <outlet property="timetableCode" destination="adp-Ru-mG6" id="0nb-Sv-8gA"/>
                                         </connections>
                                     </tableViewCell>
@@ -1231,6 +1227,8 @@
                         <outlet property="courseTitle" destination="W3s-Xz-pKQ" id="zVZ-bw-jQI"/>
                         <outlet property="especialidad" destination="8KC-Zr-yXI" id="fIz-s2-6a0"/>
                         <outlet property="nivel" destination="lWt-IE-Jh2" id="2GC-tb-Ica"/>
+                        <outlet property="timetableTableView" destination="RNJ-rl-oZC" id="AL6-yR-oZs"/>
+                        <segue destination="qs3-VY-YDL" kind="show" identifier="professorDetailSegue" id="Ufb-c8-euJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMd-6w-WZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
