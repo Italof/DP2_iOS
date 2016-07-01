@@ -152,4 +152,16 @@ extension EducationalObjective {
         return objectives ?? Array<EducationalObjective>()
     }
     
+    internal class func getObjectivesByResult (res: StudentResult, ctx: NSManagedObjectContext) -> Array<EducationalObjective> {
+        let fetchRequest = NSFetchRequest()
+        fetchRequest.entity = NSEntityDescription.entityForName("EducationalObjective", inManagedObjectContext: ctx)
+        let predicate = NSPredicate(format: "ANY studentResults.id == %d", res.id)
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let objectives = try! ctx.executeFetchRequest(fetchRequest) as? Array<EducationalObjective>
+        return objectives ?? Array<EducationalObjective>()
+    }
+    
 }

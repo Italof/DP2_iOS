@@ -116,7 +116,7 @@ extension Faculty {
         let fetchRequest = NSFetchRequest()
         fetchRequest.entity = NSEntityDescription.entityForName("Faculty", inManagedObjectContext: ctx)
         
-        let sortDescriptor = NSSortDescriptor(key: "id", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         let faculties = try! ctx.executeFetchRequest(fetchRequest) as? Array<Faculty>

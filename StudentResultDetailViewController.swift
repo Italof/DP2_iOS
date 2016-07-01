@@ -11,6 +11,8 @@ import UIKit
 class StudentResultDetailViewController: UIViewController {
 
     var studentResult: StudentResult? = nil
+    var parentObjectives: Array<EducationalObjective> = []
+    
     @IBOutlet weak var resultTitle: UINavigationItem!
     @IBOutlet weak var identifier: UILabel!
     @IBOutlet weak var resultDescription: UITextView!
@@ -23,6 +25,7 @@ class StudentResultDetailViewController: UIViewController {
         self.identifier.text = self.studentResult!.identificador
         self.resultDescription.text = self.studentResult!.descripcion
         
+        self.parentObjectives = EducationalObjective.getObjectivesByResult(self.studentResult!, ctx: globalCtx)
         // Do any additional setup after loading the view.
     }
 
@@ -40,13 +43,33 @@ class StudentResultDetailViewController: UIViewController {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return self.parentObjectives.count
         
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("resEdCell", forIndexPath: indexPath)
+        
+        let obj = self.parentObjectives[indexPath.row]
+        
+        var imageView : UIImageView
+        var imageName : String = ""
+        imageView  = UIImageView(frame:CGRectMake(20, 20, 30, 30))
+        
+        if obj.estado != nil {
+            if (obj.estado?.boolValue)! {
+                imageName = "Active-Circle-30"
+            } else {
+                imageName = "Inactive-Circle-30"
+            }
+        }
+        
+        imageView.image = UIImage(named: imageName)
+        
+        cell.textLabel?.text = "Objetivo Educacional " + obj.numero.description
+        cell.detailTextLabel?.text = obj.descripcion
+        cell.accessoryView = imageView
         
         return cell
     }

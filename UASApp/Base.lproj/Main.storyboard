@@ -1130,16 +1130,74 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RNJ-rl-oZC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RNJ-rl-oZC">
                                 <rect key="frame" x="20" y="273" width="560" height="307"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timetableCell" rowHeight="69" id="xJL-Eu-Phm">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="69"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timetableCell" rowHeight="131" id="xJL-Eu-Phm" customClass="TimetableTableViewCell" customModule="UASApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xJL-Eu-Phm" id="Nd4-4w-sYB">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="68.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="130.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Código:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xt9-uk-pQD">
+                                                    <rect key="frame" x="21" y="20" width="73" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="73" id="Oom-q4-F7s"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;codigo&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adp-Ru-mG6">
+                                                    <rect key="frame" x="414" y="20" width="126" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="126" id="96G-YL-8UU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-z2-Pwk">
+                                                    <rect key="frame" x="298" y="59" width="188" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="46" id="fSg-xT-YH1"/>
+                                                        <constraint firstAttribute="width" constant="188" id="hsS-ho-fel"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Ver Profesores">
+                                                        <color key="titleColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="seeTeachersTapped:" destination="xJL-Eu-Phm" eventType="touchUpInside" id="kOC-Mu-GtP"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfp-5b-lD5">
+                                                    <rect key="frame" x="75" y="59" width="188" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="46" id="2K4-BW-SvY"/>
+                                                        <constraint firstAttribute="width" constant="188" id="4d8-r6-pCn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Descargar Evidencias">
+                                                        <color key="titleColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="downloadTapped:" destination="xJL-Eu-Phm" eventType="touchUpInside" id="MP1-wQ-4fK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="adp-Ru-mG6" firstAttribute="top" secondItem="Nd4-4w-sYB" secondAttribute="topMargin" constant="12" id="JtX-I3-MzY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="adp-Ru-mG6" secondAttribute="trailing" constant="12" id="TXg-6O-xYw"/>
+                                                <constraint firstItem="Xt9-uk-pQD" firstAttribute="leading" secondItem="Nd4-4w-sYB" secondAttribute="leadingMargin" constant="13" id="Und-Br-QNU"/>
+                                                <constraint firstItem="tfp-5b-lD5" firstAttribute="leading" secondItem="Nd4-4w-sYB" secondAttribute="leadingMargin" constant="67" id="WWZ-e5-dw4"/>
+                                                <constraint firstItem="Xt9-uk-pQD" firstAttribute="top" secondItem="Nd4-4w-sYB" secondAttribute="topMargin" constant="12" id="XOR-Jk-rlg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZpC-z2-Pwk" secondAttribute="trailing" constant="66" id="bLh-e3-mZb"/>
+                                                <constraint firstItem="ZpC-z2-Pwk" firstAttribute="top" secondItem="adp-Ru-mG6" secondAttribute="bottom" constant="18" id="nBZ-gh-yja"/>
+                                                <constraint firstItem="tfp-5b-lD5" firstAttribute="top" secondItem="Xt9-uk-pQD" secondAttribute="bottom" constant="18" id="wPB-Hm-p8d"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -2181,7 +2239,7 @@
         <!--Empty Data Set Delegate-->
         <scene sceneID="KE1-39-2sV">
             <objects>
-                <viewController id="jlO-Fc-eXY" sceneMemberID="viewController">
+                <viewController id="jlO-Fc-eXY" customClass="SemesterModalViewController" customModule="UASApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mBr-Ko-3gT"/>
                         <viewControllerLayoutGuide type="bottom" id="Qb7-pC-fTs"/>
@@ -2210,7 +2268,7 @@
                                         <rect key="frame" x="8" y="53" width="417" height="324"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="35o-sH-k6F" rowHeight="77" style="IBUITableViewCellStyleDefault" id="2c8-N7-obv">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="semesterCell" textLabel="35o-sH-k6F" rowHeight="77" style="IBUITableViewCellStyleDefault" id="2c8-N7-obv">
                                                 <rect key="frame" x="0.0" y="28" width="417" height="77"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2c8-N7-obv" id="F1T-iM-cqb">
@@ -2256,6 +2314,9 @@
                             <constraint firstItem="A5W-Iv-g3h" firstAttribute="centerX" secondItem="XKv-Ri-Ad0" secondAttribute="centerX" id="fyA-N5-ajT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="semesterTable" destination="2an-t0-F6g" id="ioI-PO-e7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKq-HA-LeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

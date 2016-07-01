@@ -1,5 +1,5 @@
 //
-//  CourseDetailViewController.swift
+//  SemesterModalViewController.swift
 //  UASApp
 //
 //  Created by Karl Montenegro on 30/06/16.
@@ -8,26 +8,15 @@
 
 import UIKit
 
-class CourseDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SemesterModalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var courseTitle: UINavigationItem!
-    @IBOutlet weak var codigo: UILabel!
-    @IBOutlet weak var nivel: UILabel!
-    @IBOutlet weak var especialidad: UILabel!
-    
-    var faculty : Faculty?
-    var course : Course?
-    var timetables : Array<Timetable> = []
+    var semesterList : Array<Semester> = []
+    @IBOutlet weak var semesterTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.courseTitle.title = self.course?.nombre
-        self.codigo.text = self.course!.codigo
-        self.nivel.text = self.course!.nivelAcademico.description
-        self.especialidad.text = self.faculty?.nombre
-        
-        self.timetables = Timetable.getTimetablesByCourse(self.course!, ctx: globalCtx)
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,18 +33,16 @@ class CourseDetailViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.timetables.count
         
+        return self.semesterList.count
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("timetableCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("semesterCell", forIndexPath: indexPath)
         
         return cell
     }
-    
-    
 
     /*
     // MARK: - Navigation

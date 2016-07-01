@@ -74,7 +74,7 @@ class CursoDetalleTVC: UITableViewController {
             
             let sch = (self.course?.timetables?.allObjects)![indexPath.row] as? Timetable
             
-            cell.lblCodigoProf.text =  sch?.totalAlumnos?.description
+            //cell.lblCodigoProf.text =  sch?.totalAlumnos?.description
             cell.lblNombreProfesor.text = sch?.codigo
             
             return cell

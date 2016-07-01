@@ -371,7 +371,6 @@ class ViewController: UIViewController {
     
     func getReportCall(fac: Faculty, completionHandler: (String?,NSError?)->()){
         
-        
         Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/measure_report", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
             .responseString { response in
             switch response.result {
@@ -383,6 +382,10 @@ class ViewController: UIViewController {
             }
             
         }
+    }
+    
+    func getPresentPeriod(fac: Faculty, completionHandler: (JSON?,Error?)->()){
+        
     }
     
     func deleteAll() {

@@ -28,7 +28,7 @@ class Course: NSManagedObject {
     @NSManaged var nombre: String?
     @NSManaged var faculty: Faculty?
     @NSManaged var timetables: NSSet?
-    @NSManaged var semester: Semester?
+    @NSManaged var semester: NSSet?
 
 }
 
@@ -49,10 +49,7 @@ extension Course {
 }
 
 extension Course {
-    func addTimeTable(obj: Timetable){
-        let timetables = self.mutableSetValueForKey("timetables")
-        timetables.addObject(obj)
-    }
+
     
     internal class func syncWithJson(fac: Faculty, json: JSON, ctx: NSManagedObjectContext)->Array<Course>? {
         
@@ -63,6 +60,24 @@ extension Course {
             
             let newCourse = Course.updateOrCreateWithJson(course, ctx: ctx)!
             newStoredCourses.append(newCourse)
+            
+            let persitedTimetables = Timetable.getTimetablesByCourse(newCourse, ctx: ctx)
+            var newStoredTimetables:Array<Timetable> = []
+            
+            for(_,timetable):(String,JSON) in course[CourseSchedulesKey] {
+                
+                let newTimetable = Timetable.updateOrCreateWithJson(timetable, ctx: ctx)!
+                
+                let tables = newCourse.timetables?.mutableSetValueForKey("timetables")
+                tables?.addObject(newTimetable)
+                newStoredTimetables.append(newTimetable)
+            }
+            
+            let forDeletion = Array(Set(persitedTimetables).subtract(newStoredTimetables))
+            
+            for timetable in forDeletion {
+                ctx.deleteObject(timetable)
+            }
             
         }
         

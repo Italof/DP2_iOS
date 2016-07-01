@@ -61,11 +61,11 @@ class CourseDataLoader {
                 if timetable == nil {
                     
                     timetable = Timetable.MR_createEntity()
-                    timetable?.id = Int(sch["IdHorario"].stringValue)!
+                    //timetable?.id = Int(sch["IdHorario"].stringValue)!
                     timetable?.codigo = sch["Codigo"].stringValue
                     //timetable?.totalAlumnos = Int(sch["TotalAlumnos"].stringValue)!
                 }
-                course?.addTimeTable(timetable!)
+                //course?.addTimeTable(timetable!)
                 
                 for (_,prs):(String,JSON) in sch["professors"] {
                     

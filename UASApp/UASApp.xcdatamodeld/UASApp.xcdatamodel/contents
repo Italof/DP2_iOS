@@ -28,7 +28,7 @@
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="course" inverseEntity="Faculty" syncable="YES"/>
-        <relationship name="semester" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Semester" inverseName="course" inverseEntity="Semester" syncable="YES"/>
+        <relationship name="semester" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Semester" inverseName="course" inverseEntity="Semester" syncable="YES"/>
         <relationship name="timetables" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Timetable" inverseName="course" inverseEntity="Timetable" syncable="YES"/>
     </entity>
     <entity name="Criterion" representedClassName=".Criterion" syncable="YES">
@@ -49,6 +49,10 @@
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="educationalObjective" inverseEntity="Faculty" syncable="YES"/>
         <relationship name="studentResults" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudentResult" inverseName="educationalObjectives" inverseEntity="StudentResult" syncable="YES"/>
+    </entity>
+    <entity name="Evidence" representedClassName=".Evidence" syncable="YES">
+        <attribute name="downloadURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="timetable" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Timetable" inverseName="evidences" inverseEntity="Timetable" syncable="YES"/>
     </entity>
     <entity name="Faculty" representedClassName=".Faculty" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
@@ -107,7 +111,7 @@
     </entity>
     <entity name="Semester" representedClassName=".Semester" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="semester" inverseEntity="Course" syncable="YES"/>
+        <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="semester" inverseEntity="Course" syncable="YES"/>
     </entity>
     <entity name="StudentResult" representedClassName=".StudentResult" syncable="YES">
         <attribute name="cicloRegistro" optional="YES" attributeType="String" syncable="YES"/>
@@ -133,10 +137,11 @@
     </entity>
     <entity name="Timetable" representedClassName=".Timetable" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="totalAlumnos" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="totalAlumnos" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="timetables" inverseEntity="Course" syncable="YES"/>
+        <relationship name="evidences" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evidence" inverseName="timetable" inverseEntity="Evidence" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="timetable" inverseEntity="Faculty" syncable="YES"/>
         <relationship name="professor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Professor" inverseName="timetable" inverseEntity="Professor" syncable="YES"/>
     </entity>
@@ -152,7 +157,8 @@
         <element name="Professor" positionX="9" positionY="54" width="128" height="240"/>
         <element name="StudentResult" positionX="-36" positionY="9" width="128" height="195"/>
         <element name="Suggestion" positionX="18" positionY="63" width="128" height="165"/>
-        <element name="Timetable" positionX="0" positionY="45" width="128" height="150"/>
+        <element name="Timetable" positionX="0" positionY="45" width="128" height="165"/>
         <element name="Semester" positionX="-9" positionY="135" width="128" height="75"/>
+        <element name="Evidence" positionX="0" positionY="144" width="128" height="75"/>
     </elements>
 </model>
