@@ -10,10 +10,6 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-protocol dataReceiveForMenu {
-    func acceptData(faculty: Faculty)
-}
-
 class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
 
     @IBOutlet weak var userProfileImage: UIImageView!
@@ -120,6 +116,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
         if segue.identifier == "startSegue" {
             let nvc = segue.destinationViewController as! UINavigationController
             let vc = nvc.viewControllers.first as! InicioVC
+
             vc.faculty = self.faculty
         }
         

@@ -19,7 +19,7 @@
         <attribute name="nombres" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="vigente" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="coordinator" inverseEntity="Faculty" syncable="YES"/>
+        <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" syncable="YES"/>
     </entity>
     <entity name="Course" representedClassName=".Course" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
@@ -61,7 +61,7 @@
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="aspects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Aspect" inverseName="faculty" inverseEntity="Aspect" syncable="YES"/>
-        <relationship name="coordinator" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Coordinator" inverseName="faculty" inverseEntity="Coordinator" syncable="YES"/>
+        <relationship name="coordinator" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Professor" inverseName="coordinator" inverseEntity="Professor" syncable="YES"/>
         <relationship name="course" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Course" inverseName="faculty" inverseEntity="Course" syncable="YES"/>
         <relationship name="criterion" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Criterion" inverseName="faculty" inverseEntity="Criterion" syncable="YES"/>
         <relationship name="educationalObjective" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EducationalObjective" inverseName="faculty" inverseEntity="EducationalObjective" syncable="YES"/>
@@ -104,6 +104,7 @@
         <attribute name="nombres" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="vigente" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="coordinator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="coordinator" inverseEntity="Faculty" syncable="YES"/>
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="professor" inverseEntity="Faculty" syncable="YES"/>
         <relationship name="plans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImprovementPlan" inverseName="professor" inverseEntity="ImprovementPlan" syncable="YES"/>
         <relationship name="suggestions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Suggestion" inverseName="professor" inverseEntity="Suggestion" syncable="YES"/>
@@ -154,7 +155,7 @@
         <element name="Faculty" positionX="-63" positionY="-18" width="128" height="285"/>
         <element name="ImprovementPlan" positionX="36" positionY="81" width="128" height="210"/>
         <element name="PlanType" positionX="27" positionY="162" width="128" height="150"/>
-        <element name="Professor" positionX="9" positionY="54" width="128" height="240"/>
+        <element name="Professor" positionX="9" positionY="54" width="128" height="255"/>
         <element name="StudentResult" positionX="-36" positionY="9" width="128" height="195"/>
         <element name="Suggestion" positionX="18" positionY="63" width="128" height="165"/>
         <element name="Timetable" positionX="0" positionY="45" width="128" height="165"/>

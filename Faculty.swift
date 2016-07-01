@@ -34,7 +34,7 @@ class Faculty: NSManagedObject {
     @NSManaged var timetable: NSSet?
     @NSManaged var professor: NSSet?
     @NSManaged var planTypes: NSSet?
-    @NSManaged var coordinator: Coordinator?
+    @NSManaged var coordinator: Professor?
     @NSManaged var aspects: NSSet?
 
 }
@@ -67,7 +67,13 @@ extension Faculty {
         var newStoredFaculties:Array<Faculty> = []
         
         for (_,faculty):(String, JSON) in json {
-            newStoredFaculties.append(Faculty.updateOrCreateWithJson(faculty, ctx: ctx)!)
+            let newFaculty = Faculty.updateOrCreateWithJson(faculty, ctx: ctx)!
+            newStoredFaculties.append(newFaculty)
+            
+            let newCoordinator = Professor.updateOrCreateWithJson(faculty[FacultyCoordinatorKey], ctx: ctx)!
+            
+            newFaculty.coordinator = newCoordinator
+            
         }
         
         let forDeletion = Array(Set(persistedFaculties).subtract(newStoredFaculties))

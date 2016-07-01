@@ -8,10 +8,31 @@
 
 import Foundation
 import CoreData
-
+import SwiftyJSON
 
 class Coordinator: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
+    @NSManaged var id: NSNumber?
+    @NSManaged var updated_at: NSDate?
+    @NSManaged var codigo: String?
+    @NSManaged var nombres: String?
+    @NSManaged var apellidos: String?
+    @NSManaged var email: String?
+    @NSManaged var cargo: String?
+    @NSManaged var vigente: NSNumber?
+    @NSManaged var descripcion: String?
+    @NSManaged var faculty: Faculty?
 
+}
+
+//MARK: - Deserialization
+
+extension Coordinator {
+    
+}
+
+//MARK: - Core Data
+
+extension Coordinator {
+    
 }

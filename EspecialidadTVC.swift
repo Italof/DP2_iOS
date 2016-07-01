@@ -95,9 +95,9 @@ class EspecialidadTVC: UITableViewController {
             let indexpath = self.tableView.indexPathForSelectedRow
             let menu = splitViewController.viewControllers.first as! MainMenuTVC
             let nvc = splitViewController.viewControllers[1] as! UINavigationController
+            
             let start = nvc.viewControllers.first as! InicioVC
             start.faculty = self.facultyList[indexpath!.row]
-            
             menu.faculty = self.facultyList[indexpath!.row]
             
         }

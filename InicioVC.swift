@@ -30,6 +30,15 @@ class InicioVC: UIViewController {
         self.facultyCode.text = self.faculty?.codigo
         self.facultyDescription.text = self.faculty?.descripcion
         
+        let firstName = self.faculty?.coordinator?.nombres
+        let lastName = self.faculty?.coordinator?.apellidos
+        
+        if firstName != nil && lastName != nil {
+            self.facultyCoordinator.text = firstName! + " " + lastName!
+        } else {
+            self.facultyCoordinator.text = "(Sin Coordinador)"
+        }
+        
         self.criteriaLevel.text = "-"
         self.acceptLevel.text = "-"
         self.acceptPercentage.text = "0%"

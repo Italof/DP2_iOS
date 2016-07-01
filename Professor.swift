@@ -37,6 +37,7 @@ class Professor: NSManagedObject {
     @NSManaged var timetable: NSSet?
     @NSManaged var plans: NSSet?
     @NSManaged var suggestions: NSSet?
+    @NSManaged var coordinator: Faculty?
 
 }
 
