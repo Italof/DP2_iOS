@@ -10,10 +10,29 @@ import UIKit
 
 class InicioVC: UIViewController {
 
+    @IBOutlet weak var facultyName: UILabel!
+    @IBOutlet weak var facultyCode: UILabel!
+    @IBOutlet weak var facultyDescription: UITextView!
+    @IBOutlet weak var facultyCoordinator: UILabel!
+    
+    @IBOutlet weak var criteriaLevel: UILabel!
+    @IBOutlet weak var acceptLevel: UILabel!
+    @IBOutlet weak var acceptPercentage: UILabel!
+    
+    var faculty : Faculty?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(self.faculty)
 
-        // Do any additional setup after loading the view.
+        self.facultyName.text = self.faculty?.nombre
+        self.facultyCode.text = self.faculty?.codigo
+        self.facultyDescription.text = self.faculty?.descripcion
+        
+        self.criteriaLevel.text = "-"
+        self.acceptLevel.text = "-"
+        self.acceptPercentage.text = "0%"
     }
 
     override func didReceiveMemoryWarning() {

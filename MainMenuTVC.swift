@@ -23,20 +23,20 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     @IBOutlet weak var userSpecialty: UILabel!
     @IBOutlet weak var facultyName: UILabel!
     
-    var faculty:Faculty? = nil
+    var faculty:Faculty?
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let endpoint = Connection()
-    var userJSON:JSON? = nil
+    var userJSON:JSON?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.userJSON = JSON(data: self.defaults.objectForKey("user") as! NSData)
         
-        
         self.facultyName.text = self.faculty?.nombre
         
+        /*
         if self.userJSON!["professor"] != nil {
             let info = self.userJSON!["professor"]
             self.userFullName.text = info["Nombre"].stringValue + " " + info["Apellido Materno"].stringValue + " " + info["ApellidoPaterno"].stringValue
@@ -50,7 +50,7 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                 self.userPosition.text = "Coordinador"
                 
             }
-        }
+        }*/
         
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "header_bg"))
         
@@ -118,7 +118,9 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "startSegue" {
-            
+            let nvc = segue.destinationViewController as! UINavigationController
+            let vc = nvc.viewControllers.first as! InicioVC
+            vc.faculty = self.faculty
         }
         
         if segue.identifier == "facultiesMenuSegue" {
