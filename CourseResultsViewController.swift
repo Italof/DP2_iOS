@@ -10,9 +10,18 @@ import UIKit
 
 class CourseResultsViewController: UIViewController {
 
+    var faculty : Faculty?
+    var course : Course?
+    
+    @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let fileURL = DocumentDirURL.URLByAppendingPathComponent("course_report_" + self.faculty!.id.description + "_" + self.course!.id.description).URLByAppendingPathExtension("html")
+        
+        let myRequest = NSURLRequest(URL: fileURL);
+        self.webView.loadRequest(myRequest)
         // Do any additional setup after loading the view.
     }
 

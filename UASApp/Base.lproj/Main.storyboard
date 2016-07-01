@@ -1225,7 +1225,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Resultados" id="3X2-FR-og7">
                             <color key="tintColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="tby-MO-eDv" kind="show" id="BwP-67-YHn"/>
+                                <segue destination="tby-MO-eDv" kind="show" identifier="courseReportSegue" id="BwP-67-YHn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1273,7 +1273,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-Ob-kWP">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
@@ -1282,10 +1282,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="K4R-Ob-kWP" secondAttribute="trailing" constant="-20" id="Kp3-3j-ELh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="K4R-Ob-kWP" secondAttribute="leading" constant="20" id="h2e-gg-4MM"/>
                             <constraint firstItem="dlU-hF-hWB" firstAttribute="top" secondItem="K4R-Ob-kWP" secondAttribute="bottom" id="l3N-wU-m40"/>
-                            <constraint firstItem="K4R-Ob-kWP" firstAttribute="top" secondItem="5Dq-Ms-Fc8" secondAttribute="bottom" id="lRC-g0-1AO"/>
+                            <constraint firstItem="K4R-Ob-kWP" firstAttribute="top" secondItem="5Dq-Ms-Fc8" secondAttribute="bottom" constant="-64" id="lRC-g0-1AO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Resultados de Medición" id="CTI-9K-eTZ"/>
+                    <connections>
+                        <outlet property="webView" destination="K4R-Ob-kWP" id="hLz-sW-MVc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVX-Dh-gse" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -84,6 +84,12 @@ class CourseDetailViewController: UIViewController, UITableViewDelegate, UITable
             let tvc = segue.destinationViewController as! ProfessorsTVC
             tvc.timetable = self.timetables[indexPath!.row]
         }
+        
+        if segue.identifier == "courseReportSegue" {
+            let wvc = segue.destinationViewController as! CourseResultsViewController
+            wvc.faculty = self.faculty
+            wvc.course = self.course
+        }
     }
 
 }
