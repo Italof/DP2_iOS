@@ -36,6 +36,7 @@ class Faculty: NSManagedObject {
     @NSManaged var planTypes: NSSet?
     @NSManaged var coordinator: Professor?
     @NSManaged var aspects: NSSet?
+    @NSManaged var configuration: Configuration?
 
 }
 

@@ -65,12 +65,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("UASApp.sqlite")
         
-        /*
+        
         do{
             try NSFileManager.defaultManager().removeItemAtURL(url)
         } catch {
             print(error)
-        }*/
+        }
         
         var failureReason = "There was an error creating or loading the application's saved data."
         do {

@@ -1,8 +1,8 @@
 //
-//  Semester+CoreDataProperties.swift
+//  Period+CoreDataProperties.swift
 //  
 //
-//  Created by Karl Montenegro on 30/06/16.
+//  Created by Karl Montenegro on 01/07/16.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,7 +12,7 @@
 import Foundation
 import CoreData
 
-extension Semester {
+extension Period {
 
     
 

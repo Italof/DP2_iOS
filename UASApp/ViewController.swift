@@ -190,21 +190,6 @@ class ViewController: UIViewController {
         authenticateUserCall(user, pass: pass, completionHandler: completionHandler)
     }
     
-    func authenticateUserCall(user: String, pass: String, completionHandler: (JSON?,NSError?)->()){
-        
-        Alamofire.request(.POST, self.endpoint.url + "authenticate?user=\(user)&password=\(pass)")
-            .validate()
-            .responseJSON { response in
-                switch response.result {
-                case .Success:
-                    let json = JSON(data: response.data!)
-                    completionHandler(json, nil)
-                case .Failure(let error):
-                    completionHandler(nil, error)
-            }
-        }
-    }
-    
     func getFaculties(completionHandler: (JSON?, NSError?)->()) {
         getFacultiesCall(completionHandler)
     }
@@ -240,6 +225,26 @@ class ViewController: UIViewController {
     func getCourseMeasurement(fac: Faculty, course: Course, completionHandler: (String?,NSError?)->()){
         getCourseMeasurementCall(fac, course: course, completionHandler: completionHandler)
     }
+
+    func authenticateUserCall(user: String, pass: String, completionHandler: (JSON?,NSError?)->()){
+        
+        Alamofire.request(.POST, self.endpoint.url + "authenticate?user=\(user)&password=\(pass)")
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    let json = JSON(data: response.data!)
+                    completionHandler(json, nil)
+                case .Failure(let error):
+                    completionHandler(nil, error)
+                }
+        }
+    }
+    
+    func getSettingsForAppCall(completionHandler: (JSON?, NSError?)->()) {
+        
+    }
+    
     
     func getFacultiesCall(completionHandler: (JSON?, NSError?)->()) {
         Alamofire.request(.GET, self.endpoint.url + "faculties?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])

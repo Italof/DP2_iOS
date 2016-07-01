@@ -9,6 +9,16 @@
         <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="aspects" inverseEntity="Faculty" syncable="YES"/>
         <relationship name="studentResult" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StudentResult" inverseName="aspects" inverseEntity="StudentResult" syncable="YES"/>
     </entity>
+    <entity name="Configuration" representedClassName=".Configuration" syncable="YES">
+        <attribute name="acceptTreshold" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="criteriaLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="expectedLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="faculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Faculty" inverseName="configuration" inverseEntity="Faculty" syncable="YES"/>
+        <relationship name="period" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Period" inverseName="configuration" inverseEntity="Period" syncable="YES"/>
+        <relationship name="semesterEnd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Semester" inverseName="configSemesterEnd" inverseEntity="Semester" syncable="YES"/>
+        <relationship name="semesterStart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Semester" inverseName="configSemesterStart" inverseEntity="Semester" syncable="YES"/>
+    </entity>
     <entity name="Coordinator" representedClassName=".Coordinator" syncable="YES">
         <attribute name="apellidos" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cargo" optional="YES" attributeType="String" syncable="YES"/>
@@ -61,6 +71,7 @@
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="aspects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Aspect" inverseName="faculty" inverseEntity="Aspect" syncable="YES"/>
+        <relationship name="configuration" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Configuration" inverseName="faculty" inverseEntity="Configuration" syncable="YES"/>
         <relationship name="coordinator" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Professor" inverseName="coordinator" inverseEntity="Professor" syncable="YES"/>
         <relationship name="course" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Course" inverseName="faculty" inverseEntity="Course" syncable="YES"/>
         <relationship name="criterion" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Criterion" inverseName="faculty" inverseEntity="Criterion" syncable="YES"/>
@@ -84,6 +95,12 @@
         <relationship name="planType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlanType" inverseName="plans" inverseEntity="PlanType" syncable="YES"/>
         <relationship name="professor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professor" inverseName="plans" inverseEntity="Professor" syncable="YES"/>
         <relationship name="suggestions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Suggestion" inverseName="improvementPlan" inverseEntity="Suggestion" syncable="YES"/>
+    </entity>
+    <entity name="Period" representedClassName=".Period" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="configuration" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Configuration" inverseName="period" inverseEntity="Configuration" syncable="YES"/>
+        <relationship name="semesters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Semester" syncable="YES"/>
     </entity>
     <entity name="PlanType" representedClassName=".PlanType" syncable="YES">
         <attribute name="codigo" optional="YES" attributeType="String" syncable="YES"/>
@@ -111,7 +128,11 @@
         <relationship name="timetable" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Timetable" inverseName="professor" inverseEntity="Timetable" syncable="YES"/>
     </entity>
     <entity name="Semester" representedClassName=".Semester" syncable="YES">
+        <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="configSemesterEnd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Configuration" inverseName="semesterEnd" inverseEntity="Configuration" syncable="YES"/>
+        <relationship name="configSemesterStart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Configuration" inverseName="semesterStart" inverseEntity="Configuration" syncable="YES"/>
         <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="semester" inverseEntity="Course" syncable="YES"/>
     </entity>
     <entity name="StudentResult" representedClassName=".StudentResult" syncable="YES">
@@ -152,14 +173,16 @@
         <element name="Course" positionX="0" positionY="45" width="128" height="165"/>
         <element name="Criterion" positionX="-9" positionY="36" width="128" height="135"/>
         <element name="EducationalObjective" positionX="-54" positionY="-9" width="128" height="180"/>
-        <element name="Faculty" positionX="-63" positionY="-18" width="128" height="285"/>
+        <element name="Faculty" positionX="-63" positionY="-18" width="128" height="300"/>
         <element name="ImprovementPlan" positionX="36" positionY="81" width="128" height="210"/>
         <element name="PlanType" positionX="27" positionY="162" width="128" height="150"/>
         <element name="Professor" positionX="9" positionY="54" width="128" height="255"/>
         <element name="StudentResult" positionX="-36" positionY="9" width="128" height="195"/>
         <element name="Suggestion" positionX="18" positionY="63" width="128" height="165"/>
         <element name="Timetable" positionX="0" positionY="45" width="128" height="165"/>
-        <element name="Semester" positionX="-9" positionY="135" width="128" height="75"/>
+        <element name="Semester" positionX="-9" positionY="135" width="128" height="135"/>
         <element name="Evidence" positionX="0" positionY="144" width="128" height="75"/>
+        <element name="Period" positionX="9" positionY="153" width="128" height="105"/>
+        <element name="Configuration" positionX="18" positionY="162" width="128" height="165"/>
     </elements>
 </model>

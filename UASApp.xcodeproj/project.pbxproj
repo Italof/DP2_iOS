@@ -117,6 +117,10 @@
 		77E2E0EE1D25E8FC00787F3C /* Evidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0EC1D25E8FC00787F3C /* Evidence.swift */; };
 		77E2E0F01D26006200787F3C /* TimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0EF1D26006200787F3C /* TimetableTableViewCell.swift */; };
 		77E2E0F21D264BA000787F3C /* CourseResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0F11D264BA000787F3C /* CourseResultsViewController.swift */; };
+		77E2E0F71D26D4D500787F3C /* Period+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0F31D26D4D500787F3C /* Period+CoreDataProperties.swift */; };
+		77E2E0F81D26D4D500787F3C /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0F41D26D4D500787F3C /* Period.swift */; };
+		77E2E0F91D26D4D500787F3C /* Configuration+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0F51D26D4D500787F3C /* Configuration+CoreDataProperties.swift */; };
+		77E2E0FA1D26D4D500787F3C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0F61D26D4D500787F3C /* Configuration.swift */; };
 		C041BB4E1D0159F8008A077A /* FacultiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041BB4D1D0159F8008A077A /* FacultiesTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -256,6 +260,10 @@
 		77E2E0EC1D25E8FC00787F3C /* Evidence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evidence.swift; sourceTree = "<group>"; };
 		77E2E0EF1D26006200787F3C /* TimetableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTableViewCell.swift; sourceTree = "<group>"; };
 		77E2E0F11D264BA000787F3C /* CourseResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseResultsViewController.swift; sourceTree = "<group>"; };
+		77E2E0F31D26D4D500787F3C /* Period+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Period+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77E2E0F41D26D4D500787F3C /* Period.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		77E2E0F51D26D4D500787F3C /* Configuration+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Configuration+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		77E2E0F61D26D4D500787F3C /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		91EC3011194695571EFCB348 /* Pods_UASApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UASApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C041BB4D1D0159F8008A077A /* FacultiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultiesTest.swift; sourceTree = "<group>"; };
 		F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UASApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-UASApp/Pods-UASApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -399,6 +407,10 @@
 		778315711CDBB828008D9209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77E2E0F31D26D4D500787F3C /* Period+CoreDataProperties.swift */,
+				77E2E0F41D26D4D500787F3C /* Period.swift */,
+				77E2E0F51D26D4D500787F3C /* Configuration+CoreDataProperties.swift */,
+				77E2E0F61D26D4D500787F3C /* Configuration.swift */,
 				77E2E0EB1D25E8FC00787F3C /* Evidence+CoreDataProperties.swift */,
 				77E2E0EC1D25E8FC00787F3C /* Evidence.swift */,
 				77E2E0DE1D25076400787F3C /* Semester+CoreDataProperties.swift */,
@@ -813,15 +825,18 @@
 				77167A581CDD16C7004C91BC /* SuggestionCell.swift in Sources */,
 				77A24CC41CDD1106006AA0B9 /* TeacherModal.swift in Sources */,
 				77A24C951CDBCD98006AA0B9 /* MainMenuTVC.swift in Sources */,
+				77E2E0FA1D26D4D500787F3C /* Configuration.swift in Sources */,
 				773F6D9A1D07AD0C00B70FF5 /* StudentResult.swift in Sources */,
 				77167A5E1CDD1DBB004C91BC /* ImprovementCell.swift in Sources */,
 				77167A671CDD2BAA004C91BC /* RubricCell.swift in Sources */,
 				77A24CA61CDC8D8C006AA0B9 /* ResEdTVC.swift in Sources */,
+				77E2E0F71D26D4D500787F3C /* Period+CoreDataProperties.swift in Sources */,
 				77E2E0F01D26006200787F3C /* TimetableTableViewCell.swift in Sources */,
 				77B063491D1CBD4400FE563C /* EducationalObjectiveDetailViewController.swift in Sources */,
 				77E2E0E11D25076400787F3C /* Semester.swift in Sources */,
 				77A24CC11CDD0A5E006AA0B9 /* TeacherCell.swift in Sources */,
 				77A24CBF1CDD08FB006AA0B9 /* CursoDetalleTVC.swift in Sources */,
+				77E2E0F91D26D4D500787F3C /* Configuration+CoreDataProperties.swift in Sources */,
 				77A24C991CDBD64E006AA0B9 /* MasterSVC.swift in Sources */,
 				77167A5A1CDD16DD004C91BC /* Suggestions.swift in Sources */,
 				773F6D9B1D07AD0C00B70FF5 /* Aspect+CoreDataProperties.swift in Sources */,
@@ -850,6 +865,7 @@
 				773F6D981D07AD0C00B70FF5 /* Criterion.swift in Sources */,
 				773F6DC31D0B20EC00B70FF5 /* PlanType.swift in Sources */,
 				77E2E0E71D25D72900787F3C /* CourseDetailViewController.swift in Sources */,
+				77E2E0F81D26D4D500787F3C /* Period.swift in Sources */,
 				773F6D861D07A99700B70FF5 /* Faculty.swift in Sources */,
 				773F6DC11D0B20EC00B70FF5 /* ImprovementPlan.swift in Sources */,
 				773F6D991D07AD0C00B70FF5 /* StudentResult+CoreDataProperties.swift in Sources */,
