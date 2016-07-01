@@ -23,9 +23,9 @@ class InicioVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(self.faculty?.period)
 
+        print(self.faculty!.period)
+        
         self.facultyName.text = self.faculty?.nombre
         self.facultyCode.text = self.faculty?.codigo
         self.facultyDescription.text = self.faculty?.descripcion
@@ -39,9 +39,28 @@ class InicioVC: UIViewController {
             self.facultyCoordinator.text = "(Sin Coordinador)"
         }
         
-        self.criteriaLevel.text = "-"
-        self.acceptLevel.text = "-"
-        self.acceptPercentage.text = "0%"
+        let critLevel = self.faculty?.period?.configuration?.criteriaLevel
+        let accpLevel = self.faculty?.period?.configuration?.expectedLevel
+        let percentLevel = self.faculty?.period?.configuration?.acceptTreshold
+        
+        if (critLevel != nil) {
+            self.criteriaLevel.text = critLevel?.description
+        } else {
+            self.criteriaLevel.text = "-"
+        }
+        
+        if (accpLevel != nil) {
+            self.acceptLevel.text = accpLevel?.description
+        } else {
+            self.acceptLevel.text = "-"
+        }
+        
+        if (percentLevel != nil) {
+            self.acceptPercentage.text = percentLevel!.description + "%"
+        } else {
+            self.acceptPercentage.text = "0%"
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

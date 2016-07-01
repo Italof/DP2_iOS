@@ -10,12 +10,13 @@ import UIKit
 
 class SemesterModalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var faculty : Faculty?
     var semesterList : Array<Semester> = []
     @IBOutlet weak var semesterTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.semesterList = Semester.getSemestersByPeriod(self.faculty!.period!, ctx: globalCtx)
         // Do any additional setup after loading the view.
     }
 
@@ -40,6 +41,10 @@ class SemesterModalViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("semesterCell", forIndexPath: indexPath)
+        
+        let semester = self.semesterList[indexPath.row]
+        
+        cell.textLabel?.text = "Ciclo Académico " + semester.descripcion!
         
         return cell
     }

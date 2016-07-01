@@ -1022,7 +1022,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Semestres" id="8z7-bE-S99">
                             <color key="tintColor" red="0.1215686275" green="0.1843137255" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="jlO-Fc-eXY" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="sTM-FJ-ytz"/>
+                                <segue destination="jlO-Fc-eXY" kind="presentation" identifier="semesterModalSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="sTM-FJ-ytz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

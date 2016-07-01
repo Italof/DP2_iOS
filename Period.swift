@@ -55,7 +55,7 @@ extension Period {
     
     internal class func syncWithJson(fac: Faculty, json: JSON, ctx: NSManagedObjectContext)->Period? {
         
-        let persistedPeriods = Period.getPeriodsByFaculty(fac, ctx: ctx)
+        //let persistedPeriods = Period.getPeriodsByFaculty(fac, ctx: ctx)
         
         let newPeriod = Period.updateOrCreateWithJson(json , ctx: ctx)!
         
@@ -63,13 +63,15 @@ extension Period {
         var newStoredSemesters : Array<Semester> = []
         
         for (_,semester):(String, JSON) in json["semesters"] {
-            let newSemester = Semester.updateOrCreateWithJson(semester, ctx: ctx)!
-            
-            print(newSemester)
-            
-            newSemester.period = newPeriod
-            newStoredSemesters.append(newSemester)
+            let newSemester = Semester.updateOrCreateWithJson(semester, ctx: ctx)
+
+            newSemester?.period = newPeriod
+            newStoredSemesters.append(newSemester!)
         }
+        
+        let newConfig = Configuration.updateOrCreateWithJson(json["configuration"], ctx: ctx)
+        
+        newPeriod.configuration = newConfig
         
         let forDeletion = Array(Set(persistedSemesters).subtract(newStoredSemesters))
         

@@ -133,6 +133,10 @@ class CursosTVC: UITableViewController {
             vc.faculty = self.faculty
         }
         
+        if segue.identifier == "semesterModalSegue" {
+            let vc = segue.destinationViewController as! SemesterModalViewController
+            vc.faculty = self.faculty
+        }
     }
 
 }

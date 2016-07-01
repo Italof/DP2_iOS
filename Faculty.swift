@@ -45,7 +45,7 @@ class Faculty: NSManagedObject {
 
 extension Faculty {
     
-    func setDataFromJson(json: JSON) {
+    func setDataFromJson(json: JSON, ctx: NSManagedObjectContext) {
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -56,7 +56,7 @@ extension Faculty {
         self.descripcion = json[FacultyDescriptionKey].stringValue
         self.codigo = json[FacultyCodeKey].stringValue
         self.updated_at = dateFormatter.dateFromString(json[FacultyUpdateKey].stringValue)
-        
+        self.coordinator = Professor.getProfessorById(json[FacultyCoordinatorKey].int32Value, ctx: ctx)
     }
 }
 
@@ -69,12 +69,13 @@ extension Faculty {
         var newStoredFaculties:Array<Faculty> = []
         
         for (_,faculty):(String, JSON) in json {
-            let newFaculty = Faculty.updateOrCreateWithJson(faculty, ctx: ctx)!
-            newStoredFaculties.append(newFaculty)
+            let newFaculty = Faculty.updateOrCreateWithJson(faculty, ctx: ctx)
+            newStoredFaculties.append(newFaculty!)
             
-            let newCoordinator = Professor.updateOrCreateWithJson(faculty[FacultyCoordinatorKey], ctx: ctx)!
+            let newCoordinator = Professor.updateOrCreateWithJson(faculty["coordinator"], ctx: ctx)
             
-            newFaculty.coordinator = newCoordinator
+            newCoordinator!.faculty = newFaculty!
+            newFaculty!.coordinator = newCoordinator!
             
         }
         
@@ -102,7 +103,7 @@ extension Faculty {
         let facultyId = json[FacultyIdKey].int32Value
         
         faculty = findOrCreateWithId(facultyId, ctx: ctx)
-        faculty?.setDataFromJson(json)
+        faculty?.setDataFromJson(json, ctx: ctx)
         
         return faculty
     }
