@@ -67,9 +67,7 @@ extension Course {
             for(_,timetable):(String,JSON) in course[CourseSchedulesKey] {
                 
                 let newTimetable = Timetable.updateOrCreateWithJson(timetable, ctx: ctx)!
-                
-                let tables = newCourse.timetables?.mutableSetValueForKey("timetables")
-                tables?.addObject(newTimetable)
+                newTimetable.course = newCourse
                 newStoredTimetables.append(newTimetable)
             }
             

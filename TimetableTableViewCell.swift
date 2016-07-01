@@ -10,6 +10,8 @@ import UIKit
 
 class TimetableTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var timetableCode: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

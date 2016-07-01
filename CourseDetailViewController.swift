@@ -50,7 +50,11 @@ class CourseDetailViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("timetableCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("timetableCell", forIndexPath: indexPath) as! TimetableTableViewCell
+        
+        let timetable = self.timetables[indexPath.row]
+        
+        cell.timetableCode.text = timetable.codigo
         
         return cell
     }

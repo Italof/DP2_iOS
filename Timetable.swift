@@ -77,7 +77,7 @@ extension Timetable {
     internal class func updateOrCreateWithJson(json: JSON, ctx: NSManagedObjectContext) -> Timetable? {
         var timetable: Timetable?
         
-        let timetableId = json[TypeIdKey].int32Value
+        let timetableId = json[TimetableIdKey].int32Value
         
         timetable = findOrCreateWithId(timetableId, ctx: ctx)
         timetable?.setDataFromJson(json, ctx: ctx)
