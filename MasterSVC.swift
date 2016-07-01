@@ -22,6 +22,8 @@ class MasterSVC: UISplitViewController {
         let nvc = self.viewControllers[1] as! UINavigationController
         let vc = nvc.viewControllers.first as! InicioVC
         vc.faculty = self.faculty
+        
+        print(faculty)
     }
 
     override func didReceiveMemoryWarning() {

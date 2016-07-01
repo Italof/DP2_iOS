@@ -103,6 +103,20 @@ class CursosTVC: UITableViewController {
     }
     */
 
+    @IBAction func unwindSegueOrderCourses (sender: UIStoryboardSegue) {
+        
+        let sourceViewController = sender.sourceViewController as? SemesterModalViewController
+        
+        //Add the new address to the client
+        //sourceViewController?.objDireccion!.cliente = self.cliente
+        
+        //Add the new address to the list
+        //self.addressList?.append((sourceViewController?.objDireccion)!)
+        
+        //Reload data
+        self.tableView.reloadData()
+    
+    }
     
     // MARK: - Navigation
 

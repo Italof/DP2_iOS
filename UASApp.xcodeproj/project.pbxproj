@@ -94,7 +94,6 @@
 		77B063491D1CBD4400FE563C /* EducationalObjectiveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B063481D1CBD4400FE563C /* EducationalObjectiveDetailViewController.swift */; };
 		77CC0B8F1D19251F009620AA /* Green-Circle-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77CC0B8D1D19251F009620AA /* Green-Circle-30.png */; };
 		77CC0B901D19251F009620AA /* Red-Circle-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77CC0B8E1D19251F009620AA /* Red-Circle-30.png */; };
-		77DC66E41D1487C6003279F8 /* reports.html in Resources */ = {isa = PBXBuildFile; fileRef = 77DC66E31D1487C6003279F8 /* reports.html */; };
 		77DC66E61D148CB2003279F8 /* Dashboard-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DC66E51D148CB2003279F8 /* Dashboard-30.png */; };
 		77DC66E81D148DA7003279F8 /* Check File-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DC66E71D148DA7003279F8 /* Check File-30.png */; };
 		77DC66EA1D148E07003279F8 /* Leaderboard Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DC66E91D148E07003279F8 /* Leaderboard Filled-30.png */; };
@@ -228,7 +227,6 @@
 		77B063481D1CBD4400FE563C /* EducationalObjectiveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalObjectiveDetailViewController.swift; sourceTree = "<group>"; };
 		77CC0B8D1D19251F009620AA /* Green-Circle-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Green-Circle-30.png"; path = "UASApp/img/Green-Circle-30.png"; sourceTree = "<group>"; };
 		77CC0B8E1D19251F009620AA /* Red-Circle-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Red-Circle-30.png"; path = "UASApp/img/Red-Circle-30.png"; sourceTree = "<group>"; };
-		77DC66E31D1487C6003279F8 /* reports.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = reports.html; path = ../../../../Desktop/reports.html; sourceTree = "<group>"; };
 		77DC66E51D148CB2003279F8 /* Dashboard-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dashboard-30.png"; path = "UASApp/img/Dashboard-30.png"; sourceTree = "<group>"; };
 		77DC66E71D148DA7003279F8 /* Check File-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Check File-30.png"; path = "UASApp/img/Check File-30.png"; sourceTree = "<group>"; };
 		77DC66E91D148E07003279F8 /* Leaderboard Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Leaderboard Filled-30.png"; path = "UASApp/img/Leaderboard Filled-30.png"; sourceTree = "<group>"; };
@@ -526,7 +524,6 @@
 			isa = PBXGroup;
 			children = (
 				7714707D1CDADB4E009D5501 /* UASApp-Bridging-Header.h */,
-				77DC66E31D1487C6003279F8 /* reports.html */,
 				77E198491CD7C85300782B72 /* AppDelegate.swift */,
 				77E1984B1CD7C85300782B72 /* ViewController.swift */,
 				77E1984D1CD7C85300782B72 /* Main.storyboard */,
@@ -692,7 +689,6 @@
 			files = (
 				771470941CDAE23A009D5501 /* Mejora-30.png in Resources */,
 				7714708A1CDAE14D009D5501 /* Aspectos-30.png in Resources */,
-				77DC66E41D1487C6003279F8 /* reports.html in Resources */,
 				7714708D1CDAE14D009D5501 /* Especialidad-30.png in Resources */,
 				77085EF21D0BAEE300755DD4 /* header_bg.png in Resources */,
 				77A24C931CDBC91E006AA0B9 /* University Filled-50.png in Resources */,
