@@ -71,101 +71,19 @@ class MainMenuTVC: UITableViewController, UISplitViewControllerDelegate {
                     break
             
             case 3: //Obj. Educacionales
-                    /*
-                    Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/educational-objectives?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
-                        .responseJSON { response in
-                        switch response.result {
-                            case .Success:
-                                let json = JSON(data: response.data!)
-                                EdObjectiveDataLoader().refresh_objectives(json)
-                                self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
-                            case .Failure(let error):
-                                //print(error)
-                                self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
-                        }
-                    }*/
-            
-                
                 self.performSegueWithIdentifier("edObjectivesSegue", sender: self)
                     break
             case 4: //Res. Estudiantiles
-                /*
-                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/students-results?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)])
-                    .responseJSON { response in
-                        switch response.result {
-                        case .Success:
-                            let json = JSON(data: response.data!)
-                            
-                            StudentResultsDataLoader().refresh_results(json)
-                            self.performSegueWithIdentifier("studentResSegue", sender: self)
-                        case .Failure(let error):
-                            //print(error)
-                            self.performSegueWithIdentifier("studentResSegue", sender: self)
-                        }
-                }*/
                 self.performSegueWithIdentifier("studentResSegue", sender: self)
                 break
             case 5: //Aspectos
-                /*
-                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/aspects?since=1463183832", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
-                    switch response.result {
-                        case .Success:
-                            let json = JSON(data: response.data!)
-                            AspectDataLoader().refresh_aspects(json)
-                            self.performSegueWithIdentifier("aspectSegue", sender: self)
-                        case .Failure(let error):
-                            //print(error)
-                            self.performSegueWithIdentifier("aspectSegue", sender: self)
-                    }
-                    
-                }*/
                 self.performSegueWithIdentifier("aspectSegue", sender: self)
                     break
 
             case 6: //Cursos
-                /*
-                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/evaluated_courses", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
-                    switch response.result {
-                    case .Success:
-                        let json = JSON(data: response.data!)
-                            CourseDataLoader().refresh_courses(json)
-                        self.performSegueWithIdentifier("coursesSegue", sender: self)
-                    case .Failure(let error):
-                        //print(error)
-                        self.performSegueWithIdentifier("coursesSegue", sender: self)
-                    }
-                    
-                }*/
                 self.performSegueWithIdentifier("coursesSegue", sender: self)
                     break
             case 7: //Mejora Continua
-                /*
-                Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/improvement_plans?since=0", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
-                    switch response.result {
-                    case .Success:
-                        let json = JSON(data: response.data!)
-                        
-                        ImprovementDataLoader().refresh_plans(json)
-                        
-                        Alamofire.request(.GET, self.endpoint.url + "faculties/" + (self.faculty?.id!.description)! + "/suggestions", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
-                            switch response.result {
-                            case .Success:
-                                let json = JSON(data: response.data!)
-                                SuggestionDataLoader().refresh_suggestions(json)
-                                
-                                self.performSegueWithIdentifier("improvementSegue", sender: self)
-                            case .Failure(let error):
-                                //print(error)
-                                self.performSegueWithIdentifier("improvementSegue", sender: self)
-                            }
-                            
-                        }
-                    case .Failure(let error):
-                        print(error)
-                    }
-                    
-                }*/
-                
                     break
             case 8: //Resultados de Evaluaciones
                 self.performSegueWithIdentifier("evaluationResultsSegue", sender: self)

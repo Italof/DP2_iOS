@@ -43,7 +43,12 @@ class ImprovementPlans: UITableViewController {
         
         let plan = self.plans[indexPath.row]
         
-        cell.lblCreator.text = plan.professor!.nombres! + " " + plan.professor!.apellidos!
+        let firstName = plan.professor!.nombres!
+        let lastName = plan.professor!.apellidos!
+        
+        let name: String = firstName + " " + lastName
+        
+        cell.lblCreator.text = name
         cell.lblAnalysis.text = plan.analisisCausal
         cell.lblDescription.text = plan.descripcion
         cell.lblTipo.text = plan.planType!.codigo

@@ -49,7 +49,9 @@ class Suggestions: UITableViewController {
             cell.lblSuggestionDate.text = "-"
         }
         
-        cell.lblUserName?.text = sgtn.professor!.nombres! + " " + sgtn.professor!.apellidos!
+        let name = (sgtn.professor?.nombres)! + " " + (sgtn.professor?.apellidos)!
+        
+        cell.lblUserName?.text = name
         cell.lblSuggestion?.text = sgtn.descripcion
         cell.lblSuggestionStatus?.text = sgtn.titulo
         

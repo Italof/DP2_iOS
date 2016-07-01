@@ -70,16 +70,13 @@ extension Course {
                 newTimetable.course = newCourse
                 newStoredTimetables.append(newTimetable)
                 
-                
                 let persistedProfessors = Professor.getProfessorsByFaculty(fac, ctx: ctx)
                 var newStoredProfessors:Array<Professor> = []
                 
                 for(_,professor):(String,JSON) in timetable[TimetableProfessorsKey] {
                     
                     let newProfessor = Professor.updateOrCreateWithJson(professor, ctx: ctx)!
-                    let professors = newTimetable.professor?.mutableSetValueForKey("professor")
-                    professors!.addObject(newProfessor)
-                    
+                    newTimetable.addProfessor(newProfessor)
                     newStoredProfessors.append(newProfessor)
                 }
                 

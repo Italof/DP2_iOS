@@ -117,6 +117,7 @@
 		77E2E0ED1D25E8FC00787F3C /* Evidence+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0EB1D25E8FC00787F3C /* Evidence+CoreDataProperties.swift */; };
 		77E2E0EE1D25E8FC00787F3C /* Evidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0EC1D25E8FC00787F3C /* Evidence.swift */; };
 		77E2E0F01D26006200787F3C /* TimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0EF1D26006200787F3C /* TimetableTableViewCell.swift */; };
+		77E2E0F21D264BA000787F3C /* CourseResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E0F11D264BA000787F3C /* CourseResultsViewController.swift */; };
 		C041BB4E1D0159F8008A077A /* FacultiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C041BB4D1D0159F8008A077A /* FacultiesTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -256,6 +257,7 @@
 		77E2E0EB1D25E8FC00787F3C /* Evidence+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Evidence+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		77E2E0EC1D25E8FC00787F3C /* Evidence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evidence.swift; sourceTree = "<group>"; };
 		77E2E0EF1D26006200787F3C /* TimetableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTableViewCell.swift; sourceTree = "<group>"; };
+		77E2E0F11D264BA000787F3C /* CourseResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseResultsViewController.swift; sourceTree = "<group>"; };
 		91EC3011194695571EFCB348 /* Pods_UASApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UASApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C041BB4D1D0159F8008A077A /* FacultiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultiesTest.swift; sourceTree = "<group>"; };
 		F789B81BBD0D795DF386C07A /* Pods-UASApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UASApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-UASApp/Pods-UASApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 				77A24CC01CDD0A5E006AA0B9 /* TeacherCell.swift */,
 				77E2E0E61D25D72900787F3C /* CourseDetailViewController.swift */,
 				77E2E0EF1D26006200787F3C /* TimetableTableViewCell.swift */,
+				77E2E0F11D264BA000787F3C /* CourseResultsViewController.swift */,
 			);
 			name = Cursos;
 			sourceTree = "<group>";
@@ -802,6 +805,7 @@
 				77E1984C1CD7C85300782B72 /* ViewController.swift in Sources */,
 				77E2E0E01D25076400787F3C /* Semester+CoreDataProperties.swift in Sources */,
 				773F6DC21D0B20EC00B70FF5 /* PlanType+CoreDataProperties.swift in Sources */,
+				77E2E0F21D264BA000787F3C /* CourseResultsViewController.swift in Sources */,
 				77167A701CDD3A81004C91BC /* EdResultDescriptionCell.swift in Sources */,
 				77A24CB91CDD052D006AA0B9 /* CursoCell.swift in Sources */,
 				773F6DC41D0B20EC00B70FF5 /* Suggestion+CoreDataProperties.swift in Sources */,

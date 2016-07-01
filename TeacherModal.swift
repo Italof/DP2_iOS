@@ -20,8 +20,11 @@ class TeacherModal: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.lblTeacherName.text = self.professor?.nombres
-        self.lblTeacherDegree.text = self.professor?.apellidos
+        let firstName = self.professor!.nombres!
+        let lastName = self.professor!.apellidos!
+        
+        self.lblTeacherName.text = firstName + " " + lastName
+        self.lblTeacherDegree.text = self.professor?.cargo
         
         self.lblTeacherRef.text = self.professor?.descripcion
     }

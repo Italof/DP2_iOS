@@ -52,7 +52,7 @@ class ViewController: UIViewController {
                 case .Success:
                     let json = JSON(data: response.data!)
                     var facultyList : Array<Faculty> = []
-                    var count = 0
+                    var courseList : Array<Course> = []
                     
                     do {
                         self.defaults.setObject(json["token"].stringValue, forKey: "token")
@@ -79,59 +79,78 @@ class ViewController: UIViewController {
                                     if error == nil {
                                         EducationalObjective.syncWithJson(fac, json: json!, ctx: globalCtx)
                                         try! globalCtx.save()
-                                    }
-                                }
-                                self.getStudentResults(fac){
-                                    json, error in
-                                    
-                                    if error == nil {
-                                        StudentResult.syncWithJson(fac, json: json!, ctx: globalCtx)
-                                        try! globalCtx.save()
-                                    }
-                                }
-                                self.getAspects(fac){
-                                    json, error in
-                                    
-                                    if error == nil {
-                                        Aspect.syncWithJson(fac, json: json!, ctx: globalCtx)
-                                        try! globalCtx.save()
-                                    }
-                                }
-                                self.getCourses(fac){
-                                    json, error in
-                                  
-                                    if error == nil {
-                                        Course.syncWithJson(fac, json: json!, ctx: globalCtx)
-                                        try! globalCtx.save()
-                                    }
-                                    
-                                }
-                                self.getImprovement(fac) {
-                                    json, error in
-                                    
-                                    if error == nil {
-                                        ImprovementPlan.syncWithJson(fac, json: json!, ctx: globalCtx)
-                                        try! globalCtx.save()
-                                    }
-                                    
-                                }
-                                self.getSuggestions(fac) {
-                                    json, error in
-                                    
-                                    if error == nil {
-                                        Suggestion.syncWithJson(fac, json: json!, ctx: globalCtx)
-                                        try! globalCtx.save()
-                                    }
-                                }
-                                self.getReport(fac){
-                                    json, error in
-                                    
-                                    if error == nil {
-                                        self.reportManager("report_faculty_" + fac.id.description, content: json!)
+                                        
+                                        self.getStudentResults(fac){
+                                            json, error in
+                                            
+                                            if error == nil {
+                                                StudentResult.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                try! globalCtx.save()
+                                                
+                                                self.getAspects(fac){
+                                                    json, error in
+                                                    
+                                                    if error == nil {
+                                                        Aspect.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                        try! globalCtx.save()
+                                                        
+                                                        self.getCourses(fac){
+                                                            json, error in
+                                                            
+                                                            if error == nil {
+                                                                Course.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                                try! globalCtx.save()
+                                                                
+                                                                courseList = Course.getCoursesByFaculty(fac, ctx: globalCtx)
+                                                                
+                                                                for course in courseList {
+                                                                    self.getCourseMeasurement(fac, course: course){
+                                                                        json, error in
+                                                                        
+                                                                        if error == nil {
+                                                                            self.reportManager("course_report_" + fac.id.description + "_" + course.id.description , content: json!)
+                                                                        }
+                                                                    }
+                                                                }
+                                                                
+                                                                self.getImprovement(fac) {
+                                                                    json, error in
+                                                                    
+                                                                    if error == nil {
+                                                                        ImprovementPlan.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                                        try! globalCtx.save()
+                                                                        
+                                                                        self.getSuggestions(fac) {
+                                                                            json, error in
+                                                                            
+                                                                            if error == nil {
+                                                                                Suggestion.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                                                try! globalCtx.save()
+                                                                                
+                                                                                self.getReport(fac){
+                                                                                    json, error in
+                                                                                    
+                                                                                    if error == nil {
+                                                                                        self.reportManager("report_faculty_" + fac.id.description, content: json!)
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                                 
                             }
+                            
+                            
                             self.performSegueWithIdentifier("facultyListSegue", sender: self)
                             self.activityIndicator.stopAnimating()
                         }
@@ -140,59 +159,6 @@ class ViewController: UIViewController {
                     self.activityIndicator.stopAnimating()
                     self.alertMessage("Usuario/Contrasena incorrectos.", winTitle: "Error")
                 }
-                
-                    
-                    /*
-                    for fac in facultyList {
-                        
-                            self.getObjectives(fac){
-                                json, error in
-                                //DS_Objectives().storeObjectives(json!)
-                                
-                                //EdObjectiveDataLoader().refresh_objectives(json!)
-                            
-                                
-                            }
-                        self.getStudentResults(fac){
-                            json, error in
-                            StudentResultsDataLoader().refresh_results(json!)
-                            
-                            
-                        }
-                        self.getAspects(fac){
-                            json, error in
-                            AspectDataLoader().refresh_aspects(json!)
-                            
-                            
-                        }
-                        self.getCourses(fac){
-                            json, error in
-                            CourseDataLoader().refresh_courses(json!)
-                            
-                            
-                        }
-                        self.getImprovement(fac) {
-                            json, error in
-                            ImprovementDataLoader().refresh_plans(json!)
-                            
-                            
-                        }
-                        self.getSuggestions(fac) {
-                            json, error in
-                            SuggestionDataLoader().refresh_suggestions(json!)
-                            
-                        }
-                        
-                        
-                        
-                        
-                        count += 1
-                        if count == facultyList.count {
-                            count = 0
-                            //self.performSegueWithIdentifier("facultyListSegue", sender: self)
-                        }
-                    }
-                    */
             }
     }
 
@@ -269,6 +235,10 @@ class ViewController: UIViewController {
     
     func getReport(fac: Faculty, completionHandler: (String?,NSError?)->()){
         getReportCall(fac, completionHandler: completionHandler)
+    }
+    
+    func getCourseMeasurement(fac: Faculty, course: Course, completionHandler: (String?,NSError?)->()){
+        getCourseMeasurementCall(fac, course: course, completionHandler: completionHandler)
     }
     
     func getFacultiesCall(completionHandler: (JSON?, NSError?)->()) {
@@ -367,6 +337,21 @@ class ViewController: UIViewController {
             }
             
         }
+    }
+    
+    func getCourseMeasurementCall(fac: Faculty, course: Course, completionHandler: (String?,NSError?)->()) {
+        
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/evaluated_courses/" + course.id.description + "/semesters/1", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseString {
+            response in
+            switch response.result {
+            case .Success:
+                let json = response.result.value
+                completionHandler(json, nil)
+            case .Failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+        
     }
     
     func getReportCall(fac: Faculty, completionHandler: (String?,NSError?)->()){
