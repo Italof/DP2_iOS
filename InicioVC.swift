@@ -24,7 +24,7 @@ class InicioVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(self.faculty)
+        print(self.faculty?.period)
 
         self.facultyName.text = self.faculty?.nombre
         self.facultyCode.text = self.faculty?.codigo

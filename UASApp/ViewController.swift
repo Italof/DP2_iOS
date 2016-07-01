@@ -72,74 +72,91 @@ class ViewController: UIViewController {
                             //Saved all faculties
                             
                             for fac in facultyList {
-
-                                self.getObjectives(fac){
+                                
+                                self.getSettingsForApp(fac) {
                                     json, error in
                                     
                                     if error == nil {
-                                        EducationalObjective.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                        Period.syncWithJson(fac, json: json!, ctx: globalCtx)
                                         try! globalCtx.save()
                                         
-                                        self.getStudentResults(fac){
+                                        //MARK: - Educational Objectives
+                                        self.getObjectives(fac){
                                             json, error in
                                             
                                             if error == nil {
-                                                StudentResult.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                EducationalObjective.syncWithJson(fac, json: json!, ctx: globalCtx)
                                                 try! globalCtx.save()
                                                 
-                                                self.getAspects(fac){
+                                                //MARK: - Student Results
+                                                self.getStudentResults(fac){
                                                     json, error in
                                                     
                                                     if error == nil {
-                                                        Aspect.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                        StudentResult.syncWithJson(fac, json: json!, ctx: globalCtx)
                                                         try! globalCtx.save()
                                                         
-                                                        self.getCourses(fac){
+                                                        //MARK: - Aspects
+                                                        self.getAspects(fac){
                                                             json, error in
                                                             
                                                             if error == nil {
-                                                                Course.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                                Aspect.syncWithJson(fac, json: json!, ctx: globalCtx)
                                                                 try! globalCtx.save()
                                                                 
-                                                                courseList = Course.getCoursesByFaculty(fac, ctx: globalCtx)
-                                                                
-                                                                for course in courseList {
-                                                                    self.getCourseMeasurement(fac, course: course){
-                                                                        json, error in
-                                                                        
-                                                                        if error == nil {
-                                                                            self.reportManager("course_report_" + fac.id.description + "_" + course.id.description , content: json!)
-                                                                        }
-                                                                    }
-                                                                }
-                                                                
-                                                                self.getImprovement(fac) {
+                                                                //MARK: - Courses
+                                                                self.getCourses(fac){
                                                                     json, error in
                                                                     
                                                                     if error == nil {
-                                                                        ImprovementPlan.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                                        Course.syncWithJson(fac, json: json!, ctx: globalCtx)
                                                                         try! globalCtx.save()
                                                                         
-                                                                        self.getSuggestions(fac) {
+                                                                        courseList = Course.getCoursesByFaculty(fac, ctx: globalCtx)
+                                                                        
+                                                                        for course in courseList {
+                                                                            //MARK: - Course Reports
+                                                                            self.getCourseMeasurement(fac, course: course){
+                                                                                json, error in
+                                                                                
+                                                                                if error == nil {
+                                                                                    self.reportManager("course_report_" + fac.id.description + "_" + course.id.description , content: json!)
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        //MARK: - Improvement Plans
+                                                                        self.getImprovement(fac) {
                                                                             json, error in
                                                                             
                                                                             if error == nil {
-                                                                                Suggestion.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                                                ImprovementPlan.syncWithJson(fac, json: json!, ctx: globalCtx)
                                                                                 try! globalCtx.save()
                                                                                 
-                                                                                self.getReport(fac){
+                                                                                //MARK: - Suggestions
+                                                                                self.getSuggestions(fac) {
                                                                                     json, error in
                                                                                     
                                                                                     if error == nil {
-                                                                                        self.reportManager("report_faculty_" + fac.id.description, content: json!)
+                                                                                        Suggestion.syncWithJson(fac, json: json!, ctx: globalCtx)
+                                                                                        try! globalCtx.save()
+                                                                                        
+                                                                                        //MARK: - Final Report
+                                                                                        self.getReport(fac){
+                                                                                            json, error in
+                                                                                            
+                                                                                            if error == nil {
+                                                                                                self.reportManager("report_faculty_" + fac.id.description, content: json!)
+                                                                                            }
+                                                                                        }
                                                                                     }
                                                                                 }
                                                                             }
                                                                         }
                                                                     }
+                                                                    
                                                                 }
                                                             }
-                                                            
                                                         }
                                                     }
                                                 }
@@ -147,10 +164,7 @@ class ViewController: UIViewController {
                                         }
                                     }
                                 }
-                                
                             }
-                            
-                            
                             self.performSegueWithIdentifier("facultyListSegue", sender: self)
                             self.activityIndicator.stopAnimating()
                         }
@@ -192,6 +206,10 @@ class ViewController: UIViewController {
     
     func getFaculties(completionHandler: (JSON?, NSError?)->()) {
         getFacultiesCall(completionHandler)
+    }
+    
+    func getSettingsForApp(fac: Faculty, completionHandler: (JSON?,NSError?)->()) {
+        getSettingsForAppCall(fac, completionHandler: completionHandler)
     }
     
     func getObjectives(fac: Faculty, completionHandler: (JSON?, NSError?) -> ()) {
@@ -241,8 +259,19 @@ class ViewController: UIViewController {
         }
     }
     
-    func getSettingsForAppCall(completionHandler: (JSON?, NSError?)->()) {
-        
+    func getSettingsForAppCall(fac: Faculty, completionHandler: (JSON?, NSError?)->()) {
+        //52.38.157.8/api/faculties/1/periods/actual/semesters
+        Alamofire.request(.GET, self.endpoint.url + "faculties/" + fac.id.description + "/periods/actual/semesters", headers: ["Authorization": "Bearer " + (self.defaults.objectForKey("token") as! String)]).responseJSON { response in
+            switch response.result {
+            case .Success:
+                let json = JSON(data: response.data!)
+                completionHandler(json, nil)
+                break
+            case .Failure(let error):
+                completionHandler(nil, error)
+            }
+            
+        }
     }
     
     

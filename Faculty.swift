@@ -37,6 +37,7 @@ class Faculty: NSManagedObject {
     @NSManaged var coordinator: Professor?
     @NSManaged var aspects: NSSet?
     @NSManaged var configuration: Configuration?
+    @NSManaged var period: Period?
 
 }
 

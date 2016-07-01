@@ -22,8 +22,6 @@ class EspecialidadTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.ctx = globalAppDelegate.managedObjectContext
-        
         self.facultyList = Faculty.getAllFaculties(globalCtx)
         
     }
