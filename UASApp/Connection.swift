@@ -9,5 +9,5 @@
 import Foundation
 
 class Connection {
-    var url: String = "http://52.38.157.8/api/"
+    var url: String = "http://52.89.227.55/api/"
 }

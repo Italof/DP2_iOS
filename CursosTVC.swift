@@ -105,7 +105,7 @@ class CursosTVC: UITableViewController {
 
     @IBAction func unwindSegueOrderCourses (sender: UIStoryboardSegue) {
         
-        let sourceViewController = sender.sourceViewController as? SemesterModalViewController
+        _ = sender.sourceViewController as? SemesterModalViewController
         
         //Add the new address to the client
         //sourceViewController?.objDireccion!.cliente = self.cliente

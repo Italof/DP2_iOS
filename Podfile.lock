@@ -1,10 +1,14 @@
 PODS:
   - Alamofire (3.4.1)
+  - Charts (2.2.5):
+    - Charts/Core (= 2.2.5)
+  - Charts/Core (2.2.5)
   - DZNEmptyDataSet (1.8.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - Charts
   - DZNEmptyDataSet
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -19,7 +23,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 37588f31ce516fbad531c57864c96debd026fcbf
+
+COCOAPODS: 1.0.1
